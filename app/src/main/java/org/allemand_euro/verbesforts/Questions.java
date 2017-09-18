@@ -6,16 +6,12 @@ import java.util.Random;
 class Question {
         public Verb mVerb;
         public int mFormType;
-        public int mWantedType;
         public String mGivenForm;
-        public Vector<String> mAnswers;
 
-        public Question(Verb verb, int formType, int wantedType, String givenForm, Vector<String> answers) {
+        public Question(Verb verb, int formType, String givenForm) {
                 mVerb = verb;
                 mFormType = formType;
-                mWantedType = wantedType;
                 mGivenForm = givenForm;
-                mAnswers = answers;
         }
         public Boolean Answer(String s) {
                 Vector<String> answers = mAnswers;
@@ -38,15 +34,11 @@ class Questions {
                 if(i < 0 || i > mListOfUnusedVerbs.size())
                         i = rand.nextInt(mListOfUnusedVerbs.size());
                 int formType = rand.nextInt(5);
-                int wantedType = formType; // Just give same value to force loop to run
-                while(wantedType == formType)
-                        wantedType = rand.nextInt(6);
-                
+
                 int randomPick = rand.nextInt(mListOfUnusedVerbs.get(i).mForms.get(formType).size());
                 String givenForm = mListOfUnusedVerbs.get(i).mForms.get(formType).get(randomPick);
-                Vector<String> answers = mListOfUnusedVerbs.get(i).mForms.get(wantedType);
                 
-                return new Question(mListOfUnusedVerbs.remove(i), formType, wantedType, givenForm, answers);
+                return new Question(mListOfUnusedVerbs.remove(i), formType, givenForm);
         }
         public static String FormToWord(int i) {
                 if(i == 0) return "infinitif";
