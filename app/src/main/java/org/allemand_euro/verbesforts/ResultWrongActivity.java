@@ -22,15 +22,15 @@ public class ResultWrongActivity extends AppCompatActivity {
                 setContentView(R.layout.activity_resultwrong);
                 TextView text = (TextView) findViewById(R.id.comment);
                 
-                String answers[] = getIntent().getExtras().getStringArray("answer");
+                /*                String answers[] = getIntent().getExtras().getStringArray("answer");
                 String toShow = new String(); //= text.getText().toString();
                 for(int i = 0; i < answers.length; i++) {
                         toShow += answers[i];
                         if(i < answers.length - 1)
                                 toShow += " ou ";
-                }
+                                }
 
-                text.setText(toShow);
+                                text.setText(toShow);*/
 
         }
 }

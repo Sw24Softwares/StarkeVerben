@@ -9,13 +9,13 @@
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:id="@+id/infinif"/>
+        android:id="@+id/infinitif"/>
 
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/preterit"
-        android:layout_below="@+id/infinif"/>
+        android:layout_below="@+id/infinitif"/>
 
     <EditText
         android:layout_width="150dp"
