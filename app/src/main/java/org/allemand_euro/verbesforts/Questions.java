@@ -54,4 +54,14 @@ class Questions {
                 else if(i == 4) return "traduction";
                 else return "auxiliaire";
         }
+
+        private Questions mInstance = null;
+        public Questions CreateSingleton(Vector<Verb> verbs) {
+                if(mInstance == null)
+                        mInstance = new Questions(verbs);
+                return mInstance;
+        }
+        public Questions GetSingleton() {
+                return mInstance;
+        }
 }
