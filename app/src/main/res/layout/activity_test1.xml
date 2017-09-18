@@ -23,11 +23,6 @@
         android:id="@+id/participe"
         android:layout_below="@+id/preterit"/>
 
-    <EditText
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/troisieme_personne"
-        android:layout_below="@id/auxiliaire"/>
 
     <EditText
         android:layout_width="150dp"
@@ -42,6 +37,12 @@
         android:text="Sein"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/participe"/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/troisieme_personne"
+        android:layout_below="@id/auxiliaire"/>
     
     <Button
         android:layout_width="wrap_content"

@@ -19,9 +19,7 @@ public class TestActivity extends AppCompatActivity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_test);
 
-                Vector<Verb> verbs = Loader.GetSingleton().mVerbs;
-                Questions questionsManager = new Questions(verbs);
-                mQuestion = questionsManager.AskQuestion(-1);
+                /*                mQuestion = Questions.GetSingleton().AskQuestion(-1);
                 
                 TextView text = (TextView) findViewById(R.id.form);
                 text.setText(Questions.FormToWord(mQuestion.mFormType) + " : " + mQuestion.mGivenForm + '\n' +
@@ -45,5 +43,6 @@ public class TestActivity extends AppCompatActivity {
                                         }
                                 }
                         });
+                */
         }
 }

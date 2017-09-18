@@ -13,8 +13,8 @@ class Question {
                 mFormType = formType;
                 mGivenForm = givenForm;
         }
-        public Boolean Answer(String s) {
-                Vector<String> answers = mAnswers;
+        public Boolean Answer(String s, int form) {
+                Vector<String> answers = mVerb.mForms.get(form);
                 for(int i = 0; i < answers.size(); i++)
                         if(answers.get(i).equalsIgnoreCase(s))
                                 return true;

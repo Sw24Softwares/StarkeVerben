@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                         reader = new BufferedReader(new InputStreamReader(getAssets().open("verbs.txt"), "UTF-8"));
                         Loader.GetSingleton().Load(reader);
-                        Vector<Verb> verbs = Loader.GetSingleton().mVerbs;
-                        Question.CreateSingleton(verbs);
+                        Questions.CreateSingleton(Loader.GetSingleton().mVerbs);
 
                 } catch (IOException e) {
                         System.exit(0);
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                        Intent intent = new Intent(MainActivity.this, TestActivity.class);
+                                        Intent intent = new Intent(MainActivity.this, TestActivityDebug.class);
                                         startActivity(intent);
                                 }
                         });
