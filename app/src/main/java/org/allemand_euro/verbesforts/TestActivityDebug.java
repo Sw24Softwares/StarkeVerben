@@ -11,40 +11,53 @@ import android.widget.Button;
 
 import java.util.Vector;
 
+import static android.R.color.black;
+
 public class TestActivityDebug extends AppCompatActivity {
         public Question mQuestion;
-        
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_test1);
 
-                ((EditText)findViewById(R.id.infinitif)).setHint(Questions.FormToWord(0));
-                ((EditText)findViewById(R.id.preterit)).setHint(Questions.FormToWord(1));
-                ((EditText)findViewById(R.id.participe)).setHint(Questions.FormToWord(2));
-                ((EditText)findViewById(R.id.troisieme_personne)).setHint(Questions.FormToWord(3));
-                ((EditText)findViewById(R.id.traduction)).setHint(Questions.FormToWord(4));
-                
+                final EditText infinitif = (EditText) findViewById(R.id.infinitif);
+                final EditText preterit = (EditText) findViewById(R.id.preterit);
+                final EditText participe = (EditText) findViewById(R.id.participe);
+                final EditText troisiemePersonne = (EditText) findViewById(R.id.troisieme_personne);
+                final EditText traduction = (EditText) findViewById(R.id.traduction);
+
+                infinitif.setHint(Questions.FormToWord(0));
+                preterit.setHint(Questions.FormToWord(1));
+                participe.setHint(Questions.FormToWord(2));
+                troisiemePersonne.setHint(Questions.FormToWord(3));
+                traduction.setHint(Questions.FormToWord(4));
+
                 mQuestion = Questions.GetSingleton().AskQuestion(-1);
                 if(mQuestion.mFormType == 0) {
-                        ((EditText)findViewById(R.id.infinitif)).setText(mQuestion.mGivenForm);
-                        ((EditText)findViewById(R.id.infinitif)).setEnabled(false);
+                        infinitif.setHint(mQuestion.mGivenForm);
+                        infinitif.setEnabled(false);
+                        infinitif.setHintTextColor(getResources().getColor(black));
                 }
                 if(mQuestion.mFormType == 1) {
-                        ((EditText)findViewById(R.id.preterit)).setText(mQuestion.mGivenForm);
-                        ((EditText)findViewById(R.id.preterit)).setEnabled(false);
+                        preterit.setHint(mQuestion.mGivenForm);
+                        preterit.setEnabled(false);
+                        preterit.setHintTextColor(getResources().getColor(black));
                 }
                 if(mQuestion.mFormType == 2) {
-                        ((EditText)findViewById(R.id.participe)).setText(mQuestion.mGivenForm);
-                        ((EditText)findViewById(R.id.participe)).setEnabled(false);
+                        participe.setHint(mQuestion.mGivenForm);
+                        participe.setEnabled(false);
+                        participe.setHintTextColor(getResources().getColor(black));
                 }
                 if(mQuestion.mFormType == 3) {
-                        ((EditText)findViewById(R.id.troisieme_personne)).setText(mQuestion.mGivenForm);
-                        ((EditText)findViewById(R.id.troisieme_personne)).setEnabled(false);
+                        troisiemePersonne.setHint(mQuestion.mGivenForm);
+                        troisiemePersonne.setEnabled(false);
+                        troisiemePersonne.setHintTextColor(getResources().getColor(black));
                 }
                 if(mQuestion.mFormType == 4) {
-                        ((EditText)findViewById(R.id.traduction)).setText(mQuestion.mGivenForm);
-                        ((EditText)findViewById(R.id.traduction)).setEnabled(false);
+                        traduction.setHint(mQuestion.mGivenForm);
+                        traduction.setEnabled(false);
+                        traduction.setHintTextColor(getResources().getColor(black));
                 }
 
 
@@ -53,15 +66,15 @@ public class TestActivityDebug extends AppCompatActivity {
                                 @Override
                                 public void onClick(View view) {
                                         Boolean right = true;
-                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.infinitif)).getText().toString(),0))
+                                        if(!mQuestion.Answer(infinitif.getText().toString(),0))
                                                 right = false;
-                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.preterit)).getText().toString(),1))
-                                                right = false;                                       
-                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.participe)).getText().toString(),2))
+                                        if(!mQuestion.Answer(preterit.getText().toString(),1))
                                                 right = false;
-                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.troisieme_personne)).getText().toString(),3))
+                                        if(!mQuestion.Answer(participe.getText().toString(),2))
                                                 right = false;
-                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.traduction)).getText().toString(),4))
+                                        if(!mQuestion.Answer(troisiemePersonne.getText().toString(),3))
+                                                right = false;
+                                        if(!mQuestion.Answer(traduction.getText().toString(),4))
                                                 right = false;
                                         if(right) {
                                                 Intent intent = new Intent(TestActivityDebug.this, ResultRightActivity.class);

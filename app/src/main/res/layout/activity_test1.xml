@@ -4,31 +4,37 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:focusableInTouchMode="true">
+
 
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:id="@+id/infinitif"/>
+        android:id="@+id/infinitif"
+        android:textAlignment="center"/>
 
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/preterit"
-        android:layout_below="@+id/infinitif"/>
+        android:layout_below="@+id/infinitif"
+        android:textAlignment="center"/>
 
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/participe"
-        android:layout_below="@+id/preterit"/>
+        android:layout_below="@+id/preterit"
+        android:textAlignment="center"/>
 
 
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/traduction"
-        android:layout_below="@+id/troisieme_personne"/>
+        android:layout_below="@+id/troisieme_personne"
+        android:textAlignment="center"/>
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -42,8 +48,9 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/troisieme_personne"
-        android:layout_below="@id/auxiliaire"/>
-    
+        android:layout_below="@id/auxiliaire"
+        android:textAlignment="center"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
