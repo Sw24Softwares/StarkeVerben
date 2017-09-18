@@ -20,7 +20,7 @@ class Question {
         public Boolean Answer(String s) {
                 Vector<String> answers = mAnswers;
                 for(int i = 0; i < answers.size(); i++)
-                        if(answers.get(i).equals(s))
+                        if(answers.get(i).equalsIgnoreCase(s))
                                 return true;
                 return false;
         }
