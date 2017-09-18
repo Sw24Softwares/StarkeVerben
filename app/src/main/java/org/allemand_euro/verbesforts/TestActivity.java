@@ -31,7 +31,6 @@ public class TestActivity extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                        TextView text = (TextView) findViewById(R.id.form);
                                         EditText editor = (EditText)findViewById(R.id.reponse);
                                         
                                         String answer = editor.getText().toString();
@@ -41,7 +40,6 @@ public class TestActivity extends AppCompatActivity {
                                         }
                                         else {
                                                 Intent intent = new Intent(TestActivity.this, ResultWrongActivity.class);
-                                                //intent.putExtra("answer", mQuestion.mAnswers.get(0));
                                                 intent.putExtra("answer", mQuestion.mAnswers.toArray(new String[0]));
                                                 startActivity(intent);
                                         }
