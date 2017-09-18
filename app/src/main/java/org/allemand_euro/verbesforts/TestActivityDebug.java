@@ -18,5 +18,15 @@ public class TestActivityDebug extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_test1);
+
+                mQuestion = Questions.GetSingleton().AskQuestion(-1);
+
+                Button button = (Button) findViewById(R.id.verify);
+                button.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                }
+                        });
+
         }
 }
