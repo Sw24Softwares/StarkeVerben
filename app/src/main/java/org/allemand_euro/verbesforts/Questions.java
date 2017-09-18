@@ -27,24 +27,26 @@ class Question {
 }
 class Questions {
         public Vector<Verb> mListOfVerbs;
+        public Vector<Verb> mListOfUnusedVerbs;
         
         public Questions(Vector<Verb> verbs) {
                 mListOfVerbs = verbs;
+                mListOfUnusedVerbs = verbs;
         }
-        public Question AskQuestion(Integer i) {
+        public Question AskQuestion(int i) {
                 Random rand = new Random();
-                if(i < 0 || i > mListOfVerbs.size())
-                        i = rand.nextInt(mListOfVerbs.size());
+                if(i < 0 || i > mListOfUnusedVerbs.size())
+                        i = rand.nextInt(mListOfUnusedVerbs.size());
                 int formType = rand.nextInt(5);
                 int wantedType = formType; // Just give same value to force loop to run
                 while(wantedType == formType)
                         wantedType = rand.nextInt(6);
                 
-                int randomPick = rand.nextInt(mListOfVerbs.get(i).mForms.get(formType).size());
-                String givenForm = mListOfVerbs.get(i).mForms.get(formType).get(randomPick);
-                Vector<String> answers = mListOfVerbs.get(i).mForms.get(wantedType);
+                int randomPick = rand.nextInt(mListOfUnusedVerbs.get(i).mForms.get(formType).size());
+                String givenForm = mListOfUnusedVerbs.get(i).mForms.get(formType).get(randomPick);
+                Vector<String> answers = mListOfUnusedVerbs.get(i).mForms.get(wantedType);
                 
-                return new Question(mListOfVerbs.get(i), formType, wantedType, givenForm, answers);
+                return new Question(mListOfUnusedVerbs.remove(i), formType, wantedType, givenForm, answers);
         }
         public static String FormToWord(int i) {
                 if(i == 0) return "infinitif";
