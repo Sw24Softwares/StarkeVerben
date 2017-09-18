@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center">
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/infinif"/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/preterit"
+        android:layout_below="@+id/infinif"/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/participe"
+        android:layout_below="@+id/preterit"/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/troisieme_personne"
+        android:layout_below="@id/auxiliaire"/>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/traduction"
+        android:layout_below="@+id/troisieme_personne"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/auxiliaire"
+        android:text="Sein"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/participe"/>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/verify"
+        android:layout_below="@+id/traduction"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="Verify"/>
+
+</RelativeLayout>

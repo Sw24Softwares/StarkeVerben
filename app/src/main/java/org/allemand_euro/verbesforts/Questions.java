@@ -49,13 +49,13 @@ class Questions {
                 else return "auxiliaire";
         }
 
-        private Questions mInstance = null;
-        public Questions CreateSingleton(Vector<Verb> verbs) {
+        static private Questions mInstance = null;
+        static public Questions CreateSingleton(Vector<Verb> verbs) {
                 if(mInstance == null)
                         mInstance = new Questions(verbs);
                 return mInstance;
         }
-        public Questions GetSingleton() {
+        static public Questions GetSingleton() {
                 return mInstance;
         }
 }
