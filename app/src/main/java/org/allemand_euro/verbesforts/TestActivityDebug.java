@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
@@ -26,6 +27,8 @@ public class TestActivityDebug extends AppCompatActivity {
                 final EditText participe = (EditText) findViewById(R.id.participe);
                 final EditText troisiemePersonne = (EditText) findViewById(R.id.troisieme_personne);
                 final EditText traduction = (EditText) findViewById(R.id.traduction);
+                final CheckBox aux = (CheckBox) findViewById(R.id.auxiliaire);
+
 
                 infinitif.setHint(Questions.FormToWord(0));
                 preterit.setHint(Questions.FormToWord(1));
@@ -60,22 +63,31 @@ public class TestActivityDebug extends AppCompatActivity {
                         traduction.setHintTextColor(getResources().getColor(black));
                 }
 
-
                 Button button = (Button) findViewById(R.id.verify);
                 button.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
                                         Boolean right = true;
-                                        if(!mQuestion.Answer(infinitif.getText().toString(),0))
+                                        String auxiliaire;
+
+                                        if (aux.isChecked())
+                                                auxiliaire = "sein";
+                                        else
+                                                auxiliaire = "haben";
+
+                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.infinitif)).getText().toString(),0))
                                                 right = false;
-                                        if(!mQuestion.Answer(preterit.getText().toString(),1))
+                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.preterit)).getText().toString(),1))
                                                 right = false;
-                                        if(!mQuestion.Answer(participe.getText().toString(),2))
+                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.participe)).getText().toString(),2))
                                                 right = false;
-                                        if(!mQuestion.Answer(troisiemePersonne.getText().toString(),3))
+                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.troisieme_personne)).getText().toString(),3))
                                                 right = false;
-                                        if(!mQuestion.Answer(traduction.getText().toString(),4))
-                                                right = false;
+                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.traduction)).getText().toString(),4))
+                                                        right = false;
+                                        //if(!mQuestion.Answer(auxiliaire,5))
+                                                //right = false;
+
                                         if(right) {
                                                 Intent intent = new Intent(TestActivityDebug.this, ResultRightActivity.class);
                                                 startActivity(intent);
