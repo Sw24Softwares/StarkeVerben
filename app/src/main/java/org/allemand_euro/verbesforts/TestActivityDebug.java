@@ -38,29 +38,29 @@ public class TestActivityDebug extends AppCompatActivity {
 
                 mQuestion = Questions.GetSingleton().AskQuestion(-1);
                 if(mQuestion.mFormType == 0) {
-                        infinitif.setHint(mQuestion.mGivenForm);
+                        infinitif.setText(mQuestion.mGivenForm);
                         infinitif.setEnabled(false);
-                        infinitif.setHintTextColor(getResources().getColor(black));
+                        infinitif.setTextColor(getResources().getColor(black));
                 }
                 if(mQuestion.mFormType == 1) {
-                        preterit.setHint(mQuestion.mGivenForm);
+                        preterit.setText(mQuestion.mGivenForm);
                         preterit.setEnabled(false);
-                        preterit.setHintTextColor(getResources().getColor(black));
+                        preterit.setTextColor(getResources().getColor(black));
                 }
                 if(mQuestion.mFormType == 2) {
-                        participe.setHint(mQuestion.mGivenForm);
+                        participe.setText(mQuestion.mGivenForm);
                         participe.setEnabled(false);
-                        participe.setHintTextColor(getResources().getColor(black));
+                        participe.setTextColor(getResources().getColor(black));
                 }
                 if(mQuestion.mFormType == 3) {
-                        troisiemePersonne.setHint(mQuestion.mGivenForm);
+                        troisiemePersonne.setText(mQuestion.mGivenForm);
                         troisiemePersonne.setEnabled(false);
-                        troisiemePersonne.setHintTextColor(getResources().getColor(black));
+                        troisiemePersonne.setTextColor(getResources().getColor(black));
                 }
                 if(mQuestion.mFormType == 4) {
-                        traduction.setHint(mQuestion.mGivenForm);
+                        traduction.setText(mQuestion.mGivenForm);
                         traduction.setEnabled(false);
-                        traduction.setHintTextColor(getResources().getColor(black));
+                        traduction.setTextColor(getResources().getColor(black));
                 }
 
                 Button button = (Button) findViewById(R.id.verify);
@@ -75,18 +75,18 @@ public class TestActivityDebug extends AppCompatActivity {
                                         else
                                                 auxiliaire = "haben";
 
-                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.infinitif)).getText().toString(),0))
+                                        if(!mQuestion.Answer(infinitif.getText().toString(),0))
                                                 right = false;
-                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.preterit)).getText().toString(),1))
+                                        if(!mQuestion.Answer(preterit.getText().toString(),1))
                                                 right = false;
-                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.participe)).getText().toString(),2))
+                                        if(!mQuestion.Answer(participe.getText().toString(),2))
                                                 right = false;
-                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.troisieme_personne)).getText().toString(),3))
+                                        if(!mQuestion.Answer(troisiemePersonne.getText().toString(),3))
                                                 right = false;
-                                        if(!mQuestion.Answer(((EditText)findViewById(R.id.traduction)).getText().toString(),4))
-                                                        right = false;
-                                        //if(!mQuestion.Answer(auxiliaire,5))
-                                                //right = false;
+                                        if(!mQuestion.Answer(traduction.getText().toString(),4))
+                                                right = false;
+                                        if(!mQuestion.Answer(auxiliaire,5))
+                                                right = false;
 
                                         if(right) {
                                                 Intent intent = new Intent(TestActivityDebug.this, ResultRightActivity.class);
