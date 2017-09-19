@@ -17,6 +17,12 @@ import static android.R.color.black;
 public class TestActivityDebug extends AppCompatActivity {
         public Question mQuestion;
 
+        protected void fillEditText(EditText editText, String text) {
+                editText.setText(text);
+                editText.setEnabled(false);
+                editText.setTextColor(getResources().getColor(black));
+        }
+        
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
@@ -37,67 +43,35 @@ public class TestActivityDebug extends AppCompatActivity {
                 traduction.setHint(Questions.FormToWord(4));
 
                 mQuestion = Questions.GetSingleton().AskQuestion(-1);
-                if(mQuestion.mFormType == 0) {
-                        infinitif.setText(mQuestion.mGivenForm);
-                        infinitif.setEnabled(false);
-                        infinitif.setTextColor(getResources().getColor(black));
-                }
-                if(mQuestion.mFormType == 1) {
-                        preterit.setText(mQuestion.mGivenForm);
-                        preterit.setEnabled(false);
-                        preterit.setTextColor(getResources().getColor(black));
-                }
-                if(mQuestion.mFormType == 2) {
-                        participe.setText(mQuestion.mGivenForm);
-                        participe.setEnabled(false);
-                        participe.setTextColor(getResources().getColor(black));
-                }
-                if(mQuestion.mFormType == 3) {
-                        troisiemePersonne.setText(mQuestion.mGivenForm);
-                        troisiemePersonne.setEnabled(false);
-                        troisiemePersonne.setTextColor(getResources().getColor(black));
-                }
-                if(mQuestion.mFormType == 4) {
-                        traduction.setText(mQuestion.mGivenForm);
-                        traduction.setEnabled(false);
-                        traduction.setTextColor(getResources().getColor(black));
-                }
+                if(mQuestion.mFormType == 0) fillEditText( infinitif,         mQuestion.mGivenForm );
+                if(mQuestion.mFormType == 1) fillEditText( preterit,          mQuestion.mGivenForm );
+                if(mQuestion.mFormType == 2) fillEditText( participe,         mQuestion.mGivenForm );
+                if(mQuestion.mFormType == 3) fillEditText( troisiemePersonne, mQuestion.mGivenForm );
+                if(mQuestion.mFormType == 4) fillEditText( traduction,        mQuestion.mGivenForm );
 
                 Button button = (Button) findViewById(R.id.verify);
                 button.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                        Boolean right = true;
+                                        Boolean right[] = {true,true,true,true,true};
                                         String auxiliaire;
 
-                                        if (aux.isChecked())
-                                                auxiliaire = "sein";
-                                        else
-                                                auxiliaire = "haben";
-
                                         if(!mQuestion.Answer(infinitif.getText().toString(),0))
-                                                right = false;
+                                                right[0] = false;
                                         if(!mQuestion.Answer(preterit.getText().toString(),1))
-                                                right = false;
+                                                right[1] = false;
                                         if(!mQuestion.Answer(participe.getText().toString(),2))
-                                                right = false;
+                                                right[2] = false;
                                         if(!mQuestion.Answer(troisiemePersonne.getText().toString(),3))
-                                                right = false;
+                                                right[3] = false;
                                         if(!mQuestion.Answer(traduction.getText().toString(),4))
-                                                right = false;
-                                        if(!mQuestion.Answer(auxiliaire,5))
-                                                right = false;
+                                                right[4] = false;
+                                        if(!mQuestion.Answer(Questions.BoolToAux(aux.isChecked()),5))
+                                                right[5] = false;
 
-                                        if(right) {
-                                                Intent intent = new Intent(TestActivityDebug.this, ResultRightActivity.class);
-                                                startActivity(intent);
-                                        }
-                                        else {
-                                                Intent intent = new Intent(TestActivityDebug.this, ResultWrongActivity.class);
-                                                //                                                intent.putExtra("answer", mQuestion.mAnswers.toArray(new String[0]));
-                                                startActivity(intent);
-                                        }
-
+                                        Intent intent = new Intent(TestActivityDebug.this, ResultRightActivity.class);
+                                        startActivity(intent);
+                                        intent.putExtra("right", right);
                                 }
                         });
 

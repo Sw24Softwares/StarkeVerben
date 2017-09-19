@@ -48,6 +48,11 @@ class Questions {
                 else if(i == 4) return "traduction";
                 else return "auxiliaire";
         }
+        public static String BoolToAux(Boolean b) {
+                if(b)
+                        return "sein";
+                return "haben";
+        }
 
         static private Questions mInstance = null;
         static public Questions CreateSingleton(Vector<Verb> verbs) {
