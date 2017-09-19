@@ -69,6 +69,7 @@ public class TestActivityDebug extends AppCompatActivity {
 
                                         for (int i = 0; i < 6; i++)
                                                 intent.putExtra(Questions.FormToWord(i), mQuestion.mVerb.mForms.get(i).toArray(new String[0]));
+                                        intent.putExtra("givenFormType", mQuestion.mFormType);
                                 }
                         });
 
