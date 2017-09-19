@@ -64,12 +64,12 @@ public class TestActivityDebug extends AppCompatActivity {
                                         givenAnswers[5] = Questions.BoolToAux(aux.isChecked());
 
                                         Intent intent = new Intent(TestActivityDebug.this, ResultRightActivity.class);
-                                        startActivity(intent);
                                         intent.putExtra("givenAnswers", givenAnswers);
 
                                         for (int i = 0; i < 6; i++)
                                                 intent.putExtra(Questions.FormToWord(i), mQuestion.mVerb.mForms.get(i).toArray(new String[0]));
                                         intent.putExtra("givenFormType", mQuestion.mFormType);
+                                        startActivity(intent);
                                 }
                         });
 
