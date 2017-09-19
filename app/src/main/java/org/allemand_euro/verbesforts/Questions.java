@@ -24,7 +24,7 @@ class Question {
 class Questions {
         public Vector<Verb> mListOfVerbs;
         public Vector<Verb> mListOfUnusedVerbs;
-        
+
         public Questions(Vector<Verb> verbs) {
                 mListOfVerbs = verbs;
                 mListOfUnusedVerbs = verbs;
@@ -37,16 +37,16 @@ class Questions {
 
                 int randomPick = rand.nextInt(mListOfUnusedVerbs.get(i).mForms.get(formType).size());
                 String givenForm = mListOfUnusedVerbs.get(i).mForms.get(formType).get(randomPick);
-                
+
                 return new Question(mListOfUnusedVerbs.remove(i), formType, givenForm);
         }
         public static String FormToWord(int i) {
-                if(i == 0) return "infinitif";
-                else if(i == 1) return "prétérit";
-                else if(i == 2) return "participe";
-                else if(i == 3) return "troisième personne";
-                else if(i == 4) return "traduction";
-                else return "auxiliaire";
+                if(i == 0) return "Infinitf";
+                else if(i == 1) return "Prétérit";
+                else if(i == 2) return "Participe P.";
+                else if(i == 3) return "3e Personne";
+                else if(i == 4) return "Traduction";
+                else return "Auxiliaire";
         }
         public static String BoolToAux(Boolean b) {
                 if(b)
