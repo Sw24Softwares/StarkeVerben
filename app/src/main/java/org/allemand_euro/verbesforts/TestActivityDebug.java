@@ -53,25 +53,19 @@ public class TestActivityDebug extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                        Boolean right[] = {true,true,true,true,true};
+                                        String givenAnswers[] = new String[6];
                                         String auxiliaire;
 
-                                        if(!mQuestion.Answer(infinitif.getText().toString(),0))
-                                                right[0] = false;
-                                        if(!mQuestion.Answer(preterit.getText().toString(),1))
-                                                right[1] = false;
-                                        if(!mQuestion.Answer(participe.getText().toString(),2))
-                                                right[2] = false;
-                                        if(!mQuestion.Answer(troisiemePersonne.getText().toString(),3))
-                                                right[3] = false;
-                                        if(!mQuestion.Answer(traduction.getText().toString(),4))
-                                                right[4] = false;
-                                        if(!mQuestion.Answer(Questions.BoolToAux(aux.isChecked()),5))
-                                                right[5] = false;
+                                        givenAnswers[0] = infinitif.getText().toString();
+                                        givenAnswers[1] = preterit.getText().toString();
+                                        givenAnswers[2] = participe.getText().toString();
+                                        givenAnswers[3] = troisiemePersonne.getText().toString();
+                                        givenAnswers[4] = traduction.getText().toString();
+                                        givenAnswers[5] = Questions.BoolToAux(aux.isChecked());
 
                                         Intent intent = new Intent(TestActivityDebug.this, ResultRightActivity.class);
                                         startActivity(intent);
-                                        intent.putExtra("right", right);
+                                        intent.putExtra("givenAnswers", givenAnswers);
                                 }
                         });
 
