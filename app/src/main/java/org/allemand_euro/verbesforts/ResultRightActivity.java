@@ -19,16 +19,16 @@ import java.io.InputStreamReader;
 import android.graphics.Color;
 
 public class ResultRightActivity extends AppCompatActivity {
-        protected void initTextView(TextView textView, String givenAnswer, Vector<String> answers) {
+        protected void initTextView(TextView textView, String givenAnswer, Vector<String> answers, Boolean changeColor) {
                 Boolean right = false;
                 for(int i = 0; i < answers.size(); i++) {
                         if(answers.get(i).equalsIgnoreCase(givenAnswer))
                                 right = true;
                         textView.setText(answers.get(i));
                 }
-                if(right)
+                if(right && changeColor)
                         textView.setTextColor(Color.GREEN);
-                if(!right)
+                if(!right && changeColor)
                         textView.setTextColor(Color.RED);
         }
         @Override
@@ -50,11 +50,11 @@ public class ResultRightActivity extends AppCompatActivity {
                 String givenAnswers[] = getIntent().getExtras().getStringArray("givenAnswers");
                 int givenFormType = getIntent().getExtras().getInt("givenFormType");
 
-                initTextView(infinitif, givenAnswers[0], answers.get(0));
-                initTextView(preterit, givenAnswers[1], answers.get(1));
-                initTextView(participe, givenAnswers[2], answers.get(2));
-                initTextView(troisiemePersonne, givenAnswers[3], answers.get(3));
-                initTextView(traduction, givenAnswers[4], answers.get(4));
-                initTextView(aux, givenAnswers[5], answers.get(5));
+                initTextView(infinitif, givenAnswers[0], answers.get(0), givenFormType != 0);
+                initTextView(preterit, givenAnswers[1], answers.get(1), givenFormType != 1);
+                initTextView(participe, givenAnswers[2], answers.get(2), givenFormType != 2);
+                initTextView(troisiemePersonne, givenAnswers[3], answers.get(3), givenFormType != 3);
+                initTextView(traduction, givenAnswers[4], answers.get(4), givenFormType != 4);
+                initTextView(aux, givenAnswers[5], answers.get(5), givenFormType != 5);
         }
 }
