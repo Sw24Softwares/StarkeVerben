@@ -29,13 +29,22 @@ public class MainActivity extends AppCompatActivity {
                         System.exit(0);
                 }
                 
-                Button button = (Button) findViewById(R.id.test);
-                button.setOnClickListener(new View.OnClickListener() {
+                Button testButton = (Button) findViewById(R.id.test);
+                testButton.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
                                         Intent intent = new Intent(MainActivity.this, TestActivityDebug.class);
                                         startActivity(intent);
                                 }
                         });
+                Button lessonButton = (Button) findViewById(R.id.lesson);
+                lessonButton.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                        Intent intent = new Intent(MainActivity.this, LessonActivity.class);
+                                        startActivity(intent);
+                                }
+                        });
+
         }
 }
