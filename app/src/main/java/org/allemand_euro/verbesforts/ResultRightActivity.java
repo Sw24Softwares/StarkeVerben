@@ -41,7 +41,7 @@ public class ResultRightActivity extends AppCompatActivity {
                 final TextView participe = (TextView) findViewById(R.id.participe_result);
                 final TextView troisiemePersonne = (TextView) findViewById(R.id.troisieme_personne_result);
                 final TextView traduction = (TextView) findViewById(R.id.traduction_result);
-                final TextView aux = (TextView) findViewById(R.id.auxiliaire_result);                
+                final TextView aux = (TextView) findViewById(R.id.auxiliaire_result);
 
                 Vector<Vector<String>> answers = new Vector<Vector<String>>();
                 for(int i = 0; i < 6; i++)
@@ -56,5 +56,24 @@ public class ResultRightActivity extends AppCompatActivity {
                 initTextView(troisiemePersonne, givenAnswers[3], answers.get(3), givenFormType != 3);
                 initTextView(traduction, givenAnswers[4], answers.get(4), givenFormType != 4);
                 initTextView(aux, givenAnswers[5], answers.get(5), givenFormType != 5);
+
+                Button arreter = (Button) findViewById(R.id.arreter);
+                Button continuer = (Button) findViewById(R.id.continuer);
+
+                arreter.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                        Intent intent = new Intent(ResultRightActivity.this, MainActivity.class);
+                                        startActivity(intent);
+                                }
+                        });
+
+                continuer.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                        Intent intent = new Intent(ResultRightActivity.this, TestActivityDebug.class);
+                                        startActivity(intent);
+                                }
+                        });
         }
 }
