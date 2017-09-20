@@ -27,9 +27,9 @@ public class ResultRightActivity extends AppCompatActivity {
                         textView.setText(answers.get(i));
                 }
                 if(right)
-                        textView.setTextColor(getResources().getColor(Color.GREEN));
+                        textView.setTextColor(Color.GREEN);
                 if(!right)
-                        textView.setTextColor(getResources().getColor(Color.RED));
+                        textView.setTextColor(Color.RED);
         }
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class ResultRightActivity extends AppCompatActivity {
                 for(int i = 0; i < 6; i++)
                         answers.addElement(new Vector(Arrays.asList(getIntent().getExtras().getStringArray(Questions.FormToWord(i)))));
 
-                String givenAnswers[] = getIntent().getExtras().getStringArray("givenForms");
+                String givenAnswers[] = getIntent().getExtras().getStringArray("givenAnswers");
                 int givenFormType = getIntent().getExtras().getInt("givenFormType");
 
                 initTextView(infinitif, givenAnswers[0], answers.get(0));
