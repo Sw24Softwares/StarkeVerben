@@ -41,7 +41,7 @@ class Questions {
                 return new Question(mListOfUnusedVerbs.remove(i), formType, givenForm);
         }
         public static String FormToWord(int i) {
-                if(i == 0) return "Infinitf";
+                if(i == 0) return "Infinitif";
                 else if(i == 1) return "Prétérit";
                 else if(i == 2) return "Participe P.";
                 else if(i == 3) return "3e Personne";

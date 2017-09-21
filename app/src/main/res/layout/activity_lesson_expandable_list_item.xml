@@ -2,15 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="55dip"
-              android:orientation="vertical" >
-  
+              android:orientation="vertical">
+
   <TextView
       android:id="@+id/lesson_expandable_item_text"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:textSize="17dip"
+      android:textSize="17sp"
       android:paddingTop="5dp"
       android:paddingBottom="5dp"
-      android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+      android:layout_margin="2dp"
+      android:gravity="center_horizontal"/>
  
 </LinearLayout>
