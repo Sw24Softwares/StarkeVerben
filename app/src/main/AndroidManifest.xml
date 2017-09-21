@@ -17,10 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".TestActivity" />
-        <activity android:name=".ResultWrongActivity" />
-        <activity android:name=".ResultRightActivity" />
-        <activity android:name=".TestActivityDebug" />
-        <activity android:name=".LessonActivity" />
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".TestActivity" />
         <activity android:name=".LessonActivity" />
     </application>
 

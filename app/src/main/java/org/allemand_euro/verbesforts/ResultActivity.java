@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
 
 import android.graphics.Color;
 
-public class ResultRightActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity {
         protected void initTextView(TextView textView, String givenAnswer, Vector<String> answers, Boolean changeColor) {
                 Boolean right = false;
                 for(int i = 0; i < answers.size(); i++) {
@@ -63,7 +63,7 @@ public class ResultRightActivity extends AppCompatActivity {
                 arreter.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                        Intent intent = new Intent(ResultRightActivity.this, MainActivity.class);
+                                        Intent intent = new Intent(ResultActivity.this, MainActivity.class);
                                         startActivity(intent);
                                 }
                         });
@@ -71,7 +71,7 @@ public class ResultRightActivity extends AppCompatActivity {
                 continuer.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                        Intent intent = new Intent(ResultRightActivity.this, TestActivityDebug.class);
+                                        Intent intent = new Intent(ResultActivity.this, TestActivity.class);
                                         startActivity(intent);
                                 }
                         });
