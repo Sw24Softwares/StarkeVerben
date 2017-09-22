@@ -19,6 +19,9 @@ import java.io.InputStreamReader;
 import android.graphics.Color;
 
 public class ResultActivity extends AppCompatActivity {
+        int mMarks[] = null;
+        DatabaseHelper mDatabaseHelper;
+        
         protected void initTextView(TextView textView, String givenAnswer, Vector<String> answers, Boolean changeColor) {
                 Boolean right = false;
                 for(int i = 0; i < answers.size(); i++) {
@@ -26,8 +29,10 @@ public class ResultActivity extends AppCompatActivity {
                                 right = true;
                         textView.setText(answers.get(i));
                 }
-                if(right && changeColor)
+                if(right && changeColor) {
                         textView.setTextColor(Color.GREEN);
+                        mMarks[mMarks.length-1]++;
+                }
                 if(!right && changeColor)
                         textView.setTextColor(Color.RED);
         }
@@ -43,12 +48,18 @@ public class ResultActivity extends AppCompatActivity {
                 final TextView traduction = (TextView) findViewById(R.id.traduction_result);
                 final TextView aux = (TextView) findViewById(R.id.auxiliaire_result);
 
+                mDatabaseHelper = new DatabaseHelper(this);
+                
                 Vector<Vector<String>> answers = new Vector<Vector<String>>();
                 for(int i = 0; i < 6; i++)
                         answers.addElement(new Vector(Arrays.asList(getIntent().getExtras().getStringArray(Questions.FormToWord(i)))));
 
                 String givenAnswers[] = getIntent().getExtras().getStringArray("givenAnswers");
                 int givenFormType = getIntent().getExtras().getInt("givenFormType");
+
+                final int total = getIntent().getExtras().getInt("total");
+                int marks[] = getIntent().getExtras().getIntArray("marks");
+                mMarks = Arrays.copyOf(marks, marks.length +1);
 
                 initTextView(infinitif, givenAnswers[0], answers.get(0), givenFormType != 0);
                 initTextView(preterit, givenAnswers[1], answers.get(1), givenFormType != 1);
@@ -59,11 +70,16 @@ public class ResultActivity extends AppCompatActivity {
 
                 Button arreter = (Button) findViewById(R.id.arreter);
                 Button continuer = (Button) findViewById(R.id.continuer);
-
+                
                 arreter.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
                                         Intent intent = new Intent(ResultActivity.this, MainActivity.class);
+
+                                        String marks = new String();
+                                        for(int i = 0; i < mMarks.length; i++)
+                                                marks += String.valueOf(mMarks[i]);
+                                        mDatabaseHelper.addData(marks);
                                         startActivity(intent);
                                 }
                         });
@@ -72,6 +88,8 @@ public class ResultActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(View view) {
                                         Intent intent = new Intent(ResultActivity.this, TestActivity.class);
+                                        intent.putExtra("total", total + 1);
+                                        intent.putExtra("marks", mMarks);
                                         startActivity(intent);
                                 }
                         });

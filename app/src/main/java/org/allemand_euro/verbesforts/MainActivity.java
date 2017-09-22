@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(View view) {
                                         Intent intent = new Intent(MainActivity.this, TestActivity.class);
+                                        intent.putExtra("total", 0);
+                                        intent.putExtra("marks",new int[0]);
                                         startActivity(intent);
                                 }
                         });

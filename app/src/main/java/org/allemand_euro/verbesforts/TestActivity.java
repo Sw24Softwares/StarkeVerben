@@ -49,6 +49,9 @@ public class TestActivity extends AppCompatActivity {
                 if(mQuestion.mFormType == 3) fillEditText( troisiemePersonne, mQuestion.mGivenForm );
                 if(mQuestion.mFormType == 4) fillEditText( traduction,        mQuestion.mGivenForm );
 
+                final int total = getIntent().getExtras().getInt("total");
+                final int marks[] = getIntent().getExtras().getIntArray("marks");
+
                 Button button = (Button) findViewById(R.id.verify);
                 button.setOnClickListener(new View.OnClickListener() {
                                 @Override
@@ -69,6 +72,8 @@ public class TestActivity extends AppCompatActivity {
                                         for (int i = 0; i < 6; i++)
                                                 intent.putExtra(Questions.FormToWord(i), mQuestion.mVerb.mForms.get(i).toArray(new String[0]));
                                         intent.putExtra("givenFormType", mQuestion.mFormType);
+                                        intent.putExtra("total", total);
+                                        intent.putExtra("marks", marks);
                                         startActivity(intent);
                                 }
                         });
