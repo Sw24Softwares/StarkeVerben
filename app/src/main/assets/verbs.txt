@@ -25,7 +25,7 @@ schwimmen* schwamm geschwommen schwimmt nager
 bieten bot geboten bietet offrir/proposer
 fliegen* flog geflogen fliegt voler
 fliehen* floh geflohen flieht fuir
-fließen* floss geflossen fließt center
+fließen* floss geflossen fließt couler
 genießen genoss genossen genießt proﬁter/jouir_de
 gießen goss gegossen gießt verser/arroser
 schießen schoss geschossen schießt tirer_avec_une_arme
@@ -36,7 +36,7 @@ ziehen* zog gezogen zieht aller s'installer_quelque_part
 bitten bat gebeten bittet prier/demander
 gehen* ging gegangen geht aller_à_pied
 heißen hieß geheißen heißt s'appeler
-hemmen* kam gekommen kommt venir
+kommen* kam gekommen kommt venir
 liegen lag gelegen liegt être_couché
 lügen log gelegen lügt mentir
 rufen rief gerufen ruft appeler
