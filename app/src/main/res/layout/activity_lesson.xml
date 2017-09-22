@@ -8,5 +8,6 @@
   <ExpandableListView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:dividerHeight="1.5dp"
       android:id="@+id/lesson_list"/>
 </LinearLayout>

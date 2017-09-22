@@ -12,14 +12,14 @@
         android:layout_width="150dp"
 	android:layout_height="wrap_content"
         android:id="@+id/infinitif"
-	android:inputType="text"
+	android:inputType="textNoSuggestions"
         android:textAlignment="center"/>
 
     <EditText
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/preterit"
-	android:inputType="text"
+	android:inputType="textNoSuggestions"
         android:layout_below="@+id/infinitif"
         android:textAlignment="center"/>
 
@@ -27,7 +27,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/participe"
-	android:inputType="text"
+	android:inputType="textNoSuggestions"
         android:layout_below="@+id/preterit"
         android:textAlignment="center"/>
 
@@ -36,7 +36,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/traduction"
-	android:inputType="text"
+	android:inputType="textNoSuggestions"
         android:layout_below="@+id/troisieme_personne"
         android:textAlignment="center"/>
 
@@ -44,8 +44,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/auxiliaire"
+	android:inputType="textNoSuggestions"
         android:text="Sein"
-	android:inputType="text"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/participe"/>
 
@@ -53,7 +53,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/troisieme_personne"
-	android:inputType="text"
+	android:inputType="textNoSuggestions"
         android:layout_below="@id/auxiliaire"
         android:textAlignment="center"/>
 
