@@ -19,6 +19,7 @@
         <activity android:name=".TestActivity" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".LessonActivity" />
+        <activity android:name=".ProgressActivity" />
     </application>
 
 </manifest>

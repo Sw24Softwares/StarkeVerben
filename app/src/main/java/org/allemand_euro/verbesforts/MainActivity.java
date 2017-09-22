@@ -45,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
                                         startActivity(intent);
                                 }
                         });
+                Button progressButton = (Button) findViewById(R.id.progress);
+                progressButton.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                        Intent intent = new Intent(MainActivity.this, ProgressActivity.class);
+                                        startActivity(intent);
+                                }
+                        });
+                
         }
 
         @Override
