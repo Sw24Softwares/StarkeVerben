@@ -29,11 +29,9 @@ public class ResultActivity extends AppCompatActivity {
 
         protected void initTextView(TextView textView, String givenAnswer, Vector<String> answers, Boolean changeColor) {
                 Boolean right = false;
-                for(int i = 0; i < answers.size(); i++) {
-                        if(answers.get(i).equalsIgnoreCase(givenAnswer))
-                                right = true;
-                        textView.setText(answers.get(i));
-                }
+                if(Question.Answer(answers, givenAnswer))
+                        right = true;
+                textView.setText(answers.get(0));
                 if(right && changeColor) {
                         textView.setTextColor(ContextCompat.getColor(this, R.color.good));
                         mMarks[mMarks.length-1]++;

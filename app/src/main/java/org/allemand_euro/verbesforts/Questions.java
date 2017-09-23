@@ -15,10 +15,13 @@ class Question {
                 mFormType = formType;
                 mGivenForm = givenForm;
         }
-        public Boolean Answer(String s, int form) {
-                Vector<String> answers = mVerb.mForms.get(form);
+        public static String standardize(String s) {
+                String st = s.replace("ß","ss");
+                return st;
+        }
+        public static Boolean Answer(Vector<String> answers, String s) {
                 for(int i = 0; i < answers.size(); i++)
-                        if(answers.get(i).equalsIgnoreCase(s))
+                        if(standardize(answers.get(i)).equalsIgnoreCase(standardize(s)))
                                 return true;
                 return false;
         }
