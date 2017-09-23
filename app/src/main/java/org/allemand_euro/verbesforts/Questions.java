@@ -50,8 +50,8 @@ class Questions {
         }
         public static String BoolToAux(Boolean b) {
                 if(b)
-                        return "ist";
-                return "hat";
+                        return "sein";
+                return "haben";
         }
 
         static private Questions mInstance = null;

@@ -67,7 +67,12 @@ public class ResultActivity extends AppCompatActivity {
                 int marks[] = getIntent().getExtras().getIntArray("marks");
                 mMarks = Arrays.copyOf(marks, marks.length +1);
 
-                initTextView(infinitif, givenAnswers[0], answers.get(0), givenFormType != 0);
+                if(givenAnswers[5].equals("sein"))	givenAnswers[5] = "ist";
+		else					givenAnswers[5] = "hat";
+		if(answers.get(5).contains("sein"))	answers.set(5, new Vector(Arrays.asList("ist")));
+		else					answers.set(5, new Vector(Arrays.asList("hat")));
+		
+		initTextView(infinitif, givenAnswers[0], answers.get(0), givenFormType != 0);
                 initTextView(preterit, givenAnswers[1], answers.get(1), givenFormType != 1);
                 initTextView(participe, givenAnswers[2], answers.get(2), givenFormType != 2);
                 initTextView(troisiemePersonne, givenAnswers[3], answers.get(3), givenFormType != 3);

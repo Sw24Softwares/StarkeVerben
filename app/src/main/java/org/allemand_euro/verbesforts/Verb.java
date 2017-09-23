@@ -17,11 +17,11 @@ class Verb {
                 }
                 for(int i = 0; i < mForms.get(0).size(); i++) {
                         if(mForms.get(0).get(i).charAt(mForms.get(0).get(i).length() -1) == '*'){
-                                mForms.get(5).addElement("ist");
+                                mForms.get(5).addElement("sein");
                                 mForms.get(0).set(i, mForms.get(0).get(i).replace("*",""));
                         }
                         else
-                                mForms.get(5).addElement("hat");
+                                mForms.get(5).addElement("haben");
                 }
         }
         public Verb (String infinitive, String preterite, String participle, String traduction, String thirdPerson, String auxiliary) {
