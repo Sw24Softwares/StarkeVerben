@@ -7,7 +7,12 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.content.ContentValues;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 import java.util.Arrays;
 import java.util.Vector;
 
@@ -78,8 +83,11 @@ public class ResultActivity extends AppCompatActivity {
 
                                         String marks = new String();
                                         for(int i = 0; i < mMarks.length; i++)
-                                                marks += String.valueOf(mMarks[i]);
-                                        mDatabaseHelper.addData(marks);
+                                                marks += String.valueOf(mMarks[i]) + ' ';
+                                        ContentValues contentValues = new ContentValues();
+                                        contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
+                                        contentValues.put(DatabaseHelper.COLUMN_2, marks);
+                                        mDatabaseHelper.addData(contentValues);
                                         startActivity(intent);
                                 }
                         });

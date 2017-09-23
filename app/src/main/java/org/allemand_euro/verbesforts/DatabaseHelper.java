@@ -14,18 +14,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         public static final String DATABASE_NAME = "results.db";
         public static final String TABLE_NAME = "marks";
-        public static final String COL1 = "ID";
-        public static final String COL2 = "ITEM1";
+        public static final String COLUMN_1 = "DATA";
+        public static final String COLUMN_2 = "MARKS";
 
-
+        
         public DatabaseHelper(Context context) {
                 super(context, DATABASE_NAME, null, 1);
         }
 
         @Override
         public void onCreate(SQLiteDatabase db) {
-                String createTable = "CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                        " ITEM1 TEXT)";
+                String createTable =
+                        "CREATE TABLE " + TABLE_NAME + " (" +
+                        "ID INTEGER PRIMARY KEY," +
+                        COLUMN_1 + " TEXT," +
+                        COLUMN_2 + " TEXT)";
+
                 db.execSQL(createTable);
         }
 
@@ -35,10 +39,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 onCreate(db);
         }
 
-        public boolean addData(String item1){
+        public boolean addData(ContentValues contentValues){
                 SQLiteDatabase db = this.getWritableDatabase();
-                ContentValues contentValues = new ContentValues();
-                contentValues.put(COL2, item1);
 
                 long result = db.insert(TABLE_NAME, null, contentValues);
 

@@ -55,7 +55,7 @@ wissen wusste gewusst weiß savoir
 fallen* ﬁel gefallen fällt tomber
 fangen fing gefangen fängt attraper/capturer
 halten hielt gehalten hält tenir/s’arrêter
-hängen hing gehangen hängt être suspendu
+hängen hing gehangen hängt être_suspendu
 lassen ließ gelassen lässt laisser
 laufen* lief gelaufen läuft courir/marcher
 raten riet geraten rät conseiller/deviner
