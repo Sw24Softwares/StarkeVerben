@@ -3,6 +3,8 @@ package org.allemand_euro.verbesforts;
 import java.util.Vector;
 import java.util.Random;
 
+import android.content.res.Resources;
+
 class Question {
         public Verb mVerb;
         public int mFormType;
@@ -41,12 +43,13 @@ class Questions {
                 return new Question(mListOfUnusedVerbs.remove(i), formType, givenForm);
         }
         public static String FormToWord(int i) {
-                if(i == 0) return "Infinitif";
-                else if(i == 1) return "Prétérit";
-                else if(i == 2) return "Participe P.";
-                else if(i == 3) return "3e Personne";
-                else if(i == 4) return "Traduction";
-                else return "Auxiliaire";
+                Resources res = Settings.GetSingleton().GetResources();
+                if(i == 0) return res.getString(R.string.infinitive);
+                else if(i == 1) return res.getString(R.string.preterite);
+                else if(i == 2) return res.getString(R.string.participe);
+                else if(i == 3) return res.getString(R.string.third_person);
+                else if(i == 4) return res.getString(R.string.traduction);
+                else return res.getString(R.string.auxiliary);
         }
         public static String BoolToAux(Boolean b) {
                 if(b)

@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
                         reader = new BufferedReader(new InputStreamReader(getAssets().open("verbs.txt"), "UTF-8"));
                         Loader.GetSingleton().Load(reader);
                         Questions.CreateSingleton(Loader.GetSingleton().mVerbs);
+                        Settings.GetSingleton().SetResources(getResources());
 
                 } catch (IOException e) {
                         System.exit(0);

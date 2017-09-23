@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
+import java.util.Collections;
 import android.app.Activity;
 import android.database.Cursor;
 import android.view.View;
@@ -42,8 +43,10 @@ public class ProgressActivity extends AppCompatActivity {
                 mListDataChild = new HashMap<String, List<String>>();
  
                 Cursor data = mDatabaseHelper.getListContents();
+                data.moveToLast();
+                data.moveToNext();
 
-                while(data.moveToNext()){
+                while(data.moveToPrevious()){
                        mListDataHeader.add(data.getString(1));
                        List<String> details = new ArrayList<String>();
                        String results[] = data.getString(2).split(" ");
