@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Verbes Forts</string>
+    
+    <string name="test">Test</string>
+    <string name="progression">Progression</string>
+    <string name="lesson">Lesson</string>
+
+    <string name="finish">Finish</string>
+    <string name="go_on">Continue</string>
+    <string name="verify">Verify</string>
+
+    <string name="at">at</string>
+
+    <string name="infinitive">Infinitive</string>
+    <string name="preterite">Preterite</string>
+    <string name="participe">Participe</string>
+    <string name="third_person">3rd Person</string>
+    <string name="traduction">Traduction</string>
+    <string name="auxiliary">Auxiliary</string>
+</resources>

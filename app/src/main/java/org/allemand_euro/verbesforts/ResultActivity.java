@@ -10,17 +10,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.content.ContentValues;
 
-import java.util.Calendar;
 import java.util.Date;
 import java.text.SimpleDateFormat;
-import java.util.Locale;
 import java.util.Arrays;
 import java.util.Vector;
-
-import android.content.res.Resources;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 
 public class ResultActivity extends AppCompatActivity {
@@ -96,7 +89,7 @@ public class ResultActivity extends AppCompatActivity {
 					int onTwenty = Math.round(totalPercent * 2 / 10);
                                         
 					ContentValues contentValues = new ContentValues();
-                                        contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy " + getString(R.string.at) + " HH:mm : " + String.valueOf(totalPercent) + "% - (" + onTwenty + "/20)").format(new Date()));
+                                        contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy '" + getString(R.string.at) + "' HH:mm : '" + String.valueOf(totalPercent) + "% - (" + onTwenty + "/20)'").format(new Date()));
                                         contentValues.put(DatabaseHelper.COLUMN_2, marks);
                                         mDatabaseHelper.addData(contentValues);
                                         startActivity(intent);
