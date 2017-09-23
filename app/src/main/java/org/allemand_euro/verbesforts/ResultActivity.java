@@ -1,5 +1,6 @@
 package org.allemand_euro.verbesforts;
 
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -35,11 +36,11 @@ public class ResultActivity extends AppCompatActivity {
                         textView.setText(answers.get(i));
                 }
                 if(right && changeColor) {
-                        textView.setTextColor(Color.GREEN);
+                        textView.setTextColor(ContextCompat.getColor(this, R.color.good));
                         mMarks[mMarks.length-1]++;
                 }
                 if(!right && changeColor)
-                        textView.setTextColor(Color.RED);
+                        textView.setTextColor(ContextCompat.getColor(this, R.color.bad));
         }
         @Override
         protected void onCreate(Bundle savedInstanceState) {
