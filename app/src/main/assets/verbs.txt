@@ -79,7 +79,7 @@ sehen sah gesehen sieht voir
 treten* trat getreten tritt marcher/faire_un_pas
 vergessen vergaß vergessen vergisst oublier
 brechen brach gebrochen bricht briser
-gelten galt gegolteh gilt valoir
+gelten galt gegolten gilt valoir
 helfen half geholfen hilft aider
 nehmen nehm genemmen nimmt prendre
 sprechen sprach gesprochen spricht parler

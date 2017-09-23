@@ -85,10 +85,18 @@ public class ResultActivity extends AppCompatActivity {
                                         Intent intent = new Intent(ResultActivity.this, MainActivity.class);
 
                                         String marks = new String();
-                                        for(int i = 0; i < mMarks.length; i++)
+					int totalPercent = 0;
+                                        
+					for(int i = 0; i < mMarks.length; i++) {
                                                 marks += String.valueOf(mMarks[i]) + ' ';
-                                        ContentValues contentValues = new ContentValues();
-                                        contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy à HH:mm").format(new Date()));
+						totalPercent += mMarks[i];
+					}
+
+					totalPercent = Math.round(totalPercent * 100 / (mMarks.length * 5));
+					int onTwenty = Math.round(totalPercent * 2 / 10);
+                                        
+					ContentValues contentValues = new ContentValues();
+                                        contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy " + getString(R.string.at) + " HH:mm : " + String.valueOf(totalPercent) + "% - (" + onTwenty + "/20)").format(new Date()));
                                         contentValues.put(DatabaseHelper.COLUMN_2, marks);
                                         mDatabaseHelper.addData(contentValues);
                                         startActivity(intent);
