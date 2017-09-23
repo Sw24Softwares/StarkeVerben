@@ -44,7 +44,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/auxiliaire"
-	android:inputType="textNoSuggestions"
         android:text="Sein"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/participe"/>
@@ -64,6 +63,6 @@
         android:layout_below="@+id/traduction"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
-        android:text="Verify"/>
+        android:text="@string/verify"/>
 
 </RelativeLayout>

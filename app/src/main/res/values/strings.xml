@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Verbes Forts</string>
+
+    <string name="test">Test</string>
+    <string name="progression">Progression</string>
+    <string name="lesson">Leçon</string>
+
+    <string name="stop">Arrêter</string>
+    <string name="go_on">Continuer</string>
+    <string name="verify">Vérifier</string>
+
+    <string name="infinitive">Infinitif</string>
+    <string name="preterite">Prétérit</string>
+    <string name="participe">Participe p.</string>
+    <string name="third_person">3e Personne</string>
+    <string name="traduction">Traduction</string>
+    <string name="auxiliary">Auxiliaire</string>
 </resources>

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_gravity="center"
-        android:text="Test" />
+        android:text="@string/test" />
 
     <Button
         android:id="@+id/progress"
@@ -21,13 +21,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_gravity="center"
-        android:text="Progression"/>
+        android:text="@string/progression"/>
     <Button
         android:id="@+id/lesson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_gravity="center"
-        android:text="Leçon"/>
+        android:text="@string/lesson"/>
 
 </LinearLayout>

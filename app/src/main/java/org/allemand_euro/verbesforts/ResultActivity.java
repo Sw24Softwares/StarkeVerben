@@ -1,7 +1,7 @@
 package org.allemand_euro.verbesforts;
 
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
 
 import android.content.Intent;
@@ -22,12 +22,11 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import android.graphics.Color;
 
 public class ResultActivity extends AppCompatActivity {
         int mMarks[] = null;
         DatabaseHelper mDatabaseHelper;
-        
+
         protected void initTextView(TextView textView, String givenAnswer, Vector<String> answers, Boolean changeColor) {
                 Boolean right = false;
                 for(int i = 0; i < answers.size(); i++) {
@@ -55,7 +54,7 @@ public class ResultActivity extends AppCompatActivity {
                 final TextView aux = (TextView) findViewById(R.id.auxiliaire_result);
 
                 mDatabaseHelper = new DatabaseHelper(this);
-                
+
                 Vector<Vector<String>> answers = new Vector<Vector<String>>();
                 for(int i = 0; i < 6; i++)
                         answers.addElement(new Vector(Arrays.asList(getIntent().getExtras().getStringArray(Questions.FormToWord(i)))));
@@ -68,11 +67,11 @@ public class ResultActivity extends AppCompatActivity {
                 mMarks = Arrays.copyOf(marks, marks.length +1);
 
                 if(givenAnswers[5].equals("sein"))	givenAnswers[5] = "ist";
-		else					givenAnswers[5] = "hat";
-		if(answers.get(5).contains("sein"))	answers.set(5, new Vector(Arrays.asList("ist")));
-		else					answers.set(5, new Vector(Arrays.asList("hat")));
-		
-		initTextView(infinitif, givenAnswers[0], answers.get(0), givenFormType != 0);
+                else                                givenAnswers[5] = "hat";
+                if(answers.get(5).contains("sein"))	answers.set(5, new Vector(Arrays.asList("ist")));
+                else                                answers.set(5, new Vector(Arrays.asList("hat")));
+
+                initTextView(infinitif, givenAnswers[0], answers.get(0), givenFormType != 0);
                 initTextView(preterit, givenAnswers[1], answers.get(1), givenFormType != 1);
                 initTextView(participe, givenAnswers[2], answers.get(2), givenFormType != 2);
                 initTextView(troisiemePersonne, givenAnswers[3], answers.get(3), givenFormType != 3);
@@ -81,7 +80,7 @@ public class ResultActivity extends AppCompatActivity {
 
                 Button arreter = (Button) findViewById(R.id.arreter);
                 Button continuer = (Button) findViewById(R.id.continuer);
-                
+
                 arreter.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
