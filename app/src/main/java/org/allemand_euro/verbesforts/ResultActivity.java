@@ -85,7 +85,7 @@ public class ResultActivity extends AppCompatActivity {
                                         for(int i = 0; i < mMarks.length; i++)
                                                 marks += String.valueOf(mMarks[i]) + ' ';
                                         ContentValues contentValues = new ContentValues();
-                                        contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy").format(new Date()));
+                                        contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy à HH:mm").format(new Date()));
                                         contentValues.put(DatabaseHelper.COLUMN_2, marks);
                                         mDatabaseHelper.addData(contentValues);
                                         startActivity(intent);
