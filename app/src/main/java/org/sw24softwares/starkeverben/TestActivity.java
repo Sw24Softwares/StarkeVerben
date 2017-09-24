@@ -1,4 +1,4 @@
-package org.allemand_euro.verbesforts;
+package org.sw24softwares.starkeverben;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,11 +6,8 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.view.View;
 import android.widget.Button;
-
-import java.util.Vector;
 
 import static android.R.color.black;
 

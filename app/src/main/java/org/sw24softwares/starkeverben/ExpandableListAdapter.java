@@ -1,4 +1,4 @@
-package org.allemand_euro.verbesforts;
+package org.sw24softwares.starkeverben;
 
 import java.util.HashMap;
 import java.util.List;

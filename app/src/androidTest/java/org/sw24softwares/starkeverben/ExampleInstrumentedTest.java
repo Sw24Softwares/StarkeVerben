@@ -1,4 +1,4 @@
-package org.allemand_euro.verbesforts;
+package org.sw24softwares.starkeverben;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

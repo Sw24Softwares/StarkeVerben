@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.allemand_euro.verbesforts">
+    package="org.sw24softwares.starkeverben">
 
     <application
         android:allowBackup="true"
@@ -8,17 +8,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="org.sw24softwares.starkeverben.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TestActivity" />
-        <activity android:name=".ResultActivity" />
-        <activity android:name=".LessonActivity" />
-        <activity android:name=".ProgressActivity" />
+        <activity android:name="org.sw24softwares.starkeverben.TestActivity" />
+        <activity android:name="org.sw24softwares.starkeverben.ResultActivity" />
+        <activity android:name="org.sw24softwares.starkeverben.LessonActivity" />
+        <activity android:name="org.sw24softwares.starkeverben.ProgressActivity" />
     </application>
 
 </manifest>

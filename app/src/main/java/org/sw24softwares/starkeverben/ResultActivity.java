@@ -1,4 +1,4 @@
-package org.allemand_euro.verbesforts;
+package org.sw24softwares.starkeverben;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.content.ContextCompat;

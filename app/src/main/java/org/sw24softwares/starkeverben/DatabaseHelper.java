@@ -1,13 +1,10 @@
-package org.allemand_euro.verbesforts;
+package org.sw24softwares.starkeverben;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 
 public class DatabaseHelper extends SQLiteOpenHelper {

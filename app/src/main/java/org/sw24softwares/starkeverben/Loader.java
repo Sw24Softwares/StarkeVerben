@@ -1,6 +1,5 @@
-package org.allemand_euro.verbesforts;
+package org.sw24softwares.starkeverben;
 
-import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Vector;
