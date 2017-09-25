@@ -22,6 +22,48 @@ public class ResultActivity extends AppCompatActivity {
         int mMarks[] = null;
         DatabaseHelper mDatabaseHelper;
 
+        protected void saveMark(final int theMarks[]) {
+                AlertDialog alertDialog = new AlertDialog.Builder(ResultActivity.this).create();
+
+		alertDialog.setTitle(getString(R.string.save));
+                alertDialog.setMessage(getString(R.string.save_message));
+                alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.yes),
+                
+		new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(ResultActivity.this, MainActivity.class);
+
+                            String marks = new String();
+                            int totalPercent = 0;
+
+                            for(int i = 0; i < theMarks.length; i++) {
+                                marks += String.valueOf(theMarks[i]) + ' ';
+                                totalPercent += theMarks[i];
+                            }
+
+                            totalPercent = Math.round(totalPercent * 100 / (theMarks.length * 5));
+                            int onTwenty = Math.round(totalPercent * 2 / 10);
+
+                            ContentValues contentValues = new ContentValues();
+                            contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy '" + getString(R.string.at) + "' HH:mm : '" + String.valueOf(totalPercent) + "% - (" + onTwenty + "/20)'").format(new Date()));
+                            contentValues.put(DatabaseHelper.COLUMN_2, marks);
+                            mDatabaseHelper.addData(contentValues);
+			    
+			    startActivity(intent);
+                        }
+                    });
+
+                alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.no),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(ResultActivity.this, MainActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+
+                alertDialog.show();
+        }
+
         protected void initTextView(TextView textView, String givenAnswer, Vector<String> answers, Boolean changeColor) {
                 Boolean right = false;
                 if(Question.Answer(answers, givenAnswer))
@@ -78,45 +120,9 @@ public class ResultActivity extends AppCompatActivity {
                 arreter.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-
-                                        AlertDialog alertDialog = new AlertDialog.Builder(ResultActivity.this).create();
-                                        alertDialog.setTitle(getString(R.string.save));
-                                        alertDialog.setMessage(getString(R.string.save_message));
-                                        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.yes),
-                                            new DialogInterface.OnClickListener() {
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    Intent intent = new Intent(ResultActivity.this, MainActivity.class);
-
-                                                    String marks = new String();
-                                                    int totalPercent = 0;
-
-                                                    for(int i = 0; i < mMarks.length; i++) {
-                                                        marks += String.valueOf(mMarks[i]) + ' ';
-                                                        totalPercent += mMarks[i];
-                                                    }
-
-                                                    totalPercent = Math.round(totalPercent * 100 / (mMarks.length * 5));
-                                                    int onTwenty = Math.round(totalPercent * 2 / 10);
-
-                                                    ContentValues contentValues = new ContentValues();
-                                                    contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy '" + getString(R.string.at) + "' HH:mm : '" + String.valueOf(totalPercent) + "% - (" + onTwenty + "/20)'").format(new Date()));
-                                                    contentValues.put(DatabaseHelper.COLUMN_2, marks);
-                                                    mDatabaseHelper.addData(contentValues);
-                                                    startActivity(intent);
-                                                }
-                                            });
-
-                                        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.no),
-                                            new DialogInterface.OnClickListener() {
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    Intent intent = new Intent(ResultActivity.this, MainActivity.class);
-                                                    startActivity(intent);
-                                                }
-                                            });
-
-                                        alertDialog.show();
-                                                    }
-                                            });
+                                        saveMark(mMarks);
+                                }
+                });
 
                 continuer.setOnClickListener(new View.OnClickListener() {
                                 @Override
