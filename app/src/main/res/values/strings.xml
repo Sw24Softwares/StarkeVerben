@@ -8,6 +8,9 @@
     <string name="finish">Terminer</string>
     <string name="go_on">Continuer</string>
     <string name="verify">Vérifier</string>
+    <string name="save">Enregistrer ?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
 
     <string name="at">à</string>
 

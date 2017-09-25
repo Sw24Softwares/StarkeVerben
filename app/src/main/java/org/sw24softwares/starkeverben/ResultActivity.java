@@ -1,5 +1,7 @@
 package org.sw24softwares.starkeverben;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
@@ -36,6 +38,7 @@ public class ResultActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_result);
+
 
                 final TextView infinitif = (TextView) findViewById(R.id.infinitif_result);
                 final TextView preterit = (TextView) findViewById(R.id.preterit_result);
@@ -75,26 +78,45 @@ public class ResultActivity extends AppCompatActivity {
                 arreter.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                        Intent intent = new Intent(ResultActivity.this, MainActivity.class);
 
-                                        String marks = new String();
-					int totalPercent = 0;
-                                        
-					for(int i = 0; i < mMarks.length; i++) {
-                                                marks += String.valueOf(mMarks[i]) + ' ';
-						totalPercent += mMarks[i];
-					}
+                                        AlertDialog alertDialog = new AlertDialog.Builder(ResultActivity.this).create();
+                                        alertDialog.setTitle(getString(R.string.save));
 
-					totalPercent = Math.round(totalPercent * 100 / (mMarks.length * 5));
-					int onTwenty = Math.round(totalPercent * 2 / 10);
-                                        
-					ContentValues contentValues = new ContentValues();
-                                        contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy '" + getString(R.string.at) + "' HH:mm : '" + String.valueOf(totalPercent) + "% - (" + onTwenty + "/20)'").format(new Date()));
-                                        contentValues.put(DatabaseHelper.COLUMN_2, marks);
-                                        mDatabaseHelper.addData(contentValues);
-                                        startActivity(intent);
-                                }
-                        });
+                                        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.yes),
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    Intent intent = new Intent(ResultActivity.this, MainActivity.class);
+
+                                                    String marks = new String();
+                                                    int totalPercent = 0;
+
+                                                    for(int i = 0; i < mMarks.length; i++) {
+                                                        marks += String.valueOf(mMarks[i]) + ' ';
+                                                        totalPercent += mMarks[i];
+                                                    }
+
+                                                    totalPercent = Math.round(totalPercent * 100 / (mMarks.length * 5));
+                                                    int onTwenty = Math.round(totalPercent * 2 / 10);
+
+                                                    ContentValues contentValues = new ContentValues();
+                                                    contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy '" + getString(R.string.at) + "' HH:mm : '" + String.valueOf(totalPercent) + "% - (" + onTwenty + "/20)'").format(new Date()));
+                                                    contentValues.put(DatabaseHelper.COLUMN_2, marks);
+                                                    mDatabaseHelper.addData(contentValues);
+                                                    startActivity(intent);
+                                                }
+                                            });
+
+                                        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.no),
+                                            new DialogInterface.OnClickListener() {
+                                                public void onClick(DialogInterface dialog, int which) {
+                                                    Intent intent = new Intent(ResultActivity.this, MainActivity.class);
+                                                    startActivity(intent);
+                                                }
+                                            });
+
+                                        alertDialog.show();
+                                                    }
+                                            });
 
                 continuer.setOnClickListener(new View.OnClickListener() {
                                 @Override

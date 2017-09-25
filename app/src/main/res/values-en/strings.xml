@@ -9,6 +9,9 @@
     <string name="finish">Finish</string>
     <string name="go_on">Continue</string>
     <string name="verify">Verify</string>
+    <string name="save">Save?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <string name="at">at</string>
 
