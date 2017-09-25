@@ -81,7 +81,7 @@ public class ResultActivity extends AppCompatActivity {
 
                                         AlertDialog alertDialog = new AlertDialog.Builder(ResultActivity.this).create();
                                         alertDialog.setTitle(getString(R.string.save));
-
+                                        alertDialog.setMessage(getString(R.string.save_message));
                                         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.yes),
                                             new DialogInterface.OnClickListener() {
                                                 public void onClick(DialogInterface dialog, int which) {

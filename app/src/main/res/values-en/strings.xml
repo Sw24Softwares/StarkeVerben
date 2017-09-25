@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Starke Verben</string>
-    
+
     <string name="test">Test</string>
     <string name="progression">Progression</string>
     <string name="lesson">Lesson</string>
@@ -10,6 +10,7 @@
     <string name="go_on">Continue</string>
     <string name="verify">Verify</string>
     <string name="save">Save?</string>
+    <string name="save_message">Save the mark.</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
 
