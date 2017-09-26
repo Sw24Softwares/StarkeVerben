@@ -25,6 +25,8 @@ public class TestActivity extends AppCompatActivity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_test1);
 
+		Questions.getSingleton().mListOfUnusedVerbs = Questions.getSingleton().mListOfVerbs;
+
                 final EditText infinitif = (EditText) findViewById(R.id.infinitif);
                 final EditText preterit = (EditText) findViewById(R.id.preterit);
                 final EditText participe = (EditText) findViewById(R.id.participe);

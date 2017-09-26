@@ -1,5 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Sw24Softwares/StarkeVerben/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"></p>
 <p align="center">Learn your German verbs easily</p>
+
 ---
 
 ## Description
