@@ -23,7 +23,7 @@ public class TestActivity extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_test1);
+                setContentView(R.layout.activity_test);
 
 	    Questions.GetSingleton().mListOfUnusedVerbs = Questions.GetSingleton().mListOfVerbs;
 
