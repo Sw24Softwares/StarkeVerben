@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Date;
+
 import static android.R.color.black;
 
 public class TestActivity extends AppCompatActivity {
@@ -19,13 +21,23 @@ public class TestActivity extends AppCompatActivity {
                 editText.setEnabled(false);
                 editText.setTextColor(getResources().getColor(black));
         }
+
+	protected boolean testDuration(long start) {
+		long time = (System.currentTimeMillis() - start) / 1000;
+		if (time < 20)
+			return true;
+		else
+			return false;
+	}
         
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_test);
+		
+		final long start = System.currentTimeMillis();
 
-	    Questions.GetSingleton().mListOfUnusedVerbs = Questions.GetSingleton().mListOfVerbs;
+		Questions.GetSingleton().mListOfUnusedVerbs = Questions.GetSingleton().mListOfVerbs;
 
                 final EditText infinitif = (EditText) findViewById(R.id.infinitif);
                 final EditText preterit = (EditText) findViewById(R.id.preterit);
@@ -55,7 +67,18 @@ public class TestActivity extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                        String givenAnswers[] = new String[6];
+                                        Intent intent = new Intent(TestActivity.this, ResultActivity.class);
+					
+					String time = getIntent().getExtras().getString("dialog");
+					if(time == null)
+						time = "true";
+
+					if(testDuration(start) && time.equals("true"))
+						intent.putExtra("dialog", "true");
+					else
+						intent.putExtra("dialog", "false");
+					
+					String givenAnswers[] = new String[6];
                                         String auxiliaire;
 
                                         givenAnswers[0] = infinitif.getText().toString();
@@ -65,11 +88,10 @@ public class TestActivity extends AppCompatActivity {
                                         givenAnswers[4] = traduction.getText().toString();
                                         givenAnswers[5] = Questions.BoolToAux(aux.isChecked());
 
-                                        Intent intent = new Intent(TestActivity.this, ResultActivity.class);
                                         intent.putExtra("givenAnswers", givenAnswers);
 
                                         for (int i = 0; i < 6; i++)
-                                                intent.putExtra(Questions.FormToWord(i), mQuestion.mVerb.mForms.get(i).toArray(new String[0]));
+					intent.putExtra(Questions.FormToWord(i), mQuestion.mVerb.mForms.get(i).toArray(new String[0]));
                                         intent.putExtra("givenFormType", mQuestion.mFormType);
                                         intent.putExtra("total", total);
                                         intent.putExtra("marks", marks);

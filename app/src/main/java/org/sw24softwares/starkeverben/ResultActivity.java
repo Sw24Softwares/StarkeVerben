@@ -22,7 +22,7 @@ public class ResultActivity extends AppCompatActivity {
         int mMarks[] = null;
         DatabaseHelper mDatabaseHelper;
 
-        protected void saveMark(final int theMarks[]) {
+        protected void saveMarkDialog(final int theMarks[]) {
                 AlertDialog alertDialog = new AlertDialog.Builder(ResultActivity.this).create();
 
 		alertDialog.setTitle(getString(R.string.save));
@@ -64,6 +64,28 @@ public class ResultActivity extends AppCompatActivity {
                 alertDialog.show();
         }
 
+        protected void saveMark(final int theMarks[]) {
+		Intent intent = new Intent(ResultActivity.this, MainActivity.class);
+
+		String marks = new String();
+		int totalPercent = 0;
+
+		for(int i = 0; i < theMarks.length; i++) {
+		marks += String.valueOf(theMarks[i]) + ' ';
+		totalPercent += theMarks[i];
+		}
+
+		totalPercent = Math.round(totalPercent * 100 / (theMarks.length * 5));
+		int onTwenty = Math.round(totalPercent * 2 / 10);
+
+		ContentValues contentValues = new ContentValues();
+		contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy '" + getString(R.string.at) + "' HH:mm : '" + String.valueOf(totalPercent) + "% - (" + onTwenty + "/20)'").format(new Date()));
+		contentValues.put(DatabaseHelper.COLUMN_2, marks);
+		mDatabaseHelper.addData(contentValues);
+
+		startActivity(intent);
+        }
+
         protected void initTextView(TextView textView, String givenAnswer, Vector<String> answers, Boolean changeColor) {
                 Boolean right = false;
                 if(Question.Answer(answers, givenAnswer))
@@ -97,6 +119,8 @@ public class ResultActivity extends AppCompatActivity {
 
                 String givenAnswers[] = getIntent().getExtras().getStringArray("givenAnswers");
                 int givenFormType = getIntent().getExtras().getInt("givenFormType");
+	
+		final String dialog = getIntent().getExtras().getString("dialog");		//String to see if the user has took more of 20 seconds to complete each test (outputs the dialog if not)
 
                 final int total = getIntent().getExtras().getInt("total");
                 int marks[] = getIntent().getExtras().getIntArray("marks");
@@ -120,7 +144,10 @@ public class ResultActivity extends AppCompatActivity {
                 arreter.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                        saveMark(mMarks);
+					if(dialog.equals("true"))
+						saveMarkDialog(mMarks);
+					else
+						saveMark(mMarks);
                                 }
                 });
 
@@ -130,6 +157,7 @@ public class ResultActivity extends AppCompatActivity {
                                         Intent intent = new Intent(ResultActivity.this, TestActivity.class);
                                         intent.putExtra("total", total + 1);
                                         intent.putExtra("marks", mMarks);
+					intent.putExtra("dialog", dialog);
                                         startActivity(intent);
                                 }
                         });
