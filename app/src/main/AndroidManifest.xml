@@ -17,7 +17,13 @@
         </activity>
         <activity android:name="org.sw24softwares.starkeverben.TestActivity" />
         <activity android:name="org.sw24softwares.starkeverben.ResultActivity" />
-        <activity android:name="org.sw24softwares.starkeverben.LessonActivity" />
+        <activity android:name="org.sw24softwares.starkeverben.LessonActivity"> 
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+                <meta-data android:name="android.app.searchable"
+                           android:resource="@xml/searchable"/>
+        </activity>
         <activity android:name="org.sw24softwares.starkeverben.ProgressActivity" />
     </application>
 

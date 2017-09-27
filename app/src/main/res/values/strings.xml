@@ -21,4 +21,7 @@
     <string name="third_person">3e Personne</string>
     <string name="traduction">Traduction</string>
     <string name="auxiliary">Auxiliaire</string>
+
+    <string name="search_hint">Rechercher</string>
+    <string name="app_label">StarkeVerben</string>
 </resources>
