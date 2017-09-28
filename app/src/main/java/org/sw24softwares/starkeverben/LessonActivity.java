@@ -59,7 +59,7 @@ public class LessonActivity extends AppCompatActivity {
                         }
                         if(contain) {
                                 listDataHeader.add(verbs.get(i).mForms.get(0).get(0));
-                                listDataChild.put(listDataHeader.get(i), details);
+                                listDataChild.put(listDataHeader.get(listDataHeader.size()-1), details);
                         }
                 }
         }
