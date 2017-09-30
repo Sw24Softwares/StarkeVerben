@@ -10,9 +10,11 @@ import java.util.Vector;
 import java.util.Set;
 
 import android.content.Intent;
+import android.content.Context;
 import android.app.SearchManager;
 
 import android.widget.ExpandableListView;
+import android.widget.SearchView;
 
 public class LessonActivity extends AppCompatActivity {
         ExpandableListAdapter listAdapter;
@@ -25,16 +27,19 @@ public class LessonActivity extends AppCompatActivity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_lesson);
 
-                onSearchRequested();
+                //                onSearchRequested();
+                // Get the SearchView and set the searchable configuration
+                SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+                SearchView searchView = (SearchView) findViewById(R.id.lesson_search);
+                // Assumes current activity is the searchable activity
+                searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+                searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
                 
                 expListView = (ExpandableListView) findViewById(R.id.lesson_list);
+                search(new String());
                 
-                // Get the intent, verify the action and get the query
-                Intent intent = getIntent();
-                if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-                        String query = intent.getStringExtra(SearchManager.QUERY);
-                        search(query);
-                }
+                // Get the intent, verify the action and get the query                
+                handleIntent(getIntent());
         }
  
         private void prepareListData(String search_word) {
@@ -57,7 +62,7 @@ public class LessonActivity extends AppCompatActivity {
                                 }
                                 details.add(caseVerb);
                         }
-                        if(contain) {
+                        if(contain || search_word == new String()) {
                                 listDataHeader.add(verbs.get(i).mForms.get(0).get(0));
                                 listDataChild.put(listDataHeader.get(listDataHeader.size()-1), details);
                         }
@@ -67,5 +72,18 @@ public class LessonActivity extends AppCompatActivity {
                 prepareListData(word);
                 listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
                 expListView.setAdapter(listAdapter);
+        }
+
+        @Override
+        protected void onNewIntent(Intent intent) {
+                setIntent(intent);
+                handleIntent(intent);
+        }
+        
+        private void handleIntent(Intent intent) {
+                if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+                        String query = intent.getStringExtra(SearchManager.QUERY);
+                        search(query);
+                }
         }
 }

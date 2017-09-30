@@ -17,7 +17,8 @@
         </activity>
         <activity android:name="org.sw24softwares.starkeverben.TestActivity" />
         <activity android:name="org.sw24softwares.starkeverben.ResultActivity" />
-        <activity android:name="org.sw24softwares.starkeverben.LessonActivity"> 
+        <activity android:name="org.sw24softwares.starkeverben.LessonActivity"
+                  android:launchMode="singleTop"> 
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
