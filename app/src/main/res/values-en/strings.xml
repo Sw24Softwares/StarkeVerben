@@ -22,4 +22,7 @@
     <string name="third_person">3rd Person</string>
     <string name="traduction">Traduction</string>
     <string name="auxiliary">Auxiliary</string>
+
+    <string name="search_hint">Search</string>
+    <string name="app_label">StarkeVerben</string>
 </resources>
