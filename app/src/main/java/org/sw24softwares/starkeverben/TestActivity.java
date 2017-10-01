@@ -71,12 +71,12 @@ public class TestActivity extends AppCompatActivity {
 					
 					String time = getIntent().getExtras().getString("dialog");
 					if(time == null)
-						time = "true";
+						time = "false";
 
-					if(testDuration(start) && time.equals("true"))
-						intent.putExtra("dialog", "true");
-					else
+					if(!testDuration(start) && time.equals("false"))
 						intent.putExtra("dialog", "false");
+					else
+						intent.putExtra("dialog", "true");
 					
 					String givenAnswers[] = new String[6];
                                         String auxiliaire;
