@@ -71,8 +71,8 @@ public class ResultActivity extends AppCompatActivity {
 		int totalPercent = 0;
 
 		for(int i = 0; i < theMarks.length; i++) {
-		marks += String.valueOf(theMarks[i]) + ' ';
-		totalPercent += theMarks[i];
+                        marks += String.valueOf(theMarks[i]) + ' ';
+                        totalPercent += theMarks[i];
 		}
 
 		totalPercent = Math.round(totalPercent * 100 / (theMarks.length * 5));

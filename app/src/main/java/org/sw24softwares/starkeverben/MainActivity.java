@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
+                
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
                 BufferedReader reader = null;
                 try {
                         reader = new BufferedReader(new InputStreamReader(getAssets().open("verbs.txt"), "UTF-8"));
-                        Loader.GetSingleton().Load(reader);
+                        Loader.CreateSingleton(reader);
                         Questions.CreateSingleton(Loader.GetSingleton().mVerbs);
                         Settings.GetSingleton().SetResources(getResources());
 

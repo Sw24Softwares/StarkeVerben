@@ -7,7 +7,7 @@ import java.util.Vector;
 public class Loader {
         public Vector<Verb> mVerbs = new Vector<Verb>();
 
-        public void Load (BufferedReader bufferedReader) {
+        private Loader (BufferedReader bufferedReader) {
                 try {
                         String line = null;
                         while ((line = bufferedReader.readLine()) != null) 
@@ -17,9 +17,13 @@ public class Loader {
                         System.err.format("IOException: %s%n", x);
                 }
         }
-        public static Loader GetSingleton() {
+        static public Loader CreateSingleton(BufferedReader buffer) {
                 if(mInstance == null)
-                        mInstance = new Loader();
+                        mInstance = new Loader(buffer);
+                return mInstance;
+        }
+
+        public static Loader GetSingleton() {
                 return mInstance;
         }
         static Loader mInstance = null;
