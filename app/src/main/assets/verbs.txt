@@ -50,7 +50,7 @@ denken dachte gedacht denkt penser
 kennen kannte gekannt kennt connaître
 nennen nannte genannt nennt nommer
 senden sandte/sendete gesandt/gesendet sendet émettre/envoyer
-wenden wandte/wendete gewandt/gewendet wendet toumer/retourner
+wenden wandte/wendete gewandt/gewendet wendet tourner/retourner
 wissen wusste gewusst weiß savoir
 fallen* fiel gefallen fällt tomber
 fangen fing gefangen fängt attraper/capturer
