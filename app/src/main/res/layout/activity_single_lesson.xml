@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:focusableInTouchMode="true">
+  
+    <Button
+        android:id="@+id/stop_single_lesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginLeft="35dp"
+        android:background="@android:color/transparent"
+        android:text="@string/finish" />
+
+    <Button
+        android:id="@+id/next_single_lesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginRight="35dp"
+        android:background="@android:color/transparent"
+        android:text="@string/go_on" />
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/form_infinitif_single_lesson"
+        android:text="@string/infinitive"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/form_preterit_single_lesson"
+        android:text="@string/preterite"
+        android:layout_below="@id/form_infinitif_single_lesson"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/form_participe_single_lesson"
+        android:text="@string/participe"
+        android:layout_below="@id/form_preterit_single_lesson"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/form_auxiliary_single_lesson"
+        android:text="@string/auxiliary"
+        android:layout_below="@id/form_participe_single_lesson"
+        android:textAlignment="center" />
+    
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/form_troisieme_personne_single_lesson"
+        android:text="@string/third_person"
+        android:layout_below="@id/form_auxiliary_single_lesson"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/form_traduction_single_lesson"
+        android:text="@string/traduction"
+        android:layout_below="@id/form_troisieme_personne_single_lesson"
+        android:textAlignment="center" />
+
+
+    
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/infinitif_single_lesson"
+        android:layout_toRightOf="@id/form_infinitif_single_lesson"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/preterit_single_lesson"
+        android:layout_toRightOf="@id/form_preterit_single_lesson"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/participe_single_lesson"
+        android:layout_toRightOf="@id/form_participe_single_lesson"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/auxiliary_single_lesson"
+        android:layout_toRightOf="@id/form_auxiliary_single_lesson"
+        android:textAlignment="center" />
+    
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/troisieme_personne_single_lesson"
+        android:layout_toRightOf="@id/form_troisieme_personne_single_lesson"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/traduction_single_lesson"
+        android:layout_toRightOf="@id/form_traduction_single_lesson"
+        android:textAlignment="center" />
+    
+</RelativeLayout>

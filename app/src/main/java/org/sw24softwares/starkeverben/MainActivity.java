@@ -56,7 +56,14 @@ public class MainActivity extends AppCompatActivity {
                                         startActivity(intent);
                                 }
                         });
-                
+                Button singlelessonButton = (Button) findViewById(R.id.single_lesson);
+                singlelessonButton.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                        Intent intent = new Intent(MainActivity.this, SingleLessonActivity.class);
+                                        startActivity(intent);
+                                }
+                        });
         }
 
         @Override
