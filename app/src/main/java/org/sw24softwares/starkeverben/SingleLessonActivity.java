@@ -3,6 +3,7 @@ package org.sw24softwares.starkeverben;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Vector;
 
@@ -28,7 +29,10 @@ public class SingleLessonActivity extends AppCompatActivity {
                 Random rand = new Random();
                 Verb verb = questions.mListOfVerbs.get(rand.nextInt(questions.mListOfVerbs.size()));
 
-                infinitif.setText(verb.mForms.get(0).get(0));
+                if(verb.mForms.get(5).contains("sein"))	verb.mForms.set(5, new Vector(Arrays.asList("ist ")));
+                else                                verb.mForms.set(5, new Vector(Arrays.asList("hat ")));
+                
+		        infinitif.setText(verb.mForms.get(0).get(0));
                 preterit.setText(verb.mForms.get(1).get(0));
                 participe.setText(verb.mForms.get(2).get(0));
                 troisiemePersonne.setText(verb.mForms.get(3).get(0));
@@ -40,6 +44,7 @@ public class SingleLessonActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(View view) {
                                         Intent intent = new Intent(SingleLessonActivity.this, SingleLessonActivity.class);
+					finish();
                                         startActivity(intent);
                                 }
                         });

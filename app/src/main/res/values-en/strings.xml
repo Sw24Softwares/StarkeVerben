@@ -4,8 +4,8 @@
 
     <string name="test">Test</string>
     <string name="progression">Progression</string>
-    <string name="lesson">Lesson</string>
-    <string name="single_lesson">One By One Lesson</string>
+    <string name="lesson">List</string>
+    <string name="single_lesson">Lesson</string>
 
     <string name="finish">Finish</string>
     <string name="go_on">Continue</string>

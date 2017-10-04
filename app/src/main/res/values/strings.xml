@@ -3,8 +3,8 @@
 
     <string name="test">Test</string>
     <string name="progression">Progression</string>
-    <string name="lesson">Leçon</string>
-    <string name="single_lesson">Une Leçon À La Fois</string>
+    <string name="lesson">Liste</string>
+    <string name="single_lesson">Leçon</string>
 
     <string name="finish">Terminer</string>
     <string name="go_on">Continuer</string>

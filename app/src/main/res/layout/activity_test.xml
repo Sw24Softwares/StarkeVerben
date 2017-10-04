@@ -10,16 +10,16 @@
 
     <EditText
         android:layout_width="165dp"
-	android:layout_height="wrap_content"
+		android:layout_height="wrap_content"
         android:id="@+id/infinitif"
-	android:inputType="textNoSuggestions"
+		android:inputType="textNoSuggestions"
         android:textAlignment="center"/>
 
     <EditText
         android:layout_width="165dp"
         android:layout_height="wrap_content"
         android:id="@+id/preterit"
-	android:inputType="textNoSuggestions"
+		android:inputType="textNoSuggestions"
         android:layout_below="@+id/infinitif"
         android:textAlignment="center"/>
 
@@ -27,7 +27,7 @@
         android:layout_width="165dp"
         android:layout_height="wrap_content"
         android:id="@+id/participe"
-	android:inputType="textNoSuggestions"
+		android:inputType="textNoSuggestions"
         android:layout_below="@+id/preterit"
         android:textAlignment="center"/>
 
@@ -52,7 +52,7 @@
         android:layout_width="165dp"
         android:layout_height="wrap_content"
         android:id="@+id/troisieme_personne"
-	android:inputType="textNoSuggestions"
+		android:inputType="textNoSuggestions"
         android:layout_below="@id/auxiliaire"
         android:textAlignment="center"/>
 
