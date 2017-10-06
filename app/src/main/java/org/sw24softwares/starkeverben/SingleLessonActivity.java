@@ -46,6 +46,7 @@ public class SingleLessonActivity extends AppCompatActivity {
                                         Intent intent = new Intent(SingleLessonActivity.this, SingleLessonActivity.class);
 					finish();
                                         startActivity(intent);
+					overridePendingTransition(0,0);
                                 }
                         });
                 Button stop = (Button) findViewById(R.id.stop_single_lesson);
