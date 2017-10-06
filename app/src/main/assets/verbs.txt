@@ -81,7 +81,7 @@ vergessen vergaß vergessen vergisst oublier
 brechen brach gebrochen bricht briser
 gelten galt gegolten gilt valoir
 helfen half geholfen hilft aider
-nehmen nehm genemmen nimmt prendre
+nehmen nahm genommen nimmt prendre
 sprechen sprach gesprochen spricht parler
 sterben** starb gestorben stirbt mourir
 treffen traf getroffen trifft atteindre/rencontrer
