@@ -9,7 +9,7 @@ steigen* stieg gestiegen steigt monter
 treiben trieb getrieben treibt faire_avancer
 weisen wies gewiesen weist indiquer
 binden band gebunden bindet lier/attacher
-dringen* drang gedrongen dringt pénétrer
+dringen* drang gedrungen dringt pénétrer
 finden fand gefunden findet trouver
 gelingen* gelang gelungen gelingt réussir
 klingen klang geklungen klingt tinter
@@ -38,7 +38,7 @@ gehen* ging gegangen geht aller_à_pied
 heißen hieß geheißen heißt s'appeler
 kommen* kam gekommen kommt venir
 liegen lag gelegen liegt être_couché
-lügen log gelegen lügt mentir
+lügen log gelogen lügt mentir
 rufen rief gerufen ruft appeler
 schwören schwor geschworen schwört jurer
 sitzen saß gesessen sitzt être_assis
@@ -62,7 +62,7 @@ raten riet geraten rät conseiller/deviner
 schlafen schlief geschlafen schläft dormir
 backen backte/buk gebacken bäckt cuire_au_four
 fahren* fuhr gefahren fährt aller(en_véhicule)
-graben grub gegreben gräbt creuser
+graben grub gegraben gräbt creuser
 laden lud geladen lädt charger
 schaffen schuf geschaffen schafft créer
 schlagen schlug geschlagen schlägt frapper
