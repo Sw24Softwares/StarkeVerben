@@ -1,6 +1,10 @@
 <p align="center"><img src="https://raw.githubusercontent.com/Sw24Softwares/StarkeVerben/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"></p>
 <p align="center">Learn your German verbs easily</p>
 
+[<p align="center"><img src="https://f-droid.org/badge/get-it-on.png"
+        alt="Get it on F-Droid"
+        height="80"></p>](https://f-droid.org/app/org.sw24softwares.starkeverben)
+
 ---
 
 ## Description
@@ -14,7 +18,3 @@ If you find something that went wrong, please open an issue. We will try to solv
 
 ## License
 This program is released under the GPL3 license. For further information, please read LICENSE file.
-
-[<img src="https://f-droid.org/badge/get-it-on.png"
-        alt="Get it on F-Droid"
-        height="">](https://f-droid.org/app/org.sw24softwares.starkeverben)
