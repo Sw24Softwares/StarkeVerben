@@ -24,7 +24,7 @@ public class Loader {
                         while ((line = trans.readLine()) != null) {
                                 String parts[] = line.trim().split(" ");
                                 Integer index = new Integer(Integer.parseInt(parts[0]));
-                                mLines.replace(index,  mLines.get(index) + parts[1]);
+                                mLines.put(index,  mLines.get(index) + parts[1]);
                         }
                         Object[] entities = mLines.values().toArray();
                         for(Object o : entities)

@@ -9,4 +9,4 @@ android:
                 - android-26
 
 script:
-        - ./gradlew clean assembleDebug
+        - ./gradlew clean build
