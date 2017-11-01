@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 import java.util.Locale;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +26,12 @@ public class MainActivity extends AppCompatActivity {
                 BufferedReader reader = null, trans = null;
                 try {
                         reader = new BufferedReader(new InputStreamReader(getAssets().open("verbs.txt"), "UTF-8"));
-                        trans  = new BufferedReader(new InputStreamReader(getAssets().open(getResources().getConfiguration().locale.getDisplayLanguage(Locale.ENGLISH) + ".txt"), "UTF-8"));
+                        String translationPath = "English.txt";
+                        String localeLanguagePath = getResources().getConfiguration().locale.getDisplayLanguage(Locale.ENGLISH) + ".txt";
+                        if(Arrays.asList(getResources().getAssets().list("")).contains(localeLanguagePath))
+                                translationPath = localeLanguagePath; 
+                        trans  = new BufferedReader(new InputStreamReader(getAssets().open(translationPath), "UTF-8"));
+
                         Loader.CreateSingleton(reader, trans);
                         Questions.CreateSingleton(Loader.GetSingleton().mVerbs);
                 } catch (IOException e) {
