@@ -1,10 +1,10 @@
-backen backte/buk gebacken bäckt 0 
-beginnen begann begonnen beginnt 1 
-bieten bot geboten bietet 2 
-binden band gebunden bindet 3 
-bitten bat gebeten bittet 4 
-bleiben* blieb geblieben bleibt 5 
-brechen brach gebrochen bricht 6 
+backen backte/buk gebacken bäckt 0
+beginnen begann begonnen beginnt 1
+bieten bot geboten bietet 2
+binden band gebunden bindet 3
+bitten bat gebeten bittet 4
+bleiben* blieb geblieben bleibt 5
+brechen brach gebrochen bricht 6
 bringen brachte gebracht bringt 7 
 denken dachte gedacht denkt 8 
 dringen* drang gedrungen dringt 9 
@@ -94,6 +94,6 @@ wenden wandte/wendete gewandt/gewendet wendet 92
 werben warb geworben wirbt 93 
 werfen warf geworfen wirft 94 
 wissen wusste gewusst weiß 95 
-ziehen* zog gezogen zieht aller 96 
+ziehen* zog gezogen zieht 96 
 ziehen zog gezogen zieht 97 
 zwingen zwang gezwungen zwingt 98 

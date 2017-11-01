@@ -11,21 +11,23 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
-                
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
 
-                BufferedReader reader = null;
+                Settings.GetSingleton().SetResources(getResources());
+                
+                BufferedReader reader = null, trans = null;
                 try {
                         reader = new BufferedReader(new InputStreamReader(getAssets().open("verbs.txt"), "UTF-8"));
-                        Loader.CreateSingleton(reader);
+                        trans  = new BufferedReader(new InputStreamReader(getAssets().open(getResources().getConfiguration().locale.getDisplayLanguage(Locale.ENGLISH) + ".txt"), "UTF-8"));
+                        Loader.CreateSingleton(reader, trans);
                         Questions.CreateSingleton(Loader.GetSingleton().mVerbs);
-                        Settings.GetSingleton().SetResources(getResources());
-
                 } catch (IOException e) {
                         System.exit(0);
                 }
