@@ -15,8 +15,5 @@ In order to compile this application, make sure you have the Android SDK install
 
 [![Build Status](https://travis-ci.org/Sw24Softwares/StarkeVerben.svg?branch=master)](https://travis-ci.org/Sw24Softwares/StarkeVerben)
 
-## Contributing
-We are always happy to see people interested in our work. Therefore if you have found a missing feature or a bug, you can either open a pull request, or an issue. We do not have a specific coding rule, thus you can add your style to the submitted code.
-
 ## License
 This program is released under the GPL3 license. For further information, please read LICENSE file.
