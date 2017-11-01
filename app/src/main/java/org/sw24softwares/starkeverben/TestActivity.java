@@ -8,6 +8,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.view.inputmethod.InputMethodManager;
 
 import java.util.Date;
 
@@ -62,6 +64,19 @@ public class TestActivity extends AppCompatActivity {
 
                 final int total = getIntent().getExtras().getInt("total");
                 final int marks[] = getIntent().getExtras().getIntArray("marks");
+
+                
+                final RelativeLayout layout = (RelativeLayout) findViewById(R.id.test_layout);
+                layout.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v){
+                                if(getCurrentFocus()!=null) {
+                                    InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                                    inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+                                    layout.requestFocus();
+                                }
+                        }
+                });
 
                 Button button = (Button) findViewById(R.id.verify);
                 button.setOnClickListener(new View.OnClickListener() {

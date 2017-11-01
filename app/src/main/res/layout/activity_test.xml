@@ -2,67 +2,75 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:layout_gravity="center"
-    android:focusableInTouchMode="true">
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/test_layout"
+    android:clickable="true">
 
-
-    <EditText
-        android:layout_width="165dp"
-		android:layout_height="wrap_content"
-        android:id="@+id/infinitif"
-		android:inputType="textNoSuggestions"
-        android:textAlignment="center"/>
-
-    <EditText
-        android:layout_width="165dp"
+    <RelativeLayout
         android:layout_height="wrap_content"
-        android:id="@+id/preterit"
-		android:inputType="textNoSuggestions"
-        android:layout_below="@+id/infinitif"
-        android:textAlignment="center"/>
-
-    <EditText
-        android:layout_width="165dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/participe"
-		android:inputType="textNoSuggestions"
-        android:layout_below="@+id/preterit"
-        android:textAlignment="center"/>
-
-
-    <EditText
-        android:layout_width="165dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/traduction"
-	    android:inputType="text"
-        android:layout_below="@+id/troisieme_personne"
-        android:textAlignment="center"/>
-
-    <CheckBox
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/auxiliaire"
-        android:text="Sein"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/participe"/>
-
-    <EditText
-        android:layout_width="165dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/troisieme_personne"
-		android:inputType="textNoSuggestions"
-        android:layout_below="@id/auxiliaire"
-        android:textAlignment="center"/>
-
-    <Button
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/verify"
-        android:layout_below="@+id/traduction"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/verify"/>
+        android:focusableInTouchMode="true">
+
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/infinitif"
+            android:inputType="textNoSuggestions"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/preterit"
+            android:inputType="textNoSuggestions"
+            android:layout_below="@+id/infinitif"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/participe"
+            android:inputType="textNoSuggestions"
+            android:layout_below="@+id/preterit"
+            android:textAlignment="center"/>
+
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/traduction"
+            android:inputType="text"
+            android:layout_below="@+id/troisieme_personne"
+            android:textAlignment="center"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/auxiliaire"
+            android:text="Sein"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/participe"/>
+
+        <EditText
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/troisieme_personne"
+            android:inputType="textNoSuggestions"
+            android:layout_below="@id/auxiliaire"
+            android:textAlignment="center"/>
+
+        <Button
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/verify"
+            android:layout_below="@+id/traduction"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/verify"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>
