@@ -9,7 +9,7 @@
 8 gondol
 9 áthatol
 10 enni
-vezet/utazik autót
+11 vezet/autót_utazik
 12 esik
 13 fog
 14 talál
@@ -34,7 +34,7 @@ vezet/utazik autót
 33 hív/nevez
 34 segít
 35 ismer
-vhogyan hangzik
+36 vhogyan_hangzik
 37 jön
 38 rak/rakoik
 39 hagy/enged
@@ -43,7 +43,7 @@ vhogyan hangzik
 42 olvas
 43 fekszik
 44 hazudik
-vkit/vmit kerül
+45 vkit/kerül_vkit
 46 mér
 47 vesz
 48 nevez
@@ -53,7 +53,7 @@ vkit/vmit kerül
 52 lovagol/meglovagol
 53 hív
 54 teremt
-vmilyennek tűnik
+55 tűnik_vmilyennek 
 56 lő
 57 alszik
 58 üt
@@ -83,7 +83,7 @@ vmilyennek tűnik
 82 iszik
 83 tesz
 84 elfelejt
-vmit elveszít
+85 elveszít_vmit 
 86 elnyel/felemészt
 87 eltűnik
 88 nő
