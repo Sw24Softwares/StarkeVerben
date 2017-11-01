@@ -19,9 +19,9 @@
 
     <string name="infinitive">Infinitive</string>
     <string name="preterite">Preterite</string>
-    <string name="participe">Participe</string>
+    <string name="participe">Participle</string>
     <string name="third_person">3rd Person</string>
-    <string name="traduction">Traduction</string>
+    <string name="traduction">Translation</string>
     <string name="auxiliary">Auxiliary</string>
 
     <string name="search_hint">Search</string>
