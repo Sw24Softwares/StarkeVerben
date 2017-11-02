@@ -1,28 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Starke Verben</string>
 
     <string name="test">Test</string>
     <string name="progression">Progression</string>
-    <string name="lesson">Liste</string>
-    <string name="single_lesson">Leçon</string>
+    <string name="lesson">List</string>
+    <string name="single_lesson">Lesson</string>
 
-    <string name="finish">Terminer</string>
-    <string name="go_on">Continuer</string>
-    <string name="verify">Vérifier</string>
-    <string name="save">Enregistrer ?</string>
-    <string name="save_message">Enregistrer la note.</string>
-    <string name="yes">Oui</string>
-    <string name="no">Non</string>
+    <string name="finish">Finish</string>
+    <string name="go_on">Continue</string>
+    <string name="verify">Verify</string>
+    <string name="save">Save?</string>
+    <string name="save_message">Save the mark.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
-    <string name="at">à</string>
+    <string name="at">at</string>
 
-    <string name="infinitive">Infinitif</string>
-    <string name="preterite">Prétérit</string>
-    <string name="participe">Participe p.</string>
-    <string name="third_person">3e Personne</string>
-    <string name="traduction">Traduction</string>
-    <string name="auxiliary">Auxiliaire</string>
+    <string name="infinitive">Infinitive</string>
+    <string name="preterite">Preterite</string>
+    <string name="participe">Participle</string>
+    <string name="third_person">3rd Person</string>
+    <string name="traduction">Translation</string>
+    <string name="auxiliary">Auxiliary</string>
 
-    <string name="search_hint">Rechercher</string>
+    <string name="search_hint">Search</string>
     <string name="app_label">StarkeVerben</string>
 </resources>
