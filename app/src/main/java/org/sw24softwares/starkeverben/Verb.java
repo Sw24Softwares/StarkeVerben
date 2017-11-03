@@ -5,6 +5,8 @@ import java.util.Vector;
 class Verb {
         public Vector<Vector<String>> mForms = new Vector<Vector<String>>();
 
+        public Verb() {
+        }
         public Verb(String sentence) {
                 for(int i = 0; i < 6; i++) mForms.addElement(new Vector<String>());
                 
@@ -31,5 +33,10 @@ class Verb {
                 mForms.get(3).addElement(thirdPerson);
                 mForms.get(4).addElement(traduction);
                 mForms.get(5).addElement(auxiliary);
+        }
+        public Verb clone() {
+                Verb v = new Verb();
+                v.mForms = (Vector<Vector<String>>)mForms.clone();
+                return v;
         }
 }
