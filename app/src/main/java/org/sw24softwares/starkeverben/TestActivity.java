@@ -39,8 +39,6 @@ public class TestActivity extends AppCompatActivity {
 		
 		final long start = System.currentTimeMillis();
 
-		Questions.GetSingleton().mListOfUnusedVerbs = Questions.GetSingleton().mListOfVerbs;
-
                 final EditText infinitif = (EditText) findViewById(R.id.infinitif);
                 final EditText preterit = (EditText) findViewById(R.id.preterit);
                 final EditText participe = (EditText) findViewById(R.id.participe);

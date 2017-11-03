@@ -31,8 +31,8 @@ class Questions {
         public Vector<Verb> mListOfUnusedVerbs;
 
         public Questions(Vector<Verb> verbs) {
-                mListOfVerbs = verbs;
-                mListOfUnusedVerbs = verbs;
+                mListOfVerbs = (Vector<Verb>)verbs.clone();
+                mListOfUnusedVerbs = (Vector<Verb>)verbs.clone();
         }
         public Question AskQuestion(int i) {
                 Random rand = new Random();
