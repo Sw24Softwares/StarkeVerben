@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
 import java.util.Set;
+import java.util.Collections;
 
 import android.content.Intent;
 import android.content.Context;
@@ -21,7 +22,7 @@ public class LessonActivity extends AppCompatActivity {
         ExpandableListView expListView;
         List<String> listDataHeader;
         HashMap<String, List<String>> listDataChild;
- 
+        
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
@@ -63,7 +64,11 @@ public class LessonActivity extends AppCompatActivity {
                                 details.add(caseVerb);
                         }
                         if(contain || search_word == new String()) {
-                                listDataHeader.add(verbs.get(i).mForms.get(0).get(0));
+                                String suffix = "";
+                                int n = Collections.frequency(listDataHeader,verbs.get(i).mForms.get(0).get(0));
+                                if(n != 0)
+                                        suffix = " " + Integer.toString(n + 1);
+                                listDataHeader.add(verbs.get(i).mForms.get(0).get(0) + suffix);
                                 listDataChild.put(listDataHeader.get(listDataHeader.size()-1), details);
                         }
                 }

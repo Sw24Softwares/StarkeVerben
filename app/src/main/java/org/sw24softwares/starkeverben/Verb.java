@@ -26,14 +26,6 @@ class Verb {
                                 mForms.get(5).addElement("haben");
                 }
         }
-        public Verb (String infinitive, String preterite, String participle, String traduction, String thirdPerson, String auxiliary) {
-                mForms.get(0).addElement(infinitive);
-                mForms.get(1).addElement(preterite);
-                mForms.get(2).addElement(participle);
-                mForms.get(3).addElement(thirdPerson);
-                mForms.get(4).addElement(traduction);
-                mForms.get(5).addElement(auxiliary);
-        }
         public Verb clone() {
                 Verb v = new Verb();
                 v.mForms = (Vector<Vector<String>>)mForms.clone();
