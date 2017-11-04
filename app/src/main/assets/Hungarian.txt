@@ -1,4 +1,4 @@
-0 süt_(süteményt)
+0 süt(süteményt)
 1 kezd
 2 nyújt/felajánl/kínál
 3 köt/megköt
@@ -9,7 +9,7 @@
 8 gondol
 9 áthatol
 10 enni
-11 vezet/autót_utazik
+11 autót_vezet/utazik
 12 esik
 13 fog
 14 talál
@@ -36,14 +36,14 @@
 35 ismer
 36 vhogyan_hangzik
 37 jön
-38 rak/rakoik
+38 rak/rakodik
 39 hagy/enged
 40 fut
 41 kölcsönöz
 42 olvas
 43 fekszik
 44 hazudik
-45 vkit/kerül_vkit
+45 kerül_valakit
 46 mér
 47 vesz
 48 nevez
@@ -59,7 +59,7 @@
 58 üt
 59 zár
 60 dobál/hajít
-61 ír
+61 írni
 62 kiabál
 63 lép/lépked
 64 hallgat
@@ -69,7 +69,7 @@
 68 küld
 69 énekel
 70 ül
-71 beszl
+71 beszél
 72 ugrik
 73 áll
 74 emelkedik
