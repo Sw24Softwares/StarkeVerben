@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Starke Verben</string>
+
+    <string name="test">Test</string>
+    <string name="progression">Progres</string>
+    <string name="lesson">Listează</string>
+    <string name="single_lesson">Lecție</string>
+
+    <string name="finish">Termină</string>
+    <string name="go_on">Continuă</string>
+    <string name="verify">Verifică</string>
+    <string name="save">Salvează?</string>
+    <string name="save_message">Salvează semnul.</string>
+    <string name="yes">Da</string>
+    <string name="no">Nu</string>
+
+    <string name="at">la</string>
+
+    <string name="infinitive">Infinitiv</string>
+    <string name="preterite">Perfectul simplu</string>
+    <string name="participe">Participiu</string>
+    <string name="third_person">Persoana a treia</string>
+    <string name="traduction">Traducere</string>
+    <string name="auxiliary">Auxiliar</string>
+
+    <string name="search_hint">Caută</string>
+    <string name="app_label">StarkeVerben</string>
+</resources>
