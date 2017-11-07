@@ -6,125 +6,127 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/next_single_lesson"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="16dp">
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:paddingEnd="16dp"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:paddingStart="16dp"
-            android:stretchColumns="*">
+            android:paddingStart="16dp">
 
-            <TableRow
-                android:gravity="center_vertical"
-                android:paddingBottom="8dp">
+            <TextView
+                android:id="@+id/form_infinitif_single_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:gravity="start"
+                android:text="@string/infinitive"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/infinitif_single_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black" />
+
+
+            <TextView
+                android:id="@+id/form_preterit_single_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="4dp"
+                android:text="@string/preterite"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/preterit_single_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+
+            <TextView
+                android:id="@+id/form_participe_single_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="4dp"
+                android:text="@string/participe"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp">
 
                 <TextView
-                    android:id="@+id/form_infinitif_single_lesson"
-                    android:gravity="end"
-                    android:padding="4dp"
-                    android:text="@string/infinitive"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:id="@+id/infinitif_single_lesson"
-                    android:gravity="start"
-                    android:padding="8dp"
+                    android:id="@+id/auxiliary_single_lesson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/black" />
-            </TableRow>
-
-            <TableRow
-                android:gravity="center_vertical"
-                android:paddingBottom="8dp">
 
                 <TextView
-                    android:id="@+id/form_preterit_single_lesson"
-                    android:gravity="end"
-                    android:padding="4dp"
-                    android:text="@string/preterite"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:id="@+id/preterit_single_lesson"
-                    android:gravity="start"
-                    android:padding="8dp"
-                    android:textColor="@android:color/black"
-                    android:textSize="25sp" />
-            </TableRow>
-
-            <TableRow
-                android:gravity="center_vertical"
-                android:paddingBottom="8dp">
-
-                <TextView
-                    android:id="@+id/form_participe_single_lesson"
-                    android:gravity="end"
-                    android:padding="4dp"
-                    android:text="@string/participe"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <LinearLayout
-                    android:gravity="start"
-                    android:padding="8dp">
-
-                    <TextView
-                        android:id="@+id/auxiliary_single_lesson"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/black" />
-
-                    <TextView
-                        android:id="@+id/participe_single_lesson"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/black" />
-
-                </LinearLayout>
-            </TableRow>
-
-            <TableRow
-                android:gravity="center_vertical"
-                android:paddingBottom="8dp">
-
-                <TextView
-                    android:id="@+id/form_troisieme_personne_single_lesson"
-                    android:gravity="end"
-                    android:padding="4dp"
-                    android:text="@string/third_person"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:id="@+id/troisieme_personne_single_lesson"
-                    android:gravity="start"
-                    android:padding="8dp"
+                    android:id="@+id/participe_single_lesson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/black" />
-            </TableRow>
 
-            <TableRow
-                android:gravity="center_vertical"
-                android:paddingBottom="8dp">
+            </LinearLayout>
 
-                <TextView
-                    android:id="@+id/form_traduction_single_lesson"
-                    android:gravity="end"
-                    android:padding="4dp"
-                    android:text="@string/traduction"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:id="@+id/traduction_single_lesson"
-                    android:gravity="start"
-                    android:padding="8dp"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@android:color/black" />
-            </TableRow>
-        </TableLayout>
+            <TextView
+                android:id="@+id/form_troisieme_personne_single_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="4dp"
+                android:text="@string/third_person"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/troisieme_personne_single_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black" />
+
+
+            <TextView
+                android:id="@+id/form_traduction_single_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="4dp"
+                android:text="@string/traduction"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/traduction_single_lesson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
     </ScrollView>
 
     <Button
