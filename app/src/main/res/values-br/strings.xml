@@ -1,0 +1,30 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Starke Verben</string>
+
+    <string name="test">Teste</string>
+    <string name="progression">Progressão</string>
+    <string name="lesson">Listar</string>
+    <string name="single_lesson">Aula</string>
+
+    <string name="finish">Finalizar</string>
+    <string name="go_on">Continuar</string>
+    <string name="verify">Verificar</string>
+    <string name="save">Salvar?</string>
+    <string name="save_message">Salve o marcador.</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+
+    <string name="at">às</string>
+
+    <string name="infinitive">Infinitivo</string>
+    <string name="preterite">Pretérito</string>
+    <string name="participe">Particípio</string>
+    <string name="third_person">3a Pessoa</string>
+    <string name="traduction">Tradução</string>
+    <string name="auxiliary">Auxiliar</string>
+
+    <string name="search_hint">Buscar</string>
+    <string name="app_label">StarkeVerben</string>
+</resources>
