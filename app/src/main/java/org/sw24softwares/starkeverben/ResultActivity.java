@@ -121,7 +121,7 @@ public class ResultActivity extends AppCompatActivity {
                 String givenAnswers[] = getIntent().getExtras().getStringArray("givenAnswers");
                 int givenFormType = getIntent().getExtras().getInt("givenFormType");
 	
-		final String dialog = getIntent().getExtras().getString("dialog");		//String to see if the user has took more of 20 seconds to complete each test (outputs the dialog if not)
+		final Boolean dialog = getIntent().getExtras().getBoolean("dialog");		//String to see if the user has took more of 20 seconds to complete each test (outputs the dialog if not)
 
                 final int total = getIntent().getExtras().getInt("total");
                 int marks[] = getIntent().getExtras().getIntArray("marks");
@@ -145,7 +145,7 @@ public class ResultActivity extends AppCompatActivity {
                 arreter.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-					if(dialog.equals("true"))
+					if(dialog)
 						saveMarkDialog(mMarks);
 					else
 						saveMark(mMarks);

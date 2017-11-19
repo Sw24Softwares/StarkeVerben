@@ -59,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
                                 public void onClick(View view) {
                                         Intent intent = new Intent(MainActivity.this, TestActivity.class);
                                         intent.putExtra("total", 0);
-                                        intent.putExtra("marks",new int[0]);
+                                        intent.putExtra("marks", new int[0]);
+                                        intent.putExtra("dialog", false);
                                         startActivity(intent);
                                 }
                         });

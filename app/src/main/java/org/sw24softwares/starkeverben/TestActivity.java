@@ -76,7 +76,7 @@ public class TestActivity extends AppCompatActivity {
                 layout.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v){
-                                if(getCurrentFocus()!=null) {
+                                if(getCurrentFocus() != null) {
                                     InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
                                     inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
                                     layout.requestFocus();
@@ -89,15 +89,10 @@ public class TestActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(View view) {
                                         Intent intent = new Intent(TestActivity.this, ResultActivity.class);
-					
-					String time = getIntent().getExtras().getString("dialog");
-					if(time == null)
-						time = "false";
 
-					if(!testDuration(start) && time.equals("false"))
-						intent.putExtra("dialog", "false");
-					else
-						intent.putExtra("dialog", "true");
+                                        // Whether a test has taken more than 20 seconds to be done
+					Boolean time = getIntent().getExtras().getBoolean("dialog");
+                                        intent.putExtra("dialog", testDuration(start) || time);
 					
 					String givenAnswers[] = new String[6];
                                         givenAnswers[5] = Verb.boolToAux(aux.isChecked());
