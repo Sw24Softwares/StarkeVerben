@@ -25,19 +25,23 @@ public class SingleLessonActivity extends AppCompatActivity {
                 final TextView traduction = (TextView) findViewById(R.id.traduction_single_lesson);
                 final TextView aux = (TextView) findViewById(R.id.auxiliary_single_lesson);
 
-                Questions questions = Questions.GetSingleton();
                 Random rand = new Random();
-                Verb verb = questions.mListOfVerbs.get(rand.nextInt(questions.mListOfVerbs.size())).clone();
+                int verbNumber = rand.nextInt(Settings.getSingleton().getVerbs().size());
+                Verb verb = Settings.getSingleton().getVerbs().get(verbNumber);
 
-                if(verb.mForms.get(5).contains("sein"))	verb.mForms.set(5, new Vector(Arrays.asList("ist ")));
-                else                                verb.mForms.set(5, new Vector(Arrays.asList("hat ")));
+                String auxiliary;
                 
-                infinitif.setText(verb.mForms.get(0).get(0));
-                preterit.setText(verb.mForms.get(1).get(0));
-                participe.setText(verb.mForms.get(2).get(0));
-                troisiemePersonne.setText(verb.mForms.get(3).get(0));
-                traduction.setText(verb.mForms.get(4).get(0));
-                aux.setText(verb.mForms.get(5).get(0));
+                if(verb.getAuxiliary())
+                        auxiliary = "ist ";
+                else
+                        auxiliary = "hat ";
+                
+                infinitif.setText(verb.getAllForms().get(0).get(0));
+                preterit.setText(verb.getAllForms().get(1).get(0));
+                participe.setText(verb.getAllForms().get(2).get(0));
+                troisiemePersonne.setText(verb.getAllForms().get(3).get(0));
+                traduction.setText(Settings.getSingleton().getTranslations().get(verbNumber).getTranslations().get(0));
+                aux.setText(auxiliary);
 
                 Button next = (Button) findViewById(R.id.next_single_lesson);
                 next.setOnClickListener(new View.OnClickListener() {

@@ -7,12 +7,15 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
-import java.io.IOException;
+import android.content.res.Resources;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 import java.util.Locale;
 import java.util.Arrays;
+
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,22 +23,33 @@ public class MainActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
-
-                Settings.GetSingleton().SetResources(getResources());
                 
-                BufferedReader reader = null, trans = null;
+                BufferedReader verbs = null, trans = null;
                 try {
-                        reader = new BufferedReader(new InputStreamReader(getAssets().open("verbs.txt"), "UTF-8"));
+                        verbs = new BufferedReader(new InputStreamReader(getAssets().open("verbs.txt"), "UTF-8"));
                         String translationPath = "English.txt";
                         String localeLanguagePath = getResources().getConfiguration().locale.getDisplayLanguage(Locale.ENGLISH) + ".txt";
                         if(Arrays.asList(getResources().getAssets().list("")).contains(localeLanguagePath))
                                 translationPath = localeLanguagePath; 
-                        trans  = new BufferedReader(new InputStreamReader(getAssets().open(translationPath), "UTF-8"));
+                        trans = new BufferedReader(new InputStreamReader(getAssets().open(translationPath), "UTF-8"));
 
-                        Loader.CreateSingleton(reader, trans);
-                        Questions.CreateSingleton(Loader.GetSingleton().mVerbs);
-                } catch (IOException e) {
-                        System.exit(0);
+                        Resources res = getResources();
+                        Settings.getSingleton().setFormString(0,res.getString(R.string.infinitive));
+                        Settings.getSingleton().setFormString(1,res.getString(R.string.preterite));
+                        Settings.getSingleton().setFormString(2,res.getString(R.string.participe));
+                        Settings.getSingleton().setFormString(3,res.getString(R.string.third_person));
+                        Settings.getSingleton().setFormString(4,res.getString(R.string.traduction));
+                        Settings.getSingleton().setFormString(5,res.getString(R.string.auxiliary));
+                        
+                        VerbsLoader vl = new VerbsLoader();
+                        vl.load(verbs);
+                        TranslationLoader tl = new TranslationLoader();
+                        tl.load(trans);
+
+                        Settings.getSingleton().setVerbs(vl.getVerbs());
+                        Settings.getSingleton().setTranslations(tl.getTranslations());
+                } catch (Exception e) {
+                        Log.e("StarkeVerben", e.getMessage());
                 }
 
                 Button testButton = (Button) findViewById(R.id.test);

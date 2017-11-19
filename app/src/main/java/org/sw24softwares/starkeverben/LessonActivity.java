@@ -47,28 +47,39 @@ public class LessonActivity extends AppCompatActivity {
                 listDataHeader = new ArrayList<String>();
                 listDataChild = new HashMap<String, List<String>>();
 
-                Vector<Verb> verbs = Loader.GetSingleton().mVerbs;
+                Vector<Verb> verbs = Settings.getSingleton().getVerbs();
                 // Adding child data
                 for(int i = 0; i < verbs.size(); i++) {
                         Boolean contain = false;
                         List<String> details = new ArrayList<String>();
-                        for(int j = 0; j < verbs.get(i).mForms.size(); j++) {
-                                String caseVerb = Questions.FormToWord(j) + " : ";
-                                for(int k = 0; k < verbs.get(i).mForms.get(j).size(); k++) {
-                                        if(verbs.get(i).mForms.get(j).get(k).contains(search_word))
+                        for(int j = 0; j < verbs.get(i).getAllForms().size(); j++) {
+                                String caseVerb = Verb.formToWord(j) + " : ";
+                                for(int k = 0; k < verbs.get(i).getAllForms().get(j).size(); k++) {
+                                        if(verbs.get(i).getAllForms().get(j).get(k).contains(search_word))
                                                 contain = true;
-                                        caseVerb += verbs.get(i).mForms.get(j).get(k);
-                                        if(k < verbs.get(i).mForms.get(j).size() - 1)
+                                        caseVerb += verbs.get(i).getAllForms().get(j).get(k);
+                                        if(k < verbs.get(i).getAllForms().get(j).size() - 1)
                                                 caseVerb += ", ";
                                 }
                                 details.add(caseVerb);
                         }
+                        String caseVerb = Verb.formToWord(3) + " : " + Verb.boolToAux(verbs.get(i).getAuxiliary());
+                        details.add(caseVerb);
+                        caseVerb = Verb.formToWord(4) + " : ";
+                        for(int j = 0; j < Settings.getSingleton().getTranslations().get(i).getTranslations().size(); j++) {
+                                if(Settings.getSingleton().getTranslations().get(i).getTranslations().get(j).contains(search_word))
+                                        contain = true;
+                                caseVerb += Settings.getSingleton().getTranslations().get(i).getTranslations().get(j);
+                                if(j < Settings.getSingleton().getTranslations().get(i).getTranslations().size() - 1)
+                                        caseVerb += ", ";
+                        }
+                        details.add(caseVerb);
                         if(contain || search_word == new String()) {
                                 String suffix = "";
-                                int n = Collections.frequency(listDataHeader,verbs.get(i).mForms.get(0).get(0));
-                                if(n != 0)
-                                        suffix = " " + Integer.toString(n + 1);
-                                listDataHeader.add(verbs.get(i).mForms.get(0).get(0) + suffix);
+                                int n = Collections.frequency(listDataHeader,verbs.get(i).getAllForms().get(0).get(0));
+                                for(int j = 0; j < n; j++)
+                                        suffix += "\0";
+                                listDataHeader.add(verbs.get(i).getAllForms().get(0).get(0) + suffix);
                                 listDataChild.put(listDataHeader.get(listDataHeader.size()-1), details);
                         }
                 }

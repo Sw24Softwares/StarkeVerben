@@ -88,7 +88,9 @@ public class ResultActivity extends AppCompatActivity {
 
         protected void initTextView(TextView textView, String givenAnswer, Vector<String> answers, Boolean changeColor) {
                 Boolean right = false;
-                if(Question.Answer(answers, givenAnswer))
+                for(int i = 0; i < answers.size(); i++)
+                        answers.set(i, Verb.standardize(answers.get(i)));
+                if(answers.contains(Verb.standardize(givenAnswer)))
                         right = true;
                 textView.setText(answers.get(0));
                 if(right && changeColor) {
@@ -103,7 +105,6 @@ public class ResultActivity extends AppCompatActivity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_result);
 
-
                 final TextView infinitif = (TextView) findViewById(R.id.infinitif_result);
                 final TextView preterit = (TextView) findViewById(R.id.preterit_result);
                 final TextView participe = (TextView) findViewById(R.id.participe_result);
@@ -115,7 +116,7 @@ public class ResultActivity extends AppCompatActivity {
 
                 Vector<Vector<String>> answers = new Vector<Vector<String>>();
                 for(int i = 0; i < 6; i++)
-                        answers.addElement(new Vector(Arrays.asList(getIntent().getExtras().getStringArray(Questions.FormToWord(i)))));
+                        answers.addElement(new Vector(Arrays.asList(getIntent().getExtras().getStringArray(Verb.formToWord(i)))));
 
                 String givenAnswers[] = getIntent().getExtras().getStringArray("givenAnswers");
                 int givenFormType = getIntent().getExtras().getInt("givenFormType");
@@ -127,16 +128,16 @@ public class ResultActivity extends AppCompatActivity {
                 mMarks = Arrays.copyOf(marks, marks.length +1);
 
                 if(givenAnswers[5].equals("sein"))	givenAnswers[5] = "ist";
-                else                                givenAnswers[5] = "hat";
+                else                                    givenAnswers[5] = "hat";
                 if(answers.get(5).contains("sein"))	answers.set(5, new Vector(Arrays.asList("ist")));
-                else                                answers.set(5, new Vector(Arrays.asList("hat")));
+                else                                    answers.set(5, new Vector(Arrays.asList("hat")));
 
-                initTextView(infinitif, givenAnswers[0], answers.get(0), givenFormType != 0);
-                initTextView(preterit, givenAnswers[1], answers.get(1), givenFormType != 1);
-                initTextView(participe, givenAnswers[2], answers.get(2), givenFormType != 2);
-                initTextView(troisiemePersonne, givenAnswers[3], answers.get(3), givenFormType != 3);
-                initTextView(traduction, givenAnswers[4], answers.get(4), givenFormType != 4);
-                initTextView(aux, givenAnswers[5], answers.get(5), givenFormType != 5);
+                initTextView(infinitif, givenAnswers[0], (Vector<String>)answers.get(0).clone(), givenFormType != 0);
+                initTextView(preterit, givenAnswers[1], (Vector<String>)answers.get(1).clone(), givenFormType != 1);
+                initTextView(participe, givenAnswers[2], (Vector<String>)answers.get(2).clone(), givenFormType != 2);
+                initTextView(troisiemePersonne, givenAnswers[3], (Vector<String>)answers.get(3).clone(), givenFormType != 3);
+                initTextView(traduction, givenAnswers[4], (Vector<String>)answers.get(4).clone(), givenFormType != 4);
+                initTextView(aux, givenAnswers[5], (Vector<String>)answers.get(5).clone(), givenFormType != 5);
 
                 Button arreter = (Button) findViewById(R.id.arreter);
                 Button continuer = (Button) findViewById(R.id.continuer);
