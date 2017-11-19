@@ -14,6 +14,7 @@ import android.view.inputmethod.InputMethodManager;
 import java.util.Date;
 import java.util.Random;
 import java.util.Arrays;
+import java.util.Vector;
 
 import static android.R.color.black;
 
@@ -44,31 +45,29 @@ public class TestActivity extends AppCompatActivity {
 		
 		final long start = System.currentTimeMillis();
 
-                final EditText infinitif = (EditText) findViewById(R.id.infinitif);
-                final EditText preterit = (EditText) findViewById(R.id.preterit);
-                final EditText participe = (EditText) findViewById(R.id.participe);
-                final EditText troisiemePersonne = (EditText) findViewById(R.id.troisieme_personne);
-                final EditText traduction = (EditText) findViewById(R.id.traduction);
-                final CheckBox aux = (CheckBox) findViewById(R.id.auxiliaire);
-
-                infinitif.setHint(Verb.formToWord(0));
-                preterit.setHint(Verb.formToWord(1));
-                participe.setHint(Verb.formToWord(2));
-                troisiemePersonne.setHint(Verb.formToWord(3));
-                traduction.setHint(Verb.formToWord(4));
-
+                final Vector<EditText> editForms = new Vector<EditText>();
+                editForms.addElement((EditText) findViewById(R.id.infinitif));
+                editForms.addElement((EditText) findViewById(R.id.preterit));
+                editForms.addElement((EditText) findViewById(R.id.participe));
+                editForms.addElement((EditText) findViewById(R.id.third_person));
+                editForms.addElement((EditText) findViewById(R.id.translation));
+                final CheckBox aux = (CheckBox) findViewById(R.id.auxiliary);
+                
+                for(int i = 0; i < editForms.size(); i++)
+                        editForms.get(i).setHint(Verb.formToWord(i));
                 
                 Random rand = new Random();
                 mGivenVerb = rand.nextInt(Settings.getSingleton().getVerbs().size());
                 mVerb = Settings.getSingleton().getVerbs().get(mGivenVerb);
                 mFormType = rand.nextInt(5);
                 mPossibility = rand.nextInt(mVerb.getAllForms().get(mFormType).size());
-                
-                if(mFormType == 0) fillEditText(infinitif,         mVerb.getAllForms().get(mFormType).get(mPossibility));
-                if(mFormType == 1) fillEditText(preterit,          mVerb.getAllForms().get(mFormType).get(mPossibility));
-                if(mFormType == 2) fillEditText(participe,         mVerb.getAllForms().get(mFormType).get(mPossibility));
-                if(mFormType == 3) fillEditText(troisiemePersonne, mVerb.getAllForms().get(mFormType).get(mPossibility));
-                if(mFormType == 4) fillEditText(traduction,        Settings.getSingleton().getTranslations().get(mGivenVerb).getTranslations().get(mPossibility));
+
+
+                for(int i = 0; i < 4; i++)
+                        if(mFormType == i)
+                                fillEditText(editForms.get(i), mVerb.getAllForms().get(mFormType).get(mPossibility));
+                if(mFormType == 4)
+                        fillEditText(editForms.get(4), Settings.getSingleton().getTranslations().get(mGivenVerb).getTranslations().get(mPossibility));
 
                 final int total = getIntent().getExtras().getInt("total");
                 final int marks[] = getIntent().getExtras().getIntArray("marks");
@@ -101,12 +100,9 @@ public class TestActivity extends AppCompatActivity {
 						intent.putExtra("dialog", "true");
 					
 					String givenAnswers[] = new String[6];
-                                        givenAnswers[0] = infinitif.getText().toString();
-                                        givenAnswers[1] = preterit.getText().toString();
-                                        givenAnswers[2] = participe.getText().toString();
-                                        givenAnswers[3] = troisiemePersonne.getText().toString();
-                                        givenAnswers[4] = traduction.getText().toString();
                                         givenAnswers[5] = Verb.boolToAux(aux.isChecked());
+                                        for(int i = 0; i < editForms.size(); i++)
+                                                givenAnswers[i] = editForms.get(i).getText().toString();
 
                                         intent.putExtra("givenAnswers", givenAnswers);
 

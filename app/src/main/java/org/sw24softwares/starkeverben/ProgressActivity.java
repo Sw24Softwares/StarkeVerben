@@ -42,9 +42,8 @@ public class ProgressActivity extends AppCompatActivity {
                        mListDataHeader.add(data.getString(1));
                        List<String> details = new ArrayList<String>();
                        String results[] = data.getString(2).split(" ");
-                       for(int i = 0; i < results.length; i++) {
+                       for(int i = 0; i < results.length; i++)
                                details.add(results[i] + " / 5");
-                       }
                        mListDataChild.put(mListDataHeader.get(mListDataHeader.size()-1), details);
                 }
 
