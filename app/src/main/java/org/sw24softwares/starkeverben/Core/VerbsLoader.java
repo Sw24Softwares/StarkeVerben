@@ -47,7 +47,8 @@ class VerbsLoader extends Loader {
                 String line;
                 while((line = reader.readLine()) != null) {
                         line = cleanLine(line);
-                        checkLineFormat(line);
+                        if (Settings.getSingleton().isDebug())
+                                checkLineFormat(line);
                         mVerbs.addElement(buildVerb(line));
                 }
                 return true;

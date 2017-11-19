@@ -7,6 +7,8 @@ class Settings {
         protected Vector<Verb> mVerbs;
 
         protected String[] mFormStrings = new String[6];
+
+        protected Boolean mDebug = false;
         
         public Settings() {
         }
@@ -20,7 +22,10 @@ class Settings {
         }
         public void setFormString(int i, String s) {
                 mFormStrings[i] = s;
-       }
+        }
+        public void setDebug(Boolean d) {
+                mDebug = d;
+        }
 
         // Getters
         public Vector<Translation> getTranslations() {
@@ -43,6 +48,9 @@ class Settings {
         }
         public String getFormString(int i) {
                 return mFormStrings[i];
+        }
+        public Boolean isDebug() {
+                return mDebug;
         }
         
         static private Settings mSingleton = new Settings();

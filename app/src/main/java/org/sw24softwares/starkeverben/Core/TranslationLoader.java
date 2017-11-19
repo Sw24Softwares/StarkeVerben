@@ -35,7 +35,8 @@ class TranslationLoader extends Loader {
                 String line;
                 while((line = reader.readLine()) != null) {
                         line = cleanLine(line);
-                        checkLineFormat(line);
+                        if (Settings.getSingleton().isDebug())                        
+                                checkLineFormat(line);
                         mTranslations.addElement(buildTranslation(line));
                 }
                 return true;

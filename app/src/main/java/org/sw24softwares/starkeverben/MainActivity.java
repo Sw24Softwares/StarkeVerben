@@ -23,9 +23,10 @@ public class MainActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
-                
-                BufferedReader verbs = null, trans = null;
+
+                Settings.getSingleton().setDebug(BuildConfig.DEBUG);
                 try {
+                        BufferedReader verbs = null, trans = null;
                         verbs = new BufferedReader(new InputStreamReader(getAssets().open("verbs.txt"), "UTF-8"));
                         String translationPath = "English.txt";
                         String localeLanguagePath = getResources().getConfiguration().locale.getDisplayLanguage(Locale.ENGLISH) + ".txt";
