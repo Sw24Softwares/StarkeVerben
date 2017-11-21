@@ -36,6 +36,7 @@ public class ResultActivity extends AppCompatActivity {
                 alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.no),
                 new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                                ResultActivity.this.finish();
                                 Intent intent = new Intent(ResultActivity.this, MainActivity.class);
                                 startActivity(intent);
                         }
@@ -129,6 +130,7 @@ public class ResultActivity extends AppCompatActivity {
                 go_on.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
+                                        ResultActivity.this.finish();
                                         Intent intent = new Intent(ResultActivity.this, TestActivity.class);
                                         intent.putExtra("total", getIntent().getExtras().getInt("total") + 1);
                                         intent.putExtra("marks", mMarks);

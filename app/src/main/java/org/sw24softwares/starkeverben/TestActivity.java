@@ -88,6 +88,7 @@ public class TestActivity extends AppCompatActivity {
                 button.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
+                                        TestActivity.this.finish();
                                         Intent intent = new Intent(TestActivity.this, ResultActivity.class);
 
                                         // Whether a test has taken more than 20 seconds to be done
