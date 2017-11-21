@@ -60,14 +60,17 @@ public class TestActivity extends AppCompatActivity {
                 mGivenVerb = rand.nextInt(Settings.getSingleton().getVerbs().size());
                 mVerb = Settings.getSingleton().getVerbs().get(mGivenVerb);
                 mFormType = rand.nextInt(5);
-                mPossibility = rand.nextInt(mVerb.getAllForms().get(mFormType).size());
-
-
-                for(int i = 0; i < 4; i++)
-                        if(mFormType == i)
+                
+                for(int i = 0; i < 4; i++) {
+                        if(mFormType == i) {
+                                mPossibility = rand.nextInt(mVerb.getAllForms().get(mFormType).size());
                                 fillEditText(editForms.get(i), mVerb.getAllForms().get(mFormType).get(mPossibility));
-                if(mFormType == 4)
+                        }
+                }
+                if(mFormType == 4) {
+                        mPossibility = rand.nextInt(Settings.getSingleton().getTranslations().get(mGivenVerb).getTranslations().size());
                         fillEditText(editForms.get(4), Settings.getSingleton().getTranslations().get(mGivenVerb).getTranslations().get(mPossibility));
+                }
 
                 final int total = getIntent().getExtras().getInt("total");
                 final int marks[] = getIntent().getExtras().getIntArray("marks");
