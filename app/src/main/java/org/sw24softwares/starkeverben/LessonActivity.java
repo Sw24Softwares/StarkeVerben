@@ -63,7 +63,7 @@ public class LessonActivity extends AppCompatActivity {
                                 }
                                 details.add(caseVerb);
                         }
-                        String caseVerb = Verb.formToWord(3) + " : " + Verb.boolToAux(verbs.get(i).getAuxiliary());
+                        String caseVerb = Verb.formToWord(5) + " : " + Verb.boolToAux(verbs.get(i).getAuxiliary());
                         details.add(caseVerb);
                         caseVerb = Verb.formToWord(4) + " : ";
                         for(int j = 0; j < Settings.getSingleton().getTranslations().get(i).getTranslations().size(); j++) {
