@@ -42,6 +42,7 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                 chart.setMaxHighlightDistance(300);
                 chart.setPinchZoom(true);
                 chart.getLegend().setEnabled(false);
+                chart.animateY(1050);
         
                 XAxis x = chart.getXAxis();
                 x.setEnabled(true);
@@ -71,6 +72,7 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                 dataSet.setDrawValues(false);
                 dataSet.setValueTextSize(12f);
                 dataSet.setHighlightEnabled(false);
+                //dataSet.setColors(int [] { R.color.colorPrimary }, this);
                 LineData lineData = new LineData(dataSet);
                 chart.setData(lineData);
                 chart.invalidate();
