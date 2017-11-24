@@ -76,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 progressButton.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
-                                        Intent intent = new Intent(MainActivity.this, ProgressActivity.class);
+                                        Intent intent = new Intent(MainActivity.this, ProgressGraphsActivity.class);
+                                        //Intent intent = new Intent(MainActivity.this, ProgressActivity.class);
                                         startActivity(intent);
                                 }
                         });
