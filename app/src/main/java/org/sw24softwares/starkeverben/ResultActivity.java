@@ -37,8 +37,6 @@ public class ResultActivity extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                                 ResultActivity.this.finish();
-                                Intent intent = new Intent(ResultActivity.this, MainActivity.class);
-                                startActivity(intent);
                         }
                 });
                 alertDialog.show();
@@ -54,17 +52,15 @@ public class ResultActivity extends AppCompatActivity {
 		}
 
 		totalPercent = Math.round(totalPercent * 100 / (mMarks.length * 5));
-		int onTwenty = Math.round(totalPercent * 2 / 10);
 
 		ContentValues contentValues = new ContentValues();
-		contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy '" + getString(R.string.at) + "' HH:mm : '" + String.valueOf(totalPercent) + "% - (" + onTwenty + "/20)'").format(new Date()));
+		contentValues.put(DatabaseHelper.COLUMN_1, new SimpleDateFormat("dd/MM/yyyy HH:mm " + String.valueOf(totalPercent)).format(new Date()));
 		contentValues.put(DatabaseHelper.COLUMN_2, marks);
 
                 DatabaseHelper databaseHelper = new DatabaseHelper(this);
 		databaseHelper.addData(contentValues);
 
-                Intent intent = new Intent(ResultActivity.this, MainActivity.class);
-		startActivity(intent);
+                ResultActivity.this.finish();
         }
 
         protected void initTextView(TextView textView, String givenAnswer, Vector<String> answers, Boolean changeColor) {

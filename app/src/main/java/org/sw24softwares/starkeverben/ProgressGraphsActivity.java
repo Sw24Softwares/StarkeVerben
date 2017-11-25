@@ -49,6 +49,7 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                 x.setPosition(XAxis.XAxisPosition.BOTTOM);
                 x.setDrawGridLines(false);
                 x.setValueFormatter(new XAxisValueFormatter(mDates.toArray(new String[0])));
+                x.setGranularity(1f);
 
                 YAxis yLeft = chart.getAxisLeft();
                 yLeft.setEnabled(true);
@@ -57,34 +58,37 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                 yLeft.setDrawGridLines(true);
                 yLeft.enableGridDashedLine(5f, 10f, 0f);
                 yLeft.setXOffset(15);
+                yLeft.setAxisMinimum(0f);
+                yLeft.setAxisMaximum(100f);
                 
                 chart.getAxisRight().setEnabled(false);
 
-                List<Entry> entries = new ArrayList<>();
-                for (int i = 0; i < mScores.size(); i++)
-                        entries.add(new Entry(i, mScores.get(i)));
-                
-                LineDataSet dataSet = new LineDataSet(entries, "Scores");
-                dataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
-                dataSet.setCubicIntensity(0.2f);
-                dataSet.setDrawCircles(false);
-                dataSet.setLineWidth(2f);
-                dataSet.setDrawValues(false);
-                dataSet.setValueTextSize(12f);
-                dataSet.setHighlightEnabled(false);
-                //dataSet.setColors(int [] { R.color.colorPrimary }, this);
-                LineData lineData = new LineData(dataSet);
-                chart.setData(lineData);
-                chart.invalidate();
+                if (!mScores.isEmpty()) {
+                        List<Entry> entries = new ArrayList<>();
+                        for (int i = 0; i < mScores.size(); i++)
+                                entries.add(new Entry(i, mScores.get(i)));
+                        
+                        LineDataSet dataSet = new LineDataSet(entries, "Scores");
+                        dataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+                        dataSet.setCubicIntensity(0.2f);
+                        dataSet.setDrawCircles(false);
+                        dataSet.setLineWidth(2f);
+                        dataSet.setDrawValues(false);
+                        dataSet.setValueTextSize(12f);
+                        dataSet.setHighlightEnabled(false);
+                        //dataSet.setColors(int [] { R.color.colorPrimary }, this);
+                        LineData lineData = new LineData(dataSet);
+                        chart.setData(lineData);
+                        chart.invalidate();
+                }
         }
         private void parseData() {
                 Cursor data = mDatabaseHelper.getListContents();
                 for(int i = 0; data.moveToNext(); i++){
                         String parts [] = data.getString(1).split(" ");
-                        String s = parts[parts.length-1].split("/")[0].replace("(","");
 
-                        mDates.addElement(parts[0].split("/")[0] + "/" + parts[0].split("/")[1]);
-                        mScores.addElement(Integer.parseInt(s));
+                        mDates.addElement(parts[0] + " : " + parts[1]);
+                        mScores.addElement(Integer.parseInt(parts[2]));
                 }
         }
 }

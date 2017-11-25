@@ -13,6 +13,8 @@ public class XAxisValueFormatter implements IAxisValueFormatter {
         
         @Override
         public String getFormattedValue(float value, AxisBase axis) {
-                return mValues[(int) value];
+                if(mValues.length > (int)value && (int)value >= 0)
+                        return mValues[(int) value];
+                return "";
         }
 }
