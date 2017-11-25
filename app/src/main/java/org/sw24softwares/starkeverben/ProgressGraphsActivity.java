@@ -1,6 +1,7 @@
 package org.sw24softwares.starkeverben;
 
 import android.support.v7.app.AppCompatActivity;
+import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -29,41 +30,43 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_progress_graph);
 
+                int colorPrimary = ContextCompat.getColor(this, R.color.colorPrimary);
+
                 mDatabaseHelper = new DatabaseHelper(this);
                 parseData();
                 
-                LineChart chart = (LineChart) findViewById(R.id.chart);
-                Description desc = new Description();
-                desc.setText("Scores");
-                chart.setDescription(desc);
-                chart.setDrawGridBackground(false);
-                chart.setTouchEnabled(true);
-                chart.setDragEnabled(true);
-                chart.setMaxHighlightDistance(300);
-                chart.setPinchZoom(true);
-                chart.getLegend().setEnabled(false);
-                chart.animateY(1050);
-        
-                XAxis x = chart.getXAxis();
-                x.setEnabled(true);
-                x.setPosition(XAxis.XAxisPosition.BOTTOM);
-                x.setDrawGridLines(false);
-                x.setValueFormatter(new XAxisValueFormatter(mDates.toArray(new String[0])));
-                x.setGranularity(1f);
-
-                YAxis yLeft = chart.getAxisLeft();
-                yLeft.setEnabled(true);
-                yLeft.setPosition(YAxis.YAxisLabelPosition.OUTSIDE_CHART);
-                yLeft.setDrawAxisLine(false);
-                yLeft.setDrawGridLines(true);
-                yLeft.enableGridDashedLine(5f, 10f, 0f);
-                yLeft.setXOffset(15);
-                yLeft.setAxisMinimum(0f);
-                yLeft.setAxisMaximum(100f);
-                
-                chart.getAxisRight().setEnabled(false);
-
                 if (!mScores.isEmpty()) {
+                        LineChart chart = (LineChart) findViewById(R.id.chart);
+                        Description desc = new Description();
+                        desc.setText("Scores");
+                        chart.setDescription(desc);
+                        chart.setDrawGridBackground(false);
+                        chart.setTouchEnabled(true);
+                        chart.setDragEnabled(true);
+                        chart.setMaxHighlightDistance(300);
+                        chart.setPinchZoom(true);
+                        chart.getLegend().setEnabled(false);
+                        chart.animateY(1050);
+                
+                        XAxis x = chart.getXAxis();
+                        x.setEnabled(true);
+                        x.setPosition(XAxis.XAxisPosition.BOTTOM);
+                        x.setDrawGridLines(false);
+                        x.setValueFormatter(new XAxisValueFormatter(mDates.toArray(new String[0])));
+                        x.setGranularity(1f);
+
+                        YAxis yLeft = chart.getAxisLeft();
+                        yLeft.setEnabled(true);
+                        yLeft.setPosition(YAxis.YAxisLabelPosition.OUTSIDE_CHART);
+                        yLeft.setDrawAxisLine(false);
+                        yLeft.setDrawGridLines(true);
+                        yLeft.enableGridDashedLine(5f, 10f, 0f);
+                        yLeft.setXOffset(15);
+                        yLeft.setAxisMinimum(0f);
+                        yLeft.setAxisMaximum(100f);
+                        
+                        chart.getAxisRight().setEnabled(false);
+
                         List<Entry> entries = new ArrayList<>();
                         for (int i = 0; i < mScores.size(); i++)
                                 entries.add(new Entry(i, mScores.get(i)));
@@ -76,7 +79,7 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                         dataSet.setDrawValues(false);
                         dataSet.setValueTextSize(12f);
                         dataSet.setHighlightEnabled(false);
-                        //dataSet.setColors(int [] { R.color.colorPrimary }, this);
+                        dataSet.setColors(colorPrimary);
                         LineData lineData = new LineData(dataSet);
                         chart.setData(lineData);
                         chart.invalidate();
