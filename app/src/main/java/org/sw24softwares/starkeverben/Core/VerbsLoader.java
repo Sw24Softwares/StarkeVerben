@@ -22,9 +22,9 @@ class VerbsLoader extends Loader {
                         throw new Exception("Last part is not a number in checkLineFormat() for line = " + line);
 
                 // Check four first parts contains only letters * / _ ( ) '
-                for(int i = 0; i < parts.length -1; i++)
+                /*for(int i = 0; i < parts.length -1; i++)
                         if(!parts[i].matches("[\\p{L}\\*\\/\\_\\)\\(\\']+"))
-                                throw new Exception("Word containing non accepted characters in checkLineFormat() for line = " + line + ", word " + parts[i]);
+                                throw new Exception("Word containing non accepted characters in checkLineFormat() for line = " + line + ", word " + parts[i]);*/
                 return true;
         }
 

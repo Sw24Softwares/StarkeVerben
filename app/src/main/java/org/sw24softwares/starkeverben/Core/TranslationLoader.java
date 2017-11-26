@@ -22,8 +22,8 @@ class TranslationLoader extends Loader {
                         throw new Exception("Last part is not a number in checkLineFormat() for line = " + line);
 
                 // Check four first parts contains only letters * / _ ( ) '
-                if(!parts[1].matches("[-\\p{L}\\*\\/\\_\\)\\(\\']+"))
-                        throw new Exception("Word containing non accepted characters in checkLineFormat() for line = " + line + ", word " + parts[1]);
+                /*if(!parts[1].matches("[\\-\\p{L}\\*\\/\\_\\)\\(']+"))
+                        throw new Exception("Word containing non accepted characters in checkLineFormat() for line = " + line + ", word " + parts[1]);*/
                 return true;
         }
         public Translation buildTranslation(String line) {
@@ -36,7 +36,7 @@ class TranslationLoader extends Loader {
                 while((line = reader.readLine()) != null) {
                         line = cleanLine(line);
                         if (Settings.getSingleton().isDebug())                        
-                                checkLineFormat(line);
+                                                 checkLineFormat(line);
                         mTranslations.addElement(buildTranslation(line));
                 }
                 return true;

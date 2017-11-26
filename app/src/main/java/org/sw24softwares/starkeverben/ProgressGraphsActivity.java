@@ -64,6 +64,7 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                         yLeft.setXOffset(15);
                         yLeft.setAxisMinimum(0f);
                         yLeft.setAxisMaximum(100f);
+                        yLeft.setGranularityEnabled(true);
                         
                         chart.getAxisRight().setEnabled(false);
 
