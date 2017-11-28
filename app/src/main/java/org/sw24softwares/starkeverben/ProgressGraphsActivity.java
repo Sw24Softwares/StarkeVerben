@@ -19,6 +19,7 @@ import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import org.sw24softwares.starkeverben.XYMarkerView;
 
 public class ProgressGraphsActivity extends AppCompatActivity {
         private DatabaseHelper mDatabaseHelper;
@@ -47,12 +48,15 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                         chart.setPinchZoom(true);
                         chart.getLegend().setEnabled(false);
                         chart.animateY(1050);
+                        XYMarkerView mv = new XYMarkerView(this, new XAxisValueFormatter(mDates.toArray(new String[0])));
+                        mv.setChartView(chart);
+                        chart.setMarker(mv);
                 
                         XAxis x = chart.getXAxis();
                         x.setEnabled(true);
                         x.setPosition(XAxis.XAxisPosition.BOTTOM);
                         x.setDrawGridLines(false);
-                        x.setValueFormatter(new XAxisValueFormatter(mDates.toArray(new String[0])));
+                        x.setDrawLabels(false);
                         x.setGranularity(1f);
 
                         YAxis yLeft = chart.getAxisLeft();
@@ -79,7 +83,7 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                         dataSet.setLineWidth(2f);
                         dataSet.setDrawValues(false);
                         dataSet.setValueTextSize(12f);
-                        dataSet.setHighlightEnabled(false);
+                        dataSet.setHighlightEnabled(true);
                         dataSet.setColors(colorPrimary);
                         LineData lineData = new LineData(dataSet);
                         chart.setData(lineData);
