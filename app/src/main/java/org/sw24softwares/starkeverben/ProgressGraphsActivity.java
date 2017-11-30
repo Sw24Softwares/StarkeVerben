@@ -45,7 +45,8 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                         chart.setTouchEnabled(true);
                         chart.setDragEnabled(true);
                         chart.setMaxHighlightDistance(300);
-                        chart.setPinchZoom(true);
+                        chart.setPinchZoom(false);
+                        chart.setDoubleTapToZoomEnabled(false);
                         chart.getLegend().setEnabled(false);
                         chart.animateY(1050);
                         XYMarkerView mv = new XYMarkerView(this, new XAxisValueFormatter(mDates.toArray(new String[0])));
@@ -87,7 +88,8 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                         dataSet.setColors(colorPrimary);
                         LineData lineData = new LineData(dataSet);
                         chart.setData(lineData);
-                        chart.invalidate();
+                        chart.setVisibleXRangeMaximum(60);
+                        chart.moveViewToX(mDates.size());
                 }
         }
         private void parseData() {
