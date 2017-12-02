@@ -1,6 +1,7 @@
 package org.sw24softwares.starkeverben;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -9,8 +10,11 @@ import java.util.List;
 
 import android.database.Cursor;
 import android.widget.ExpandableListView;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.LayoutInflater;
 
-public class ProgressActivity extends AppCompatActivity {
+public class ProgressActivity extends Fragment {
         ExpandableListAdapter mListAdapter;
         ExpandableListView mExpListView;
         List<String> mListDataHeader;
@@ -18,17 +22,20 @@ public class ProgressActivity extends AppCompatActivity {
         DatabaseHelper mDatabaseHelper;
 
         @Override
-        protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_progress);
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+                View view = inflater.inflate(R.layout.activity_progress, container, false);
 
-                mDatabaseHelper = new DatabaseHelper(this);
+                Context context = getActivity();
 
-                mExpListView = (ExpandableListView) findViewById(R.id.progress_list);
+                mDatabaseHelper = new DatabaseHelper(context);
+
+                mExpListView = (ExpandableListView) view.findViewById(R.id.progress_list);
                 prepareListData();
                 
-                mListAdapter = new ExpandableListAdapter(this, mListDataHeader, mListDataChild);
+                mListAdapter = new ExpandableListAdapter(context, mListDataHeader, mListDataChild);
                 mExpListView.setAdapter(mListAdapter);
+                
+                return view;
         }
         private void prepareListData() {
                 mListDataHeader = new ArrayList<String>();

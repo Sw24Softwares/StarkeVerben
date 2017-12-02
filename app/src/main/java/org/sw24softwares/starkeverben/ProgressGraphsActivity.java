@@ -1,7 +1,8 @@
 package org.sw24softwares.starkeverben;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
+import android.content.Context;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -11,6 +12,9 @@ import java.util.Vector;
 
 import android.database.Cursor;
 import android.widget.ExpandableListView;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.LayoutInflater;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -21,23 +25,24 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import org.sw24softwares.starkeverben.XYMarkerView;
 
-public class ProgressGraphsActivity extends AppCompatActivity {
+public class ProgressGraphsActivity extends Fragment {
         private DatabaseHelper mDatabaseHelper;
         private Vector<String> mDates = new Vector<String>();
         private Vector<Integer> mScores = new Vector<Integer>();
 
         @Override
-        protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_progress_graph);
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+                View view = inflater.inflate(R.layout.activity_progress_graph, container, false);
 
-                int colorPrimary = ContextCompat.getColor(this, R.color.colorPrimary);
+                Context context = getActivity();
 
-                mDatabaseHelper = new DatabaseHelper(this);
+                int colorPrimary = ContextCompat.getColor(context, R.color.colorPrimary);
+
+                mDatabaseHelper = new DatabaseHelper(context);
                 parseData();
                 
                 if (!mScores.isEmpty()) {
-                        LineChart chart = (LineChart) findViewById(R.id.chart);
+                        LineChart chart = (LineChart) view.findViewById(R.id.chart);
                         Description desc = new Description();
                         desc.setText("Scores");
                         chart.setDescription(desc);
@@ -49,7 +54,7 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                         chart.setDoubleTapToZoomEnabled(false);
                         chart.getLegend().setEnabled(false);
                         chart.animateY(1050);
-                        XYMarkerView mv = new XYMarkerView(this, new XAxisValueFormatter(mDates.toArray(new String[0])));
+                        XYMarkerView mv = new XYMarkerView(context, new XAxisValueFormatter(mDates.toArray(new String[0])));
                         mv.setChartView(chart);
                         chart.setMarker(mv);
                 
@@ -91,6 +96,8 @@ public class ProgressGraphsActivity extends AppCompatActivity {
                         chart.setVisibleXRangeMaximum(60);
                         chart.moveViewToX(mDates.size());
                 }
+                
+                return view;
         }
         private void parseData() {
                 Cursor data = mDatabaseHelper.getListContents();
