@@ -29,8 +29,6 @@
                   android:launchMode="singleTop" /> 
 
         <activity android:name="org.sw24softwares.starkeverben.ProgressTabsActivity" />
-        <activity android:name="org.sw24softwares.starkeverben.ProgressActivity" />
-        <activity android:name="org.sw24softwares.starkeverben.ProgressGraphsActivity" />
     </application>
 
 </manifest>

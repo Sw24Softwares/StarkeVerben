@@ -51,10 +51,10 @@ public class ProgressTabsActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    ProgressGraphsActivity tab1 = new ProgressGraphsActivity();
+                    ProgressGraphFragment tab1 = new ProgressGraphFragment();
                     return tab1;
                 case 1:
-                    ProgressActivity tab2 = new ProgressActivity();
+                    ProgressFragment tab2 = new ProgressFragment();
                     return tab2;
                 default:
                     return null;

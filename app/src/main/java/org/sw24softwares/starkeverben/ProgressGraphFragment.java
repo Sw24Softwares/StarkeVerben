@@ -25,7 +25,7 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import org.sw24softwares.starkeverben.XYMarkerView;
 
-public class ProgressGraphsActivity extends Fragment {
+public class ProgressGraphFragment extends Fragment {
         private DatabaseHelper mDatabaseHelper;
         private Vector<String> mDates = new Vector<String>();
         private Vector<Integer> mScores = new Vector<Integer>();

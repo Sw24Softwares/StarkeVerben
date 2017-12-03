@@ -14,7 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.LayoutInflater;
 
-public class ProgressActivity extends Fragment {
+public class ProgressFragment extends Fragment {
         ExpandableListAdapter mListAdapter;
         ExpandableListView mExpListView;
         List<String> mListDataHeader;
