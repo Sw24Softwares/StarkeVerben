@@ -71,9 +71,9 @@ public class ProgressTabsActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Graph";
+                    return getText(R.string.chart);
                 case 1:
-                    return "List";
+                    return getText(R.string.lesson);
             }
             return null;
         }
