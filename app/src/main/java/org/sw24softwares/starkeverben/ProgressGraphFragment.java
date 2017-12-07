@@ -19,7 +19,6 @@ import android.view.LayoutInflater;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
-import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
@@ -43,9 +42,7 @@ public class ProgressGraphFragment extends Fragment {
                 
                 if (!mScores.isEmpty()) {
                         LineChart chart = (LineChart) view.findViewById(R.id.chart);
-                        Description desc = new Description();
-                        desc.setText("Scores");
-                        chart.setDescription(desc);
+                        chart.setDescription(null);
                         chart.setDrawGridBackground(false);
                         chart.setTouchEnabled(true);
                         chart.setDragEnabled(true);
