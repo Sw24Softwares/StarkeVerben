@@ -28,7 +28,8 @@
         <activity android:name="org.sw24softwares.starkeverben.SingleLessonActivity"
                   android:launchMode="singleTop" /> 
 
-        <activity android:name="org.sw24softwares.starkeverben.ProgressTabsActivity" />
+        <activity android:name="org.sw24softwares.starkeverben.ProgressTabsActivity" 
+                  android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
