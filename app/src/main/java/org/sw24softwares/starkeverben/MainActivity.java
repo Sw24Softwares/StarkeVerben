@@ -1,11 +1,13 @@
 package org.sw24softwares.starkeverben;
 
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.view.Menu;
 
 import android.content.res.Resources;
 
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
 
+                Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+                setSupportActionBar(myToolbar);
+                
                 Settings.getSingleton().setDebug(BuildConfig.DEBUG);
                 try {
                         BufferedReader verbs = null, trans = null;
@@ -89,7 +94,14 @@ public class MainActivity extends AppCompatActivity {
                                 }
                         });
         }
-
+        
+        @Override
+        public boolean onCreateOptionsMenu(Menu menu) {
+                // Inflate the menu; this adds items to the action bar if it is present.
+                getMenuInflater().inflate(R.menu.toolbar_main, menu);
+                return true;
+        }
+        
         @Override
         public void onBackPressed() {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
