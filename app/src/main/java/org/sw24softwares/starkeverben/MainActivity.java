@@ -6,14 +6,18 @@ import android.os.Bundle;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.Button;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Button;
+import android.preference.PreferenceManager;
+import android.content.SharedPreferences;
 
 import android.content.res.Resources;
+import android.content.res.Configuration;
+import android.content.Context;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
 import java.util.Locale;
 import java.util.Arrays;
 
@@ -21,6 +25,13 @@ import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
+        Resources getLocalizedResources(Context context, Locale desiredLocale) {
+                Configuration conf = context.getResources().getConfiguration();
+                conf = new Configuration(conf);
+                conf.setLocale(desiredLocale);
+                Context localizedContext = context.createConfigurationContext(conf);
+                return localizedContext.getResources();
+        }
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
@@ -28,16 +39,23 @@ public class MainActivity extends AppCompatActivity {
 
                 Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
                 setSupportActionBar(myToolbar);
-                
+
                 Settings.getSingleton().setDebug(BuildConfig.DEBUG);
                 try {
+                        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+                        String languagePref = sharedPref.getString("prefLanguage", "");
+
                         BufferedReader verbs = null, trans = null;
                         verbs = new BufferedReader(new InputStreamReader(getAssets().open("verbs.txt"), "UTF-8"));
-                        String translationPath = "English.txt";
-                        String localeLanguagePath = getResources().getConfiguration().locale.getDisplayLanguage(Locale.ENGLISH) + ".txt";
-                        if(Arrays.asList(getResources().getAssets().list("")).contains(localeLanguagePath))
-                                translationPath = localeLanguagePath; 
-                        trans = new BufferedReader(new InputStreamReader(getAssets().open(translationPath), "UTF-8"));
+                        String translationPath = languagePref;
+                        if(languagePref == getLocalizedResources(this, Locale.ENGLISH).getString(R.string.pref_language_translation_default)) {
+                                String localeLanguagePath = getResources().getConfiguration().locale.getDisplayLanguage(Locale.ENGLISH);
+                                if(Arrays.asList(getResources().getAssets().list("Translations/")).contains(localeLanguagePath))
+                                        translationPath = localeLanguagePath;
+                                else
+                                        translationPath = "English";
+                        }
+                        trans = new BufferedReader(new InputStreamReader(getAssets().open("Translations/" + translationPath), "UTF-8"));
 
                         Resources res = getResources();
                         Settings.getSingleton().setFormString(0,res.getString(R.string.infinitive));
@@ -108,5 +126,16 @@ public class MainActivity extends AppCompatActivity {
                 intent.addCategory(Intent.CATEGORY_HOME);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
+        }
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+                switch (item.getItemId()) {
+                case R.id.action_settings:
+                        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                        startActivity(intent);
+                        return true;
+                default:
+                        return super.onOptionsItemSelected(item);
+                }
         }
 }
