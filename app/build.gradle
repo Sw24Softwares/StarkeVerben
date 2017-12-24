@@ -27,5 +27,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:+'
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
     testCompile 'junit:junit:4.12'
 }

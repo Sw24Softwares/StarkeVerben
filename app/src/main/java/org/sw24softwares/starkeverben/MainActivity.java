@@ -16,6 +16,9 @@ import android.content.res.Resources;
 import android.content.res.Configuration;
 import android.content.Context;
 
+import com.ashokvarma.bottomnavigation.BottomNavigationBar;
+import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Locale;
@@ -39,7 +42,18 @@ public class MainActivity extends AppCompatActivity {
 
                 Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
                 setSupportActionBar(myToolbar);
-
+                
+                BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.navigation);
+                bottomNavigationBar
+                        .addItem(new BottomNavigationItem(R.drawable.ic_subject_black_24dp, R.string.test))
+                        .addItem(new BottomNavigationItem(R.drawable.ic_timeline_black_24dp, R.string.progression))
+                        .addItem(new BottomNavigationItem(R.drawable.ic_learn_black_24dp, R.string.single_lesson))
+                        .addItem(new BottomNavigationItem(R.drawable.ic_list_black_24dp, R.string.lesson))
+                        .setBarBackgroundColor("#FFFFFF")
+                        .setActiveColor(R.color.colorPrimary)
+                        .setMode(BottomNavigationBar.MODE_FIXED)
+                        .initialise();
+                
                 Settings.getSingleton().setDebug(BuildConfig.DEBUG);
                 try {
                         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);

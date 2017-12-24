@@ -72,17 +72,10 @@
 		android:gravity="center_horizontal"
 		android:layout_marginBottom="10dp"/>
 
-        <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_above="@id/navigation"
-                android:background="@drawable/shadow"/>
-
-        <android.support.design.widget.BottomNavigationView
+        <com.ashokvarma.bottomnavigation.BottomNavigationBar
                 android:id="@+id/navigation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-		android:layout_alignParentBottom="true"
-                app:menu="@menu/bottom_nav_items" />
+		android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
