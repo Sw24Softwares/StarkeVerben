@@ -49,8 +49,9 @@ public class MainActivity extends AppCompatActivity {
                         .addItem(new BottomNavigationItem(R.drawable.ic_timeline_black_24dp, R.string.progression))
                         .addItem(new BottomNavigationItem(R.drawable.ic_learn_black_24dp, R.string.single_lesson))
                         .addItem(new BottomNavigationItem(R.drawable.ic_list_black_24dp, R.string.lesson))
-                        .setBarBackgroundColor("#FFFFFF")
                         .setActiveColor(R.color.colorPrimary)
+                        .setInActiveColor(R.color.inactiveBottomNav)
+                        .setBarBackgroundColor("#FFFFFF")
                         .setMode(BottomNavigationBar.MODE_FIXED)
                         .initialise();
                 
