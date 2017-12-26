@@ -1,6 +1,7 @@
 package org.sw24softwares.starkeverben;
 
 import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                         .addItem(new BottomNavigationItem(R.drawable.ic_list_black_24dp, R.string.lesson))
                         .setActiveColor(R.color.colorPrimary)
                         .setInActiveColor(R.color.inactiveBottomNav)
-                        .setBarBackgroundColor("#FFFFFF")
+                        .setBarBackgroundColor(android.R.color.white)
                         .setMode(BottomNavigationBar.MODE_FIXED)
                         .initialise();
                 
@@ -91,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                         Log.e("StarkeVerben", e.getMessage());
                 }
 
-                Button testButton = (Button) findViewById(R.id.test);
+                /*Button testButton = (Button) findViewById(R.id.test);
                 testButton.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
@@ -125,6 +126,36 @@ public class MainActivity extends AppCompatActivity {
                                         Intent intent = new Intent(MainActivity.this, SingleLessonActivity.class);
                                         startActivity(intent);
                                 }
+                        });*/
+                
+                bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener(){
+                        @Override
+                        public void onTabSelected(int position) {
+                                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                                
+                                switch(position) {
+                                        case 0:
+                                                break;
+                                        case 1:
+                                                transaction.replace(R.id.main_container, new ProgressTabsFragment());
+                                                break;
+                                        case 2:
+                                                transaction.replace(R.id.main_container, new SingleLessonFragment());
+                                                break;
+                                        case 3:
+                                                transaction.replace(R.id.main_container, new LessonFragment());
+                                                break;
+                                        default:
+                                                break;
+                                }
+                                transaction.commit();
+                        }
+                        @Override
+                        public void onTabUnselected(int position) {
+                        }
+                        @Override
+                        public void onTabReselected(int position) {
+                        }
                         });
         }
         

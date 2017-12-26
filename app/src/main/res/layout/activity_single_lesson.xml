@@ -54,7 +54,7 @@
                 android:gravity="center"
                 android:padding="8dp"
                 android:textColor="@android:color/black"
-                android:textSize="25sp" />
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
 
             <TextView
@@ -130,28 +130,12 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/stop_single_lesson"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
-        android:background="@android:color/transparent"
-        android:text="@string/finish" />
-
-    <Button
         android:id="@+id/next_single_lesson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
         android:layout_marginBottom="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
         android:background="@android:color/transparent"
         android:text="@string/go_on" />
 

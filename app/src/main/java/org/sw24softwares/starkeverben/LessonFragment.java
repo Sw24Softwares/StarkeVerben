@@ -1,6 +1,6 @@
 package org.sw24softwares.starkeverben;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -13,34 +13,37 @@ import java.util.Collections;
 import android.content.Intent;
 import android.content.Context;
 import android.app.SearchManager;
-
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.LayoutInflater;
 import android.widget.ExpandableListView;
 import android.widget.SearchView;
 
-public class LessonActivity extends AppCompatActivity {
+public class LessonFragment extends Fragment {
         ExpandableListAdapter listAdapter;
         ExpandableListView expListView;
         List<String> listDataHeader;
         HashMap<String, List<String>> listDataChild;
         
         @Override
-        protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_lesson);
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+                View view = inflater.inflate(R.layout.activity_lesson, container, false);
 
                 //                onSearchRequested();
                 // Get the SearchView and set the searchable configuration
-                SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-                SearchView searchView = (SearchView) findViewById(R.id.lesson_search);
+                /*SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+                SearchView searchView = (SearchView) getView().findViewById(R.id.lesson_search);
                 // Assumes current activity is the searchable activity
                 searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-                searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
+                searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default*/
                 
-                expListView = (ExpandableListView) findViewById(R.id.lesson_list);
+                expListView = (ExpandableListView) view.findViewById(R.id.lesson_list);
                 search(new String());
                 
                 // Get the intent, verify the action and get the query                
-                handleIntent(getIntent());
+                //handleIntent(getIntent());
+
+                return view;
         }
  
         private void prepareListData(String search_word) {
@@ -86,11 +89,11 @@ public class LessonActivity extends AppCompatActivity {
         }
         private void search(String word) {
                 prepareListData(word);
-                listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild);
+                listAdapter = new ExpandableListAdapter(getActivity(), listDataHeader, listDataChild);
                 expListView.setAdapter(listAdapter);
         }
 
-        @Override
+        /*@Override
         protected void onNewIntent(Intent intent) {
                 setIntent(intent);
                 handleIntent(intent);
@@ -101,5 +104,5 @@ public class LessonActivity extends AppCompatActivity {
                         String query = intent.getStringExtra(SearchManager.QUERY);
                         search(query);
                 }
-        }
+        }*/
 }
