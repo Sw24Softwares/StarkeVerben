@@ -22,56 +22,14 @@
 
                 </android.support.v7.widget.Toolbar>
 
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/sliding_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
         </android.support.design.widget.AppBarLayout>
-
-        <!--        <LinearLayout
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:orientation="vertical"
-		android:layout_centerInParent="true">
-
-		<Button
-			android:id="@+id/test"
-			android:layout_width="120dp"
-			android:layout_height="50dp"
-			android:layout_margin="10dp"
-			android:layout_gravity="center"
-			android:text="@string/test" />
-
-		<Button
-			android:id="@+id/progress"
-			android:layout_width="120dp"
-			android:layout_height="50dp"
-			android:layout_margin="10dp"
-			android:layout_gravity="center"
-			android:text="@string/progression"/>
-
-		<Button
-			android:id="@+id/single_lesson"
-			android:layout_width="120dp"
-			android:layout_height="50dp"
-			android:layout_margin="10dp"
-			android:layout_gravity="center"
-			android:text="@string/single_lesson"/>
-		
-		<Button
-			android:id="@+id/lesson"
-			android:layout_width="120dp"
-			android:layout_height="50dp"
-			android:layout_margin="10dp"
-			android:layout_gravity="center"
-			android:text="@string/lesson"/>
-
-	</LinearLayout>
-
-	<TextView
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-                android:layout_above="@+id/navigation"
-                android:text="Parnica Vanhaelewyn"
-		android:gravity="center_horizontal"
-                android:layout_marginBottom="10dp"/>-->
-
+        
         <FrameLayout
                 android:id="@+id/main_container"
                 android:layout_width="match_parent"

@@ -29,6 +29,8 @@ import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
+        FragmentTransaction mTransaction;
+
         Resources getLocalizedResources(Context context, Locale desiredLocale) {
                 Configuration conf = context.getResources().getConfiguration();
                 conf = new Configuration(conf);
@@ -43,18 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
                 Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
                 setSupportActionBar(myToolbar);
-                
-                BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.navigation);
-                bottomNavigationBar
-                        .addItem(new BottomNavigationItem(R.drawable.ic_subject_black_24dp, R.string.test))
-                        .addItem(new BottomNavigationItem(R.drawable.ic_timeline_black_24dp, R.string.progression))
-                        .addItem(new BottomNavigationItem(R.drawable.ic_learn_black_24dp, R.string.single_lesson))
-                        .addItem(new BottomNavigationItem(R.drawable.ic_list_black_24dp, R.string.lesson))
-                        .setActiveColor(R.color.colorPrimary)
-                        .setInActiveColor(R.color.inactiveBottomNav)
-                        .setBarBackgroundColor(android.R.color.white)
-                        .setMode(BottomNavigationBar.MODE_FIXED)
-                        .initialise();
                 
                 Settings.getSingleton().setDebug(BuildConfig.DEBUG);
                 try {
@@ -91,64 +81,44 @@ public class MainActivity extends AppCompatActivity {
                 } catch (Exception e) {
                         Log.e("StarkeVerben", e.getMessage());
                 }
-
-                /*Button testButton = (Button) findViewById(R.id.test);
-                testButton.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                        Intent intent = new Intent(MainActivity.this, TestActivity.class);
-                                        intent.putExtra("total", 0);
-                                        intent.putExtra("marks", new int[0]);
-                                        intent.putExtra("dialog", false);
-                                        startActivity(intent);
-                                }
-                        });
-                Button lessonButton = (Button) findViewById(R.id.lesson);
-                lessonButton.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                        Intent intent = new Intent(MainActivity.this, LessonActivity.class);
-                                        startActivity(intent);
-                                }
-                        });
-                Button progressButton = (Button) findViewById(R.id.progress);
-                progressButton.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                        Intent intent = new Intent(MainActivity.this, ProgressTabsActivity.class);
-                                        startActivity(intent);
-                                }
-                        });
-                Button singlelessonButton = (Button) findViewById(R.id.single_lesson);
-                singlelessonButton.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                        Intent intent = new Intent(MainActivity.this, SingleLessonActivity.class);
-                                        startActivity(intent);
-                                }
-                        });*/
                 
+                BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.navigation);
+                bottomNavigationBar
+                        .addItem(new BottomNavigationItem(R.drawable.ic_subject_black_24dp, R.string.test))
+                        .addItem(new BottomNavigationItem(R.drawable.ic_timeline_black_24dp, R.string.progression))
+                        .addItem(new BottomNavigationItem(R.drawable.ic_learn_black_24dp, R.string.single_lesson))
+                        .addItem(new BottomNavigationItem(R.drawable.ic_list_black_24dp, R.string.lesson))
+                        .setActiveColor(R.color.colorPrimary)
+                        .setInActiveColor(R.color.inactiveBottomNav)
+                        .setBarBackgroundColor(android.R.color.white)
+                        .setMode(BottomNavigationBar.MODE_FIXED)
+                        .initialise();
+                
+                mTransaction = getSupportFragmentManager().beginTransaction();
+                mTransaction.add(R.id.main_container, new PreTestFragment()).commit();
+               
                 bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener(){
                         @Override
                         public void onTabSelected(int position) {
-                                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                                mTransaction = getSupportFragmentManager().beginTransaction();
                                 
                                 switch(position) {
                                         case 0:
+                                                mTransaction.replace(R.id.main_container, new PreTestFragment());
                                                 break;
                                         case 1:
-                                                transaction.replace(R.id.main_container, new ProgressTabsFragment());
+                                                mTransaction.replace(R.id.main_container, new ProgressTabsFragment());
                                                 break;
                                         case 2:
-                                                transaction.replace(R.id.main_container, new SingleLessonFragment());
+                                                mTransaction.replace(R.id.main_container, new SingleLessonFragment());
                                                 break;
                                         case 3:
-                                                transaction.replace(R.id.main_container, new LessonFragment());
+                                                mTransaction.replace(R.id.main_container, new LessonFragment());
                                                 break;
                                         default:
                                                 break;
                                 }
-                                transaction.commit();
+                                mTransaction.commit();
                         }
                         @Override
                         public void onTabUnselected(int position) {
@@ -156,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onTabReselected(int position) {
                         }
-                        });
+                });
         }
         
         @Override
@@ -173,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
         }
+        
         @Override
         public boolean onOptionsItemSelected(MenuItem item) {
                 switch (item.getItemId()) {
