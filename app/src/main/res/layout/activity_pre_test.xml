@@ -25,7 +25,7 @@
                 android:layout_height="200dp"
                 android:layout_gravity="center"
                 app:pulse_count="1"
-                app:pulse_duration="1000"
+                app:pulse_duration="1200"
                 app:pulse_repeat="0"
                 app:pulse_color="@android:color/white"
                 app:pulse_startFromScratch="false"
