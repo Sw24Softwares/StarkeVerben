@@ -7,70 +7,75 @@
     android:id="@+id/test_layout"
     android:clickable="true">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_centerInParent="true"
-        android:focusableInTouchMode="true">
-      
-        <EditText
-            android:layout_width="165dp"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
             android:layout_height="wrap_content"
-            android:id="@+id/infinitif"
-            android:inputType="textNoSuggestions"
-            android:textAlignment="center"/>
-
-        <EditText
-            android:layout_width="165dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/preterit"
-            android:inputType="textNoSuggestions"
-            android:layout_below="@+id/infinitif"
-            android:textAlignment="center"/>
-
-        <EditText
-            android:layout_width="165dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/participe"
-            android:inputType="textNoSuggestions"
-            android:layout_below="@+id/preterit"
-            android:textAlignment="center"/>
-
-
-        <EditText
-            android:layout_width="165dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/translation"
-            android:inputType="text"
-            android:layout_below="@+id/third_person"
-            android:textAlignment="center"/>
-
-        <CheckBox
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/auxiliary"
-            android:text="Sein"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/participe"/>
+            android:focusableInTouchMode="true">
+          
+            <EditText
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/infinitif"
+                android:inputType="textNoSuggestions"
+                android:textAlignment="center"/>
 
-        <EditText
-            android:layout_width="165dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/third_person"
-            android:inputType="textNoSuggestions"
-            android:layout_below="@id/auxiliary"
-            android:textAlignment="center"/>
+            <EditText
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/preterit"
+                android:inputType="textNoSuggestions"
+                android:layout_below="@+id/infinitif"
+                android:textAlignment="center"/>
 
-        <Button
-            android:layout_width="125dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/verify"
-            android:layout_below="@+id/translation"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="20dp"
-            android:text="@string/verify"/>
-            
-    </RelativeLayout>
+            <EditText
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/participe"
+                android:inputType="textNoSuggestions"
+                android:layout_below="@+id/preterit"
+                android:textAlignment="center"/>
 
+
+            <EditText
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/translation"
+                android:inputType="text"
+                android:layout_below="@+id/third_person"
+                android:textAlignment="center"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/auxiliary"
+                android:text="Sein"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/participe"/>
+
+            <EditText
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/third_person"
+                android:inputType="textNoSuggestions"
+                android:layout_below="@id/auxiliary"
+                android:textAlignment="center"/>
+
+            <Button
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/verify"
+                android:layout_below="@+id/translation"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:text="@string/verify"/>
+                
+        </RelativeLayout>
+
+    </ScrollView>
     
 </RelativeLayout>
