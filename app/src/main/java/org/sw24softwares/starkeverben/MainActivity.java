@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
                         BufferedReader verbs = null, trans = null;
                         verbs = new BufferedReader(new InputStreamReader(getAssets().open("verbs.txt"), "UTF-8"));
                         String translationPath = languagePref;
-                        if(languagePref == getLocalizedResources(this, Locale.ENGLISH).getString(R.string.pref_language_translation_default)) {
+                        if(languagePref.equals(getLocalizedResources(this, Locale.ENGLISH).getString(R.string.pref_language_translation_default))) {
                                 String localeLanguagePath = getResources().getConfiguration().locale.getDisplayLanguage(Locale.ENGLISH);
-                                if(Arrays.asList(getResources().getAssets().list("Translations/")).contains(localeLanguagePath))
+                                if(Arrays.asList(getResources().getAssets().list("Translations")).contains(localeLanguagePath))
                                         translationPath = localeLanguagePath;
                                 else
                                         translationPath = "English";

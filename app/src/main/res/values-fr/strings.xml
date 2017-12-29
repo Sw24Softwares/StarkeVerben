@@ -26,4 +26,9 @@
 
     <string name="search_hint">Rechercher</string>
     <string name="app_label">StarkeVerben</string>
+
+    <string name="pref_language">Langue</string>
+    <string name="pref_language_translation">Langue de traduction</string>
+    <string name="pref_language_translation_summary">Choisir la langue</string>
+    <string name="pref_language_translation_default">Langue du système</string>
 </resources>
