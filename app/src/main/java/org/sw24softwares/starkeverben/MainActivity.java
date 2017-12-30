@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onTabSelected(int position) {
                                 mTransaction = getSupportFragmentManager().beginTransaction();
+                                mTransaction.setCustomAnimations(android.R.anim.fade_in, 0);
                                 
                                 switch(position) {
                                         case 0:

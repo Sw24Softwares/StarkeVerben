@@ -50,7 +50,6 @@ public class ProgressGraphFragment extends Fragment {
                         chart.setPinchZoom(false);
                         chart.setDoubleTapToZoomEnabled(false);
                         chart.getLegend().setEnabled(false);
-                        chart.animateY(1050);
                         XYMarkerView mv = new XYMarkerView(context, new XAxisValueFormatter(mDates.toArray(new String[0])));
                         mv.setChartView(chart);
                         chart.setMarker(mv);
