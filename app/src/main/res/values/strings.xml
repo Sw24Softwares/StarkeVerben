@@ -28,8 +28,13 @@
     <string name="search_hint">Search</string>
     <string name="app_label">StarkeVerben</string>
 
+    <string name="pref_about">About</string>
     <string name="pref_language">Language</string>
     <string name="pref_language_translation">Translation language</string>
     <string name="pref_language_translation_summary">Choose the translation language</string>
     <string name="pref_language_translation_default">System default</string>
+
+    <string name="connect">Connect with us</string>
+    <string name="dependencies">The dependencies we use</string>
+    <string name="about_page_description">We hope you enjoy our application</string>
 </resources>

@@ -27,11 +27,12 @@
                            android:resource="@xml/searchable"/>
         </activity>
         <activity android:name="org.sw24softwares.starkeverben.SingleLessonActivity"
-                  android:launchMode="singleTop" /> 
+                  android:launchMode="singleTop" />
 
         <activity android:name="org.sw24softwares.starkeverben.ProgressTabsActivity" 
                   android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="org.sw24softwares.starkeverben.SettingsActivity" />
+        <activity android:name="org.sw24softwares.starkeverben.AboutActivity" />
     </application>
 
 </manifest>

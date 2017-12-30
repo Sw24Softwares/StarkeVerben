@@ -4,7 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.ListPreference;
+import android.preference.PreferenceScreen;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.Configuration;
 import android.content.Context;
@@ -44,5 +46,9 @@ public class SettingsActivity  extends PreferenceActivity {
                 catch (IOException e) {
                         System.exit(0);
                 }
+
+                PreferenceScreen screen = (PreferenceScreen) findPreference("prefAbout");
+                Intent intent = new Intent(this, AboutActivity.class);
+                screen.setIntent(intent);
 	}
 }

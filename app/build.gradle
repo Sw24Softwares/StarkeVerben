@@ -29,5 +29,7 @@ dependencies {
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
     compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
     compile 'pl.bclogic:pulsator4droid:1.0.3'
+    compile 'com.github.medyo:android-about-page:1.2.2'
+    
     testCompile 'junit:junit:4.12'
 }
