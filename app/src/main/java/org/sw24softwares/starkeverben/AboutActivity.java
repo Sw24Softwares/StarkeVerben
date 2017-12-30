@@ -1,5 +1,6 @@
 package org.sw24softwares.starkeverben;
 
+import org.sw24softwares.starkeverben.BuildConfig;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +22,7 @@ public class AboutActivity extends AppCompatActivity {
                 AboutPage aboutPage = new AboutPage(this)
                         .isRTL(false)
                         .setImage(R.mipmap.ic_launcher)
-                        .addItem(new Element().setTitle("Version 2.2"))
+                        .addItem(new Element().setTitle("Version " + BuildConfig.VERSION_NAME))
                         .addGroup(getResources().getString(R.string.connect))
                         .addWebsite("https://f-droid.org/packages/org.sw24softwares.starkeverben/")
                         .addGitHub("Sw24Softwares/StarkeVerben");
