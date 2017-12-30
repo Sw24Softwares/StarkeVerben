@@ -34,7 +34,9 @@
     <string name="pref_language_translation_summary">Choose the translation language</string>
     <string name="pref_language_translation_default">System default</string>
 
+
     <string name="connect">Connect with us</string>
-    <string name="dependencies">The dependencies we use</string>
+    <string name="dependencies">Dependencies</string>
+    <string name="developers">Developers</string>
     <string name="about_page_description">We hope you enjoy our application</string>
 </resources>
