@@ -15,9 +15,9 @@
       android:layout_alignParentLeft="true"
       android:layout_alignParentStart="true" />
 
-  <SearchView
+  <!--<SearchView
       android:id="@+id/lesson_search"
       android:layout_width="match_parent"
-      android:layout_height="50dp" />
+      android:layout_height="50dp" />-->
 
 </RelativeLayout>

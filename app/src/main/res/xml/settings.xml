@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
   <PreferenceCategory
-      android:key="button_language_settings"
-      android:title="@string/pref_language"
-      android:persistent="false">
+      android:title="@string/pref_language">
     <ListPreference
         android:key="prefLanguage"
         android:defaultValue="System default"
         android:summary="@string/pref_language_translation_summary" 
         android:title="@string/pref_language_translation" />
   </PreferenceCategory>
-  <PreferenceScreen
-      android:key="prefAbout"
-      android:title="@string/pref_about" />
+
+  <PreferenceCategory
+      android:title="@string/pref_about">
+    <PreferenceScreen
+        android:key="prefAbout"
+        android:title="@string/pref_about_app" />
+  </PreferenceCategory>
 </PreferenceScreen>
