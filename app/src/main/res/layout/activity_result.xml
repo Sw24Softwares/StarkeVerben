@@ -10,71 +10,68 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent" >
 
+    <TextView
+        android:id="@+id/infinitive_result"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/preterit_result"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/preterit_result"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/aux_part_layout"
+        android:layout_centerHorizontal="true" />
+
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-	android:layout_marginTop="90dp">
+        android:id="@+id/aux_part_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_centerInParent="true">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
-            android:layout_marginBottom="20dp"
-            android:id="@+id/infinitive_result"
-            android:layout_gravity="center_horizontal" />
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"
+            android:id="@+id/auxiliary_result"
+            android:layout_centerHorizontal="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
-            android:layout_marginBottom="20dp"
-            android:id="@+id/preterit_result"
-            android:layout_gravity="center_horizontal" />
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-	    android:layout_marginBottom="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:layout_marginRight="7dp"
-                android:layout_marginEnd="7dp"
-                android:id="@+id/auxiliary_result"
-                android:layout_gravity="center_horizontal" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="30sp"
-                android:layout_marginLeft="7dp"
-                android:layout_marginStart="7dp"
-                android:id="@+id/participe_result"
-                android:layout_gravity="center_horizontal" />
-
-        </LinearLayout>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:layout_marginBottom="20dp"
-            android:id="@+id/third_person_result"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:id="@+id/translation_result"
-            android:layout_gravity="center_horizontal" />
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:id="@+id/participe_result"
+            android:layout_centerHorizontal="true" />
 
     </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/third_person_result"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/aux_part_layout"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/translation_result"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/third_person_result"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"

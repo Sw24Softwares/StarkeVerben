@@ -24,7 +24,7 @@ public class AboutActivity extends AppCompatActivity {
                         .setImage(R.mipmap.ic_launcher)
                         .addItem(new Element().setTitle("Version " + BuildConfig.VERSION_NAME))
                         .addGroup(getResources().getString(R.string.connect))
-                        .addWebsite("https://f-droid.org/packages/org.sw24softwares.starkeverben/")
+                        //.addWebsite("https://f-droid.org/packages/org.sw24softwares.starkeverben/")
                         .addGitHub("Sw24Softwares/StarkeVerben");
                 aboutPage = setUpDependencies(aboutPage);
                 aboutPage = setUpDevelopers(aboutPage);
