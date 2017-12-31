@@ -1,6 +1,5 @@
 package org.sw24softwares.starkeverben;
 
-import android.support.v4.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,13 +10,13 @@ import com.woxthebox.draglistview.DragItemAdapter;
 
 import java.util.ArrayList;
 
-class ItemAdapter extends DragItemAdapter<Pair<Long, String>, ItemAdapter.ViewHolder> {
+class ItemAdapter extends DragItemAdapter<Integer, ItemAdapter.ViewHolder> {
 
         private int mLayoutId;
         private int mGrabHandleId;
         private boolean mDragOnLongPress;
 
-        ItemAdapter(ArrayList<Pair<Long, String>> list, int layoutId, int grabHandleId, boolean dragOnLongPress) {
+        ItemAdapter(ArrayList<Integer> list, int layoutId, int grabHandleId, boolean dragOnLongPress) {
                 mLayoutId = layoutId;
                 mGrabHandleId = grabHandleId;
                 mDragOnLongPress = dragOnLongPress;
@@ -33,14 +32,14 @@ class ItemAdapter extends DragItemAdapter<Pair<Long, String>, ItemAdapter.ViewHo
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
                 super.onBindViewHolder(holder, position);
-                String text = mItemList.get(position).second;
-                holder.mText.setText(text);
+                Integer index = mItemList.get(position);
+                holder.mText.setText(Settings.getSingleton().getFormString(index));
                 holder.itemView.setTag(mItemList.get(position));
         }
 
         @Override
         public long getUniqueItemId(int position) {
-                return mItemList.get(position).first;
+                return mItemList.get(position);
         }
 
         class ViewHolder extends DragItemAdapter.ViewHolder {

@@ -7,7 +7,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.util.Pair;
 import android.os.Bundle;
 
 import android.content.Intent;
@@ -18,10 +17,20 @@ import android.widget.TextView;
 import com.woxthebox.draglistview.DragItem;
 import com.woxthebox.draglistview.DragListView;
 
+import android.preference.Preference;
+import android.preference.PreferenceActivity;
+import android.preference.PreferenceManager;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+
+import android.util.Log;
+
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
 
 public class FormOrderActivity extends AppCompatActivity {
-        private ArrayList<Pair<Long, String>> mItemArray;
+        private ArrayList<Integer> mItemArray;
         private DragListView mDragListView;
 
         @Override
@@ -37,13 +46,27 @@ public class FormOrderActivity extends AppCompatActivity {
                                 }
                                 @Override
                                 public void onItemDragEnded(int fromPosition, int toPosition) {
+                                        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(FormOrderActivity.this);
+                                        SharedPreferences.Editor editor = sharedPref.edit();
+                                        ArrayList<String> stringArray = new ArrayList<>();
+                                        for(int i = 0; i < mItemArray.size(); i++)
+                                                stringArray.add(Integer.toString(i));
+                                        editor.remove("formOrder");
+                                        editor.putStringSet("formOrder", new HashSet<>(stringArray));
+                                        editor.commit();
+                                        Log.e("StarkeVerben", "From " + Integer.toString(fromPosition) + " To " + Integer.toString(toPosition));
                                 }
                         });
 
                 mItemArray = new ArrayList<>();
-                for (int i = 0; i < 40; i++) {
-                        mItemArray.add(new Pair<>((long) i, "Item " + i));
-                }
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+                Set<String> formOrderPref = sharedPref.getStringSet("formOrder", null);
+                if(formOrderPref == null)
+                        for(int i = 0; i < 5; i++)
+                                mItemArray.add(i);
+                else
+                        for(int i = 0; i < formOrderPref.toArray().length; i++)
+                                mItemArray.add(Integer.parseInt((String)formOrderPref.toArray()[i]));
         
                 mDragListView.setLayoutManager(new LinearLayoutManager(this));
                 ItemAdapter listAdapter = new ItemAdapter(mItemArray,

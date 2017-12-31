@@ -15,8 +15,12 @@ import java.util.Date;
 import java.util.Random;
 import java.util.Arrays;
 import java.util.Vector;
+import java.util.Set;
 
 import static android.R.color.black;
+
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 public class TestActivity extends AppCompatActivity {
         protected int mGivenVerb;
@@ -43,18 +47,27 @@ public class TestActivity extends AppCompatActivity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_test);
 		
-		final long start = System.currentTimeMillis();
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+                Set<String> formOrderPref = sharedPref.getStringSet("formOrder", null);
 
+                final Vector<Integer> formsOrder = new Vector<Integer>();
+                for(int i = 0; i < formOrderPref.toArray().length; i++)
+                        formsOrder.addElement(Integer.parseInt((String)formOrderPref.toArray()[i]));
+                final Vector<Integer> formsOrderReverse = new Vector<Integer>();
+                formsOrderReverse.setSize(5);
+                for(int i = 0; i < formsOrder.size(); i++)
+                        formsOrderReverse.set(formsOrder.get(i),i);
+                            
                 final Vector<EditText> editForms = new Vector<EditText>();
-                editForms.addElement((EditText) findViewById(R.id.infinitif));
-                editForms.addElement((EditText) findViewById(R.id.preterit));
-                editForms.addElement((EditText) findViewById(R.id.participe));
-                editForms.addElement((EditText) findViewById(R.id.third_person));
-                editForms.addElement((EditText) findViewById(R.id.translation));
+                editForms.addElement((EditText) findViewById(R.id.e0));
+                editForms.addElement((EditText) findViewById(R.id.e1));
+                editForms.addElement((EditText) findViewById(R.id.e2));
+                editForms.addElement((EditText) findViewById(R.id.e3));
+                editForms.addElement((EditText) findViewById(R.id.e4));
                 final CheckBox aux = (CheckBox) findViewById(R.id.auxiliary);
                 
                 for(int i = 0; i < editForms.size(); i++)
-                        editForms.get(i).setHint(Verb.formToWord(i));
+                        editForms.get(i).setHint(Verb.formToWord(formsOrder.get(i)));
                 
                 Random rand = new Random();
                 mGivenVerb = rand.nextInt(Settings.getSingleton().getVerbs().size());
@@ -64,16 +77,18 @@ public class TestActivity extends AppCompatActivity {
                 for(int i = 0; i < 4; i++) {
                         if(mFormType == i) {
                                 mPossibility = rand.nextInt(mVerb.getAllForms().get(mFormType).size());
-                                fillEditText(editForms.get(i), mVerb.getAllForms().get(mFormType).get(mPossibility));
+                                fillEditText(editForms.get(formsOrderReverse.get(i)), mVerb.getAllForms().get(mFormType).get(mPossibility));
                         }
                 }
                 if(mFormType == 4) {
                         mPossibility = rand.nextInt(Settings.getSingleton().getTranslations().get(mGivenVerb).getTranslations().size());
-                        fillEditText(editForms.get(4), Settings.getSingleton().getTranslations().get(mGivenVerb).getTranslations().get(mPossibility));
+                        fillEditText(editForms.get(formsOrderReverse.get(4)), Settings.getSingleton().getTranslations().get(mGivenVerb).getTranslations().get(mPossibility));
                 }
 
                 final int total = getIntent().getExtras().getInt("total");
                 final int marks[] = getIntent().getExtras().getIntArray("marks");
+                final long start = System.currentTimeMillis();
+
                 
                 final RelativeLayout layout = (RelativeLayout) findViewById(R.id.test_layout);
                 layout.setOnClickListener(new View.OnClickListener() {
@@ -99,9 +114,9 @@ public class TestActivity extends AppCompatActivity {
                                         intent.putExtra("dialog", testDuration(start) || time);
 					
 					String givenAnswers[] = new String[6];
-                                        givenAnswers[5] = Verb.boolToAux(aux.isChecked());
                                         for(int i = 0; i < editForms.size(); i++)
-                                                givenAnswers[i] = editForms.get(i).getText().toString();
+                                                givenAnswers[formsOrder.get(i)] = editForms.get(i).getText().toString();
+                                        givenAnswers[5] = Verb.boolToAux(aux.isChecked());
 
                                         intent.putExtra("givenAnswers", givenAnswers);
 

@@ -20,33 +20,33 @@
             <EditText
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/infinitif"
+                android:id="@+id/e0"
                 android:inputType="textNoSuggestions"
                 android:textAlignment="center"/>
 
             <EditText
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/preterit"
+                android:id="@+id/e1"
                 android:inputType="textNoSuggestions"
-                android:layout_below="@+id/infinitif"
+                android:layout_below="@+id/e0"
                 android:textAlignment="center"/>
 
             <EditText
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/participe"
+                android:id="@+id/e2"
                 android:inputType="textNoSuggestions"
-                android:layout_below="@+id/preterit"
+                android:layout_below="@+id/e1"
                 android:textAlignment="center"/>
 
 
             <EditText
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/translation"
+                android:id="@+id/e3"
                 android:inputType="text"
-                android:layout_below="@+id/third_person"
+                android:layout_below="@+id/e2"
                 android:textAlignment="center"/>
 
             <CheckBox
@@ -55,12 +55,12 @@
                 android:id="@+id/auxiliary"
                 android:text="Sein"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/participe"/>
+                android:layout_below="@id/e3"/>
 
             <EditText
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/third_person"
+                android:id="@+id/e4"
                 android:inputType="textNoSuggestions"
                 android:layout_below="@id/auxiliary"
                 android:textAlignment="center"/>
@@ -69,7 +69,7 @@
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/verify"
-                android:layout_below="@+id/translation"
+                android:layout_below="@+id/e4"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="20dp"
                 android:text="@string/verify"/>
