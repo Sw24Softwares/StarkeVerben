@@ -6,9 +6,11 @@ import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 
 import android.content.Intent;
+import android.app.SearchManager;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SearchView;
 import android.widget.Button;
 import android.preference.PreferenceManager;
 import android.content.SharedPreferences;
@@ -29,7 +31,12 @@ import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
-        FragmentTransaction mTransaction;
+        private FragmentTransaction mTransaction;
+        private static final String PRE_TEST = "PreTest";
+        private static final String PROGRESS = "Progress";
+        private static final String SINGLE_LESSON = "SingleLesson";
+        private static final String LESSON = "Lesson";
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
@@ -68,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                         .initialise();
                 
                 mTransaction = getSupportFragmentManager().beginTransaction();
-                mTransaction.add(R.id.main_container, new PreTestFragment()).commit();
+                mTransaction.add(R.id.main_container, new PreTestFragment(), PRE_TEST).commit();
                
                 bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener(){
                         @Override
@@ -78,16 +85,16 @@ public class MainActivity extends AppCompatActivity {
                                 
                                 switch(position) {
                                         case 0:
-                                                mTransaction.replace(R.id.main_container, new PreTestFragment());
+                                                mTransaction.replace(R.id.main_container, new PreTestFragment(), PRE_TEST);
                                                 break;
                                         case 1:
-                                                mTransaction.replace(R.id.main_container, new ProgressTabsFragment());
+                                                mTransaction.replace(R.id.main_container, new ProgressTabsFragment(), PROGRESS);
                                                 break;
                                         case 2:
-                                                mTransaction.replace(R.id.main_container, new SingleLessonFragment());
+                                                mTransaction.replace(R.id.main_container, new SingleLessonFragment(), SINGLE_LESSON);
                                                 break;
                                         case 3:
-                                                mTransaction.replace(R.id.main_container, new LessonFragment());
+                                                mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON);
                                                 break;
                                         default:
                                                 break;
@@ -101,6 +108,8 @@ public class MainActivity extends AppCompatActivity {
                         public void onTabReselected(int position) {
                         }
                 });
+                
+                handleIntent(getIntent());
         }
         
         @Override
@@ -128,5 +137,28 @@ public class MainActivity extends AppCompatActivity {
                 default:
                         return super.onOptionsItemSelected(item);
                 }
+        }
+        
+        // Following methods are used for the search bar in the LessonFragment
+        @Override
+        protected void onNewIntent(Intent intent) {
+                setIntent(intent);
+                handleIntent(intent);
+        }
+
+        private void handleIntent(Intent intent) {
+                LessonFragment lessonFragment = (LessonFragment) getSupportFragmentManager().findFragmentByTag(LESSON);
+
+                if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+                        String query = intent.getStringExtra(SearchManager.QUERY);
+                        lessonFragment.search(query);
+                }
+        }
+
+        protected void initSearch(SearchView searchView) {
+                SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+                
+                searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+                searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
         }
 }

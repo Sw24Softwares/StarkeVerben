@@ -12,7 +12,6 @@ import java.util.Collections;
 
 import android.content.Intent;
 import android.content.Context;
-import android.app.SearchManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.LayoutInflater;
@@ -29,20 +28,12 @@ public class LessonFragment extends Fragment {
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
                 View view = inflater.inflate(R.layout.activity_lesson, container, false);
 
-                //                onSearchRequested();
-                // Get the SearchView and set the searchable configuration
-                /*SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-                SearchView searchView = (SearchView) getView().findViewById(R.id.lesson_search);
-                // Assumes current activity is the searchable activity
-                searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-                searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default*/
-                
-                expListView = (ExpandableListView) view.findViewById(R.id.lesson_list);
-                search(new String());
-                
-                // Get the intent, verify the action and get the query                
-                //handleIntent(getIntent());
+                SearchView searchView = (SearchView) view.findViewById(R.id.lesson_search);
+                ((MainActivity)getActivity()).initSearch(searchView); // Initializing the search bar with the SearchManager 
 
+                expListView = (ExpandableListView) view.findViewById(R.id.lesson_list);
+                search(new String()); //Initiates the ListView with all the verbs
+                
                 return view;
         }
  
@@ -87,22 +78,9 @@ public class LessonFragment extends Fragment {
                         }
                 }
         }
-        private void search(String word) {
+        protected void search(String word) {
                 prepareListData(word);
                 listAdapter = new ExpandableListAdapter(getActivity(), listDataHeader, listDataChild);
                 expListView.setAdapter(listAdapter);
         }
-
-        /*@Override
-        protected void onNewIntent(Intent intent) {
-                setIntent(intent);
-                handleIntent(intent);
-        }
-        
-        private void handleIntent(Intent intent) {
-                if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-                        String query = intent.getStringExtra(SearchManager.QUERY);
-                        search(query);
-                }
-        }*/
 }
