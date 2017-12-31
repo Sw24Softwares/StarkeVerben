@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 Settings.getSingleton().setDebug(BuildConfig.DEBUG);
                 try {
                         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-                        String languagePref = sharedPref.getString("prefLanguage", "");
+                        String languagePref = sharedPref.getString("prefLanguage", "System default");
                         GlobalData.loadVerbs(this, languagePref);
                 } catch (Exception e) {
                         Log.e("StarkeVerben", e.getMessage());

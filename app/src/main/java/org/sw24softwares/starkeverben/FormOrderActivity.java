@@ -46,18 +46,16 @@ public class FormOrderActivity extends AppCompatActivity {
                                 }
                                 @Override
                                 public void onItemDragEnded(int fromPosition, int toPosition) {
-                                        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(FormOrderActivity.this);
-                                        SharedPreferences.Editor editor = sharedPref.edit();
                                         ArrayList<String> stringArray = new ArrayList<>();
                                         for(int i = 0; i < mItemArray.size(); i++)
-                                                stringArray.add(Integer.toString(i));
-                                        editor.remove("formOrder");
+                                                stringArray.add(Integer.toString(mItemArray.get(i)));
+                                        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(FormOrderActivity.this);
+                                        SharedPreferences.Editor editor = sharedPref.edit();
                                         editor.putStringSet("formOrder", new HashSet<>(stringArray));
                                         editor.commit();
-                                        Log.e("StarkeVerben", "From " + Integer.toString(fromPosition) + " To " + Integer.toString(toPosition));
                                 }
                         });
-
+                
                 mItemArray = new ArrayList<>();
                 SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
                 Set<String> formOrderPref = sharedPref.getStringSet("formOrder", null);
@@ -67,7 +65,7 @@ public class FormOrderActivity extends AppCompatActivity {
                 else
                         for(int i = 0; i < formOrderPref.toArray().length; i++)
                                 mItemArray.add(Integer.parseInt((String)formOrderPref.toArray()[i]));
-        
+                
                 mDragListView.setLayoutManager(new LinearLayoutManager(this));
                 ItemAdapter listAdapter = new ItemAdapter(mItemArray,
                                                           R.layout.list_item,

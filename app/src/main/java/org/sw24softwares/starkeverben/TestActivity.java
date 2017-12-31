@@ -51,13 +51,18 @@ public class TestActivity extends AppCompatActivity {
                 Set<String> formOrderPref = sharedPref.getStringSet("formOrder", null);
 
                 final Vector<Integer> formsOrder = new Vector<Integer>();
-                for(int i = 0; i < formOrderPref.toArray().length; i++)
-                        formsOrder.addElement(Integer.parseInt((String)formOrderPref.toArray()[i]));
+                if(formOrderPref == null)
+                        for(int i = 0; i < 5; i++)
+                                formsOrder.addElement(i);
+                else {
+                        for(int i = 0; i < formOrderPref.toArray().length; i++)
+                                formsOrder.addElement(Integer.parseInt((String)formOrderPref.toArray()[i]));
+                }
                 final Vector<Integer> formsOrderReverse = new Vector<Integer>();
                 formsOrderReverse.setSize(5);
                 for(int i = 0; i < formsOrder.size(); i++)
                         formsOrderReverse.set(formsOrder.get(i),i);
-                            
+                                
                 final Vector<EditText> editForms = new Vector<EditText>();
                 editForms.addElement((EditText) findViewById(R.id.e0));
                 editForms.addElement((EditText) findViewById(R.id.e1));
