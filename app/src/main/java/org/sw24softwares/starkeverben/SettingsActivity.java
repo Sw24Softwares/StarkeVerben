@@ -2,6 +2,7 @@ package org.sw24softwares.starkeverben;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.ListPreference;
 import android.preference.PreferenceScreen;
@@ -18,6 +19,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
+import android.util.Log;
+
 public class SettingsActivity  extends PreferenceActivity {
         public String[] addElementToArray(String[] baseArray, String obj) {
                 List<String> temp = new ArrayList<String>(Arrays.asList(baseArray));
@@ -25,13 +28,6 @@ public class SettingsActivity  extends PreferenceActivity {
                 String[] simpleArray = new String[temp.size()];
                 temp.toArray(simpleArray);
                 return simpleArray;
-        }
-        Resources getLocalizedResources(Context context, Locale desiredLocale) {
-                Configuration conf = context.getResources().getConfiguration();
-                conf = new Configuration(conf);
-                conf.setLocale(desiredLocale);
-                Context localizedContext = context.createConfigurationContext(conf);
-                return localizedContext.getResources();
         }
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -41,7 +37,18 @@ public class SettingsActivity  extends PreferenceActivity {
                         guiList.setEntries(addElementToArray(getAssets().list("Translations"),
                                                              getString(R.string.pref_language_translation_default)));
                         guiList.setEntryValues(addElementToArray(getAssets().list("Translations"),
-                                                                 getLocalizedResources(this, Locale.ENGLISH).getString(R.string.pref_language_translation_default)));
+                                                                 GlobalData.getLocalizedResources(this, Locale.ENGLISH).getString(R.string.pref_language_translation_default)));
+                        guiList.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                                        @Override
+                                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                                                try {
+                                                        GlobalData.loadVerbs(SettingsActivity.this, (String)newValue);
+                                                } catch (Exception e) {
+                                                        Log.e("StarkeVerben", e.getMessage());
+                                                }
+                                                return true;
+                                        }
+                        });
                 }
                 catch (IOException e) {
                         System.exit(0);

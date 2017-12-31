@@ -30,14 +30,6 @@ import android.util.Log;
 public class MainActivity extends AppCompatActivity {
 
         FragmentTransaction mTransaction;
-
-        Resources getLocalizedResources(Context context, Locale desiredLocale) {
-                Configuration conf = context.getResources().getConfiguration();
-                conf = new Configuration(conf);
-                conf.setLocale(desiredLocale);
-                Context localizedContext = context.createConfigurationContext(conf);
-                return localizedContext.getResources();
-        }
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
@@ -50,38 +42,19 @@ public class MainActivity extends AppCompatActivity {
                 try {
                         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
                         String languagePref = sharedPref.getString("prefLanguage", "");
-
-                        BufferedReader verbs = null, trans = null;
-                        verbs = new BufferedReader(new InputStreamReader(getAssets().open("verbs.txt"), "UTF-8"));
-                        String translationPath = languagePref;
-                        if(languagePref.equals(getLocalizedResources(this, Locale.ENGLISH).getString(R.string.pref_language_translation_default))) {
-                                String localeLanguagePath = getResources().getConfiguration().locale.getDisplayLanguage(Locale.ENGLISH);
-                                if(Arrays.asList(getResources().getAssets().list("Translations")).contains(localeLanguagePath))
-                                        translationPath = localeLanguagePath;
-                                else
-                                        translationPath = "English";
-                        }
-                        trans = new BufferedReader(new InputStreamReader(getAssets().open("Translations/" + translationPath), "UTF-8"));
-
-                        Resources res = getResources();
-                        Settings.getSingleton().setFormString(0,res.getString(R.string.infinitive));
-                        Settings.getSingleton().setFormString(1,res.getString(R.string.preterite));
-                        Settings.getSingleton().setFormString(2,res.getString(R.string.participe));
-                        Settings.getSingleton().setFormString(3,res.getString(R.string.third_person));
-                        Settings.getSingleton().setFormString(4,res.getString(R.string.traduction));
-                        Settings.getSingleton().setFormString(5,res.getString(R.string.auxiliary));
-                        
-                        VerbsLoader vl = new VerbsLoader();
-                        vl.load(verbs);
-                        TranslationLoader tl = new TranslationLoader();
-                        tl.load(trans);
-
-                        Settings.getSingleton().setVerbs(vl.getVerbs());
-                        Settings.getSingleton().setTranslations(tl.getTranslations());
+                        GlobalData.loadVerbs(this, languagePref);
                 } catch (Exception e) {
                         Log.e("StarkeVerben", e.getMessage());
                 }
-                
+
+                Resources res = getResources();
+                Settings.getSingleton().setFormString(0,res.getString(R.string.infinitive));
+                Settings.getSingleton().setFormString(1,res.getString(R.string.preterite));
+                Settings.getSingleton().setFormString(2,res.getString(R.string.participe));
+                Settings.getSingleton().setFormString(3,res.getString(R.string.third_person));
+                Settings.getSingleton().setFormString(4,res.getString(R.string.traduction));
+                Settings.getSingleton().setFormString(5,res.getString(R.string.auxiliary));
+
                 BottomNavigationBar bottomNavigationBar = (BottomNavigationBar) findViewById(R.id.navigation);
                 bottomNavigationBar
                         .addItem(new BottomNavigationItem(R.drawable.ic_subject_black_24dp, R.string.test))
