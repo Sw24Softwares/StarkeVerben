@@ -48,7 +48,9 @@ public class SettingsActivity  extends PreferenceActivity {
                 }
 
                 PreferenceScreen screen = (PreferenceScreen) findPreference("prefAbout");
-                Intent intent = new Intent(this, AboutActivity.class);
-                screen.setIntent(intent);
+                screen.setIntent(new Intent(this, AboutActivity.class));
+                screen = (PreferenceScreen) findPreference("prefFormOrder");
+                screen.setIntent(new Intent(this, FormOrderActivity.class));
+
 	}
 }

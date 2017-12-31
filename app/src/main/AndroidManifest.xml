@@ -33,6 +33,7 @@
                   android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="org.sw24softwares.starkeverben.SettingsActivity" />
         <activity android:name="org.sw24softwares.starkeverben.AboutActivity" />
+        <activity android:name="org.sw24softwares.starkeverben.FormOrderActivity" />
     </application>
 
 </manifest>

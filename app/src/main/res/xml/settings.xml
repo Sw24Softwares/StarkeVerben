@@ -15,4 +15,11 @@
         android:key="prefAbout"
         android:title="@string/pref_about_app" />
   </PreferenceCategory>
+  <PreferenceCategory
+      android:title="@string/pref_appearance">
+    <PreferenceScreen
+        android:key="prefFormOrder"
+        android:title="@string/pref_form_order" />
+  </PreferenceCategory>
+
 </PreferenceScreen>

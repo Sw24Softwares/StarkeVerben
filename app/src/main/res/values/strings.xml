@@ -35,6 +35,8 @@
     <string name="pref_language_translation_summary">Choose the translation language</string>
     <string name="pref_language_translation_default">System default</string>
 
+    <string name="pref_appearance">Appearence</string>
+    <string name="pref_form_order">Form order</string>
 
     <string name="connect">Connect with us</string>
     <string name="dependencies">Dependencies</string>

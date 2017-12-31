@@ -8,4 +8,6 @@
     <color name="bad">#F44336</color>
 
     <color name="inactiveBottomNav">#606060</color>
+
+    <color name="list_item_background">#AACCCCCC</color>
 </resources>
