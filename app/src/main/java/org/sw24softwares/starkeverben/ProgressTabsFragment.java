@@ -35,22 +35,21 @@ public class ProgressTabsFragment extends Fragment {
                 mViewPager.setAdapter(mSectionsPagerAdapter);
 
                 mTabLayout = (TabLayout) getActivity().findViewById(R.id.sliding_tabs);
-                mTabLayout.setVisibility(View.VISIBLE);
                 mTabLayout.setupWithViewPager(mViewPager);
 
                 return view;
         }
 
         @Override
-        public void onPause() {
-                mTabLayout.setVisibility(View.GONE);
-                super.onPause();
-        }
-
-        @Override
         public void onResume() {
                 mTabLayout.setVisibility(View.VISIBLE);
                 super.onResume();
+        }
+
+        @Override
+        public void onStop() {
+                mTabLayout.setVisibility(View.GONE);
+                super.onStop();
         }
 
         public class SectionsPagerAdapter extends FragmentPagerAdapter {
