@@ -4,11 +4,13 @@ import org.sw24softwares.starkeverben.BuildConfig;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.net.Uri;
 
 import mehdi.sakout.aboutpage.AboutPage;
@@ -18,17 +20,25 @@ public class AboutActivity extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
+                setContentView(R.layout.activity_about);
+
+                Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+                myToolbar.setTitle("");
+                setSupportActionBar(myToolbar);
+                myToolbar.setTitle(R.string.pref_about);
 
                 AboutPage aboutPage = new AboutPage(this)
                         .isRTL(false)
                         .setImage(R.mipmap.ic_launcher)
                         .addItem(new Element().setTitle("Version " + BuildConfig.VERSION_NAME))
                         .addGroup(getResources().getString(R.string.connect))
-                        //.addWebsite("https://f-droid.org/packages/org.sw24softwares.starkeverben/")
+                        .addWebsite("https://sw24softwares.github.io/")
                         .addGitHub("Sw24Softwares/StarkeVerben");
                 aboutPage = setUpDependencies(aboutPage);
                 aboutPage = setUpDevelopers(aboutPage);
-                setContentView(aboutPage.create());
+                
+                LinearLayout layout = (LinearLayout)findViewById(R.id.layout);
+                layout.addView(aboutPage.create());
         }
         protected AboutPage setUpDependencies(AboutPage ap) {
                 ap.addGroup(getResources().getString(R.string.dependencies));
