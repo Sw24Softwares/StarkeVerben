@@ -18,5 +18,7 @@ In order to compile this application, make sure you have the Android SDK install
 ## Contributing
 Please see [this](https://github.com/Sw24Softwares/StarkeVerben/blob/master/CONTRIBUTING.md).
 
+[![Gitter](https://badges.gitter.im/Sw24Softwares/StarkeVerben.svg)](https://gitter.im/Sw24Softwares/StarkeVerben?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ## License
 This program is released under the GPL3 license. For further information, please read LICENSE file.

@@ -1,5 +1,5 @@
 # Contributing
-We are always happy to see people interested in our work. Therefore if you have found a missing feature or a bug, you can either open a pull request, or an issue.
+We are always happy to see people interested in our work. Therefore if you have found a missing feature or a bug, you can either open a pull request, or an issue. As we have a Gitter channel, you can also [join us](https://gitter.im/Sw24Softwares/StarkeVerben?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 ## Coding rule
 We do not have a specific coding rule, thus you can add your style to the submitted code.
