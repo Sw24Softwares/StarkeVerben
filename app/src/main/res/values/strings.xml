@@ -38,7 +38,8 @@
     <string name="pref_appearance">Appearence</string>
     <string name="pref_form_order">Form order</string>
 
-    <string name="connect">Connect with us</string>
+    <string name="version">Version</string>
+    <string name="connect">Get in touch with us</string>
     <string name="dependencies">Dependencies</string>
     <string name="developers">Developers</string>
     <string name="about_page_description">Starke Verben</string>

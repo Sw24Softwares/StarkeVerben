@@ -27,4 +27,16 @@
 
     <string name="search_hint">Pretraga</string>
     <string name="app_label">StarkeVerben</string>
+
+    <string name="pref_about">O aplikaciji</string>
+    <string name="pref_about_app">O aplikaciji</string>
+    <string name="pref_language">Jezik</string>
+    <string name="pref_language_translation">Jezik za prevod</string>
+    <string name="pref_language_translation_summary">Izaberite jezik za prevod</string>
+    <string name="pref_language_translation_default">Jezik uređaja</string>
+
+    <string name="version">Verzija</string>
+    <string name="connect">Naše stranice</string>
+    <string name="developers">Developeri</string>
+    <string name="about_page_description">Starke Verben</string>
 </resources>

@@ -33,4 +33,10 @@
     <string name="pref_language_translation">Langue de traduction</string>
     <string name="pref_language_translation_summary">Choisir la langue</string>
     <string name="pref_language_translation_default">Langue du système</string>
+
+    <string name="version">Version</string>
+    <string name="connect">Contactez-nous</string>
+    <string name="dependencies">Dépendances</string>
+    <string name="developers">Développeurs</string>
+    <string name="about_page_description">Starke Verben</string>
 </resources>

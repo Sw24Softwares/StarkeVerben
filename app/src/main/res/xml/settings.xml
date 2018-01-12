@@ -9,12 +9,14 @@
         android:title="@string/pref_language_translation" />
   </PreferenceCategory>
 
- <PreferenceCategory
+  <!--
+  <PreferenceCategory
       android:title="@string/pref_appearance">
     <PreferenceScreen
         android:key="prefFormOrder"
         android:title="@string/pref_form_order" />
   </PreferenceCategory>
+  -->
 
   <PreferenceCategory
       android:title="@string/pref_about">

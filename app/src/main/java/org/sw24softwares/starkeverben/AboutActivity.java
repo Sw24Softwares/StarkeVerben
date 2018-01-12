@@ -30,10 +30,10 @@ public class AboutActivity extends AppCompatActivity {
                 AboutPage aboutPage = new AboutPage(this)
                         .isRTL(false)
                         .setImage(R.mipmap.ic_launcher)
-                        .addItem(new Element().setTitle("Version " + BuildConfig.VERSION_NAME))
+                        .addItem(new Element().setTitle(getResources().getString(R.string.version) + " " + BuildConfig.VERSION_NAME))
                         .addGroup(getResources().getString(R.string.connect))
-                        .addWebsite("https://sw24softwares.github.io/")
-                        .addGitHub("Sw24Softwares/StarkeVerben");
+                        .addGitHub("Sw24Softwares/StarkeVerben")
+                        .addWebsite("https://sw24softwares.github.io/");
                 aboutPage = setUpDependencies(aboutPage);
                 aboutPage = setUpDevelopers(aboutPage);
                 
