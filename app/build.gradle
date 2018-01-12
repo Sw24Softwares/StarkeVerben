@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.3"
     defaultConfig {
         applicationId "org.sw24softwares.starkeverben"
-        minSdkVersion 15
+        minSdkVersion 17
         targetSdkVersion 25
         versionCode 7
         versionName "2.2"
