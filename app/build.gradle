@@ -7,8 +7,8 @@ android {
         applicationId "org.sw24softwares.starkeverben"
         minSdkVersion 17
         targetSdkVersion 25
-        versionCode 7
-        versionName "2.2"
+        versionCode 8
+        versionName "3.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

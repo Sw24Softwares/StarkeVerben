@@ -33,6 +33,7 @@ public class AboutActivity extends AppCompatActivity {
                         .addItem(new Element().setTitle(getResources().getString(R.string.version) + " " + BuildConfig.VERSION_NAME))
                         .addGroup(getResources().getString(R.string.connect))
                         .addGitHub("Sw24Softwares/StarkeVerben")
+                        .addItem(addGitter("Sw24Softwares/StarkeVerben"))
                         .addWebsite("https://sw24softwares.github.io/");
                 aboutPage = setUpDependencies(aboutPage);
                 aboutPage = setUpDevelopers(aboutPage);
@@ -46,7 +47,7 @@ public class AboutActivity extends AppCompatActivity {
                 ap.addItem(addDependencies("Pulsator4Droid","https://github.com/booncol/Pulsator4Droid"));
                 ap.addItem(addDependencies("BottomNavigation","https://github.com/Ashok-Varma/BottomNavigation"));
                 ap.addItem(addDependencies("Android About Page","https://github.com/medyo/android-about-page"));
-                ap.addItem(addDependencies("Material Design", "https://material.io"));
+                ap.addItem(addDependencies("Material Design Icons", "https://material.io/icons"));
                 return ap;
         }
         protected Element addDependencies(final String title, final String link) {
@@ -67,6 +68,15 @@ public class AboutActivity extends AppCompatActivity {
                         .setIconDrawable(icon)
                         .setAutoApplyIconTint(false)
                         .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+                return elem;
+        }
+
+        protected Element addGitter(final String link) {
+                Element elem = new Element()
+                    .setTitle("Gitter")
+                    .setIconDrawable(R.drawable.gitter)
+                    .setAutoApplyIconTint(false)
+                    .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://gitter.im/" + link)));
                 return elem;
         }
 }
