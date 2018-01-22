@@ -71,10 +71,10 @@ class Verb {
                 return "haben";
         }
         static public String standardize(String s) {
-                s = s.replace("ß","ss");
+                //                s = s.replace("ß","ss");
                 return s;
         }
-        
+
 
         public Verb clone() {
                 Verb v = new Verb(mIndex, (Vector<Vector<String>>)getAllForms().clone(), mAuxiliary);
