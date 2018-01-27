@@ -1,6 +1,6 @@
 <h2 align="center">Starke Verben</h2>
 <div align="center">
-[![Build Status](https://travis-ci.org/Sw24Softwares/StarkeVerben.svg?branch=master)](https://travis-ci.org/Sw24Softwares/StarkeVerben) [![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/Sw24Softwares/StarkeVerben/blob/master/LICENSE) [![Gitter](https://badges.gitter.im/Sw24Softwares/StarkeVerben.svg)](https://gitter.im/Sw24Softwares/StarkeVerben?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![F-Droid](https://img.shields.io/badge/get it-on F--Droid-green.svg)](https://f-droid.org/app/org.sw24softwares.starkeverben)</div>
+[![Build Status](https://travis-ci.org/Sw24Softwares/StarkeVerben.svg?branch=master)](https://travis-ci.org/Sw24Softwares/StarkeVerben) [![License](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/Sw24Softwares/StarkeVerben/blob/master/LICENSE) [![Gitter](https://badges.gitter.im/Sw24Softwares/StarkeVerben.svg)](https://gitter.im/Sw24Softwares/StarkeVerben?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![F-Droid](https://img.shields.io/badge/get_it-on_F--Droid-green.svg)](https://f-droid.org/app/org.sw24softwares.starkeverben)</div>
 
 ---
 
