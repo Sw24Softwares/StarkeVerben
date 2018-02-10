@@ -40,29 +40,28 @@
                 android:layout_below="@+id/e1"
                 android:textAlignment="center"/>
 
-
-            <EditText
-                android:layout_width="165dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/e3"
-                android:inputType="text"
-                android:layout_below="@+id/e2"
-                android:textAlignment="center"/>
-
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/auxiliary"
                 android:text="Sein"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/e3"/>
+                android:layout_below="@id/e2"/>
+
+            <EditText
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/e3"
+                android:inputType="text"
+                android:layout_below="@+id/auxiliary"
+                android:textAlignment="center"/>
 
             <EditText
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/e4"
                 android:inputType="textNoSuggestions"
-                android:layout_below="@id/auxiliary"
+                android:layout_below="@id/e3"
                 android:textAlignment="center"/>
 
             <Button
