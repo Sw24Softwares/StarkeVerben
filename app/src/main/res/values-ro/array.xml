@@ -1,413 +1,415 @@
-<string-array name="backen">
-	<item>a coace</item>
-</string-array>
-
-<string-array name="beginnen">
-	<item>a începe</item>
-</string-array>
-
-<string-array name="bieten">
-	<item>a oferi</item>
-</string-array>
-
-<string-array name="binden">
-	<item>a îmbina</item>
-	<item>a lega</item>
-</string-array>
-
-<string-array name="bitten">
-	<item>a cere</item>
-	<item>a întreba</item>
-</string-array>
-
-<string-array name="bleiben">
-	<item>a sta</item>
-	<item>a rămâne</item>
-</string-array>
-
-<string-array name="brechen">
-	<item>a sparge</item>
-</string-array>
-
-<string-array name="bringen">
-	<item>a aduce</item>
-</string-array>
-
-<string-array name="denken">
-	<item>a gândi</item>
-</string-array>
-
-<string-array name="dringen">
-	<item>a penetra</item>
-</string-array>
-
-<string-array name="essen">
-	<item>a mânca</item>
-</string-array>
-
-<string-array name="fahren">
-	<item>a conduce</item>
-	<item>a călători</item>
-</string-array>
-
-<string-array name="fallen">
-	<item>a cădea</item>
-</string-array>
-
-<string-array name="fangen">
-	<item>a prinde</item>
-</string-array>
-
-<string-array name="finden">
-	<item>a găsi</item>
-</string-array>
-
-<string-array name="fliegen">
-	<item>a zbura</item>
-</string-array>
-
-<string-array name="fliehen">
-	<item>a evada</item>
-</string-array>
-
-<string-array name="fließen">
-	<item>a curge</item>
-</string-array>
-
-<string-array name="fressen">
-	<item>a mânca ca un animal</item>
-</string-array>
-
-<string-array name="geben">
-	<item>a da</item>
-</string-array>
-
-<string-array name="gehen">
-	<item>a merge</item>
-</string-array>
-
-<string-array name="gelingen">
-	<item>a reuși</item>
-</string-array>
-
-<string-array name="gelten">
-	<item>a număra</item>
-	<item>a valora</item>
-</string-array>
-
-<string-array name="genießen">
-	<item>a se bucura</item>
-</string-array>
-
-<string-array name="geschehen">
-	<item>a se produce</item>
-</string-array>
-
-<string-array name="gewinnen">
-	<item>a câștiga</item>
-</string-array>
-
-<string-array name="gießen">
-	<item>a turna</item>
-	<item>a uda</item>
-</string-array>
-
-<string-array name="gleichen">
-	<item>a semăna</item>
-</string-array>
-
-<string-array name="graben">
-	<item>a săpa</item>
-</string-array>
-
-<string-array name="greifen">
-	<item>a apuca</item>
-</string-array>
-
-<string-array name="halten">
-	<item>a ține</item>
-</string-array>
-
-<string-array name="hängen">
-	<item>a spânzura</item>
-</string-array>
-
-<string-array name="heben">
-	<item>a ridica</item>
-	<item>a înalța</item>
-</string-array>
-
-<string-array name="heißen">
-	<item>a fi chemat</item>
-</string-array>
-
-<string-array name="helfen">
-	<item>a ajuta</item>
-</string-array>
-
-<string-array name="kennen">
-	<item>a ști</item>
-</string-array>
-
-<string-array name="klingen">
-	<item>a suna</item>
-</string-array>
-
-<string-array name="kommen">
-	<item>a veni</item>
-</string-array>
-
-<string-array name="laden">
-	<item>a încărca</item>
-</string-array>
-
-<string-array name="lassen">
-	<item>a pleca</item>
-</string-array>
-
-<string-array name="laufen">
-	<item>a fugi</item>
-</string-array>
-
-<string-array name="leihen">
-	<item>a împrumuta</item>
-</string-array>
-
-<string-array name="lesen">
-	<item>a citi</item>
-</string-array>
-
-<string-array name="liegen">
-	<item>a sta(în poziție)</item>
-</string-array>
-
-<string-array name="lügen">
-	<item>a minți</item>
-</string-array>
-
-<string-array name="meiden">
-	<item>a evita</item>
-</string-array>
-
-<string-array name="messen">
-	<item>a măsura</item>
-</string-array>
-
-<string-array name="nehmen">
-	<item>a lua</item>
-</string-array>
-
-<string-array name="nennen">
-	<item>a numi</item>
-	<item>a chema</item>
-</string-array>
-
-<string-array name="pfeifen">
-	<item>a fluiera</item>
-</string-array>
-
-<string-array name="raten">
-	<item>a sfătui</item>
-</string-array>
-
-<string-array name="reißen">
-	<item>a rupe</item>
-	<item>a sfășia</item>
-</string-array>
-
-<string-array name="reiten">
-	<item>a călări(un cal)</item>
-</string-array>
-
-<string-array name="rufen">
-	<item>a chema</item>
-</string-array>
-
-<string-array name="schaffen">
-	<item>a crea</item>
-</string-array>
-
-<string-array name="scheinen">
-	<item>a părea</item>
-	<item>a străluci</item>
-</string-array>
-
-<string-array name="schießen">
-	<item>a împușca</item>
-</string-array>
-
-<string-array name="schlafen">
-	<item>a dormi</item>
-</string-array>
-
-<string-array name="schlagen">
-	<item>a lovi</item>
-</string-array>
-
-<string-array name="schließen">
-	<item>a închide</item>
-</string-array>
-
-<string-array name="schmeißen">
-	<item>a încorda</item>
-</string-array>
-
-<string-array name="schreiben">
-	<item>a scrie</item>
-</string-array>
-
-<string-array name="schreien">
-	<item>a striga</item>
-</string-array>
-
-<string-array name="schreiten">
-	<item>a călca</item>
-</string-array>
-
-<string-array name="schweigen">
-	<item>a fi silențios</item>
-</string-array>
-
-<string-array name="schwimmen">
-	<item>a înota</item>
-</string-array>
-
-<string-array name="schwören">
-	<item>a înjura</item>
-</string-array>
-
-<string-array name="sehen">
-	<item>a vedea</item>
-	<item>a privi</item>
-</string-array>
-
-<string-array name="senden">
-	<item>a trimite</item>
-</string-array>
-
-<string-array name="singen">
-	<item>a cînta</item>
-</string-array>
-
-<string-array name="sitzen">
-	<item>a sta</item>
-</string-array>
-
-<string-array name="sprechen">
-	<item>a vorbi</item>
-</string-array>
-
-<string-array name="springen">
-	<item>a sări</item>
-</string-array>
-
-<string-array name="stehen">
-	<item>a sta</item>
-</string-array>
-
-<string-array name="steigen">
-	<item>a cățăra</item>
-</string-array>
-
-<string-array name="sterben">
-	<item>a muri</item>
-</string-array>
-
-<string-array name="stoßen">
-	<item>a împinge</item>
-	<item>a ciocăni</item>
-</string-array>
-
-<string-array name="streiten">
-	<item>a certa</item>
-</string-array>
-
-<string-array name="tragen">
-	<item>a căra</item>
-	<item>a purta</item>
-</string-array>
-
-<string-array name="treffen">
-	<item>a cunoaste pe cineva</item>
-</string-array>
-
-<string-array name="treiben">
-	<item>a conduce</item>
-	<item>a aluneca</item>
-</string-array>
-
-<string-array name="treten">
-	<item>a păși</item>
-	<item>a lovi</item>
-</string-array>
-
-<string-array name="trinken">
-	<item>a bea</item>
-</string-array>
-
-<string-array name="tun">
-	<item>a face</item>
-</string-array>
-
-<string-array name="vergessen">
-	<item>a uita</item>
-</string-array>
-
-<string-array name="verlieren">
-	<item>a pierde</item>
-</string-array>
-
-<string-array name="verschlingen">
-	<item>a devora</item>
-</string-array>
-
-<string-array name="verschwinden">
-	<item>a dispărea</item>
-</string-array>
-
-<string-array name="wachsen">
-	<item>a crește</item>
-</string-array>
-
-<string-array name="waschen">
-	<item>a spăla</item>
-</string-array>
-
-<string-array name="weichen">
-	<item>a concede</item>
-	<item>to give away</item>
-</string-array>
-
-<string-array name="weisen">
-	<item>a arăta</item>
-</string-array>
-
-<string-array name="wenden">
-	<item>a întoarce</item>
-</string-array>
-
-<string-array name="werben">
-	<item>a face reclama</item>
-	<item>a recruta</item>
-</string-array>
-
-<string-array name="werfen">
-	<item>a arunca</item>
-</string-array>
-
-<string-array name="wissen">
-	<item>a ști</item>
-</string-array>
-
-<string-array name="ziehen">
-	<item>a trage</item>
-</string-array>
-
-<string-array name="ziehen">
-	<item>a mișca</item>
-</string-array>
-
-<string-array name="zwingen">
-	<item>a forța</item>
-</string-array>
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="backen">
+    <item>a coace</item>
+  </string-array>
+
+  <string-array name="beginnen">
+    <item>a începe</item>
+  </string-array>
+
+  <string-array name="bieten">
+    <item>a oferi</item>
+  </string-array>
+
+  <string-array name="binden">
+    <item>a îmbina</item>
+    <item>a lega</item>
+  </string-array>
+
+  <string-array name="bitten">
+    <item>a cere</item>
+    <item>a întreba</item>
+  </string-array>
+
+  <string-array name="bleiben">
+    <item>a sta</item>
+    <item>a rămâne</item>
+  </string-array>
+
+  <string-array name="brechen">
+    <item>a sparge</item>
+  </string-array>
+
+  <string-array name="bringen">
+    <item>a aduce</item>
+  </string-array>
+
+  <string-array name="denken">
+    <item>a gândi</item>
+  </string-array>
+
+  <string-array name="dringen">
+    <item>a penetra</item>
+  </string-array>
+
+  <string-array name="essen">
+    <item>a mânca</item>
+  </string-array>
+
+  <string-array name="fahren">
+    <item>a conduce</item>
+    <item>a călători</item>
+  </string-array>
+
+  <string-array name="fallen">
+    <item>a cădea</item>
+  </string-array>
+
+  <string-array name="fangen">
+    <item>a prinde</item>
+  </string-array>
+
+  <string-array name="finden">
+    <item>a găsi</item>
+  </string-array>
+
+  <string-array name="fliegen">
+    <item>a zbura</item>
+  </string-array>
+
+  <string-array name="fliehen">
+    <item>a evada</item>
+  </string-array>
+
+  <string-array name="fließen">
+    <item>a curge</item>
+  </string-array>
+
+  <string-array name="fressen">
+    <item>a mânca ca un animal</item>
+  </string-array>
+
+  <string-array name="geben">
+    <item>a da</item>
+  </string-array>
+
+  <string-array name="gehen">
+    <item>a merge</item>
+  </string-array>
+
+  <string-array name="gelingen">
+    <item>a reuși</item>
+  </string-array>
+
+  <string-array name="gelten">
+    <item>a număra</item>
+    <item>a valora</item>
+  </string-array>
+
+  <string-array name="genießen">
+    <item>a se bucura</item>
+  </string-array>
+
+  <string-array name="geschehen">
+    <item>a se produce</item>
+  </string-array>
+
+  <string-array name="gewinnen">
+    <item>a câștiga</item>
+  </string-array>
+
+  <string-array name="gießen">
+    <item>a turna</item>
+    <item>a uda</item>
+  </string-array>
+
+  <string-array name="gleichen">
+    <item>a semăna</item>
+  </string-array>
+
+  <string-array name="graben">
+    <item>a săpa</item>
+  </string-array>
+
+  <string-array name="greifen">
+    <item>a apuca</item>
+  </string-array>
+
+  <string-array name="halten">
+    <item>a ține</item>
+  </string-array>
+
+  <string-array name="hängen">
+    <item>a spânzura</item>
+  </string-array>
+
+  <string-array name="heben">
+    <item>a ridica</item>
+    <item>a înalța</item>
+  </string-array>
+
+  <string-array name="heißen">
+    <item>a fi chemat</item>
+  </string-array>
+
+  <string-array name="helfen">
+    <item>a ajuta</item>
+  </string-array>
+
+  <string-array name="kennen">
+    <item>a ști</item>
+  </string-array>
+
+  <string-array name="klingen">
+    <item>a suna</item>
+  </string-array>
+
+  <string-array name="kommen">
+    <item>a veni</item>
+  </string-array>
+
+  <string-array name="laden">
+    <item>a încărca</item>
+  </string-array>
+
+  <string-array name="lassen">
+    <item>a pleca</item>
+  </string-array>
+
+  <string-array name="laufen">
+    <item>a fugi</item>
+  </string-array>
+
+  <string-array name="leihen">
+    <item>a împrumuta</item>
+  </string-array>
+
+  <string-array name="lesen">
+    <item>a citi</item>
+  </string-array>
+
+  <string-array name="liegen">
+    <item>a sta(în poziție)</item>
+  </string-array>
+
+  <string-array name="lügen">
+    <item>a minți</item>
+  </string-array>
+
+  <string-array name="meiden">
+    <item>a evita</item>
+  </string-array>
+
+  <string-array name="messen">
+    <item>a măsura</item>
+  </string-array>
+
+  <string-array name="nehmen">
+    <item>a lua</item>
+  </string-array>
+
+  <string-array name="nennen">
+    <item>a numi</item>
+    <item>a chema</item>
+  </string-array>
+
+  <string-array name="pfeifen">
+    <item>a fluiera</item>
+  </string-array>
+
+  <string-array name="raten">
+    <item>a sfătui</item>
+  </string-array>
+
+  <string-array name="reißen">
+    <item>a rupe</item>
+    <item>a sfășia</item>
+  </string-array>
+
+  <string-array name="reiten">
+    <item>a călări(un cal)</item>
+  </string-array>
+
+  <string-array name="rufen">
+    <item>a chema</item>
+  </string-array>
+
+  <string-array name="schaffen">
+    <item>a crea</item>
+  </string-array>
+
+  <string-array name="scheinen">
+    <item>a părea</item>
+    <item>a străluci</item>
+  </string-array>
+
+  <string-array name="schießen">
+    <item>a împușca</item>
+  </string-array>
+
+  <string-array name="schlafen">
+    <item>a dormi</item>
+  </string-array>
+
+  <string-array name="schlagen">
+    <item>a lovi</item>
+  </string-array>
+
+  <string-array name="schließen">
+    <item>a închide</item>
+  </string-array>
+
+  <string-array name="schmeißen">
+    <item>a încorda</item>
+  </string-array>
+
+  <string-array name="schreiben">
+    <item>a scrie</item>
+  </string-array>
+
+  <string-array name="schreien">
+    <item>a striga</item>
+  </string-array>
+
+  <string-array name="schreiten">
+    <item>a călca</item>
+  </string-array>
+
+  <string-array name="schweigen">
+    <item>a fi silențios</item>
+  </string-array>
+
+  <string-array name="schwimmen">
+    <item>a înota</item>
+  </string-array>
+
+  <string-array name="schwören">
+    <item>a înjura</item>
+  </string-array>
+
+  <string-array name="sehen">
+    <item>a vedea</item>
+    <item>a privi</item>
+  </string-array>
+
+  <string-array name="senden">
+    <item>a trimite</item>
+  </string-array>
+
+  <string-array name="singen">
+    <item>a cînta</item>
+  </string-array>
+
+  <string-array name="sitzen">
+    <item>a sta</item>
+  </string-array>
+
+  <string-array name="sprechen">
+    <item>a vorbi</item>
+  </string-array>
+
+  <string-array name="springen">
+    <item>a sări</item>
+  </string-array>
+
+  <string-array name="stehen">
+    <item>a sta</item>
+  </string-array>
+
+  <string-array name="steigen">
+    <item>a cățăra</item>
+  </string-array>
+
+  <string-array name="sterben">
+    <item>a muri</item>
+  </string-array>
+
+  <string-array name="stoßen">
+    <item>a împinge</item>
+    <item>a ciocăni</item>
+  </string-array>
+
+  <string-array name="streiten">
+    <item>a certa</item>
+  </string-array>
+
+  <string-array name="tragen">
+    <item>a căra</item>
+    <item>a purta</item>
+  </string-array>
+
+  <string-array name="treffen">
+    <item>a cunoaste pe cineva</item>
+  </string-array>
+
+  <string-array name="treiben">
+    <item>a conduce</item>
+    <item>a aluneca</item>
+  </string-array>
+
+  <string-array name="treten">
+    <item>a păși</item>
+    <item>a lovi</item>
+  </string-array>
+
+  <string-array name="trinken">
+    <item>a bea</item>
+  </string-array>
+
+  <string-array name="tun">
+    <item>a face</item>
+  </string-array>
+
+  <string-array name="vergessen">
+    <item>a uita</item>
+  </string-array>
+
+  <string-array name="verlieren">
+    <item>a pierde</item>
+  </string-array>
+
+  <string-array name="verschlingen">
+    <item>a devora</item>
+  </string-array>
+
+  <string-array name="verschwinden">
+    <item>a dispărea</item>
+  </string-array>
+
+  <string-array name="wachsen">
+    <item>a crește</item>
+  </string-array>
+
+  <string-array name="waschen">
+    <item>a spăla</item>
+  </string-array>
+
+  <string-array name="weichen">
+    <item>a concede</item>
+    <item>to give away</item>
+  </string-array>
+
+  <string-array name="weisen">
+    <item>a arăta</item>
+  </string-array>
+
+  <string-array name="wenden">
+    <item>a întoarce</item>
+  </string-array>
+
+  <string-array name="werben">
+    <item>a face reclama</item>
+    <item>a recruta</item>
+  </string-array>
+
+  <string-array name="werfen">
+    <item>a arunca</item>
+  </string-array>
+
+  <string-array name="wissen">
+    <item>a ști</item>
+  </string-array>
+
+  <string-array name="ziehen">
+    <item>a trage</item>
+  </string-array>
+
+  <string-array name="ziehen">
+    <item>a mișca</item>
+  </string-array>
+
+  <string-array name="zwingen">
+    <item>a forța</item>
+  </string-array>
+</resources>
