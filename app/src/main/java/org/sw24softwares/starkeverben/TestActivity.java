@@ -27,7 +27,7 @@ public class TestActivity extends AppCompatActivity {
         protected int mFormType;
         protected int mPossibility;
         protected Verb mVerb;
-        
+
         protected void fillEditText(EditText editText, String text) {
                 editText.setText(text);
                 editText.setEnabled(false);
@@ -41,14 +41,15 @@ public class TestActivity extends AppCompatActivity {
 		else
 			return false;
 	}
-        
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_test);
-		
+
                 SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
                 Set<String> formOrderPref = sharedPref.getStringSet("formOrder", null);
+                Set<String> form = sharedPref.getStringSet("form_in_test", null);
 
                 final Vector<Integer> formsOrder = new Vector<Integer>();
                 if(formOrderPref == null)
@@ -62,7 +63,7 @@ public class TestActivity extends AppCompatActivity {
                 formsOrderReverse.setSize(5);
                 for(int i = 0; i < formsOrder.size(); i++)
                         formsOrderReverse.set(formsOrder.get(i),i);
-                                
+
                 final Vector<EditText> editForms = new Vector<EditText>();
                 editForms.addElement((EditText) findViewById(R.id.e0));
                 editForms.addElement((EditText) findViewById(R.id.e1));
@@ -70,15 +71,18 @@ public class TestActivity extends AppCompatActivity {
                 editForms.addElement((EditText) findViewById(R.id.e3));
                 editForms.addElement((EditText) findViewById(R.id.e4));
                 final CheckBox aux = (CheckBox) findViewById(R.id.auxiliary);
-                
+
                 for(int i = 0; i < editForms.size(); i++)
                         editForms.get(i).setHint(Verb.formToWord(formsOrder.get(i)));
-                
+
                 Random rand = new Random();
                 mGivenVerb = rand.nextInt(Settings.getSingleton().getVerbs().size());
                 mVerb = Settings.getSingleton().getVerbs().get(mGivenVerb);
-                mFormType = rand.nextInt(5);
-                
+
+                do
+                    mFormType = rand.nextInt(5);
+                while(!form.contains(String.valueOf(mFormType)));
+
                 for(int i = 0; i < 4; i++) {
                         if(mFormType == i) {
                                 mPossibility = rand.nextInt(mVerb.getAllForms().get(mFormType).size());
@@ -94,7 +98,7 @@ public class TestActivity extends AppCompatActivity {
                 final int marks[] = getIntent().getExtras().getIntArray("marks");
                 final long start = System.currentTimeMillis();
 
-                
+
                 final RelativeLayout layout = (RelativeLayout) findViewById(R.id.test_layout);
                 layout.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -117,7 +121,7 @@ public class TestActivity extends AppCompatActivity {
                                         // Whether a test has taken more than 20 seconds to be done
 					Boolean time = getIntent().getExtras().getBoolean("dialog");
                                         intent.putExtra("dialog", testDuration(start) || time);
-					
+
 					String givenAnswers[] = new String[6];
                                         for(int i = 0; i < editForms.size(); i++)
                                                 givenAnswers[formsOrder.get(i)] = editForms.get(i).getText().toString();

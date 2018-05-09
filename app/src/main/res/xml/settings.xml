@@ -18,6 +18,14 @@
   </PreferenceCategory>
   -->
 
+    <MultiSelectListPreference
+        android:entries="@array/forms"
+        android:entryValues="@array/forms_index"
+        android:defaultValue="@array/forms_default"
+        android:key="form_in_test"
+        android:summary="Forms that can be given in test"
+        android:title="Forms in test" />
+
   <PreferenceCategory
       android:title="@string/pref_about">
     <PreferenceScreen

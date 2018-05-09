@@ -58,8 +58,8 @@ public class AboutActivity extends AppCompatActivity {
         }
         protected AboutPage setUpDevelopers(AboutPage ap) {
                 ap.addGroup(getResources().getString(R.string.developers));
-                ap.addItem(addDeveloper("24PaH", "https://github.com/24PaH", R.drawable._24pah));
-                ap.addItem(addDeveloper("Swarthon", "https://github.com/Swarthon", R.drawable.swarthon));
+                ap.addItem(addDeveloper("Hamza Parnica", "https://github.com/24PaH", R.drawable._24pah));
+                ap.addItem(addDeveloper("Louis Vanhaelewyn", "https://github.com/Swarthon", R.drawable.swarthon));
                 return ap;
         }
         protected Element addDeveloper(final String title, final String link, final Integer icon) {
