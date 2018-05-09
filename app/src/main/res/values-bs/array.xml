@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="backen">
+    <item>peći</item>
+  </string-array>
+
+  <string-array name="beginnen">
+    <item>početi</item>
+  </string-array>
+
+  <string-array name="bieten">
+    <item>ponuditi</item>
+    <item>pokloniti</item>
+  </string-array>
+
+  <string-array name="binden">
+    <item>povezati</item>
+  </string-array>
+
+  <string-array name="bitten">
+    <item>pitati</item>
+    <item>zahtevati</item>
+  </string-array>
+
+  <string-array name="bleiben">
+    <item>ostati</item>
+  </string-array>
+
+  <string-array name="brechen">
+    <item>prekinuti</item>
+    <item>slomiti</item>
+  </string-array>
+
+  <string-array name="bringen">
+    <item>donjeti</item>
+  </string-array>
+
+  <string-array name="denken">
+    <item>misliti</item>
+  </string-array>
+
+  <string-array name="dringen">
+    <item>upasti</item>
+    <item>ući</item>
+  </string-array>
+
+  <string-array name="essen">
+    <item>jesti</item>
+  </string-array>
+
+  <string-array name="fahren">
+    <item>voziti</item>
+  </string-array>
+
+  <string-array name="fallen">
+    <item>pasti</item>
+  </string-array>
+
+  <string-array name="fangen">
+    <item>uhvatiti</item>
+  </string-array>
+
+  <string-array name="finden">
+    <item>naći</item>
+  </string-array>
+
+  <string-array name="fliegen">
+    <item>letjeti</item>
+  </string-array>
+
+  <string-array name="fliehen">
+    <item>bježati</item>
+    <item>bjegati</item>
+    <item>pobječi</item>
+  </string-array>
+
+  <string-array name="fließen">
+    <item>teći</item>
+  </string-array>
+
+  <string-array name="fressen">
+    <item>žderati</item>
+  </string-array>
+
+  <string-array name="geben">
+    <item>dati</item>
+  </string-array>
+
+  <string-array name="gehen">
+    <item>ići</item>
+    <item>hodati</item>
+  </string-array>
+
+  <string-array name="gelingen">
+    <item>uspijeti</item>
+    <item>istrajati</item>
+  </string-array>
+
+  <string-array name="gelten">
+    <item>vrijediti</item>
+  </string-array>
+
+  <string-array name="genießen">
+    <item>uživati</item>
+  </string-array>
+
+  <string-array name="geschehen">
+    <item>desiti</item>
+  </string-array>
+
+  <string-array name="gewinnen">
+    <item>pobijediti</item>
+    <item>dobiti</item>
+  </string-array>
+
+  <string-array name="gießen">
+    <item>zaliti</item>
+  </string-array>
+
+  <string-array name="gleichen">
+    <item>izgledati</item>
+    <item>ličiti</item>
+  </string-array>
+
+  <string-array name="graben">
+    <item>kopati</item>
+  </string-array>
+
+  <string-array name="greifen">
+    <item>zgrabiti</item>
+  </string-array>
+
+  <string-array name="halten">
+    <item>držati</item>
+  </string-array>
+
+  <string-array name="hängen">
+    <item>visiti</item>
+  </string-array>
+
+  <string-array name="heben">
+    <item>dignuti</item>
+  </string-array>
+
+  <string-array name="heißen">
+    <item>zvati</item>
+  </string-array>
+
+  <string-array name="helfen">
+    <item>pomoći</item>
+  </string-array>
+
+  <string-array name="kennen">
+    <item>znati</item>
+  </string-array>
+
+  <string-array name="klingen">
+    <item>zvučati</item>
+  </string-array>
+
+  <string-array name="kommen">
+    <item>doći</item>
+  </string-array>
+
+  <string-array name="laden">
+    <item>natovariti</item>
+    <item>teretiti</item>
+  </string-array>
+
+  <string-array name="lassen">
+    <item>pustiti</item>
+    <item>napustiti</item>
+  </string-array>
+
+  <string-array name="laufen">
+    <item>trčati</item>
+  </string-array>
+
+  <string-array name="leihen">
+    <item>posuditi</item>
+  </string-array>
+
+  <string-array name="lesen">
+    <item>čitati</item>
+    <item>pročitati</item>
+  </string-array>
+
+  <string-array name="liegen">
+    <item>legnuti</item>
+    <item>ležati</item>
+  </string-array>
+
+  <string-array name="lügen">
+    <item>lagati</item>
+  </string-array>
+
+  <string-array name="meiden">
+    <item>izbjegavati</item>
+  </string-array>
+
+  <string-array name="messen">
+    <item>mijeriti</item>
+  </string-array>
+
+  <string-array name="nehmen">
+    <item>uzeti</item>
+  </string-array>
+
+  <string-array name="nennen">
+    <item>imenovati</item>
+  </string-array>
+
+  <string-array name="pfeifen">
+    <item>zviždati</item>
+  </string-array>
+
+  <string-array name="raten">
+    <item>savjetovati</item>
+  </string-array>
+
+  <string-array name="reißen">
+    <item>pocijepati</item>
+    <item>poderati</item>
+  </string-array>
+
+  <string-array name="reiten">
+    <item>jahati</item>
+  </string-array>
+
+  <string-array name="rufen">
+    <item>zvati</item>
+    <item>pozvati</item>
+  </string-array>
+
+  <string-array name="schaffen">
+    <item>napraviti</item>
+    <item>stvoriti</item>
+  </string-array>
+
+  <string-array name="scheinen">
+    <item>izgledati</item>
+    <item>sijati</item>
+  </string-array>
+
+  <string-array name="schießen">
+    <item>pucati</item>
+  </string-array>
+
+  <string-array name="schlafen">
+    <item>spavati</item>
+  </string-array>
+
+  <string-array name="schlagen">
+    <item>udariti</item>
+  </string-array>
+
+  <string-array name="schließen">
+    <item>zatvoriti</item>
+  </string-array>
+
+  <string-array name="schmeißen">
+    <item>baciti</item>
+  </string-array>
+
+  <string-array name="schreiben">
+    <item>pisati</item>
+  </string-array>
+
+  <string-array name="schreien">
+    <item>vrištati</item>
+    <item>derati</item>
+    <item>galamiti</item>
+  </string-array>
+
+  <string-array name="schreiten">
+    <item>hodati</item>
+  </string-array>
+
+  <string-array name="schweigen">
+    <item>šutiti</item>
+  </string-array>
+
+  <string-array name="schwimmen">
+    <item>plivati</item>
+  </string-array>
+
+  <string-array name="schwören">
+    <item>kunuti</item>
+    <item>zakleti</item>
+  </string-array>
+
+  <string-array name="sehen">
+    <item>vidijeti</item>
+    <item>gledati</item>
+  </string-array>
+
+  <string-array name="senden">
+    <item>slati</item>
+    <item>poslati</item>
+  </string-array>
+
+  <string-array name="singen">
+    <item>pjevati</item>
+  </string-array>
+
+  <string-array name="sitzen">
+    <item>sjesti</item>
+  </string-array>
+
+  <string-array name="sprechen">
+    <item>pričati</item>
+    <item>govoriti</item>
+  </string-array>
+
+  <string-array name="springen">
+    <item>skočiti</item>
+  </string-array>
+
+  <string-array name="stehen">
+    <item>stojati</item>
+  </string-array>
+
+  <string-array name="steigen">
+    <item>penjati</item>
+  </string-array>
+
+  <string-array name="sterben">
+    <item>umrijeti</item>
+  </string-array>
+
+  <string-array name="stoßen">
+    <item>gurnuti</item>
+    <item>udariti</item>
+  </string-array>
+
+  <string-array name="streiten">
+    <item>prepirati</item>
+    <item>svađati</item>
+  </string-array>
+
+  <string-array name="tragen">
+    <item>nositi</item>
+    <item>oblačiti</item>
+  </string-array>
+
+  <string-array name="treffen">
+    <item>stresti</item>
+    <item>upoznati</item>
+  </string-array>
+
+  <string-array name="treiben">
+    <item>voziti</item>
+  </string-array>
+
+  <string-array name="treten">
+    <item>ići</item>
+    <item>zakoraćiti</item>
+  </string-array>
+
+  <string-array name="trinken">
+    <item>piti</item>
+  </string-array>
+
+  <string-array name="tun">
+    <item>raditi</item>
+  </string-array>
+
+  <string-array name="vergessen">
+    <item>zaboraviti</item>
+  </string-array>
+
+  <string-array name="verlieren">
+    <item>izgubiti</item>
+  </string-array>
+
+  <string-array name="verschlingen">
+    <item>gutati</item>
+  </string-array>
+
+  <string-array name="verschwinden">
+    <item>nestati</item>
+  </string-array>
+
+  <string-array name="wachsen">
+    <item>rasti</item>
+  </string-array>
+
+  <string-array name="waschen">
+    <item>oprati</item>
+  </string-array>
+
+  <string-array name="weichen">
+    <item>napustiti</item>
+  </string-array>
+
+  <string-array name="weisen">
+    <item>pokazati</item>
+  </string-array>
+
+  <string-array name="wenden">
+    <item>okrenuti</item>
+  </string-array>
+
+  <string-array name="werben">
+    <item>oglašavati</item>
+    <item>reklamirati</item>
+  </string-array>
+
+  <string-array name="werfen">
+    <item>baciti</item>
+  </string-array>
+
+  <string-array name="wissen">
+    <item>znati</item>
+  </string-array>
+
+  <string-array name="ziehen">
+    <item>vući</item>
+    <item>povući</item>
+  </string-array>
+
+  <string-array name="ziehen">
+    <item>pucati</item>
+  </string-array>
+
+  <string-array name="zwingen">
+    <item>primorati</item>
+    <item>natijerati</item>
+  </string-array>
+</resources>
