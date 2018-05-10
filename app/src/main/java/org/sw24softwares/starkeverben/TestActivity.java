@@ -17,10 +17,12 @@ import java.util.Random;
 import java.util.Arrays;
 import java.util.Vector;
 import java.util.Set;
+import java.util.HashSet;
 
 import static android.R.color.black;
 
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.preference.PreferenceManager;
 
 import android.util.Log;
@@ -50,9 +52,13 @@ public class TestActivity extends AppCompatActivity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_test);
 
+                Set<String> defaultGivenForms = new HashSet<String>(Arrays.asList(getResources().getStringArray(R.array.forms_index)));
+
                 SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
                 Set<String> formOrderPref = sharedPref.getStringSet("formOrder", null);
-                Set<String> form = sharedPref.getStringSet("form_in_test", null);
+                Set<String> givenForms = sharedPref.getStringSet("givenFormsInTest", defaultGivenForms);
+
+                if (givenForms.size() == 0) givenForms = defaultGivenForms;
 
                 final Vector<Integer> formsOrder = new Vector<Integer>();
                 if(formOrderPref == null)
@@ -86,7 +92,7 @@ public class TestActivity extends AppCompatActivity {
 
                 do
                     mFormType = rand.nextInt(5);
-                while(!form.contains(String.valueOf(mFormType)));
+                while(!givenForms.contains(String.valueOf(mFormType)));
 
                 for(int i = 0; i < 4; i++) {
                         if(mFormType == i) {

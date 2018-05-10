@@ -30,8 +30,7 @@
 
     <string name="pref_about">O aplikaciji</string>
     <string name="pref_about_app">O aplikaciji</string>
-    <string name="pref_language">Jezik</string>
-    <string name="pref_language_translation">Jezik za prevod</string>
+    <string name="pref_language_translation_title">Jezik za prevod</string>
     <string name="pref_language_translation_summary">Izaberite jezik za prevod</string>
     <string name="pref_language_translation_default">Jezik uređaja</string>
 

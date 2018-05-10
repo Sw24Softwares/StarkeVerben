@@ -29,8 +29,7 @@
 
     <string name="pref_about">À propos</string>
     <string name="pref_about_app">À propos de cette application</string>
-    <string name="pref_language">Langue</string>
-    <string name="pref_language_translation">Langue de traduction</string>
+    <string name="pref_language_translation_title">Langue de traduction</string>
     <string name="pref_language_translation_summary">Choisir la langue</string>
     <string name="pref_language_translation_default">Langue du système</string>
 
