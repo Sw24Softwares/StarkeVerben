@@ -9,6 +9,7 @@ import java.util.Random;
 import java.util.Vector;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.LayoutInflater;
@@ -37,12 +38,15 @@ public class SingleLessonFragment extends Fragment {
                         auxiliary = "ist ";
                 else
                         auxiliary = "hat ";
+
+                Resources res = getResources();
+                String[] trans = res.getStringArray(res.getIdentifier(verb.getAllForms().get(0).get(0),"array",getActivity().getPackageName()));
                 
                 infinitif.setText(verb.getAllForms().get(0).get(0));
                 preterit.setText(verb.getAllForms().get(1).get(0));
                 participe.setText(verb.getAllForms().get(2).get(0));
                 troisiemePersonne.setText(verb.getAllForms().get(3).get(0));
-                traduction.setText(Settings.getSingleton().getTranslations().get(verbNumber).getTranslations().get(0));
+                traduction.setText(trans[0]);
                 aux.setText(auxiliary);
 
                 Button next = (Button) view.findViewById(R.id.next_single_lesson);

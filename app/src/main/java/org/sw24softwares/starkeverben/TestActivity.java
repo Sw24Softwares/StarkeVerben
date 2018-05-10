@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.view.View;
@@ -22,12 +23,14 @@ import static android.R.color.black;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import android.util.Log;
+
 public class TestActivity extends AppCompatActivity {
         protected int mGivenVerb;
         protected int mFormType;
-        protected int mPossibility;
         protected Verb mVerb;
-
+        protected String[] mTranslations;
+        
         protected void fillEditText(EditText editText, String text) {
                 editText.setText(text);
                 editText.setEnabled(false);
@@ -78,6 +81,8 @@ public class TestActivity extends AppCompatActivity {
                 Random rand = new Random();
                 mGivenVerb = rand.nextInt(Settings.getSingleton().getVerbs().size());
                 mVerb = Settings.getSingleton().getVerbs().get(mGivenVerb);
+                Log.e("StarkeVerben", mVerb.getAllForms().get(0).get(0));
+                mTranslations = getResources().getStringArray(getResources().getIdentifier(mVerb.getAllForms().get(0).get(0),"array",getPackageName()));
 
                 do
                     mFormType = rand.nextInt(5);
@@ -85,13 +90,12 @@ public class TestActivity extends AppCompatActivity {
 
                 for(int i = 0; i < 4; i++) {
                         if(mFormType == i) {
-                                mPossibility = rand.nextInt(mVerb.getAllForms().get(mFormType).size());
-                                fillEditText(editForms.get(formsOrderReverse.get(i)), mVerb.getAllForms().get(mFormType).get(mPossibility));
+                                int possibility = rand.nextInt(mVerb.getAllForms().get(mFormType).size());
+                                fillEditText(editForms.get(formsOrderReverse.get(i)), mVerb.getAllForms().get(mFormType).get(possibility));
                         }
                 }
                 if(mFormType == 4) {
-                        mPossibility = rand.nextInt(Settings.getSingleton().getTranslations().get(mGivenVerb).getTranslations().size());
-                        fillEditText(editForms.get(formsOrderReverse.get(4)), Settings.getSingleton().getTranslations().get(mGivenVerb).getTranslations().get(mPossibility));
+                        fillEditText(editForms.get(formsOrderReverse.get(4)), mTranslations[0]);
                 }
 
                 final int total = getIntent().getExtras().getInt("total");
@@ -131,7 +135,7 @@ public class TestActivity extends AppCompatActivity {
 
                                         for (int i = 0; i < 4; i++)
                                                 intent.putExtra(Verb.formToWord(i), mVerb.getAllForms().get(i).toArray(new String[0]));
-                                        intent.putExtra(Verb.formToWord(4), Settings.getSingleton().getTranslations().get(mGivenVerb).getTranslations().toArray(new String[0]));
+                                        intent.putExtra(Verb.formToWord(4), mTranslations);
                                         intent.putExtra(Verb.formToWord(5), Arrays.asList(Verb.boolToAux(mVerb.getAuxiliary())).toArray());
                                         intent.putExtra("givenFormType", mFormType);
                                         intent.putExtra("total", total);

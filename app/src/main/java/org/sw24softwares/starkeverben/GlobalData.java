@@ -26,23 +26,10 @@ class GlobalData {
                 BufferedReader verbs = null, trans = null;
                 verbs = new BufferedReader(new InputStreamReader(context.getAssets().open("verbs.txt"), "UTF-8"));
                 String translationPath = languagePref;
-                if(languagePref.equals(getLocalizedResources(context, Locale.ENGLISH).getString(R.string.pref_language_translation_default))) {
-                        String localeLanguagePath = context.getResources().getConfiguration().locale.getDisplayLanguage(Locale.ENGLISH);
-                        if(Arrays.asList(context.getAssets().list("Translations")).contains(localeLanguagePath))
-                                translationPath = localeLanguagePath;
-                        else
-                                translationPath = "English";
-                }
-                trans = new BufferedReader(new InputStreamReader(context.getAssets().open("Translations/" + translationPath), "UTF-8"));
-                
-                
+                                
                 VerbsLoader vl = new VerbsLoader();
                 vl.load(verbs);
-                TranslationLoader tl = new TranslationLoader();
-                tl.load(trans);
                 
                 Settings.getSingleton().setVerbs(vl.getVerbs());
-                Settings.getSingleton().setTranslations(tl.getTranslations());
-
         }
 }
