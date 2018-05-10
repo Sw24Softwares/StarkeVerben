@@ -88,9 +88,8 @@ public class TestActivity extends AppCompatActivity {
                 Random rand = new Random();
                 mGivenVerb = rand.nextInt(Settings.getSingleton().getVerbs().size());
                 mVerb = Settings.getSingleton().getVerbs().get(mGivenVerb);
-                Log.e("StarkeVerben", mVerb.getAllForms().get(0).get(0));
-                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-                Resources res = GlobalData.getLocalizedResources(this,new Locale(sharedPref.getString("prefLanguage", null)));
+                Log.e("StarkeVerben",sharedPref.getString("prefLanguage", ""));
+                Resources res = GlobalData.getLocalizedResources(this,new Locale(sharedPref.getString("prefLanguage", "")));
                 mTranslations = res.getStringArray(res.getIdentifier(GlobalData.decompose(mVerb.getAllForms().get(0).get(0)),"array",getPackageName()));
 
                 

@@ -4,26 +4,25 @@
       android:title="@string/pref">
     <ListPreference
         android:key="prefLanguage"
-        android:title="@string/pref_language_translation"
+        android:title="@string/pref_language_translation_title"
+        android:defaultValue=""
         android:entries="@array/language_entries"
         android:entryValues="@array/language_values"/>
   </PreferenceCategory>
-
-
-    <MultiSelectListPreference
-        android:entries="@array/forms"
-        android:entryValues="@array/forms_index"
-        android:defaultValue="@array/forms_index"
-        android:key="givenFormsInTest"
-        android:summary="@string/pref_given_forms_summary"
-        android:title="@string/pref_given_forms_title" />
-
-    <!--
-        <PreferenceScreen
-        android:key="prefFormOrder"
-        android:title="@string/pref_form_order_title" />
-    -->
-  </PreferenceCategory>
+  
+  
+  <MultiSelectListPreference
+      android:entries="@array/forms"
+      android:entryValues="@array/forms_index"
+      android:defaultValue="@array/forms_index"
+      android:key="givenFormsInTest"
+      android:summary="@string/pref_given_forms_summary"
+      android:title="@string/pref_given_forms_title" />
+  
+  <!-- <PreferenceScreen
+       android:key="prefFormOrder"
+       android:title="@string/pref_form_order_title" />
+  -->
 
   <PreferenceCategory
       android:title="@string/pref_about">
