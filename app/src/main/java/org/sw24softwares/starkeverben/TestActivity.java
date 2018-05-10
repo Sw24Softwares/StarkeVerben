@@ -18,6 +18,7 @@ import java.util.Arrays;
 import java.util.Vector;
 import java.util.Set;
 import java.util.HashSet;
+import java.util.Locale;
 
 import static android.R.color.black;
 
@@ -88,8 +89,11 @@ public class TestActivity extends AppCompatActivity {
                 mGivenVerb = rand.nextInt(Settings.getSingleton().getVerbs().size());
                 mVerb = Settings.getSingleton().getVerbs().get(mGivenVerb);
                 Log.e("StarkeVerben", mVerb.getAllForms().get(0).get(0));
-                mTranslations = getResources().getStringArray(getResources().getIdentifier(GlobalData.decompose(mVerb.getAllForms().get(0).get(0)),"array",getPackageName()));
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+                Resources res = GlobalData.getLocalizedResources(this,new Locale(sharedPref.getString("prefLanguage", null)));
+                mTranslations = res.getStringArray(res.getIdentifier(GlobalData.decompose(mVerb.getAllForms().get(0).get(0)),"array",getPackageName()));
 
+                
                 do
                     mFormType = rand.nextInt(5);
                 while(!givenForms.contains(String.valueOf(mFormType)));

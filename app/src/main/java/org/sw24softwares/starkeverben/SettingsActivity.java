@@ -32,28 +32,16 @@ public class SettingsActivity  extends PreferenceActivity {
 	@Override public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.settings);
-                try {
-                        ListPreference guiList = (ListPreference)findPreference("prefLanguage");
-                        guiList.setEntries(addElementToArray(getAssets().list("Translations"),
-                                                             getString(R.string.pref_language_translation_default)));
-                        guiList.setEntryValues(addElementToArray(getAssets().list("Translations"),
-                                                                 GlobalData.getLocalizedResources(this, Locale.ENGLISH).getString(R.string.pref_language_translation_default)));
-                        guiList.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                                        @Override
-                                        public boolean onPreferenceChange(Preference preference, Object newValue) {
-                                                try {
-                                                        GlobalData.loadVerbs(SettingsActivity.this, (String)newValue);
-                                                } catch (Exception e) {
-                                                        Log.e("StarkeVerben", e.getMessage());
-                                                }
-                                                return true;
-                                        }
+                
+                ListPreference guiList = (ListPreference)findPreference("prefLanguage");
+                guiList.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                                @Override
+                                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                                        Settings.getSingleton().setTranslationLocale((String)newValue);
+                                        return true;
+                                }
                         });
-                }
-                catch (IOException e) {
-                        System.exit(0);
-                }
-
+       
                 PreferenceScreen screen = (PreferenceScreen) findPreference("prefAbout");
                 screen.setIntent(new Intent(this, AboutActivity.class));
                 //screen = (PreferenceScreen) findPreference("prefFormOrder");

@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Vector;
 import java.util.Set;
 import java.util.Collections;
+import java.util.Locale;
 
 import android.content.Intent;
 import android.content.Context;
@@ -19,7 +20,8 @@ import android.view.LayoutInflater;
 import android.widget.ExpandableListView;
 import android.widget.SearchView;
 
-import android.util.Log;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 public class LessonFragment extends Fragment {
         ExpandableListAdapter listAdapter;
@@ -44,6 +46,8 @@ public class LessonFragment extends Fragment {
                 listDataHeader = new ArrayList<String>();
                 listDataChild = new HashMap<String, List<String>>();
 
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                Resources res = GlobalData.getLocalizedResources(getActivity(),new Locale(sharedPref.getString("prefLanguage", null)));
                 Vector<Verb> verbs = Settings.getSingleton().getVerbs();
                 // Adding child data
                 for(int i = 0; i < verbs.size(); i++) {
@@ -63,7 +67,6 @@ public class LessonFragment extends Fragment {
                         String caseVerb = Verb.formToWord(5) + " : " + Verb.boolToAux(verbs.get(i).getAuxiliary());
                         details.add(caseVerb);
                         caseVerb = Verb.formToWord(4) + " : ";
-                        Resources res = getResources();
                         String[] translations = res.getStringArray(res.getIdentifier(GlobalData.decompose(verbs.get(i).getAllForms().get(0).get(0)),"array",getActivity().getPackageName()));
                         for(int j = 0; j < translations.length; j++) {
                                 if(translations[j].contains(search_word))

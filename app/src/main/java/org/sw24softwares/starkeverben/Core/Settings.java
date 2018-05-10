@@ -3,20 +3,15 @@ package org.sw24softwares.starkeverben;
 import java.util.Vector;
 
 class Settings {
-        protected Vector<Translation> mTranslations;
         protected Vector<Verb> mVerbs;
-
         protected String[] mFormStrings = new String[6];
-
         protected Boolean mDebug = false;
+        protected String mTranslationLocale;
         
         public Settings() {
         }
 
         // Setters
-        public void setTranslations(Vector<Translation> translations) {
-                mTranslations = translations;
-        }
         public void setVerbs(Vector<Verb> verbs) {
                 mVerbs = verbs;
         }
@@ -26,11 +21,11 @@ class Settings {
         public void setDebug(Boolean d) {
                 mDebug = d;
         }
+        public void setTranslationLocale(String tl) {
+                mTranslationLocale = tl;
+        }
 
         // Getters
-        public Vector<Translation> getTranslations() {
-                return mTranslations;
-        }
         public Vector<Verb> getVerbs() {
                 return mVerbs;
         }
@@ -40,17 +35,14 @@ class Settings {
                                 return v;
                 return null;
         }
-        public Translation getTranslation(int i) {
-                for(Translation t : mTranslations)
-                        if(t.getIndex() == i)
-                                return t;
-                return null;
-        }
         public String getFormString(int i) {
                 return mFormStrings[i];
         }
         public Boolean isDebug() {
                 return mDebug;
+        }
+        public String getTranslationLocale() {
+                return mTranslationLocale;
         }
         
         static private Settings mSingleton = new Settings();

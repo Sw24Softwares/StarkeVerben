@@ -4,9 +4,11 @@
       android:title="@string/pref">
     <ListPreference
         android:key="prefLanguage"
-        android:defaultValue="System default"
-        android:summary="@string/pref_language_translation_summary" 
-        android:title="@string/pref_language_translation_title" />
+        android:title="@string/pref_language_translation"
+        android:entries="@array/language_entries"
+        android:entryValues="@array/language_values"/>
+  </PreferenceCategory>
+
 
     <MultiSelectListPreference
         android:entries="@array/forms"

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Vector;
+import java.util.Locale;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -15,6 +16,9 @@ import android.view.ViewGroup;
 import android.view.LayoutInflater;
 import android.widget.Button;
 import android.widget.TextView;
+
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 public class SingleLessonFragment extends Fragment {
         @Override
@@ -39,7 +43,8 @@ public class SingleLessonFragment extends Fragment {
                 else
                         auxiliary = "hat ";
 
-                Resources res = getResources();
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                Resources res = GlobalData.getLocalizedResources(getActivity(),new Locale(sharedPref.getString("prefLanguage", null)));
                 String[] trans = res.getStringArray(res.getIdentifier(GlobalData.decompose(verb.getAllForms().get(0).get(0)),"array",getActivity().getPackageName()));
                 
                 infinitif.setText(verb.getAllForms().get(0).get(0));
