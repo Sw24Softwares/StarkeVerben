@@ -14,6 +14,9 @@ import java.util.Locale;
 import java.util.Arrays;
 
 class GlobalData {
+        public static String decompose(String s) {
+                return s.replace("ß","ss").replace("ü","u").replace("ä","a").replace("ö","o");
+        }
         static public Resources getLocalizedResources(Context context, Locale desiredLocale) {
                 Configuration conf = context.getResources().getConfiguration();
                 conf = new Configuration(conf);

@@ -72,7 +72,7 @@
     <item>fuir</item>
   </string-array>
 
-  <string-array name="fließen">
+  <string-array name="fliessen">
     <item>couler</item>
   </string-array>
 
@@ -96,7 +96,7 @@
     <item>valoir</item>
   </string-array>
 
-  <string-array name="genießen">
+  <string-array name="geniessen">
     <item>proﬁter</item>
     <item>jouir de</item>
   </string-array>
@@ -109,7 +109,7 @@
     <item>gagner</item>
   </string-array>
 
-  <string-array name="gießen">
+  <string-array name="giessen">
     <item>verser</item>
     <item>arroser</item>
   </string-array>
@@ -131,7 +131,7 @@
     <item>s’arrêter</item>
   </string-array>
 
-  <string-array name="hängen">
+  <string-array name="hangen">
     <item>être suspendu</item>
   </string-array>
 
@@ -139,7 +139,7 @@
     <item>soulever</item>
   </string-array>
 
-  <string-array name="heißen">
+  <string-array name="heissen">
     <item>s\'appeler</item>
   </string-array>
 
@@ -184,7 +184,7 @@
     <item>être couché</item>
   </string-array>
 
-  <string-array name="lügen">
+  <string-array name="lugen">
     <item>mentir</item>
   </string-array>
 
@@ -213,7 +213,7 @@
     <item>deviner</item>
   </string-array>
 
-  <string-array name="reißen">
+  <string-array name="reissen">
     <item>arracher</item>
   </string-array>
 
@@ -234,7 +234,7 @@
     <item>paraître</item>
   </string-array>
 
-  <string-array name="schießen">
+  <string-array name="schiessen">
     <item>tirer avec une arme</item>
   </string-array>
 
@@ -246,11 +246,11 @@
     <item>frapper</item>
   </string-array>
 
-  <string-array name="schließen">
+  <string-array name="schliessen">
     <item>fermer</item>
   </string-array>
 
-  <string-array name="schmeißen">
+  <string-array name="schmeissen">
     <item>jeter(familier)</item>
   </string-array>
 
@@ -274,7 +274,7 @@
     <item>nager</item>
   </string-array>
 
-  <string-array name="schwören">
+  <string-array name="schworen">
     <item>jurer</item>
   </string-array>
 
@@ -315,7 +315,7 @@
     <item>mourir</item>
   </string-array>
 
-  <string-array name="stoßen">
+  <string-array name="stossen">
     <item>heurter</item>
     <item>pousser</item>
   </string-array>

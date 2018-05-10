@@ -72,7 +72,7 @@
     <item>to flee</item>
   </string-array>
 
-  <string-array name="fließen">
+  <string-array name="fliessen">
     <item>to flow</item>
   </string-array>
 
@@ -98,7 +98,7 @@
     <item>to be worth</item>
   </string-array>
 
-  <string-array name="genießen">
+  <string-array name="geniessen">
     <item>to enjoy</item>
   </string-array>
 
@@ -111,7 +111,7 @@
     <item>to gain</item>
   </string-array>
 
-  <string-array name="gießen">
+  <string-array name="giessen">
     <item>to pour</item>
     <item>to water</item>
   </string-array>
@@ -133,7 +133,7 @@
     <item>to hold</item>
   </string-array>
 
-  <string-array name="hängen">
+  <string-array name="hangen">
     <item>to hang</item>
   </string-array>
 
@@ -142,7 +142,7 @@
     <item>to raise</item>
   </string-array>
 
-  <string-array name="heißen">
+  <string-array name="heissen">
     <item>to be called</item>
   </string-array>
 
@@ -188,7 +188,7 @@
     <item>to lie (position)</item>
   </string-array>
 
-  <string-array name="lügen">
+  <string-array name="lugen">
     <item>to lie</item>
   </string-array>
 
@@ -217,7 +217,7 @@
     <item>to advise</item>
   </string-array>
 
-  <string-array name="reißen">
+  <string-array name="reissen">
     <item>to rip</item>
     <item>to tear</item>
   </string-array>
@@ -239,7 +239,7 @@
     <item>to shine</item>
   </string-array>
 
-  <string-array name="schießen">
+  <string-array name="schiessen">
     <item>to shoot</item>
   </string-array>
 
@@ -251,12 +251,12 @@
     <item>to hit</item>
   </string-array>
 
-  <string-array name="schließen">
+  <string-array name="schliessen">
     <item>to close</item>
     <item>to shut</item>
   </string-array>
 
-  <string-array name="schmeißen">
+  <string-array name="schmeissen">
     <item>to fling</item>
   </string-array>
 
@@ -281,7 +281,7 @@
     <item>to swim</item>
   </string-array>
 
-  <string-array name="schwören">
+  <string-array name="schworen">
     <item>to swear</item>
   </string-array>
 
@@ -322,7 +322,7 @@
     <item>to die</item>
   </string-array>
 
-  <string-array name="stoßen">
+  <string-array name="stossen">
     <item>to push</item>
     <item>to knock</item>
   </string-array>

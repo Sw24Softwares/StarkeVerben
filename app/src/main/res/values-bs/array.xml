@@ -74,7 +74,7 @@
     <item>pobječi</item>
   </string-array>
 
-  <string-array name="fließen">
+  <string-array name="fliessen">
     <item>teći</item>
   </string-array>
 
@@ -100,7 +100,7 @@
     <item>vrijediti</item>
   </string-array>
 
-  <string-array name="genießen">
+  <string-array name="geniessen">
     <item>uživati</item>
   </string-array>
 
@@ -113,7 +113,7 @@
     <item>dobiti</item>
   </string-array>
 
-  <string-array name="gießen">
+  <string-array name="giessen">
     <item>zaliti</item>
   </string-array>
 
@@ -134,7 +134,7 @@
     <item>držati</item>
   </string-array>
 
-  <string-array name="hängen">
+  <string-array name="hangen">
     <item>visiti</item>
   </string-array>
 
@@ -142,7 +142,7 @@
     <item>dignuti</item>
   </string-array>
 
-  <string-array name="heißen">
+  <string-array name="heissen">
     <item>zvati</item>
   </string-array>
 
@@ -190,7 +190,7 @@
     <item>ležati</item>
   </string-array>
 
-  <string-array name="lügen">
+  <string-array name="lugen">
     <item>lagati</item>
   </string-array>
 
@@ -218,7 +218,7 @@
     <item>savjetovati</item>
   </string-array>
 
-  <string-array name="reißen">
+  <string-array name="reissen">
     <item>pocijepati</item>
     <item>poderati</item>
   </string-array>
@@ -242,7 +242,7 @@
     <item>sijati</item>
   </string-array>
 
-  <string-array name="schießen">
+  <string-array name="schiessen">
     <item>pucati</item>
   </string-array>
 
@@ -254,11 +254,11 @@
     <item>udariti</item>
   </string-array>
 
-  <string-array name="schließen">
+  <string-array name="schliessen">
     <item>zatvoriti</item>
   </string-array>
 
-  <string-array name="schmeißen">
+  <string-array name="schmeissen">
     <item>baciti</item>
   </string-array>
 
@@ -284,7 +284,7 @@
     <item>plivati</item>
   </string-array>
 
-  <string-array name="schwören">
+  <string-array name="schworen">
     <item>kunuti</item>
     <item>zakleti</item>
   </string-array>
@@ -328,7 +328,7 @@
     <item>umrijeti</item>
   </string-array>
 
-  <string-array name="stoßen">
+  <string-array name="stossen">
     <item>gurnuti</item>
     <item>udariti</item>
   </string-array>

@@ -72,7 +72,7 @@
     <item>a evada</item>
   </string-array>
 
-  <string-array name="fließen">
+  <string-array name="fliessen">
     <item>a curge</item>
   </string-array>
 
@@ -97,7 +97,7 @@
     <item>a valora</item>
   </string-array>
 
-  <string-array name="genießen">
+  <string-array name="geniessen">
     <item>a se bucura</item>
   </string-array>
 
@@ -109,7 +109,7 @@
     <item>a câștiga</item>
   </string-array>
 
-  <string-array name="gießen">
+  <string-array name="giessen">
     <item>a turna</item>
     <item>a uda</item>
   </string-array>
@@ -130,7 +130,7 @@
     <item>a ține</item>
   </string-array>
 
-  <string-array name="hängen">
+  <string-array name="hangen">
     <item>a spânzura</item>
   </string-array>
 
@@ -139,7 +139,7 @@
     <item>a înalța</item>
   </string-array>
 
-  <string-array name="heißen">
+  <string-array name="heissen">
     <item>a fi chemat</item>
   </string-array>
 
@@ -183,7 +183,7 @@
     <item>a sta(în poziție)</item>
   </string-array>
 
-  <string-array name="lügen">
+  <string-array name="lugen">
     <item>a minți</item>
   </string-array>
 
@@ -212,7 +212,7 @@
     <item>a sfătui</item>
   </string-array>
 
-  <string-array name="reißen">
+  <string-array name="reissen">
     <item>a rupe</item>
     <item>a sfășia</item>
   </string-array>
@@ -234,7 +234,7 @@
     <item>a străluci</item>
   </string-array>
 
-  <string-array name="schießen">
+  <string-array name="schiessen">
     <item>a împușca</item>
   </string-array>
 
@@ -246,11 +246,11 @@
     <item>a lovi</item>
   </string-array>
 
-  <string-array name="schließen">
+  <string-array name="schliessen">
     <item>a închide</item>
   </string-array>
 
-  <string-array name="schmeißen">
+  <string-array name="schmeissen">
     <item>a încorda</item>
   </string-array>
 
@@ -274,7 +274,7 @@
     <item>a înota</item>
   </string-array>
 
-  <string-array name="schwören">
+  <string-array name="schworen">
     <item>a înjura</item>
   </string-array>
 
@@ -315,7 +315,7 @@
     <item>a muri</item>
   </string-array>
 
-  <string-array name="stoßen">
+  <string-array name="stossen">
     <item>a împinge</item>
     <item>a ciocăni</item>
   </string-array>

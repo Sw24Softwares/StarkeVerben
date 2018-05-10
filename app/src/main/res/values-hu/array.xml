@@ -72,7 +72,7 @@
     <item>menekül</item>
   </string-array>
 
-  <string-array name="fließen">
+  <string-array name="fliessen">
     <item>folyik</item>
   </string-array>
 
@@ -96,7 +96,7 @@
     <item>érvényes</item>
   </string-array>
 
-  <string-array name="genießen">
+  <string-array name="geniessen">
     <item>élvez</item>
   </string-array>
 
@@ -108,7 +108,7 @@
     <item>nyer</item>
   </string-array>
 
-  <string-array name="gießen">
+  <string-array name="giessen">
     <item>öntöz</item>
     <item>locsol</item>
   </string-array>
@@ -131,7 +131,7 @@
     <item>tart</item>
   </string-array>
 
-  <string-array name="hängen">
+  <string-array name="hangen">
     <item>függ</item>
     <item>lóg</item>
   </string-array>
@@ -140,7 +140,7 @@
     <item>emel</item>
   </string-array>
 
-  <string-array name="heißen">
+  <string-array name="heissen">
     <item>hív</item>
     <item>nevez</item>
   </string-array>
@@ -187,7 +187,7 @@
     <item>fekszik</item>
   </string-array>
 
-  <string-array name="lügen">
+  <string-array name="lugen">
     <item>hazudik</item>
   </string-array>
 
@@ -215,7 +215,7 @@
     <item>tanácsol</item>
   </string-array>
 
-  <string-array name="reißen">
+  <string-array name="reissen">
     <item>tép</item>
     <item>szakít</item>
   </string-array>
@@ -237,7 +237,7 @@
     <item>tűnik vmilyennek</item>
   </string-array>
 
-  <string-array name="schießen">
+  <string-array name="schiessen">
     <item>lő</item>
   </string-array>
 
@@ -249,11 +249,11 @@
     <item>üt</item>
   </string-array>
 
-  <string-array name="schließen">
+  <string-array name="schliessen">
     <item>zár</item>
   </string-array>
 
-  <string-array name="schmeißen">
+  <string-array name="schmeissen">
     <item>dobál</item>
     <item>hajít</item>
   </string-array>
@@ -279,7 +279,7 @@
     <item>úszik</item>
   </string-array>
 
-  <string-array name="schwören">
+  <string-array name="schworen">
     <item>esküszik</item>
   </string-array>
 
@@ -319,7 +319,7 @@
     <item>meghal</item>
   </string-array>
 
-  <string-array name="stoßen">
+  <string-array name="stossen">
     <item>meglök</item>
     <item>ütközik</item>
   </string-array>

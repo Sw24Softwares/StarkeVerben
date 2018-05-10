@@ -12,11 +12,14 @@ import java.util.Collections;
 
 import android.content.Intent;
 import android.content.Context;
+import android.content.res.Resources;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.LayoutInflater;
 import android.widget.ExpandableListView;
 import android.widget.SearchView;
+
+import android.util.Log;
 
 public class LessonFragment extends Fragment {
         ExpandableListAdapter listAdapter;
@@ -60,11 +63,13 @@ public class LessonFragment extends Fragment {
                         String caseVerb = Verb.formToWord(5) + " : " + Verb.boolToAux(verbs.get(i).getAuxiliary());
                         details.add(caseVerb);
                         caseVerb = Verb.formToWord(4) + " : ";
-                        for(int j = 0; j < Settings.getSingleton().getTranslations().get(i).getTranslations().size(); j++) {
-                                if(Settings.getSingleton().getTranslations().get(i).getTranslations().get(j).contains(search_word))
+                        Resources res = getResources();
+                        String[] translations = res.getStringArray(res.getIdentifier(GlobalData.decompose(verbs.get(i).getAllForms().get(0).get(0)),"array",getActivity().getPackageName()));
+                        for(int j = 0; j < translations.length; j++) {
+                                if(translations[j].contains(search_word))
                                         contain = true;
-                                caseVerb += Settings.getSingleton().getTranslations().get(i).getTranslations().get(j);
-                                if(j < Settings.getSingleton().getTranslations().get(i).getTranslations().size() - 1)
+                                caseVerb += translations[j];
+                                if(j < translations.length - 1)
                                         caseVerb += ", ";
                         }
                         details.add(caseVerb);

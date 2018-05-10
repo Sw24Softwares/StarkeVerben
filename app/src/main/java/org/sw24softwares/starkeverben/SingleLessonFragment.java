@@ -40,7 +40,7 @@ public class SingleLessonFragment extends Fragment {
                         auxiliary = "hat ";
 
                 Resources res = getResources();
-                String[] trans = res.getStringArray(res.getIdentifier(verb.getAllForms().get(0).get(0),"array",getActivity().getPackageName()));
+                String[] trans = res.getStringArray(res.getIdentifier(GlobalData.decompose(verb.getAllForms().get(0).get(0)),"array",getActivity().getPackageName()));
                 
                 infinitif.setText(verb.getAllForms().get(0).get(0));
                 preterit.setText(verb.getAllForms().get(1).get(0));

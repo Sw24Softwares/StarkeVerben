@@ -82,7 +82,7 @@ public class TestActivity extends AppCompatActivity {
                 mGivenVerb = rand.nextInt(Settings.getSingleton().getVerbs().size());
                 mVerb = Settings.getSingleton().getVerbs().get(mGivenVerb);
                 Log.e("StarkeVerben", mVerb.getAllForms().get(0).get(0));
-                mTranslations = getResources().getStringArray(getResources().getIdentifier(mVerb.getAllForms().get(0).get(0),"array",getPackageName()));
+                mTranslations = getResources().getStringArray(getResources().getIdentifier(GlobalData.decompose(mVerb.getAllForms().get(0).get(0)),"array",getPackageName()));
 
                 do
                     mFormType = rand.nextInt(5);
