@@ -26,6 +26,8 @@ public class AboutActivity extends AppCompatActivity {
                 myToolbar.setTitle("");
                 setSupportActionBar(myToolbar);
                 myToolbar.setTitle(R.string.pref_about);
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                getSupportActionBar().setDisplayShowHomeEnabled(true);
 
                 AboutPage aboutPage = new AboutPage(this)
                         .isRTL(false)
@@ -78,5 +80,11 @@ public class AboutActivity extends AppCompatActivity {
                     .setAutoApplyIconTint(false)
                     .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://gitter.im/" + link)));
                 return elem;
+        }
+
+        @Override
+        public boolean onSupportNavigateUp() {
+            onBackPressed();
+            return true;
         }
 }
