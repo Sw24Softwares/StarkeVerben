@@ -86,6 +86,7 @@ public class TestActivity extends AppCompatActivity {
                 Random rand = new Random();
                 mVerbIndex = rand.nextInt(Settings.getSingleton().getVerbs().size());
                 mVerb = Settings.getSingleton().getVerbs().get(mVerbIndex);
+
                 // Get translations
                 Resources res = GlobalData.getLocalizedResources(this,new Locale(sharedPref.getString("prefLanguage", "")));
                 mTranslations = res.getStringArray(res.getIdentifier(GlobalData.decompose(mVerb.getAllForms().get(0).get(0)),"array",getPackageName()));
@@ -99,14 +100,12 @@ public class TestActivity extends AppCompatActivity {
                                 fillEditText(editForms.get(formsOrderReverse.get(i)), mVerb.getAllForms().get(mFormType).get(possibility));
                         }
                 }
-                if(mFormType == 4) {
+                if(mFormType == 4)
                         fillEditText(editForms.get(formsOrderReverse.get(4)), mTranslations[0]);
-                }
 
                 final int total = getIntent().getExtras().getInt("total");
                 final int marks[] = getIntent().getExtras().getIntArray("marks");
                 final long start = System.currentTimeMillis();
-
 
                 final RelativeLayout layout = (RelativeLayout) findViewById(R.id.test_layout);
                 layout.setOnClickListener(new View.OnClickListener() {

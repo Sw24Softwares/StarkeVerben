@@ -24,6 +24,7 @@ import android.preference.PreferenceManager;
 
 public class ResultActivity extends AppCompatActivity {
         protected Verb mVerb;
+        protected VerbWithTranslation mVWT;
         protected String[] mTranslations;
         protected int mMarks[] = null;
 
@@ -69,10 +70,13 @@ public class ResultActivity extends AppCompatActivity {
                 ResultActivity.this.finish();
         }
 
-        protected void initTextView(int i, TextView textView, String givenAnswer, Verb verb, Boolean changeColor) {
+        protected void initTextView(int i, TextView textView, String givenAnswer, VerbWithTranslation verb, Boolean changeColor) {
                 Boolean right = false;
-                if(verb.getAllForms().get(i).contains(givenAnswer))
+                if(i < 5 && verb.getAllForms().get(i).contains(givenAnswer))
                         right = true;
+                else if (i == 5)
+                        if(Verb.boolToAux(verb.getAuxiliary()) == givenAnswer)
+                                right = true;
                 textView.setText(verb.getPrintedForm(i, true));
 
                 // Set color
@@ -101,12 +105,21 @@ public class ResultActivity extends AppCompatActivity {
                 // Get transmitted verb
                 int verbIndex = getIntent().getExtras().getInt("verbIndex");
                 mVerb = Settings.getSingleton().getVerbs().get(verbIndex);
+
                 // Get translations
                 Resources res = GlobalData.getLocalizedResources(this,new Locale(sharedPref.getString("prefLanguage", "")));
                 mTranslations = res.getStringArray(res.getIdentifier(GlobalData.decompose(mVerb.getAllForms().get(0).get(0)),"array",getPackageName()));
+
+                mVWT = new VerbWithTranslation(mVerb, new Vector(Arrays.asList(mTranslations)));
                 
                 // Get answers
                 String givenAnswers[] = getIntent().getExtras().getStringArray("givenAnswers");
+                /*Vector<Vector<String>> vec = new Vector();
+                for(int i = 0; i < 4; i++) {
+                        vec.add(new Vector<String>());
+                        vec.lastElement().add(givenAnswers[i]);
+                }
+                Verb givenVerb = new Verb(-1, vec,givenAnswers[4]=="sein");*/
                 int givenFormType = getIntent().getExtras().getInt("givenFormType");
                 
                 // Get marks array and increase its length
@@ -117,7 +130,7 @@ public class ResultActivity extends AppCompatActivity {
 
                 // Init the TextViews
                 for(int i = 0; i < textViews.size(); i++)
-                        initTextView(i, textViews.get(i), givenAnswers[i], mVerb, givenFormType != i);
+                        initTextView(i, textViews.get(i), givenAnswers[i], mVWT, givenFormType != i);
 
 
                 Button finish = (Button) findViewById(R.id.finish);

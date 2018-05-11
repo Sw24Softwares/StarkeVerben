@@ -40,7 +40,7 @@ class GlobalData {
                 String res = new String();
                 for(String s : arr)
                         res += s + sep;
-                res.substring(0,res.length()-sep.length()-1); // Delete end separator
+                res = res.substring(0,res.length()-sep.length()); // Delete end separator
                 return res;
         }
         static public String getList(Vector<String> v, String sep) {
