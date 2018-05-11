@@ -7,6 +7,8 @@ import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,10 +18,14 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Vector;
+import java.util.Locale;
 
+import android.preference.PreferenceManager;
 
 public class ResultActivity extends AppCompatActivity {
-        int mMarks[] = null;
+        protected Verb mVerb;
+        protected String[] mTranslations;
+        protected int mMarks[] = null;
 
         protected void saveMarkDialog() {
                 AlertDialog alertDialog = new AlertDialog.Builder(ResultActivity.this).create();
@@ -63,13 +69,13 @@ public class ResultActivity extends AppCompatActivity {
                 ResultActivity.this.finish();
         }
 
-        protected void initTextView(TextView textView, String givenAnswer, Vector<String> answers, Boolean changeColor) {
+        protected void initTextView(int i, TextView textView, String givenAnswer, Verb verb, Boolean changeColor) {
                 Boolean right = false;
-                for(int i = 0; i < answers.size(); i++)
-                        answers.set(i, Verb.standardize(answers.get(i)));
-                if(answers.contains(Verb.standardize(givenAnswer)))
+                if(verb.getAllForms().get(i).contains(givenAnswer))
                         right = true;
-                textView.setText(answers.get(0));
+                textView.setText(verb.getPrintedForm(i, true));
+
+                // Set color
                 if(right && changeColor) {
                         textView.setTextColor(ContextCompat.getColor(this, R.color.good));
                         mMarks[mMarks.length-1]++;
@@ -90,24 +96,28 @@ public class ResultActivity extends AppCompatActivity {
                 textViews.addElement((TextView) findViewById(R.id.translation_result));
                 textViews.addElement((TextView) findViewById(R.id.auxiliary_result));
 
-                Vector<Vector<String>> answers = new Vector<Vector<String>>();
-                for(int i = 0; i < 6; i++)
-                        answers.addElement(new Vector(Arrays.asList(getIntent().getExtras().getStringArray(Verb.formToWord(i)))));
-
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+                
+                // Get transmitted verb
+                int verbIndex = getIntent().getExtras().getInt("verbIndex");
+                mVerb = Settings.getSingleton().getVerbs().get(verbIndex);
+                // Get translations
+                Resources res = GlobalData.getLocalizedResources(this,new Locale(sharedPref.getString("prefLanguage", "")));
+                mTranslations = res.getStringArray(res.getIdentifier(GlobalData.decompose(mVerb.getAllForms().get(0).get(0)),"array",getPackageName()));
+                
+                // Get answers
                 String givenAnswers[] = getIntent().getExtras().getStringArray("givenAnswers");
                 int givenFormType = getIntent().getExtras().getInt("givenFormType");
-	
+                
+                // Get marks array and increase its length
                 final int marks[] = getIntent().getExtras().getIntArray("marks");
                 mMarks = Arrays.copyOf(marks, marks.length +1);
 
-                if(givenAnswers[5].equals("sein"))	givenAnswers[5] = "ist";
-                else                                    givenAnswers[5] = "hat";
-                if(answers.get(5).contains("sein"))	answers.set(5, new Vector(Arrays.asList("ist")));
-                else                                    answers.set(5, new Vector(Arrays.asList("hat")));
+                givenAnswers[5] = Verb.conjugueAux(givenAnswers[5].equals("sein"));
 
                 // Init the TextViews
                 for(int i = 0; i < textViews.size(); i++)
-                        initTextView(textViews.get(i), givenAnswers[i], (Vector<String>)answers.get(i).clone(), givenFormType != i);
+                        initTextView(i, textViews.get(i), givenAnswers[i], mVerb, givenFormType != i);
 
 
                 Button finish = (Button) findViewById(R.id.finish);

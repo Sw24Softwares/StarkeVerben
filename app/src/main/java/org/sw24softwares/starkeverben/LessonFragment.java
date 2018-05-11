@@ -54,26 +54,19 @@ public class LessonFragment extends Fragment {
                         Boolean contain = false;
                         List<String> details = new ArrayList<String>();
                         for(int j = 0; j < verbs.get(i).getAllForms().size(); j++) {
-                                String caseVerb = Verb.formToWord(j) + " : ";
-                                for(int k = 0; k < verbs.get(i).getAllForms().get(j).size(); k++) {
+                                String caseVerb = Verb.formToWord(j) + " : " + verbs.get(i).getPrintedForm(j, false);
+                                for(int k = 0; k < verbs.get(i).getAllForms().get(j).size(); k++)
                                         if(verbs.get(i).getAllForms().get(j).get(k).contains(search_word))
                                                 contain = true;
-                                        caseVerb += verbs.get(i).getAllForms().get(j).get(k);
-                                        if(k < verbs.get(i).getAllForms().get(j).size() - 1)
-                                                caseVerb += ", ";
-                                }
                                 details.add(caseVerb);
                         }
                         String caseVerb = Verb.formToWord(5) + " : " + Verb.boolToAux(verbs.get(i).getAuxiliary());
                         details.add(caseVerb);
-                        caseVerb = Verb.formToWord(4) + " : ";
                         String[] translations = res.getStringArray(res.getIdentifier(GlobalData.decompose(verbs.get(i).getAllForms().get(0).get(0)),"array",getActivity().getPackageName()));
+                        /*String*/ caseVerb = Verb.formToWord(4) + " : " + GlobalData.getList(translations,", ");
                         for(int j = 0; j < translations.length; j++) {
                                 if(translations[j].contains(search_word))
                                         contain = true;
-                                caseVerb += translations[j];
-                                if(j < translations.length - 1)
-                                        caseVerb += ", ";
                         }
                         details.add(caseVerb);
                         if(contain || search_word == new String()) {

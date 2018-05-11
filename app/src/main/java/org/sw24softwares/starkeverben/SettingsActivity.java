@@ -34,13 +34,6 @@ public class SettingsActivity  extends PreferenceActivity {
 		addPreferencesFromResource(R.xml.settings);
                 
                 ListPreference guiList = (ListPreference)findPreference("prefLanguage");
-                guiList.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                                @Override
-                                public boolean onPreferenceChange(Preference preference, Object newValue) {
-                                        Settings.getSingleton().setTranslationLocale((String)newValue);
-                                        return true;
-                                }
-                        });
        
                 PreferenceScreen screen = (PreferenceScreen) findPreference("prefAbout");
                 screen.setIntent(new Intent(this, AboutActivity.class));

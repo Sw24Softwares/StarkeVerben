@@ -62,6 +62,14 @@ class Verb {
                 allForms.addElement(mThirdPersons);
                 return allForms;
         }
+        public String getPrintedForm(int i, Boolean conjuguedAux) {
+                if(i == 4) {
+                        if(conjuguedAux) return conjugueAux(mAuxiliary);
+                        return boolToAux(mAuxiliary);
+                }
+                else
+                        return GlobalData.getList(getAllForms().get(i),", ");
+        }
 
         static public String formToWord(int i) {
                 return Settings.getSingleton().getFormString(i);
@@ -69,6 +77,10 @@ class Verb {
         static public String boolToAux(Boolean b) {
                 if(b) return "sein";
                 return "haben";
+        }
+        static public String conjugueAux(Boolean b) {
+                if(b) return "ist";
+                return "hast";
         }
         static public String standardize(String s) {
                 //                s = s.replace("ß","ss");

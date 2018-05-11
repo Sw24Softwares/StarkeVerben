@@ -12,9 +12,10 @@ import java.io.InputStreamReader;
 
 import java.util.Locale;
 import java.util.Arrays;
+import java.util.Vector;
 
 class GlobalData {
-        public static String decompose(String s) {
+        static public String decompose(String s) {
                 return s.replace("ß","ss").replace("ü","u").replace("ä","a").replace("ö","o");
         }
         static public Resources getLocalizedResources(Context context, Locale desiredLocale) {
@@ -34,5 +35,15 @@ class GlobalData {
                 vl.load(verbs);
                 
                 Settings.getSingleton().setVerbs(vl.getVerbs());
+        }
+        static public String getList(String[] arr, String sep) {
+                String res = new String();
+                for(String s : arr)
+                        res += s + sep;
+                res.substring(0,res.length()-sep.length()-1); // Delete end separator
+                return res;
+        }
+        static public String getList(Vector<String> v, String sep) {
+                return getList(v.toArray(new String[0]), sep);
         }
 }

@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -20,16 +21,12 @@ import java.util.Set;
 import java.util.HashSet;
 import java.util.Locale;
 
-import static android.R.color.black;
-
-import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.preference.PreferenceManager;
 
-import android.util.Log;
+import static android.R.color.black;
 
 public class TestActivity extends AppCompatActivity {
-        protected int mGivenVerb;
+        protected int mVerbIndex;
         protected int mFormType;
         protected Verb mVerb;
         protected String[] mTranslations;
@@ -65,10 +62,10 @@ public class TestActivity extends AppCompatActivity {
                 if(formOrderPref == null)
                         for(int i = 0; i < 5; i++)
                                 formsOrder.addElement(i);
-                else {
+                else
                         for(int i = 0; i < formOrderPref.toArray().length; i++)
                                 formsOrder.addElement(Integer.parseInt((String)formOrderPref.toArray()[i]));
-                }
+
                 final Vector<Integer> formsOrderReverse = new Vector<Integer>();
                 formsOrderReverse.setSize(5);
                 for(int i = 0; i < formsOrder.size(); i++)
@@ -85,10 +82,11 @@ public class TestActivity extends AppCompatActivity {
                 for(int i = 0; i < editForms.size(); i++)
                         editForms.get(i).setHint(Verb.formToWord(formsOrder.get(i)));
 
+                // Select verb
                 Random rand = new Random();
-                mGivenVerb = rand.nextInt(Settings.getSingleton().getVerbs().size());
-                mVerb = Settings.getSingleton().getVerbs().get(mGivenVerb);
-                Log.e("StarkeVerben",sharedPref.getString("prefLanguage", ""));
+                mVerbIndex = rand.nextInt(Settings.getSingleton().getVerbs().size());
+                mVerb = Settings.getSingleton().getVerbs().get(mVerbIndex);
+                // Get translations
                 Resources res = GlobalData.getLocalizedResources(this,new Locale(sharedPref.getString("prefLanguage", "")));
                 mTranslations = res.getStringArray(res.getIdentifier(GlobalData.decompose(mVerb.getAllForms().get(0).get(0)),"array",getPackageName()));
 
@@ -137,13 +135,9 @@ public class TestActivity extends AppCompatActivity {
                                         for(int i = 0; i < editForms.size(); i++)
                                                 givenAnswers[formsOrder.get(i)] = editForms.get(i).getText().toString();
                                         givenAnswers[5] = Verb.boolToAux(aux.isChecked());
-
                                         intent.putExtra("givenAnswers", givenAnswers);
 
-                                        for (int i = 0; i < 4; i++)
-                                                intent.putExtra(Verb.formToWord(i), mVerb.getAllForms().get(i).toArray(new String[0]));
-                                        intent.putExtra(Verb.formToWord(4), mTranslations);
-                                        intent.putExtra(Verb.formToWord(5), Arrays.asList(Verb.boolToAux(mVerb.getAuxiliary())).toArray());
+                                        intent.putExtra("verbIndex", mVerbIndex);
                                         intent.putExtra("givenFormType", mFormType);
                                         intent.putExtra("total", total);
                                         intent.putExtra("marks", marks);
