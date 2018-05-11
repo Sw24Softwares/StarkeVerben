@@ -6,7 +6,6 @@ class Settings {
         protected Vector<Verb> mVerbs;
         protected String[] mFormStrings = new String[6];
         protected Boolean mDebug = false;
-        protected String mTranslationLocale;
         
         public Settings() {
         }
@@ -21,10 +20,7 @@ class Settings {
         public void setDebug(Boolean d) {
                 mDebug = d;
         }
-        public void setTranslationLocale(String tl) {
-                mTranslationLocale = tl;
-        }
-
+        
         // Getters
         public Vector<Verb> getVerbs() {
                 return mVerbs;
@@ -40,9 +36,6 @@ class Settings {
         }
         public Boolean isDebug() {
                 return mDebug;
-        }
-        public String getTranslationLocale() {
-                return mTranslationLocale;
         }
         
         static private Settings mSingleton = new Settings();
