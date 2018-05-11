@@ -33,7 +33,7 @@ public class TestActivity extends AppCompatActivity {
         protected int mFormType;
         protected Verb mVerb;
         protected String[] mTranslations;
-        
+
         protected void fillEditText(EditText editText, String text) {
                 editText.setText(text);
                 editText.setEnabled(false);
@@ -59,7 +59,7 @@ public class TestActivity extends AppCompatActivity {
                 Set<String> formOrderPref = sharedPref.getStringSet("formOrder", null);
                 Set<String> givenForms = sharedPref.getStringSet("givenFormsInTest", defaultGivenForms);
 
-                if (givenForms.size() == 0) givenForms = defaultGivenForms;
+                if (givenForms.isEmpty()) givenForms = defaultGivenForms;
 
                 final Vector<Integer> formsOrder = new Vector<Integer>();
                 if(formOrderPref == null)
@@ -92,10 +92,8 @@ public class TestActivity extends AppCompatActivity {
                 Resources res = GlobalData.getLocalizedResources(this,new Locale(sharedPref.getString("prefLanguage", "")));
                 mTranslations = res.getStringArray(res.getIdentifier(GlobalData.decompose(mVerb.getAllForms().get(0).get(0)),"array",getPackageName()));
 
-                
-                do
-                    mFormType = rand.nextInt(5);
-                while(!givenForms.contains(String.valueOf(mFormType)));
+                // Getting the given form, depends on the user preferences
+                mFormType = Integer.parseInt(givenForms.toArray(new String[givenForms.size()])[rand.nextInt(givenForms.size())]);
 
                 for(int i = 0; i < 4; i++) {
                         if(mFormType == i) {
