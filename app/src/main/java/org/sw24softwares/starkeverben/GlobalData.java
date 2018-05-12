@@ -46,4 +46,9 @@ class GlobalData {
         static public String getList(Vector<String> v, String sep) {
                 return getList(v.toArray(new String[0]), sep);
         }
+        static public <T> Vector<T> oneElementVector(T elem) {
+                Vector<T> v = new Vector<T>();
+                v.add(elem);
+                return v;
+        }
 }

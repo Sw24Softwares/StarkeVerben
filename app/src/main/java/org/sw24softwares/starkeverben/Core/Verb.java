@@ -74,6 +74,22 @@ class Verb {
                         return GlobalData.getList(getAllForms().get(i),", ");
         }
 
+        public Verb clone() {
+                Verb v = new Verb(mIndex, (Vector<Vector<String>>)getAllForms().clone(), mAuxiliary);
+                return v;
+        }
+        public Vector<Integer> compare(Verb v) {
+                Vector<Integer> res = new Vector<Integer>();
+                int i = 0;
+                for(; i < getAllForms().size() && i < v.getAllForms().size(); i++)
+                        for(String s : getAllForms().get(i))
+                                if(v.getAllForms().get(i).contains(s))
+                                        res.add(i);
+                if(mAuxiliary == v.mAuxiliary)
+                        res.add(i);
+                return res;
+        }
+
         static public String formToWord(int i) {
                 return Settings.getSingleton().getFormString(i);
         }
@@ -83,17 +99,11 @@ class Verb {
         }
         static public String conjugueAux(Boolean b) {
                 if(b) return "ist";
-                return "hast";
+                return "hat";
         }
         static public String standardize(String s) {
                 //                s = s.replace("ß","ss");
                 return s;
-        }
-
-
-        public Verb clone() {
-                Verb v = new Verb(mIndex, (Vector<Vector<String>>)getAllForms().clone(), mAuxiliary);
-                return v;
         }
 }
 

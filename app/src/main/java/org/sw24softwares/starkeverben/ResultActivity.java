@@ -70,22 +70,19 @@ public class ResultActivity extends AppCompatActivity {
                 ResultActivity.this.finish();
         }
 
-        protected void initTextView(int i, TextView textView, String givenAnswer, VerbWithTranslation verb, Boolean changeColor) {
-                Boolean right = false;
-                if(i < 5 && verb.getAllForms().get(i).contains(givenAnswer))
-                        right = true;
-                else if (i == 5)
-                        if(Verb.boolToAux(verb.getAuxiliary()) == givenAnswer)
-                                right = true;
-                textView.setText(verb.getPrintedForm(i, true));
+        protected void initTextViews(Vector<TextView> textViews, Verb givenVerb, Verb verb, int form) {
+               Vector<Integer>  compareRes = givenVerb.compare(verb);
 
-                // Set color
-                if(right && changeColor) {
-                        textView.setTextColor(ContextCompat.getColor(this, R.color.good));
-                        mMarks[mMarks.length-1]++;
+                for(int i = 0; i < textViews.size(); i++) {
+                        Boolean changeColor = form != i;
+                        if(compareRes.contains(new Integer(i)) && changeColor) {
+                                textViews.get(i).setTextColor(ContextCompat.getColor(this, R.color.good));
+                                mMarks[mMarks.length-1]++;
+                        }
+                        else if(changeColor)
+                                textViews.get(i).setTextColor(ContextCompat.getColor(this, R.color.bad));
+                        textViews.get(i).setText(verb.getPrintedForm(i, true));
                 }
-                if(!right && changeColor)
-                        textView.setTextColor(ContextCompat.getColor(this, R.color.bad));
         }
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -114,25 +111,22 @@ public class ResultActivity extends AppCompatActivity {
                 
                 // Get answers
                 String givenAnswers[] = getIntent().getExtras().getStringArray("givenAnswers");
-                /*Vector<Vector<String>> vec = new Vector();
-                for(int i = 0; i < 4; i++) {
-                        vec.add(new Vector<String>());
-                        vec.lastElement().add(givenAnswers[i]);
-                }
-                Verb givenVerb = new Verb(-1, vec,givenAnswers[4]=="sein");*/
+                Vector<Vector<String>> vec = new Vector();
+                for(int i = 0; i < 4; i++)
+                        vec.add(GlobalData.oneElementVector(givenAnswers[i]));
+                Verb givenVerb = new Verb(-1, vec,givenAnswers[5]=="sein");
+                Verb givenVWT = new VerbWithTranslation(givenVerb, GlobalData.oneElementVector(givenAnswers[5]));
                 int givenFormType = getIntent().getExtras().getInt("givenFormType");
-                
+
                 // Get marks array and increase its length
                 final int marks[] = getIntent().getExtras().getIntArray("marks");
                 mMarks = Arrays.copyOf(marks, marks.length +1);
-
-                givenAnswers[5] = Verb.conjugueAux(givenAnswers[5].equals("sein"));
-
+                
                 // Init the TextViews
                 for(int i = 0; i < textViews.size(); i++)
-                        initTextView(i, textViews.get(i), givenAnswers[i], mVWT, givenFormType != i);
+                        initTextViews(textViews, givenVWT, mVWT, givenFormType);
 
-
+                
                 Button finish = (Button) findViewById(R.id.finish);
                 finish.setOnClickListener(new View.OnClickListener() {
                                 @Override
