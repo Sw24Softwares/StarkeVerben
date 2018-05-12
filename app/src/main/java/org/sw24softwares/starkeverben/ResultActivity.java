@@ -25,7 +25,6 @@ import android.preference.PreferenceManager;
 public class ResultActivity extends AppCompatActivity {
     protected Verb mVerb;
     protected VerbWithTranslation mVWT;
-    protected String[] mTranslations;
     protected int mMarks[] = null;
 
     protected void saveMarkDialog() {
@@ -116,16 +115,11 @@ public class ResultActivity extends AppCompatActivity {
         // Construct possible verbs
         int verbIndex = getIntent().getExtras().getInt("verbIndex");
         mVerb = Settings.getSingleton().getVerbs().get(verbIndex);
-        mTranslations = res.getStringArray(res.getIdentifier(
-            GlobalData.decompose(mVerb.getAllForms().get(0).get(0)), "array", getPackageName()));
-        mVWT = new VerbWithTranslation(mVerb, new Vector<String>(Arrays.asList(mTranslations)));
+        mVWT = GlobalData.androidVWTCreate(mVerb, this, res);
         Vector<VerbWithTranslation> possibleVerbs = new Vector<VerbWithTranslation>();
         for(int i = 0; i < Settings.getSingleton().getVerbs().size(); i++) {
             Verb v = Settings.getSingleton().getVerbs().get(i);
-            mTranslations = res.getStringArray(res.getIdentifier(
-                GlobalData.decompose(v.getAllForms().get(0).get(0)), "array", getPackageName()));
-            VerbWithTranslation vwt =
-                new VerbWithTranslation(v, new Vector<String>(Arrays.asList(mTranslations)));
+            VerbWithTranslation vwt = GlobalData.androidVWTCreate(v, this, res);
             if(vwt.getAllForms().get(givenFormType).equals(mVWT.getAllForms().get(givenFormType)))
                 possibleVerbs.add(vwt);
         }

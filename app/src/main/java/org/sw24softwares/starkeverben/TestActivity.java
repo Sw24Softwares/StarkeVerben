@@ -90,14 +90,14 @@ public class TestActivity extends AppCompatActivity {
         mVerb = Settings.getSingleton().getVerbs().get(mVerbIndex);
 
         // Get translations
-        Resources res = GlobalData.getLocalizedResources(
-            this, new Locale(sharedPref.getString("prefLanguage", "")));
+        Locale l = new Locale(sharedPref.getString("prefLanguage", ""));
+        Resources res = GlobalData.getLocalizedResources(this, l);
         mTranslations = res.getStringArray(res.getIdentifier(
-            GlobalData.decompose(mVerb.getAllForms().get(0).get(0)), "array", getPackageName()));
+            GlobalData.decompose(mVerb.getInfinitives().get(0)), "array", getPackageName()));
 
         // Getting the given form, depends on the user preferences
-        mFormType = Integer.parseInt(
-            givenForms.toArray(new String[0])[rand.nextInt(givenForms.size())]);
+        mFormType =
+            Integer.parseInt(givenForms.toArray(new String[0])[rand.nextInt(givenForms.size())]);
 
         for(int i = 0; i < 4; i++) {
             if(mFormType == i) {

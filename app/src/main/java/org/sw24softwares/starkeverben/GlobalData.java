@@ -18,6 +18,15 @@ class GlobalData {
     static public String decompose(String s) {
         return s.replace("ß", "ss").replace("ü", "u").replace("ä", "a").replace("ö", "o");
     }
+
+    static public VerbWithTranslation androidVWTCreate(Verb v, Context c, Resources res) {
+        String cleanInfinitives = GlobalData.decompose(v.getInfinitives().get(0));
+        int id = res.getIdentifier(cleanInfinitives, "array", c.getPackageName());
+        String[] translations = res.getStringArray(id);
+        Vector<String> transVec = new Vector<String>(Arrays.asList(translations));
+        return new VerbWithTranslation(v, transVec);
+    }
+
     static public Resources getLocalizedResources(Context context, Locale desiredLocale) {
         Configuration conf = context.getResources().getConfiguration();
         conf = new Configuration(conf);
@@ -36,6 +45,7 @@ class GlobalData {
 
         Settings.getSingleton().setVerbs(vl.getVerbs());
     }
+
     static public String getList(String[] arr, String sep) {
         String res = new String();
         for(String s : arr)

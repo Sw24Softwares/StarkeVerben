@@ -48,14 +48,14 @@ public class SingleLessonFragment extends Fragment {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
         Resources res = GlobalData.getLocalizedResources(
             getActivity(), new Locale(sharedPref.getString("prefLanguage", "")));
-        String[] trans = res.getStringArray(
-            res.getIdentifier(GlobalData.decompose(verb.getAllForms().get(0).get(0)), "array",
-                              getActivity().getPackageName()));
+        int id = res.getIdentifier(GlobalData.decompose(verb.getInfinitives().get(0)), "array",
+                                   getActivity().getPackageName());
+        String[] trans = res.getStringArray(id);
 
-        infinitif.setText(verb.getAllForms().get(0).get(0));
-        preterit.setText(verb.getAllForms().get(1).get(0));
-        participe.setText(verb.getAllForms().get(2).get(0));
-        troisiemePersonne.setText(verb.getAllForms().get(3).get(0));
+        infinitif.setText(verb.getInfinitives().get(0));
+        preterit.setText(verb.getPreterites().get(0));
+        participe.setText(verb.getParticiples().get(0));
+        troisiemePersonne.setText(verb.getThirdPersons().get(0));
         traduction.setText(trans[0]);
         aux.setText(auxiliary);
 
