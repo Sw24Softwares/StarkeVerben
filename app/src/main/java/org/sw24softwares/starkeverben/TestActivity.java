@@ -84,7 +84,8 @@ public class TestActivity extends AppCompatActivity {
 
                 // Select verb
                 Random rand = new Random();
-                mVerbIndex = rand.nextInt(Settings.getSingleton().getVerbs().size());
+                mVerbIndex = 96;
+                //                mVerbIndex = rand.nextInt(Settings.getSingleton().getVerbs().size());
                 mVerb = Settings.getSingleton().getVerbs().get(mVerbIndex);
 
                 // Get translations

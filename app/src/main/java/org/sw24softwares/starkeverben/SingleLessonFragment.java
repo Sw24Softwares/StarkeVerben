@@ -44,7 +44,7 @@ public class SingleLessonFragment extends Fragment {
                         auxiliary = "hat ";
 
                 SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-                Resources res = GlobalData.getLocalizedResources(getActivity(),new Locale(sharedPref.getString("prefLanguage", null)));
+                Resources res = GlobalData.getLocalizedResources(getActivity(),new Locale(sharedPref.getString("prefLanguage", "")));
                 String[] trans = res.getStringArray(res.getIdentifier(GlobalData.decompose(verb.getAllForms().get(0).get(0)),"array",getActivity().getPackageName()));
                 
                 infinitif.setText(verb.getAllForms().get(0).get(0));

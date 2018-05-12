@@ -47,7 +47,7 @@ public class LessonFragment extends Fragment {
                 listDataChild = new HashMap<String, List<String>>();
 
                 SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-                Resources res = GlobalData.getLocalizedResources(getActivity(),new Locale(sharedPref.getString("prefLanguage", null)));
+                Resources res = GlobalData.getLocalizedResources(getActivity(),new Locale(sharedPref.getString("prefLanguage", "")));
                 Vector<Verb> verbs = Settings.getSingleton().getVerbs();
                 // Adding child data
                 for(int i = 0; i < verbs.size(); i++) {

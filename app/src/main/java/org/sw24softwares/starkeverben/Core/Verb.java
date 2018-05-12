@@ -130,4 +130,16 @@ class VerbWithTranslation extends Verb {
                 else
                         return GlobalData.getList(getAllForms().get(i),", ");
         }
+        @Override
+                public Vector<Integer> compare(Verb v) {
+                Vector<Integer> res = new Vector<Integer>();
+                int i = 0;
+                for(; i < getAllForms().size() && i < v.getAllForms().size(); i++)
+                        for(String s : getAllForms().get(i))
+                                if(v.getAllForms().get(i).contains(s))
+                                        res.add(i);
+                if(mAuxiliary == v.mAuxiliary)
+                        res.add(i);
+                return res;
+        }
 }
