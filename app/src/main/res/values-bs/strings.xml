@@ -28,11 +28,15 @@
     <string name="search_hint">Pretraga</string>
     <string name="app_label">StarkeVerben</string>
 
-    <string name="pref_about">O aplikaciji</string>
+    <string name="pref">Postavke</string>
+    <string name="pref_about">O nama</string>
     <string name="pref_about_app">O aplikaciji</string>
-    <string name="pref_language_translation_title">Jezik za prevod</string>
-    <string name="pref_language_translation_summary">Izaberite jezik za prevod</string>
-    <string name="pref_language_translation_default">Jezik uređaja</string>
+    <string name="pref_language_translation_title">Jezik za prevod glagola</string>
+    <string name="pref_language_translation_summary">Izaberite jezik za prevod glagola</string>
+    <string name="pref_language_translation_default">Automatski</string>
+    <string name="pref_given_forms_title">Predložene forme u ispit</string>
+    <string name="pref_given_forms_summary">Predložene glagolske forme u ispit</string>
+    <string name="pref_form_order_title">Raspored glagolske forme</string>
 
     <string name="version">Verzija</string>
     <string name="connect">Naše stranice</string>

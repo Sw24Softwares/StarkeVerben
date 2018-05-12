@@ -27,11 +27,15 @@
     <string name="search_hint">Rechercher</string>
     <string name="app_label">StarkeVerben</string>
 
+    <string name="pref">Paramètres</string>
     <string name="pref_about">À propos</string>
     <string name="pref_about_app">À propos de cette application</string>
     <string name="pref_language_translation_title">Langue de traduction</string>
     <string name="pref_language_translation_summary">Choisir la langue</string>
-    <string name="pref_language_translation_default">Langue du système</string>
+    <string name="pref_language_translation_default">Automatique</string>
+    <string name="pref_given_forms_title">Formes proposées dans les tests</string>
+    <string name="pref_given_forms_summary">Formes verbales pouvant être proposées dans les tests</string>
+    <string name="pref_form_order_title">Ordre des formes verbales</string>
 
     <string name="version">Version</string>
     <string name="connect">Contactez-nous</string>

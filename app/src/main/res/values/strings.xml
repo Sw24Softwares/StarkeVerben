@@ -33,9 +33,9 @@
     <string name="pref_about_app">About this app</string>
     <string name="pref_language_translation_title">Translation language</string>
     <string name="pref_language_translation_summary">Choose the translation language</string>
-    <string name="pref_language_translation_default">System default</string>
-    <string name="pref_given_forms_title">Given forms in test</string>
-    <string name="pref_given_forms_summary">Forms that should be initially given in a test</string>
+    <string name="pref_language_translation_default">Automatic</string>
+    <string name="pref_given_forms_title">Proposed forms in test</string>
+    <string name="pref_given_forms_summary">Verb forms which are potentially proposed in tests</string>
     <string name="pref_form_order_title">Form order</string>
 
     <string name="version">Version</string>
