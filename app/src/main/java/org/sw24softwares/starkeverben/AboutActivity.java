@@ -32,7 +32,7 @@ public class AboutActivity extends AppCompatActivity {
         AboutPage aboutPage =
             new AboutPage(this)
                 .isRTL(false)
-                .setImage(R.mipmap.ic_launcher)
+                .setImage(R.drawable.about_image)
                 .addItem(new Element().setTitle(getResources().getString(R.string.version) + " "
                                                 + BuildConfig.VERSION_NAME))
                 .addGroup(getResources().getString(R.string.connect))
