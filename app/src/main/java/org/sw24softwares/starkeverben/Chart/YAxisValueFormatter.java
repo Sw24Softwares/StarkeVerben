@@ -6,15 +6,14 @@ import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import java.text.DecimalFormat;
 
 public class YAxisValueFormatter implements IAxisValueFormatter {
+    private DecimalFormat mFormat;
 
-        private DecimalFormat mFormat;
+    public YAxisValueFormatter() {
+        mFormat = new DecimalFormat("#.##");
+    }
 
-        public YAxisValueFormatter() {
-                mFormat = new DecimalFormat("#.##");
-        }
-
-        @Override
-        public String getFormattedValue(float value, AxisBase axis) {
-                return mFormat.format(value);
-        }
+    @Override
+    public String getFormattedValue(float value, AxisBase axis) {
+        return mFormat.format(value);
+    }
 }

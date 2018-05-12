@@ -17,74 +17,78 @@ import mehdi.sakout.aboutpage.AboutPage;
 import mehdi.sakout.aboutpage.Element;
 
 public class AboutActivity extends AppCompatActivity {
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.activity_about);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_about);
 
-                Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
-                myToolbar.setTitle("");
-                setSupportActionBar(myToolbar);
-                myToolbar.setTitle(R.string.pref_about);
-                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-                getSupportActionBar().setDisplayShowHomeEnabled(true);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        myToolbar.setTitle("");
+        setSupportActionBar(myToolbar);
+        myToolbar.setTitle(R.string.pref_about);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-                AboutPage aboutPage = new AboutPage(this)
-                        .isRTL(false)
-                        .setImage(R.mipmap.ic_launcher)
-                        .addItem(new Element().setTitle(getResources().getString(R.string.version) + " " + BuildConfig.VERSION_NAME))
-                        .addGroup(getResources().getString(R.string.connect))
-                        .addGitHub("Sw24Softwares/StarkeVerben")
-                        .addItem(addGitter("Sw24Softwares/StarkeVerben"))
-                        .addWebsite("https://sw24softwares.github.io/");
-                aboutPage = setUpDependencies(aboutPage);
-                aboutPage = setUpDevelopers(aboutPage);
-                
-                LinearLayout layout = (LinearLayout)findViewById(R.id.layout);
-                layout.addView(aboutPage.create());
-        }
-        protected AboutPage setUpDependencies(AboutPage ap) {
-                ap.addGroup(getResources().getString(R.string.dependencies));
-                ap.addItem(addDependencies("MPAndroidChart","https://github.com/PhilJay/MPAndroidChart"));
-                ap.addItem(addDependencies("Pulsator4Droid","https://github.com/booncol/Pulsator4Droid"));
-                ap.addItem(addDependencies("BottomNavigation","https://github.com/Ashok-Varma/BottomNavigation"));
-                ap.addItem(addDependencies("Android About Page","https://github.com/medyo/android-about-page"));
-                ap.addItem(addDependencies("Material Design Icons", "https://material.io/icons"));
-                return ap;
-        }
-        protected Element addDependencies(final String title, final String link) {
-                Element elem = new Element()
-                        .setTitle(title)
-                        .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
-                return elem;
-        }
-        protected AboutPage setUpDevelopers(AboutPage ap) {
-                ap.addGroup(getResources().getString(R.string.developers));
-                ap.addItem(addDeveloper("Hamza Parnica", "https://github.com/24PaH", R.drawable._24pah));
-                ap.addItem(addDeveloper("Louis Vanhaelewyn", "https://github.com/Swarthon", R.drawable.swarthon));
-                return ap;
-        }
-        protected Element addDeveloper(final String title, final String link, final Integer icon) {
-                Element elem = new Element()
-                        .setTitle(title)
-                        .setIconDrawable(icon)
-                        .setAutoApplyIconTint(false)
-                        .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
-                return elem;
-        }
+        AboutPage aboutPage = new AboutPage(
+            this).isRTL(false).setImage(R.mipmap.ic_launcher)
+                                  .addItem(new Element().setTitle(
+                                      getResources().getString(R.string.version) + " "
+                                      + BuildConfig.VERSION_NAME))
+                                  .addGroup(getResources().getString(R.string.connect))
+                                  .addGitHub("Sw24Softwares/StarkeVerben")
+                                  .addItem(addGitter("Sw24Softwares/StarkeVerben"))
+                                  .addWebsite("https://sw24softwares.github.io/");
+        aboutPage = setUpDependencies(aboutPage);
+        aboutPage = setUpDevelopers(aboutPage);
 
-        protected Element addGitter(final String link) {
-                Element elem = new Element()
-                    .setTitle("Gitter")
-                    .setIconDrawable(R.drawable.gitter)
-                    .setAutoApplyIconTint(false)
-                    .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://gitter.im/" + link)));
-                return elem;
-        }
+        LinearLayout layout = (LinearLayout) findViewById(R.id.layout);
+        layout.addView(aboutPage.create());
+    }
+    protected AboutPage setUpDependencies(AboutPage ap) {
+        ap.addGroup(getResources().getString(R.string.dependencies));
+        ap.addItem(addDependencies("MPAndroidChart", "https://github.com/PhilJay/MPAndroidChart"));
+        ap.addItem(addDependencies("Pulsator4Droid", "https://github.com/booncol/Pulsator4Droid"));
+        ap.addItem(
+            addDependencies("BottomNavigation", "https://github.com/Ashok-Varma/BottomNavigation"));
+        ap.addItem(
+            addDependencies("Android About Page", "https://github.com/medyo/android-about-page"));
+        ap.addItem(addDependencies("Material Design Icons", "https://material.io/icons"));
+        return ap;
+    }
+    protected Element addDependencies(final String title, final String link) {
+        Element elem = new Element().setTitle(title).setIntent(
+            new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+        return elem;
+    }
+    protected AboutPage setUpDevelopers(AboutPage ap) {
+        ap.addGroup(getResources().getString(R.string.developers));
+        ap.addItem(addDeveloper("Hamza Parnica", "https://github.com/24PaH", R.drawable._24pah));
+        ap.addItem(
+            addDeveloper("Louis Vanhaelewyn", "https://github.com/Swarthon", R.drawable.swarthon));
+        return ap;
+    }
+    protected Element addDeveloper(final String title, final String link, final Integer icon) {
+        Element elem = new Element()
+                           .setTitle(title)
+                           .setIconDrawable(icon)
+                           .setAutoApplyIconTint(false)
+                           .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+        return elem;
+    }
 
-        @Override
-        public boolean onSupportNavigateUp() {
-            onBackPressed();
-            return true;
-        }
+    protected Element addGitter(final String link) {
+        Element elem = new Element()
+                           .setTitle("Gitter")
+                           .setIconDrawable(R.drawable.gitter)
+                           .setAutoApplyIconTint(false)
+                           .setIntent(new Intent(
+                               Intent.ACTION_VIEW, Uri.parse("https://gitter.im/" + link)));
+        return elem;
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 }
