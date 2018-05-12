@@ -25,7 +25,7 @@ class Loader {
         return word;
     }
     public Vector<String> buildPossibilities(String line) {
-        Vector<String> vec     = new Vector<String>();
+        Vector<String> vec = new Vector<String>();
         String possibilities[] = line.split("/");
         for(String p : possibilities)
             vec.addElement(p);

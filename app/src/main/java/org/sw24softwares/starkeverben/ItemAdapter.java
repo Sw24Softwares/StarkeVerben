@@ -16,8 +16,8 @@ class ItemAdapter extends DragItemAdapter<Integer, ItemAdapter.ViewHolder> {
     private boolean mDragOnLongPress;
 
     ItemAdapter(ArrayList<Integer> list, int layoutId, int grabHandleId, boolean dragOnLongPress) {
-        mLayoutId        = layoutId;
-        mGrabHandleId    = grabHandleId;
+        mLayoutId = layoutId;
+        mGrabHandleId = grabHandleId;
         mDragOnLongPress = dragOnLongPress;
         setItemList(list);
     }

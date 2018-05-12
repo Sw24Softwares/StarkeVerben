@@ -17,11 +17,11 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     // child data in format of header title, child title
     private HashMap<String, List<String>> mListDataChild;
 
-    public ExpandableListAdapter(
-        Context context, List<String> listDataHeader, HashMap<String, List<String>> listChildData) {
-        this.mContext        = context;
+    public ExpandableListAdapter(Context context, List<String> listDataHeader,
+                                 HashMap<String, List<String>> listChildData) {
+        this.mContext = context;
         this.mListDataHeader = listDataHeader;
-        this.mListDataChild  = listChildData;
+        this.mListDataChild = listChildData;
     }
 
     @Override
@@ -36,18 +36,18 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getChildView(int groupPosition, final int childPosition, boolean isLastChild,
-        View convertView, ViewGroup parent) {
+                             View convertView, ViewGroup parent) {
         final String childText = (String) getChild(groupPosition, childPosition);
 
         if(convertView == null) {
-            LayoutInflater infalInflater
-                = (LayoutInflater) this.mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView
-                = infalInflater.inflate(R.layout.activity_lesson_expandable_list_item, null);
+            LayoutInflater infalInflater =
+                (LayoutInflater) this.mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView =
+                infalInflater.inflate(R.layout.activity_lesson_expandable_list_item, null);
         }
 
-        TextView txtListChild
-            = (TextView) convertView.findViewById(R.id.lesson_expandable_item_text);
+        TextView txtListChild =
+            (TextView) convertView.findViewById(R.id.lesson_expandable_item_text);
 
         txtListChild.setText(childText);
         return convertView;
@@ -74,18 +74,18 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getGroupView(
-        int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+    public View getGroupView(int groupPosition, boolean isExpanded, View convertView,
+                             ViewGroup parent) {
         String headerTitle = (String) getGroup(groupPosition);
         if(convertView == null) {
-            LayoutInflater infalInflater
-                = (LayoutInflater) this.mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView
-                = infalInflater.inflate(R.layout.activity_lesson_expandable_list_group, null);
+            LayoutInflater infalInflater =
+                (LayoutInflater) this.mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView =
+                infalInflater.inflate(R.layout.activity_lesson_expandable_list_group, null);
         }
 
-        TextView listHeader
-            = (TextView) convertView.findViewById(R.id.lesson_expandable_group_text);
+        TextView listHeader =
+            (TextView) convertView.findViewById(R.id.lesson_expandable_group_text);
         listHeader.setTypeface(null, Typeface.BOLD);
         listHeader.setText(headerTitle);
 

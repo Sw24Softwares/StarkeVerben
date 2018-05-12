@@ -49,17 +49,17 @@ public class FormOrderActivity extends AppCompatActivity {
                 ArrayList<String> stringArray = new ArrayList<>();
                 for(int i = 0; i < mItemArray.size(); i++)
                     stringArray.add(Integer.toString(mItemArray.get(i)));
-                SharedPreferences sharedPref
-                    = PreferenceManager.getDefaultSharedPreferences(FormOrderActivity.this);
+                SharedPreferences sharedPref =
+                    PreferenceManager.getDefaultSharedPreferences(FormOrderActivity.this);
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putStringSet("formOrder", new HashSet<>(stringArray));
                 editor.commit();
             }
         });
 
-        mItemArray                   = new ArrayList<>();
+        mItemArray = new ArrayList<>();
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        Set<String> formOrderPref    = sharedPref.getStringSet("formOrder", null);
+        Set<String> formOrderPref = sharedPref.getStringSet("formOrder", null);
         if(formOrderPref == null)
             for(int i = 0; i < 5; i++)
                 mItemArray.add(i);
@@ -68,8 +68,8 @@ public class FormOrderActivity extends AppCompatActivity {
                 mItemArray.add(Integer.parseInt((String) formOrderPref.toArray()[i]));
 
         mDragListView.setLayoutManager(new LinearLayoutManager(this));
-        ItemAdapter listAdapter
-            = new ItemAdapter(mItemArray, R.layout.list_item, R.id.item_layout, false);
+        ItemAdapter listAdapter =
+            new ItemAdapter(mItemArray, R.layout.list_item, R.id.item_layout, false);
         mDragListView.setAdapter(listAdapter, true);
         mDragListView.setCanDragHorizontally(false);
         mDragListView.setCustomDragItem(new MyDragItem(this, R.layout.list_item));

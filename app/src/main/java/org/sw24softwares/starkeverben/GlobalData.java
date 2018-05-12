@@ -20,7 +20,7 @@ class GlobalData {
     }
     static public Resources getLocalizedResources(Context context, Locale desiredLocale) {
         Configuration conf = context.getResources().getConfiguration();
-        conf               = new Configuration(conf);
+        conf = new Configuration(conf);
         conf.setLocale(desiredLocale);
         Context localizedContext = context.createConfigurationContext(conf);
         return localizedContext.getResources();

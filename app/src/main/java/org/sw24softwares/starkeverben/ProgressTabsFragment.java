@@ -22,8 +22,8 @@ public class ProgressTabsFragment extends Fragment {
     private ViewPager mViewPager;
 
     @Override
-    public View onCreateView(
-        LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_progress_tabs, container, false);
 
         // Create the adapter that will return a fragment for each of the three

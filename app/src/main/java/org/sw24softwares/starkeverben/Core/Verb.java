@@ -8,9 +8,9 @@ class Verb {
     protected int mIndex = -1;
     // Parts forming verbs
     // Vector are used in order to provide different possibilities
-    protected Vector<String> mInfinitives  = new Vector<String>();
-    protected Vector<String> mPreterites   = new Vector<String>();
-    protected Vector<String> mParticiples  = new Vector<String>();
+    protected Vector<String> mInfinitives = new Vector<String>();
+    protected Vector<String> mPreterites = new Vector<String>();
+    protected Vector<String> mParticiples = new Vector<String>();
     protected Vector<String> mThirdPersons = new Vector<String>();
     // Auxiliary of the verb
     // true if sein
@@ -21,13 +21,13 @@ class Verb {
     }
     // Per member constructor
     public Verb(int index, Vector<String> infinitives, Vector<String> preterites,
-        Vector<String> participles, Vector<String> thirdPersons, Boolean auxiliary) {
-        mIndex        = index;
-        mInfinitives  = infinitives;
-        mPreterites   = preterites;
-        mParticiples  = participles;
+                Vector<String> participles, Vector<String> thirdPersons, Boolean auxiliary) {
+        mIndex = index;
+        mInfinitives = infinitives;
+        mPreterites = preterites;
+        mParticiples = participles;
         mThirdPersons = thirdPersons;
-        mAuxiliary    = auxiliary;
+        mAuxiliary = auxiliary;
     }
     // Grouped constructor
     public Verb(int index, Vector<Vector<String>> parts, Boolean auxiliary) {
@@ -79,7 +79,7 @@ class Verb {
     }
     public Vector<Integer> compare(Verb v) {
         Vector<Integer> res = new Vector<Integer>();
-        int i               = 0;
+        int i = 0;
         for(; i < getAllForms().size() && i < v.getAllForms().size(); i++)
             for(String s : getAllForms().get(i))
                 if(v.getAllForms().get(i).contains(s))
@@ -133,7 +133,7 @@ class VerbWithTranslation extends Verb {
     @Override
     public Vector<Integer> compare(Verb v) {
         Vector<Integer> res = new Vector<Integer>();
-        int i               = 0;
+        int i = 0;
         for(; i < getAllForms().size() && i < v.getAllForms().size(); i++)
             for(String s : getAllForms().get(i))
                 if(v.getAllForms().get(i).contains(s))

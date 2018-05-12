@@ -31,10 +31,10 @@ import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
     private FragmentTransaction mTransaction;
-    private static final String PRE_TEST      = "PreTest";
-    private static final String PROGRESS      = "Progress";
+    private static final String PRE_TEST = "PreTest";
+    private static final String PROGRESS = "Progress";
     private static final String SINGLE_LESSON = "SingleLesson";
-    private static final String LESSON        = "Lesson";
+    private static final String LESSON = "Lesson";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         Settings.getSingleton().setDebug(BuildConfig.DEBUG);
         try {
             SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-            String languagePref          = sharedPref.getString("prefLanguage", "System default");
+            String languagePref = sharedPref.getString("prefLanguage", "System default");
             GlobalData.loadVerbs(this, languagePref);
         } catch(Exception e) {
             Log.e("StarkeVerben", e.getMessage());
@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         Settings.getSingleton().setFormString(4, res.getString(R.string.traduction));
         Settings.getSingleton().setFormString(5, res.getString(R.string.auxiliary));
 
-        BottomNavigationBar bottomNavigationBar
-            = (BottomNavigationBar) findViewById(R.id.navigation);
+        BottomNavigationBar bottomNavigationBar =
+            (BottomNavigationBar) findViewById(R.id.navigation);
         bottomNavigationBar
             .addItem(new BottomNavigationItem(R.drawable.ic_subject_black_24dp, R.string.test))
             .addItem(
@@ -93,8 +93,8 @@ public class MainActivity extends AppCompatActivity {
                     mTransaction.replace(R.id.main_container, new ProgressTabsFragment(), PROGRESS);
                     break;
                 case 2:
-                    mTransaction.replace(
-                        R.id.main_container, new SingleLessonFragment(), SINGLE_LESSON);
+                    mTransaction.replace(R.id.main_container, new SingleLessonFragment(),
+                                         SINGLE_LESSON);
                     break;
                 case 3:
                     mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON);
@@ -150,8 +150,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void handleIntent(Intent intent) {
-        LessonFragment lessonFragment
-            = (LessonFragment) getSupportFragmentManager().findFragmentByTag(LESSON);
+        LessonFragment lessonFragment =
+            (LessonFragment) getSupportFragmentManager().findFragmentByTag(LESSON);
 
         if(Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);

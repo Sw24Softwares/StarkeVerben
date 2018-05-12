@@ -29,15 +29,16 @@ public class AboutActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        AboutPage aboutPage = new AboutPage(
-            this).isRTL(false).setImage(R.mipmap.ic_launcher)
-                                  .addItem(new Element().setTitle(
-                                      getResources().getString(R.string.version) + " "
-                                      + BuildConfig.VERSION_NAME))
-                                  .addGroup(getResources().getString(R.string.connect))
-                                  .addGitHub("Sw24Softwares/StarkeVerben")
-                                  .addItem(addGitter("Sw24Softwares/StarkeVerben"))
-                                  .addWebsite("https://sw24softwares.github.io/");
+        AboutPage aboutPage =
+            new AboutPage(this)
+                .isRTL(false)
+                .setImage(R.mipmap.ic_launcher)
+                .addItem(new Element().setTitle(getResources().getString(R.string.version) + " "
+                                                + BuildConfig.VERSION_NAME))
+                .addGroup(getResources().getString(R.string.connect))
+                .addGitHub("Sw24Softwares/StarkeVerben")
+                .addItem(addGitter("Sw24Softwares/StarkeVerben"))
+                .addWebsite("https://sw24softwares.github.io/");
         aboutPage = setUpDependencies(aboutPage);
         aboutPage = setUpDevelopers(aboutPage);
 
@@ -77,12 +78,12 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     protected Element addGitter(final String link) {
-        Element elem = new Element()
-                           .setTitle("Gitter")
-                           .setIconDrawable(R.drawable.gitter)
-                           .setAutoApplyIconTint(false)
-                           .setIntent(new Intent(
-                               Intent.ACTION_VIEW, Uri.parse("https://gitter.im/" + link)));
+        Element elem =
+            new Element()
+                .setTitle("Gitter")
+                .setIconDrawable(R.drawable.gitter)
+                .setAutoApplyIconTint(false)
+                .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://gitter.im/" + link)));
         return elem;
     }
 

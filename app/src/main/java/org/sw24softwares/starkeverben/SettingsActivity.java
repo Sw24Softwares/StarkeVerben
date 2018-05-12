@@ -53,8 +53,8 @@ public class SettingsActivity extends PreferenceActivity {
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
 
-        LinearLayout root
-            = (LinearLayout) findViewById(android.R.id.list).getParent().getParent().getParent();
+        LinearLayout root =
+            (LinearLayout) findViewById(android.R.id.list).getParent().getParent().getParent();
         Toolbar bar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.toolbar, root, false);
         bar.setTitle(R.string.pref);
         root.addView(bar, 0);// insert at top

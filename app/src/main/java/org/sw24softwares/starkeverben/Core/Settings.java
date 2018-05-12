@@ -5,7 +5,7 @@ import java.util.Vector;
 class Settings {
     protected Vector<Verb> mVerbs;
     protected String[] mFormStrings = new String[6];
-    protected Boolean mDebug        = false;
+    protected Boolean mDebug = false;
 
     public Settings() {
     }

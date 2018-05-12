@@ -8,9 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "results.db";
-    public static final String TABLE_NAME    = "marks";
-    public static final String COLUMN_1      = "DATA";
-    public static final String COLUMN_2      = "MARKS";
+    public static final String TABLE_NAME = "marks";
+    public static final String COLUMN_1 = "DATA";
+    public static final String COLUMN_2 = "MARKS";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -44,7 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getListContents() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor data       = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
         return data;
     }
 }

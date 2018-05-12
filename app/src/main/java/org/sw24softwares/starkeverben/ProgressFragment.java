@@ -22,8 +22,8 @@ public class ProgressFragment extends Fragment {
     DatabaseHelper mDatabaseHelper;
 
     @Override
-    public View onCreateView(
-        LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_progress, container, false);
 
         Context context = getActivity();
@@ -40,21 +40,19 @@ public class ProgressFragment extends Fragment {
     }
     private void prepareListData() {
         mListDataHeader = new ArrayList<String>();
-        mListDataChild  = new HashMap<String, List<String>>();
+        mListDataChild = new HashMap<String, List<String>>();
 
         Cursor data = mDatabaseHelper.getListContents();
         data.moveToLast();
         data.moveToNext();
 
         while(data.moveToPrevious()) {
-            String s[]   = data.getString(1).split(" ");
+            String s[] = data.getString(1).split(" ");
             int onTwenty = Math.round(Integer.parseInt(s[2]) * 2 / 10);
             mListDataHeader.add(s[0] + " " + getString(R.string.at) + " " + s[1] + " : " + s[2]
-                + "% - ("
-                + String.valueOf(onTwenty)
-                + "/20)");
+                                + "% - (" + String.valueOf(onTwenty) + "/20)");
             List<String> details = new ArrayList<String>();
-            String results[]     = data.getString(2).split(" ");
+            String results[] = data.getString(2).split(" ");
             for(int i = 0; i < results.length; i++)
                 details.add(results[i] + " / 5");
             mListDataChild.put(mListDataHeader.get(mListDataHeader.size() - 1), details);

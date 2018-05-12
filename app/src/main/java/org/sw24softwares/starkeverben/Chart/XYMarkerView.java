@@ -27,8 +27,8 @@ public class XYMarkerView extends MarkerView {
         super(context, R.layout.custom_marker_view_layout);
 
         this.xAxisValueFormatter = xAxisValueFormatter;
-        tvContent                = (TextView) findViewById(R.id.tvContent);
-        format                   = new DecimalFormat("###.0");
+        tvContent = (TextView) findViewById(R.id.tvContent);
+        format = new DecimalFormat("###.0");
     }
 
     // callbacks everytime the MarkerView is redrawn, can be used to update the
@@ -36,8 +36,7 @@ public class XYMarkerView extends MarkerView {
     @Override
     public void refreshContent(Entry e, Highlight highlight) {
         tvContent.setText(xAxisValueFormatter.getFormattedValue(e.getX(), null) + '\n'
-            + format.format(e.getY())
-            + "%");
+                          + format.format(e.getY()) + "%");
 
         super.refreshContent(e, highlight);
     }

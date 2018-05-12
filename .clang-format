@@ -1,7 +1,7 @@
 ---
 Language:                                       Java
-AlignAfterOpenBracket:                          DontAlign
-AlignConsecutiveAssignments:                    true
+AlignAfterOpenBracket:                          true
+AlignConsecutiveAssignments:                    false
 AlignConsecutiveDeclarations:                   false
 AlignEscapedNewlinesLeft:                       false
 AlignOperands:                                  false
@@ -15,9 +15,10 @@ AllowShortLoopsOnASingleLine:                   false
 AlwaysBreakAfterDefinitionReturnType:           None
 AlwaysBreakAfterReturnType:                     None
 AlwaysBreakBeforeMultilineStrings:              true
-BinPackArguments:                               false
+BinPackArguments:                               true
+BinPackParameters:                              true
 BreakAfterJavaFieldAnnotations:                 true
-BreakBeforeBinaryOperators:                     All
+BreakBeforeBinaryOperators:                     NonAssignment
 BreakBeforeBraces:                              Attach
 BreakBeforeTernaryOperators:                    false
 ColumnLimit:                                    100

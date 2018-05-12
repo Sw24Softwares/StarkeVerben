@@ -18,8 +18,8 @@ class VerbsLoader extends Loader {
 
         // Check last part is number
         if(!isInteger(parts[parts.length - 1]))
-            throw new Exception(
-                "Last part is not a number in checkLineFormat() for line = " + line);
+            throw new Exception("Last part is not a number in checkLineFormat() for line = "
+                                + line);
 
         // Check four first parts contains only letters * / _ ( ) '
         /*for(int i = 0; i < parts.length -1; i++)
@@ -30,12 +30,12 @@ class VerbsLoader extends Loader {
     }
 
     public Verb buildVerb(String line) {
-        String parts[]                   = line.split(" ");
+        String parts[] = line.split(" ");
         Vector<Vector<String>> verbParts = new Vector<Vector<String>>();
-        Boolean auxiliary                = false;
+        Boolean auxiliary = false;
         if(parts[0].contains("*")) {
             auxiliary = true;
-            parts[0]  = parts[0].replace("*", "");
+            parts[0] = parts[0].replace("*", "");
         }
         for(int i = 0; i < parts.length - 1; i++)
             verbParts.addElement(buildPossibilities(cleanWord(parts[i])));

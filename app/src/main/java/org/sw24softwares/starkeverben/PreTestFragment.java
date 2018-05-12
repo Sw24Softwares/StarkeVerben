@@ -12,8 +12,8 @@ import android.view.LayoutInflater;
 
 public class PreTestFragment extends Fragment {
     @Override
-    public View onCreateView(
-        LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_pre_test, container, false);
 
         PulsatorLayout pulsator = (PulsatorLayout) view.findViewById(R.id.pulsator);

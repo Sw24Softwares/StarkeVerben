@@ -26,12 +26,12 @@ import org.sw24softwares.starkeverben.XYMarkerView;
 
 public class ProgressGraphFragment extends Fragment {
     private DatabaseHelper mDatabaseHelper;
-    private Vector<String> mDates   = new Vector<String>();
+    private Vector<String> mDates = new Vector<String>();
     private Vector<Integer> mScores = new Vector<Integer>();
 
     @Override
-    public View onCreateView(
-        LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_progress_graph, container, false);
 
         Context context = getActivity();
@@ -51,8 +51,8 @@ public class ProgressGraphFragment extends Fragment {
             chart.setPinchZoom(false);
             chart.setDoubleTapToZoomEnabled(false);
             chart.getLegend().setEnabled(false);
-            XYMarkerView mv
-                = new XYMarkerView(context, new XAxisValueFormatter(mDates.toArray(new String[0])));
+            XYMarkerView mv =
+                new XYMarkerView(context, new XAxisValueFormatter(mDates.toArray(new String[0])));
             mv.setChartView(chart);
             chart.setMarker(mv);
 

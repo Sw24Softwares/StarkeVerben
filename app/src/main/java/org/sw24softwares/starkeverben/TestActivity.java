@@ -50,11 +50,11 @@ public class TestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 
-        Set<String> defaultGivenForms = new HashSet<String>(
-            Arrays.asList(getResources().getStringArray(R.array.forms_index)));
+        Set<String> defaultGivenForms =
+            new HashSet<String>(Arrays.asList(getResources().getStringArray(R.array.forms_index)));
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        Set<String> formOrderPref    = sharedPref.getStringSet("formOrder", null);
+        Set<String> formOrderPref = sharedPref.getStringSet("formOrder", null);
         Set<String> givenForms = sharedPref.getStringSet("givenFormsInTest", defaultGivenForms);
 
         if(givenForms.isEmpty())
@@ -86,8 +86,8 @@ public class TestActivity extends AppCompatActivity {
 
         // Select verb
         Random rand = new Random();
-        mVerbIndex  = rand.nextInt(Settings.getSingleton().getVerbs().size());
-        mVerb       = Settings.getSingleton().getVerbs().get(mVerbIndex);
+        mVerbIndex = rand.nextInt(Settings.getSingleton().getVerbs().size());
+        mVerb = Settings.getSingleton().getVerbs().get(mVerbIndex);
 
         // Get translations
         Resources res = GlobalData.getLocalizedResources(
@@ -103,25 +103,25 @@ public class TestActivity extends AppCompatActivity {
             if(mFormType == i) {
                 int possibility = rand.nextInt(mVerb.getAllForms().get(mFormType).size());
                 fillEditText(editForms.get(formsOrderReverse.get(i)),
-                    mVerb.getAllForms().get(mFormType).get(possibility));
+                             mVerb.getAllForms().get(mFormType).get(possibility));
             }
         }
         if(mFormType == 4)
             fillEditText(editForms.get(formsOrderReverse.get(4)), mTranslations[0]);
 
-        final int total   = getIntent().getExtras().getInt("total");
+        final int total = getIntent().getExtras().getInt("total");
         final int marks[] = getIntent().getExtras().getIntArray("marks");
-        final long start  = System.currentTimeMillis();
+        final long start = System.currentTimeMillis();
 
         final RelativeLayout layout = (RelativeLayout) findViewById(R.id.test_layout);
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(getCurrentFocus() != null) {
-                    InputMethodManager inputMethodManager
-                        = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                    inputMethodManager.hideSoftInputFromWindow(
-                        getCurrentFocus().getWindowToken(), 0);
+                    InputMethodManager inputMethodManager =
+                        (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                    inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                                                               0);
                     layout.requestFocus();
                 }
             }
@@ -139,9 +139,9 @@ public class TestActivity extends AppCompatActivity {
                 intent.putExtra("dialog", testDuration(start) || time);
 
                 String givenAnswers[] = new String[6];
-                for(int i                           = 0; i < editForms.size(); i++)
+                for(int i = 0; i < editForms.size(); i++)
                     givenAnswers[formsOrder.get(i)] = editForms.get(i).getText().toString();
-                givenAnswers[5]                     = Verb.boolToAux(aux.isChecked());
+                givenAnswers[5] = Verb.boolToAux(aux.isChecked());
                 intent.putExtra("givenAnswers", givenAnswers);
 
                 intent.putExtra("verbIndex", mVerbIndex);

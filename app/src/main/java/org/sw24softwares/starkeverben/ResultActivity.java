@@ -33,26 +33,24 @@ public class ResultActivity extends AppCompatActivity {
         alertDialog.setTitle(getString(R.string.save));
         alertDialog.setMessage(getString(R.string.save_message));
 
-        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE,
-            getString(R.string.yes),
-            new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    saveMark();
-                }
-            });
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.yes),
+                              new DialogInterface.OnClickListener() {
+                                  public void onClick(DialogInterface dialog, int which) {
+                                      saveMark();
+                                  }
+                              });
 
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE,
-            getString(R.string.no),
-            new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    ResultActivity.this.finish();
-                }
-            });
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.no),
+                              new DialogInterface.OnClickListener() {
+                                  public void onClick(DialogInterface dialog, int which) {
+                                      ResultActivity.this.finish();
+                                  }
+                              });
         alertDialog.show();
     }
 
     protected void saveMark() {
-        String marks     = new String();
+        String marks = new String();
         int totalPercent = 0;
 
         for(int i = 0; i < mMarks.length; i++) {
@@ -64,8 +62,8 @@ public class ResultActivity extends AppCompatActivity {
 
         ContentValues contentValues = new ContentValues();
         contentValues.put(DatabaseHelper.COLUMN_1,
-            new SimpleDateFormat("dd/MM/yyyy HH:mm " + String.valueOf(totalPercent))
-                .format(new Date()));
+                          new SimpleDateFormat("dd/MM/yyyy HH:mm " + String.valueOf(totalPercent))
+                              .format(new Date()));
         contentValues.put(DatabaseHelper.COLUMN_2, marks);
 
         DatabaseHelper databaseHelper = new DatabaseHelper(this);
@@ -101,33 +99,33 @@ public class ResultActivity extends AppCompatActivity {
         textViews.addElement((TextView) findViewById(R.id.auxiliary_result));
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        Resources res                = GlobalData.getLocalizedResources(
+        Resources res = GlobalData.getLocalizedResources(
             this, new Locale(sharedPref.getString("prefLanguage", "")));
 
         int givenFormType = getIntent().getExtras().getInt("givenFormType");
 
         // Get answers
-        String givenAnswers[]      = getIntent().getExtras().getStringArray("givenAnswers");
+        String givenAnswers[] = getIntent().getExtras().getStringArray("givenAnswers");
         Vector<Vector<String>> vec = new Vector();
         for(int i = 0; i < 4; i++)
             vec.add(GlobalData.oneElementVector(givenAnswers[i]));
         Verb givenVerb = new Verb(-1, vec, givenAnswers[5].equals("sein"));
-        Verb givenVWT
-            = new VerbWithTranslation(givenVerb, GlobalData.oneElementVector(givenAnswers[4]));
+        Verb givenVWT =
+            new VerbWithTranslation(givenVerb, GlobalData.oneElementVector(givenAnswers[4]));
 
         // Construct possible verbs
         int verbIndex = getIntent().getExtras().getInt("verbIndex");
-        mVerb         = Settings.getSingleton().getVerbs().get(verbIndex);
+        mVerb = Settings.getSingleton().getVerbs().get(verbIndex);
         mTranslations = res.getStringArray(res.getIdentifier(
             GlobalData.decompose(mVerb.getAllForms().get(0).get(0)), "array", getPackageName()));
         mVWT = new VerbWithTranslation(mVerb, new Vector<String>(Arrays.asList(mTranslations)));
         Vector<VerbWithTranslation> possibleVerbs = new Vector<VerbWithTranslation>();
         for(int i = 0; i < Settings.getSingleton().getVerbs().size(); i++) {
-            Verb v        = Settings.getSingleton().getVerbs().get(i);
+            Verb v = Settings.getSingleton().getVerbs().get(i);
             mTranslations = res.getStringArray(res.getIdentifier(
                 GlobalData.decompose(v.getAllForms().get(0).get(0)), "array", getPackageName()));
-            VerbWithTranslation vwt
-                = new VerbWithTranslation(v, new Vector<String>(Arrays.asList(mTranslations)));
+            VerbWithTranslation vwt =
+                new VerbWithTranslation(v, new Vector<String>(Arrays.asList(mTranslations)));
             if(vwt.getAllForms().get(givenFormType).equals(mVWT.getAllForms().get(givenFormType)))
                 possibleVerbs.add(vwt);
         }
@@ -142,7 +140,7 @@ public class ResultActivity extends AppCompatActivity {
 
         // Get marks array and increase its length
         final int marks[] = getIntent().getExtras().getIntArray("marks");
-        mMarks            = Arrays.copyOf(marks, marks.length + 1);
+        mMarks = Arrays.copyOf(marks, marks.length + 1);
 
         // Init the TextViews
         initTextViews(textViews, givenVWT, mVWT, givenFormType);

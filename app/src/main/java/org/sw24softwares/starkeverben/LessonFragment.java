@@ -30,49 +30,49 @@ public class LessonFragment extends Fragment {
     HashMap<String, List<String>> listDataChild;
 
     @Override
-    public View onCreateView(
-        LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_lesson, container, false);
 
         SearchView searchView = (SearchView) view.findViewById(R.id.lesson_search);
-        ((MainActivity) getActivity())
-            .initSearch(searchView);// Initializing the search bar with the SearchManager
+        // Initializing the search bar with the SearchManager
+        ((MainActivity) getActivity()).initSearch(searchView);
 
         expListView = (ExpandableListView) view.findViewById(R.id.lesson_list);
-        search(new String());// Initiates the ListView with all the verbs
+        // Initiates the ListView with all the verbs
+        search(new String());
 
         return view;
     }
 
     private void prepareListData(String search_word) {
         listDataHeader = new ArrayList<String>();
-        listDataChild  = new HashMap<String, List<String>>();
+        listDataChild = new HashMap<String, List<String>>();
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        Resources res                = GlobalData.getLocalizedResources(
+        Resources res = GlobalData.getLocalizedResources(
             getActivity(), new Locale(sharedPref.getString("prefLanguage", "")));
         Vector<Verb> verbs = Settings.getSingleton().getVerbs();
         // Adding child data
         for(int i = 0; i < verbs.size(); i++) {
-            Boolean contain      = false;
+            Boolean contain = false;
             List<String> details = new ArrayList<String>();
             for(int j = 0; j < verbs.get(i).getAllForms().size(); j++) {
-                String caseVerb
-                    = Verb.formToWord(j) + " : " + verbs.get(i).getPrintedForm(j, false);
+                String caseVerb =
+                    Verb.formToWord(j) + " : " + verbs.get(i).getPrintedForm(j, false);
                 for(int k = 0; k < verbs.get(i).getAllForms().get(j).size(); k++)
                     if(verbs.get(i).getAllForms().get(j).get(k).contains(search_word))
                         contain = true;
                 details.add(caseVerb);
             }
-            String caseVerb
-                = Verb.formToWord(5) + " : " + Verb.boolToAux(verbs.get(i).getAuxiliary());
+            String caseVerb =
+                Verb.formToWord(5) + " : " + Verb.boolToAux(verbs.get(i).getAuxiliary());
             details.add(caseVerb);
             String[] translations = res.getStringArray(
                 res.getIdentifier(GlobalData.decompose(verbs.get(i).getAllForms().get(0).get(0)),
-                    "array",
-                    getActivity().getPackageName()));
-            /*String*/ caseVerb
-                = Verb.formToWord(4) + " : " + GlobalData.getList(translations, ", ");
+                                  "array", getActivity().getPackageName()));
+            /*String*/ caseVerb =
+                Verb.formToWord(4) + " : " + GlobalData.getList(translations, ", ");
             for(int j = 0; j < translations.length; j++) {
                 if(translations[j].contains(search_word))
                     contain = true;
@@ -80,8 +80,8 @@ public class LessonFragment extends Fragment {
             details.add(caseVerb);
             if(contain || search_word == new String()) {
                 String suffix = "";
-                int n         = Collections.frequency(
-                    listDataHeader, verbs.get(i).getAllForms().get(0).get(0));
+                int n =
+                    Collections.frequency(listDataHeader, verbs.get(i).getAllForms().get(0).get(0));
                 for(int j = 0; j < n; j++)
                     suffix += "\0";
                 listDataHeader.add(verbs.get(i).getAllForms().get(0).get(0) + suffix);
