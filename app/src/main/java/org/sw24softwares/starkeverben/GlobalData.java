@@ -34,11 +34,9 @@ class GlobalData {
         Context localizedContext = context.createConfigurationContext(conf);
         return localizedContext.getResources();
     }
-    static public void loadVerbs(Context context, String languagePref) throws Exception {
-        BufferedReader verbs = null, trans = null;
-        verbs = new BufferedReader(
+    static public void loadVerbs(Context context) throws Exception {
+        BufferedReader verbs = new BufferedReader(
             new InputStreamReader(context.getAssets().open("verbs.txt"), "UTF-8"));
-        String translationPath = languagePref;
 
         VerbsLoader vl = new VerbsLoader();
         vl.load(verbs);
