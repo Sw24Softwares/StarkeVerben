@@ -97,7 +97,7 @@ public class TestActivity extends AppCompatActivity {
 
         // Getting the given form, depends on the user preferences
         mFormType = Integer.parseInt(
-            givenForms.toArray(new String[givenForms.size()])[rand.nextInt(givenForms.size())]);
+            givenForms.toArray(new String[0])[rand.nextInt(givenForms.size())]);
 
         for(int i = 0; i < 4; i++) {
             if(mFormType == i) {
