@@ -53,7 +53,7 @@ public class FormOrderActivity extends AppCompatActivity {
                     PreferenceManager.getDefaultSharedPreferences(FormOrderActivity.this);
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putStringSet("formOrder", new HashSet<>(stringArray));
-                editor.commit();
+                editor.apply();
             }
         });
 

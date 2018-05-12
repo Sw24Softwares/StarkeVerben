@@ -57,8 +57,8 @@ public class AboutActivity extends AppCompatActivity {
         return ap;
     }
     protected Element addDependencies(final String title, final String link) {
-        Element elem = new Element().setTitle(title).setIntent(
-            new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+        Element elem = new Element().setTitle(title).setIntent(intent);
         return elem;
     }
     protected AboutPage setUpDevelopers(AboutPage ap) {

@@ -6,8 +6,7 @@
     android:fillViewport="true">
 
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent" >
 
     <TextView
@@ -26,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_above="@+id/aux_part_layout"
-        android:layout_centerHorizontal="true" />
+        android:gravity="center_horizontal" />
 
     <LinearLayout
         android:id="@+id/aux_part_layout"
@@ -42,7 +41,7 @@
             android:layout_marginRight="7dp"
             android:layout_marginEnd="7dp"
             android:id="@+id/auxiliary_result"
-            android:layout_centerHorizontal="true" />
+            android:gravity="center_horizontal" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -51,7 +50,7 @@
             android:layout_marginLeft="7dp"
             android:layout_marginStart="7dp"
             android:id="@+id/participe_result"
-            android:layout_centerHorizontal="true" />
+            android:gravity="center_horizontal" />
 
     </LinearLayout>
 

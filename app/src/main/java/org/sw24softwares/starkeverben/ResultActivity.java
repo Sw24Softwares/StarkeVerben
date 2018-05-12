@@ -76,7 +76,7 @@ public class ResultActivity extends AppCompatActivity {
 
         for(int i = 0; i < textViews.size(); i++) {
             Boolean changeColor = form != i;
-            if(compareRes.contains(new Integer(i)) && changeColor) {
+            if(compareRes.contains(Integer.valueOf(i)) && changeColor) {
                 textViews.get(i).setTextColor(ContextCompat.getColor(this, R.color.good));
                 mMarks[mMarks.length - 1]++;
             } else if(changeColor)
