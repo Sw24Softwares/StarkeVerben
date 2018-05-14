@@ -51,7 +51,12 @@ public class LessonFragment extends Fragment {
         mListDataChild = new HashMap<String, List<String>>();
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        Locale l = new Locale(sharedPref.getString("prefLanguage", ""));
+        Locale l;
+	String codeName = sharedPref.getString("prefLanguage", "");
+	if(codeName.equals(""))
+	    l = Locale.getDefault();
+	else
+	    l = new Locale(sharedPref.getString("prefLanguage", ""));
         Resources res = GlobalData.getLocalizedResources(getActivity(), l);
 
         // Creave Verbs with Translations

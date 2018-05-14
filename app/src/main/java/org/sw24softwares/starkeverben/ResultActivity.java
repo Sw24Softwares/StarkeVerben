@@ -98,8 +98,13 @@ public class ResultActivity extends AppCompatActivity {
         textViews.addElement((TextView) findViewById(R.id.auxiliary_result));
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        Resources res = GlobalData.getLocalizedResources(
-            this, new Locale(sharedPref.getString("prefLanguage", "")));
+	Locale l;
+	String codeName = sharedPref.getString("prefLanguage", "");
+	if(codeName.equals(""))
+	    l = Locale.getDefault();
+	else
+	    l = new Locale(sharedPref.getString("prefLanguage", ""));
+        Resources res = GlobalData.getLocalizedResources(this, l);
 
         int givenFormType = getIntent().getExtras().getInt("givenFormType");
 

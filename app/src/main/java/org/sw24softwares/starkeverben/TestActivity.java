@@ -90,7 +90,12 @@ public class TestActivity extends AppCompatActivity {
         mVerb = Settings.getSingleton().getVerbs().get(mVerbIndex);
 
         // Get translations
-        Locale l = new Locale(sharedPref.getString("prefLanguage", ""));
+        Locale l;
+	String codeName = sharedPref.getString("prefLanguage", "");
+	if(codeName.equals(""))
+	    l = Locale.getDefault();
+	else
+	    l = new Locale(sharedPref.getString("prefLanguage", ""));
         Resources res = GlobalData.getLocalizedResources(this, l);
         mTranslations = res.getStringArray(res.getIdentifier(
             GlobalData.decompose(mVerb.getInfinitives().get(0)), "array", getPackageName()));
