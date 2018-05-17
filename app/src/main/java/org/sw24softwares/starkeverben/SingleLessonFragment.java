@@ -45,14 +45,9 @@ public class SingleLessonFragment extends Fragment {
         else
             auxiliary = "hat ";
 
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());	
-        Locale l;
-	String codeName = sharedPref.getString("prefLanguage", "");
-	if(codeName.equals(""))
-	    l = Locale.getDefault();
-	else
-	    l = new Locale(sharedPref.getString("prefLanguage", ""));
-        Resources res = GlobalData.getLocalizedResources(getActivity(),l);
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        Locale l = GlobalData.getTranslationLocale(sharedPref);
+        Resources res = GlobalData.getLocalizedResources(getActivity(), l);
         int id = res.getIdentifier(GlobalData.decompose(verb.getInfinitives().get(0)), "array",
                                    getActivity().getPackageName());
         String[] trans = res.getStringArray(id);

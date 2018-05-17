@@ -409,6 +409,10 @@
     <item>húz</item>
   </string-array>
 
+  <string-array name="ziehen1">
+    <item>húz</item>
+  </string-array>
+
   <string-array name="zwingen">
     <item>kényszerít</item>
   </string-array>

@@ -410,9 +410,13 @@
   </string-array>
 
   <string-array name="ziehen">
-    <item>to pull</item>
     <item>to move</item>
   </string-array>
+
+  <string-array name="ziehen1">
+    <item>to pull</item>
+  </string-array>
+
 
   <string-array name="zwingen">
     <item>to force</item>

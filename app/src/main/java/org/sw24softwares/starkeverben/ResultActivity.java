@@ -98,14 +98,10 @@ public class ResultActivity extends AppCompatActivity {
         textViews.addElement((TextView) findViewById(R.id.auxiliary_result));
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-	Locale l;
-	String codeName = sharedPref.getString("prefLanguage", "");
-	if(codeName.equals(""))
-	    l = Locale.getDefault();
-	else
-	    l = new Locale(sharedPref.getString("prefLanguage", ""));
+        Locale l = GlobalData.getTranslationLocale(sharedPref);
         Resources res = GlobalData.getLocalizedResources(this, l);
 
+        Vector<Verb> verbs = Settings.getSingleton().getVerbs();
         int givenFormType = getIntent().getExtras().getInt("givenFormType");
 
         // Get answers
@@ -119,19 +115,20 @@ public class ResultActivity extends AppCompatActivity {
 
         // Construct possible verbs
         int verbIndex = getIntent().getExtras().getInt("verbIndex");
-        mVerb = Settings.getSingleton().getVerbs().get(verbIndex);
-        mVWT = GlobalData.androidVWTCreate(mVerb, this, res);
+        mVerb = verbs.get(verbIndex);
+        mVWT = GlobalData.androidVWTCreate(verbs, mVerb, this, res);
         Vector<VerbWithTranslation> possibleVerbs = new Vector<VerbWithTranslation>();
-        for(int i = 0; i < Settings.getSingleton().getVerbs().size(); i++) {
-            Verb v = Settings.getSingleton().getVerbs().get(i);
-            VerbWithTranslation vwt = GlobalData.androidVWTCreate(v, this, res);
+        for(Verb v : verbs) {
+            VerbWithTranslation vwt = GlobalData.androidVWTCreate(verbs, v, this, res);
             if(vwt.getAllForms().get(givenFormType).equals(mVWT.getAllForms().get(givenFormType)))
                 possibleVerbs.add(vwt);
         }
         int cmin = 0;
         for(VerbWithTranslation pv : possibleVerbs) {
             int s = pv.compare(givenVWT).size();
-            if(s > cmin) {
+            Vector<String> pvForms = pv.getAllForms().get(givenFormType);
+            String givenForm = givenVWT.getAllForms().get(givenFormType).get(0);
+            if(s > cmin && pvForms.contains(givenForm)) {
                 mVWT = pv;
                 cmin = s;
             }

@@ -403,6 +403,9 @@
 
   <string-array name="ziehen">
     <item>s\'installer quelque part</item>
+  </string-array>
+
+  <string-array name="ziehen1">
     <item>tirer</item>
     <item>infuser</item>
   </string-array>

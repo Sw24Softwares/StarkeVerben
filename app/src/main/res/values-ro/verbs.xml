@@ -403,6 +403,9 @@
 
   <string-array name="ziehen">
     <item>a trage</item>
+  </string-array>
+
+  <string-array name="ziehen1">
     <item>a mișca</item>
   </string-array>
 

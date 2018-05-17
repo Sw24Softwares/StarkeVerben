@@ -51,19 +51,14 @@ public class LessonFragment extends Fragment {
         mListDataChild = new HashMap<String, List<String>>();
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-        Locale l;
-	String codeName = sharedPref.getString("prefLanguage", "");
-	if(codeName.equals(""))
-	    l = Locale.getDefault();
-	else
-	    l = new Locale(sharedPref.getString("prefLanguage", ""));
+        Locale l = GlobalData.getTranslationLocale(sharedPref);
         Resources res = GlobalData.getLocalizedResources(getActivity(), l);
 
         // Creave Verbs with Translations
         Vector<Verb> verbs = Settings.getSingleton().getVerbs();
         Vector<VerbWithTranslation> verbsWithTranslation = new Vector<VerbWithTranslation>();
         for(Verb v : verbs)
-            verbsWithTranslation.add(GlobalData.androidVWTCreate(v, getActivity(), res));
+            verbsWithTranslation.add(GlobalData.androidVWTCreate(verbs, v, getActivity(), res));
 
         // Adding child data
         for(Verb v : verbsWithTranslation) {

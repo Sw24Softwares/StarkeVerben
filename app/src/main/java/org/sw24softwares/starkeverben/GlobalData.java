@@ -19,14 +19,35 @@ class GlobalData {
         return s.replace("ß", "ss").replace("ü", "u").replace("ä", "a").replace("ö", "o");
     }
 
-    static public VerbWithTranslation androidVWTCreate(Verb v, Context c, Resources res) {
-        String cleanInfinitives = GlobalData.decompose(v.getInfinitives().get(0));
-        int id = res.getIdentifier(cleanInfinitives, "array", c.getPackageName());
+    // Translations global functions
+    static public String getTranslationName(Vector<Verb> verbs, Verb goal) {
+        int translationNumber = 0;
+        for(Verb v : verbs) {
+            if(v == goal)
+                break;
+            if(v.getInfinitives().contains(goal.getInfinitives().get(0)))
+                translationNumber++;
+        }
+        if(translationNumber == 0)
+            return goal.getInfinitives().get(0);
+        return goal.getInfinitives().get(0) + String.valueOf(translationNumber);
+    }
+    static public VerbWithTranslation androidVWTCreate(Vector<Verb> verbs, Verb v, Context c,
+                                                       Resources res) {
+        String cleanInfinitive = GlobalData.decompose(getTranslationName(verbs, v));
+        int id = res.getIdentifier(cleanInfinitive, "array", c.getPackageName());
         String[] translations = res.getStringArray(id);
         Vector<String> transVec = new Vector<String>(Arrays.asList(translations));
         return new VerbWithTranslation(v, transVec);
     }
 
+    static public Locale getTranslationLocale(SharedPreferences sharedPref) {
+        String codeName = sharedPref.getString("prefLanguage", "");
+        if(codeName.equals(""))
+            return Locale.getDefault();
+        else
+            return new Locale(sharedPref.getString("prefLanguage", ""));
+    }
     static public Resources getLocalizedResources(Context context, Locale desiredLocale) {
         Configuration conf = context.getResources().getConfiguration();
         conf = new Configuration(conf);

@@ -85,20 +85,17 @@ public class TestActivity extends AppCompatActivity {
             editForms.get(i).setHint(Verb.formToWord(formsOrder.get(i)));
 
         // Select verb
+        Vector<Verb> verbs = Settings.getSingleton().getVerbs();
         Random rand = new Random();
-        mVerbIndex = rand.nextInt(Settings.getSingleton().getVerbs().size());
-        mVerb = Settings.getSingleton().getVerbs().get(mVerbIndex);
+        mVerbIndex = rand.nextInt(verbs.size());
+        mVerb = verbs.get(mVerbIndex);
 
         // Get translations
-        Locale l;
-	String codeName = sharedPref.getString("prefLanguage", "");
-	if(codeName.equals(""))
-	    l = Locale.getDefault();
-	else
-	    l = new Locale(sharedPref.getString("prefLanguage", ""));
+        Locale l = GlobalData.getTranslationLocale(sharedPref);
         Resources res = GlobalData.getLocalizedResources(this, l);
-        mTranslations = res.getStringArray(res.getIdentifier(
-            GlobalData.decompose(mVerb.getInfinitives().get(0)), "array", getPackageName()));
+        String cleanInfinitive = GlobalData.decompose(GlobalData.getTranslationName(verbs, mVerb));
+        int id = res.getIdentifier(cleanInfinitive, "array", getPackageName());
+        mTranslations = res.getStringArray(id);
 
         // Getting the given form, depends on the user preferences
         mFormType =
