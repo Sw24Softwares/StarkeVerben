@@ -7,7 +7,7 @@
 
   <RelativeLayout
       android:layout_height="wrap_content"
-      android:layout_width="wrap_content" >
+      android:layout_width="match_parent" >
 
     <TextView
         android:id="@+id/infinitive_result"
@@ -80,7 +80,7 @@
         android:background="@android:color/transparent"
         android:layout_marginLeft="35dp"
         android:layout_marginStart="35dp"
-	android:layout_marginBottom="45dp"
+	      android:layout_marginBottom="45dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
