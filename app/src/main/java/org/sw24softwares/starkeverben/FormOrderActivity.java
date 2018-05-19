@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.view.View;
 
 import android.widget.TextView;
+import android.widget.Button;
 
 import com.woxthebox.draglistview.DragItem;
 import com.woxthebox.draglistview.DragListView;
@@ -23,11 +24,9 @@ import android.preference.PreferenceManager;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.Set;
-import java.util.HashSet;
+import android.util.ArraySet;
 
 public class FormOrderActivity extends AppCompatActivity {
     private ArrayList<Integer> mItemArray;
@@ -38,34 +37,19 @@ public class FormOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formorder);
 
+        final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+
         mDragListView = (DragListView) findViewById(R.id.drag_list_view);
         mDragListView.setScrollingEnabled(false);
-        mDragListView.setDragListListener(new DragListView.DragListListenerAdapter() {
-            @Override
-            public void onItemDragStarted(int position) {
-            }
-            @Override
-            public void onItemDragEnded(int fromPosition, int toPosition) {
-                ArrayList<String> stringArray = new ArrayList<>();
-                for(int i = 0; i < mItemArray.size(); i++)
-                    stringArray.add(Integer.toString(mItemArray.get(i)));
-                SharedPreferences sharedPref =
-                    PreferenceManager.getDefaultSharedPreferences(FormOrderActivity.this);
-                SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putStringSet("formOrder", new HashSet<>(stringArray));
-                editor.apply();
-            }
-        });
 
         mItemArray = new ArrayList<>();
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        Set<String> formOrderPref = sharedPref.getStringSet("formOrder", null);
+        String formOrderPref = sharedPref.getString("formOrder", null);
         if(formOrderPref == null)
             for(int i = 0; i < 5; i++)
                 mItemArray.add(i);
         else
-            for(int i = 0; i < formOrderPref.toArray().length; i++)
-                mItemArray.add(Integer.parseInt((String) formOrderPref.toArray()[i]));
+            for(char c : formOrderPref.toCharArray())
+                mItemArray.add(Character.getNumericValue(c));
 
         mDragListView.setLayoutManager(new LinearLayoutManager(this));
         ItemAdapter listAdapter =
@@ -73,6 +57,20 @@ public class FormOrderActivity extends AppCompatActivity {
         mDragListView.setAdapter(listAdapter, true);
         mDragListView.setCanDragHorizontally(false);
         mDragListView.setCustomDragItem(new MyDragItem(this, R.layout.list_item));
+
+        Button button = (Button) findViewById(R.id.save);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String string = new String();
+                for(int i = 0; i < mItemArray.size(); i++) 
+                    string += Integer.toString(mItemArray.get(i));
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString("formOrder", string);
+                editor.commit();
+                FormOrderActivity.this.finish();
+            }
+        });
     }
     private static class MyDragItem extends DragItem {
         MyDragItem(Context context, int layoutId) {

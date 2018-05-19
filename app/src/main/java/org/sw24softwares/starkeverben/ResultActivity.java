@@ -29,7 +29,7 @@ public class ResultActivity extends AppCompatActivity {
 
     protected void saveMarkDialog() {
         AlertDialog alertDialog = new AlertDialog.Builder(ResultActivity.this).create();
-        alertDialog.setTitle(getString(R.string.save));
+        alertDialog.setTitle(getString(R.string.save_question));
         alertDialog.setMessage(getString(R.string.save_message));
 
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.yes),

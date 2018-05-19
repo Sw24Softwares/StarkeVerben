@@ -54,7 +54,7 @@ public class TestActivity extends AppCompatActivity {
             new HashSet<String>(Arrays.asList(getResources().getStringArray(R.array.forms_index)));
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        Set<String> formOrderPref = sharedPref.getStringSet("formOrder", null);
+        String formOrderPref = sharedPref.getString("formOrder", null);
         Set<String> givenForms = sharedPref.getStringSet("givenFormsInTest", defaultGivenForms);
 
         if(givenForms.isEmpty())
@@ -65,8 +65,8 @@ public class TestActivity extends AppCompatActivity {
             for(int i = 0; i < 5; i++)
                 formsOrder.addElement(i);
         else
-            for(int i = 0; i < formOrderPref.toArray().length; i++)
-                formsOrder.addElement(Integer.parseInt((String) formOrderPref.toArray()[i]));
+            for(char c : formOrderPref.toCharArray())
+                formsOrder.addElement(Character.getNumericValue(c));
 
         final Vector<Integer> formsOrderReverse = new Vector<Integer>();
         formsOrderReverse.setSize(5);

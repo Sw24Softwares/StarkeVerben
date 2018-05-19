@@ -10,7 +10,8 @@
     <string name="finish">Finish</string>
     <string name="go_on">Continue</string>
     <string name="verify">Verify</string>
-    <string name="save">Save?</string>
+    <string name="save">Save</string>
+    <string name="save_question">Save?</string>
     <string name="save_message">Save the mark.</string>
     <string name="chart">Chart</string>
     <string name="yes">Yes</string>

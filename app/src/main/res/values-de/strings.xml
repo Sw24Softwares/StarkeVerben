@@ -10,7 +10,8 @@
     <string name="finish">Aufhören</string>
     <string name="go_on">Weitergehen</string>
     <string name="verify">Überprüfen</string>
-    <string name="save">Abspeichern?</string>
+    <string name="save">Abspeichern</string>
+    <string name="save_question">Abspeichern?</string>
     <string name="save_message">Zensur abspeichern.</string>
     <string name="chart">Diagramm</string>
     <string name="yes">Ja</string>

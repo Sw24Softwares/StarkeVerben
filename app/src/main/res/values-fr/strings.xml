@@ -9,7 +9,8 @@
     <string name="finish">Terminer</string>
     <string name="go_on">Continuer</string>
     <string name="verify">Vérifier</string>
-    <string name="save">Enregistrer ?</string>
+    <string name="save">Enregistrer</string>
+    <string name="save_question">Enregistrer ?</string>
     <string name="save_message">Enregistrer la note.</string>
     <string name="chart">Graphique</string>
     <string name="yes">Oui</string>
