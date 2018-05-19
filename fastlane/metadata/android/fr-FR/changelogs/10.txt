@@ -1,0 +1,4 @@
+Changements :
+- Ajout du choix des formes verbales proposées au hasard dans les tests
+- Support du gestionnaire de traduction Weblate
+- Ajout de traductions

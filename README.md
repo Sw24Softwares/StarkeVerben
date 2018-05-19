@@ -21,18 +21,22 @@
 StarkeVerben is an Android application that aims to help people learning the German strong verbs.
 
 ## Screenshots
-<img src="repoFiles/1.png" width="20%"> <img src="repoFiles/2.png" width="20%">
-<img src="repoFiles/3.png" width="20%">
-<img src="repoFiles/4.png" width="20%">
-<img src="repoFiles/5.png" width="20%">
-<img src="repoFiles/6.png" width="20%">
-<img src="repoFiles/7.png" width="20%">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/01.png" width="20%"> <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/02.png" width="20%">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/03.png" width="20%">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/04.png" width="20%">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/05.png" width="20%">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/06.png" width="20%">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/07.png" width="20%">
+
+## Translation
+As it is an application for an educational purpose, we want to reach a large number of people. Thus if you speak a non-supported language, your help is welcome. There is many way for you to participate :
+- Translating the verbs, by adding a file named `verbs.txt` in app/src/main/res/values-[codename], where codename is the [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) code of the language
+- Translating the GUI, by adding a file named `strings.txt` in app/src/main/res/values-[codename], where codename is the [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) code of the language
+
+For other contribution, please see [this](https://github.com/Sw24Softwares/StarkeVerben/blob/master/CONTRIBUTING.md).
 
 ## Compiling
 In order to compile this application, make sure you have the Android SDK installed and the environment variable `ANDROID_HOME` set to it. Then run `./gradlew assembleDebug` on Linux, or `gradlew.bat assembleDebug` if you are on Windows. The path to the .apk file will be app/build/outputs/apk/app-debug.apk. You can also run gradlew with `installDebug` if your phone is connected via ADB. You can find the build status of the application at [travis-ci](https://travis-ci.org).
-
-## Contributing
-Please see [this](https://github.com/Sw24Softwares/StarkeVerben/blob/master/CONTRIBUTING.md).
 
 ## License
 This program is released under the GPL3 license. For further information, please read LICENSE file.

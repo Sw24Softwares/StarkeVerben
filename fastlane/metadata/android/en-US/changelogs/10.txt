@@ -1,0 +1,4 @@
+Changelog:
+- Add choice of randomly proposed verb forms in tests
+- Implement support for Weblate translation manager
+- Add translations

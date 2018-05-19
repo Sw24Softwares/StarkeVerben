@@ -1,0 +1,7 @@
+Learn the German irregular verbs, test yourself, follow your progress!
+
+This application does not require any Internet connexion.
+
+The translation for the verbs is available in several languages. If your language is not listed, you can add it by yourself.
+The application itself is also translatable.
+For more, check: https://github.com/Sw24Softwares/StarkeVerben/blob/master/README.md#translation
