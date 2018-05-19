@@ -30,8 +30,8 @@ StarkeVerben is an Android application that aims to help people learning the Ger
 
 ## Translation
 As it is an application for an educational purpose, we want to reach a large number of people. Thus if you speak a non-supported language, your help is welcome. There is many way for you to participate :
-- Translating the verbs, by adding a file named `verbs.txt` in app/src/main/res/values-[codename], where codename is the [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) code of the language
-- Translating the GUI, by adding a file named `strings.txt` in app/src/main/res/values-[codename], where codename is the [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) code of the language
+- Translating the verbs, by adding a file named `verbs.xml` in app/src/main/res/values-[codename], where codename is the [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) code of the language
+- Translating the GUI, by adding a file named `strings.xml` in app/src/main/res/values-[codename], where codename is the [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) code of the language
 
 For other contribution, please see [this](https://github.com/Sw24Softwares/StarkeVerben/blob/master/CONTRIBUTING.md).
 
