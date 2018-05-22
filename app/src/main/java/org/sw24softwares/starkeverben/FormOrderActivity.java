@@ -31,19 +31,20 @@ import android.util.ArraySet;
 public class FormOrderActivity extends AppCompatActivity {
     private ArrayList<Integer> mItemArray;
     private DragListView mDragListView;
+    private SharedPreferences mSharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formorder);
 
-        final SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 
         mDragListView = (DragListView) findViewById(R.id.drag_list_view);
         mDragListView.setScrollingEnabled(false);
 
         mItemArray = new ArrayList<>();
-        String formOrderPref = sharedPref.getString("formOrder", null);
+        String formOrderPref = mSharedPref.getString("formOrder", null);
         if(formOrderPref == null)
             for(int i = 0; i < 5; i++)
                 mItemArray.add(i);
@@ -57,20 +58,6 @@ public class FormOrderActivity extends AppCompatActivity {
         mDragListView.setAdapter(listAdapter, true);
         mDragListView.setCanDragHorizontally(false);
         mDragListView.setCustomDragItem(new MyDragItem(this, R.layout.list_item));
-
-        Button button = (Button) findViewById(R.id.save);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String string = new String();
-                for(int i = 0; i < mItemArray.size(); i++) 
-                    string += Integer.toString(mItemArray.get(i));
-                SharedPreferences.Editor editor = sharedPref.edit();
-                editor.putString("formOrder", string);
-                editor.commit();
-                FormOrderActivity.this.finish();
-            }
-        });
     }
     private static class MyDragItem extends DragItem {
         MyDragItem(Context context, int layoutId) {
@@ -84,5 +71,17 @@ public class FormOrderActivity extends AppCompatActivity {
             dragView.findViewById(R.id.item_layout)
                 .setBackgroundColor(dragView.getResources().getColor(R.color.list_item_background));
         }
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        String string = new String();
+        for(int i = 0; i < mItemArray.size(); i++) 
+            string += Integer.toString(mItemArray.get(i));
+        SharedPreferences.Editor editor = mSharedPref.edit();
+        editor.putString("formOrder", string);
+        editor.commit();
+        FormOrderActivity.this.finish();
     }
 }
