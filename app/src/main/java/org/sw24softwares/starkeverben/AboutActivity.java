@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
+import android.os.Build;
 
 import android.content.Intent;
 import android.view.View;
@@ -69,21 +70,18 @@ public class AboutActivity extends AppCompatActivity {
         return ap;
     }
     protected Element addDeveloper(final String title, final String link, final Integer icon) {
-        Element elem = new Element()
-                           .setTitle(title)
-                           .setIconDrawable(icon)
-                           .setAutoApplyIconTint(false)
-                           .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+        Element elem = new Element().setTitle(title).setAutoApplyIconTint(false).setIntent(
+            new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+        if(Build.VERSION.SDK_INT >= 21)
+            elem.setIconDrawable(icon);
         return elem;
     }
 
     protected Element addGitter(final String link) {
-        Element elem =
-            new Element()
-                .setTitle("Gitter")
-                .setIconDrawable(R.drawable.gitter)
-                .setAutoApplyIconTint(false)
-                .setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://gitter.im/" + link)));
+        Element elem = new Element().setTitle("Gitter").setAutoApplyIconTint(false).setIntent(
+            new Intent(Intent.ACTION_VIEW, Uri.parse("https://gitter.im/" + link)));
+        if(Build.VERSION.SDK_INT >= 21)
+            elem.setIconDrawable(R.drawable.gitter);
         return elem;
     }
 

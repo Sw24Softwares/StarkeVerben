@@ -77,7 +77,7 @@ public class FormOrderActivity extends AppCompatActivity {
         super.onPause();
 
         String string = new String();
-        for(int i = 0; i < mItemArray.size(); i++) 
+        for(int i = 0; i < mItemArray.size(); i++)
             string += Integer.toString(mItemArray.get(i));
         SharedPreferences.Editor editor = mSharedPref.edit();
         editor.putString("formOrder", string);
