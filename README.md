@@ -10,8 +10,9 @@
 </p>
 
 <p align="center">
+    <a href="https://hosted.weblate.org/engage/starke-verben/?utm_source=widget"><img src="https://hosted.weblate.org/widgets/starke-verben/-/svg-badge.svg" alt="Translation status" /></a>
     <a href="https://travis-ci.org/Sw24Softwares/StarkeVerben"><img src="https://travis-ci.org/Sw24Softwares/StarkeVerben.svg?branch=master" alt="Build Status"></a>
-    <a href="https://github.com/Sw24Softwares/StarkeVerben/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-GPL_v3.0-blue.svg" alt="License"></a>
+    <a href="https://github.com/Sw24Softwares/StarkeVerben/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-GPL_v3.0-blue.svg" alt="License"></a>
     <a href="https://gitter.im/Sw24Softwares/StarkeVerben?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/Sw24Softwares/StarkeVerben.svg" alt="Gitter"></a>
 </p>
 
@@ -29,9 +30,7 @@ StarkeVerben is an Android application that aims to help people learning the Ger
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/07.png" width="20%">
 
 ## Translation
-As it is an application for an educational purpose, we want to reach a large number of people. Thus if you speak a non-supported language, your help is welcome. There is many way for you to participate :
-- Translating the verbs, by adding a file named `verbs.xml` in app/src/main/res/values-[codename], where codename is the [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) code of the language
-- Translating the GUI, by adding a file named `strings.xml` in app/src/main/res/values-[codename], where codename is the [ISO 639-1](https://www.loc.gov/standards/iso639-2/php/code_list.php) code of the language
+As it is an application for an educational purpose, we want to reach a large number of people. Thus if you speak a language which is not available in our app, your help is welcome. [Here](https://hosted.weblate.org/engage/starke-verben) is the Weblate page where you can translate the app.
 
 For other contribution, please see [this](https://github.com/Sw24Softwares/StarkeVerben/blob/master/CONTRIBUTING.md).
 
