@@ -28,7 +28,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:26+'
-    compile 'com.android.support:design:+'
+    compile 'com.android.support:design:26+'
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
     compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
     compile 'pl.bclogic:pulsator4droid:1.0.3'
