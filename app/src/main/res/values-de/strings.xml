@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <string name="app_name">Starke Verben</string>
 
@@ -8,7 +8,7 @@
     <string name="single_lesson">Lektion</string>
 
     <string name="finish">Aufhören</string>
-    <string name="go_on">Weitergehen</string>
+    <string name="go_on">Weitermachen</string>
     <string name="verify">Überprüfen</string>
     <string name="save">Abspeichern</string>
     <string name="save_question">Abspeichern?</string>
@@ -27,7 +27,7 @@
     <string name="auxiliary">Hilfsverb</string>
 
     <string name="search_hint">Suchen</string>
-    <string name="app_label">StarkeVerben</string>
+    <string name="app_label">Starke Verben</string>
 
     <string name="pref">Einstellungen</string>
     <string name="pref_about">Über uns</string>
@@ -37,11 +37,11 @@
     <string name="pref_language_translation_default">Automatisch</string>
     <string name="pref_given_forms_title">Vorgeschlagene Formen im Test</string>
     <string name="pref_given_forms_summary">Verbformen, die potentiell in Tests vorgeschlagen werden</string>
-    <string name="pref_form_order_title">Form Reihenfolge</string>
+    <string name="pref_form_order_title">Reihenfolge</string>
 
     <string name="version">Version</string>
     <string name="connect">Kontakt</string>
     <string name="dependencies">Abhängigkeiten</string>
-    <string name="developers">Programmierern</string>
+    <string name="developers">Entwickler</string>
     <string name="about_page_description">Starke Verben</string>
 </resources>
