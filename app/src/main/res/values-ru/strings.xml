@@ -8,7 +8,7 @@
     <string name="go_on">Продолжить</string>
     <string name="verify">Проверить</string>
     <string name="save">Сохранить</string>
-    <string name="save_question">Сохранить?</string>
+    <string name="save_question">Сохранить\?</string>
     <string name="save_message">Сохранить отметку</string>
     <string name="chart">График</string>
     <string name="yes">Да</string>
