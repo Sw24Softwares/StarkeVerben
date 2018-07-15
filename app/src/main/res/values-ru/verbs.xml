@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="backen">
+    <item>печь</item>
+    <item>выпекать</item>
+    <item>жарить</item>
+  </string-array>
+
+  <string-array name="beginnen">
+    <item>начинать</item>
+    <item>начинаться</item>
+  </string-array>
+
+  <string-array name="bieten">
+    <item>предлагать</item>
+  </string-array>
+
+  <string-array name="binden">
+    <item>связывать</item>
+    <item>соединять</item>
+  </string-array>
+
+  <string-array name="bitten">
+    <item>просить</item>
+    <item>спрашивать</item>
+  </string-array>
+
+  <string-array name="bleiben">
+    <item>оставаться</item>
+  </string-array>
+
+  <string-array name="brechen">
+    <item>ломать</item>
+    <item>нарушать</item>
+  </string-array>
+
+  <string-array name="bringen">
+    <item>приносить</item>
+  </string-array>
+
+  <string-array name="denken">
+    <item>думать</item>
+  </string-array>
+
+  <string-array name="dringen">
+    <item>проникать</item>
+    <item>требовать</item>
+  </string-array>
+
+  <string-array name="essen">
+    <item>есть</item>
+    <item>кушать</item>
+  </string-array>
+
+  <string-array name="fahren">
+    <item>ехать</item>
+    <item>ездить</item>
+  </string-array>
+
+  <string-array name="fallen">
+    <item>падать</item>
+  </string-array>
+
+  <string-array name="fangen">
+    <item>ловить</item>
+  </string-array>
+
+  <string-array name="finden">
+    <item>находить</item>
+  </string-array>
+
+  <string-array name="fliegen">
+    <item>лететь</item>
+  </string-array>
+
+  <string-array name="fliehen">
+    <item>убегать</item>
+    <item>спасаться</item>
+  </string-array>
+
+  <string-array name="fliessen">
+    <item>течь</item>
+    <item>протекать</item>
+  </string-array>
+
+  <string-array name="fressen">
+    <item>жрать</item>
+  </string-array>
+
+  <string-array name="geben">
+    <item>давать</item>
+  </string-array>
+
+  <string-array name="gehen">
+    <item>идти</item>
+  </string-array>
+
+  <string-array name="gelingen">
+    <item>получаться</item>
+  </string-array>
+
+  <string-array name="gelten">
+    <item>считать</item>
+    <item>цениться</item>
+  </string-array>
+
+  <string-array name="geniessen">
+    <item>наслаждаться</item>
+  </string-array>
+
+  <string-array name="geschehen">
+    <item>случаться</item>
+    <item>происходить</item>
+  </string-array>
+
+  <string-array name="gewinnen">
+    <item>побеждать</item>
+    <item>приобретать</item>
+  </string-array>
+
+  <string-array name="giessen">
+    <item>лить</item>
+    <item>поливать</item>
+  </string-array>
+
+  <string-array name="gleichen">
+    <item>равняться</item>
+    <item>быть похожим</item>
+  </string-array>
+
+  <string-array name="graben">
+    <item>копать</item>
+  </string-array>
+
+  <string-array name="greifen">
+    <item>хватать</item>
+    <item>браться</item>
+  </string-array>
+
+  <string-array name="halten">
+    <item>держать</item>
+  </string-array>
+
+  <string-array name="hangen">
+    <item>висеть</item>
+  </string-array>
+
+  <string-array name="heben">
+    <item>поднимать</item>
+    <item>повышать</item>
+  </string-array>
+
+  <string-array name="heissen">
+    <item>to be called</item>
+  </string-array>
+
+  <string-array name="helfen">
+    <item>помогать</item>
+  </string-array>
+
+  <string-array name="kennen">
+    <item>знать</item>
+  </string-array>
+
+  <string-array name="klingen">
+    <item>звучать</item>
+  </string-array>
+
+  <string-array name="kommen">
+    <item>приходить</item>
+  </string-array>
+
+  <string-array name="laden">
+    <item>грузить</item>
+    <item>загружать</item>
+  </string-array>
+
+  <string-array name="lassen">
+    <item>позволять</item>
+    <item>оставлять</item>
+  </string-array>
+
+  <string-array name="laufen">
+    <item>бежать</item>
+  </string-array>
+
+  <string-array name="leihen">
+    <item>одалживать</item>
+    <item>занимать</item>
+  </string-array>
+
+  <string-array name="lesen">
+    <item>читать</item>
+  </string-array>
+
+  <string-array name="liegen">
+    <item>лежать</item>
+    <item>располагаться</item>
+  </string-array>
+
+  <string-array name="lügen">
+    <item>врать</item>
+    <item>лгать</item>
+  </string-array>
+
+  <string-array name="meiden">
+    <item>избегать</item>
+    <item>воздерживаться</item>
+  </string-array>
+
+  <string-array name="messen">
+    <item>измерять</item>
+    <item>мерить</item>
+  </string-array>
+
+  <string-array name="nehmen">
+    <item>брать</item>
+  </string-array>
+
+  <string-array name="nennen">
+    <item>называть</item>
+    <item>указывать</item>
+  </string-array>
+
+  <string-array name="pfeifen">
+    <item>свистеть</item>
+  </string-array>
+
+  <string-array name="raten">
+    <item>советовать</item>
+  </string-array>
+
+  <string-array name="reissen">
+    <item>рвать</item>
+  </string-array>
+
+  <string-array name="reiten">
+    <item>ездить верхом</item>
+    <item>скакать</item>
+  </string-array>
+
+  <string-array name="rufen">
+    <item>звать</item>
+  </string-array>
+
+  <string-array name="schaffen">
+    <item>создавать</item>
+  </string-array>
+
+  <string-array name="scheinen">
+    <item>казаться</item>
+    <item>сиять</item>
+  </string-array>
+
+  <string-array name="schiessen">
+    <item>стрелять</item>
+  </string-array>
+
+  <string-array name="schlafen">
+    <item>спать</item>
+  </string-array>
+
+  <string-array name="schlagen">
+    <item>бить</item>
+    <item>ударять</item>
+  </string-array>
+
+  <string-array name="schliessen">
+    <item>закрывать</item>
+    <item>завершать</item>
+  </string-array>
+
+  <string-array name="schmeissen">
+    <item>бросать</item>
+    <item>швырять</item>
+  </string-array>
+
+  <string-array name="schreiben">
+    <item>писать</item>
+  </string-array>
+
+  <string-array name="schreien">
+    <item>кричать</item>
+    <item>орать</item>
+  </string-array>
+
+  <string-array name="schreiten">
+    <item>шагать</item>
+    <item>идти</item>
+  </string-array>
+
+  <string-array name="schweigen">
+    <item>молчать</item>
+  </string-array>
+
+  <string-array name="schwimmen">
+    <item>плавать</item>
+  </string-array>
+
+  <string-array name="schworen">
+    <item>клясться</item>
+  </string-array>
+
+  <string-array name="sehen">
+    <item>видеть</item>
+    <item>смотреть</item>
+  </string-array>
+
+  <string-array name="senden">
+    <item>отправлять</item>
+    <item>посылать</item>
+  </string-array>
+
+  <string-array name="singen">
+    <item>петь</item>
+  </string-array>
+
+  <string-array name="sitzen">
+    <item>сидеть</item>
+  </string-array>
+
+  <string-array name="sprechen">
+    <item>говорить</item>
+  </string-array>
+
+  <string-array name="springen">
+    <item>прыгать</item>
+  </string-array>
+
+  <string-array name="stehen">
+    <item>стоять</item>
+  </string-array>
+
+  <string-array name="steigen">
+    <item>подниматься</item>
+    <item>расти</item>
+  </string-array>
+
+  <string-array name="sterben">
+    <item>умирать</item>
+  </string-array>
+
+  <string-array name="stossen">
+    <item>толкать</item>
+    <item>ударять</item>
+  </string-array>
+
+  <string-array name="streiten">
+    <item>ссориться</item>
+    <item>спорить</item>
+  </string-array>
+
+  <string-array name="tragen">
+    <item>нести</item>
+    <item>носить</item>
+  </string-array>
+
+  <string-array name="treffen">
+    <item>встречать</item>
+  </string-array>
+
+  <string-array name="treiben">
+    <item>гнать</item>
+    <item>дрейфовать</item>
+  </string-array>
+
+  <string-array name="treten">
+    <item>наступать</item>
+    <item>пинать</item>
+  </string-array>
+
+  <string-array name="trinken">
+    <item>пить</item>
+  </string-array>
+
+  <string-array name="tun">
+    <item>делать</item>
+  </string-array>
+
+  <string-array name="vergessen">
+    <item>забывать</item>
+  </string-array>
+
+  <string-array name="verlieren">
+    <item>терять</item>
+  </string-array>
+
+  <string-array name="verschlingen">
+    <item>поглощать</item>
+    <item>пожирать</item>
+  </string-array>
+
+  <string-array name="verschwinden">
+    <item>исчезать</item>
+    <item>пропадать</item>
+  </string-array>
+
+  <string-array name="wachsen">
+    <item>расти</item>
+  </string-array>
+
+  <string-array name="waschen">
+    <item>мыть</item>
+  </string-array>
+
+  <string-array name="weichen">
+    <item>смягчать</item>
+    <item>отступать</item>
+  </string-array>
+
+  <string-array name="weisen">
+    <item>указывать</item>
+  </string-array>
+
+  <string-array name="wenden">
+    <item>поворачивать</item>
+  </string-array>
+
+  <string-array name="werben">
+    <item>рекламировать</item>
+    <item>вербовать</item>
+  </string-array>
+
+  <string-array name="werfen">
+    <item>кидать</item>
+  </string-array>
+
+  <string-array name="wissen">
+    <item>знать</item>
+  </string-array>
+
+  <string-array name="ziehen">
+    <item>двигать</item>
+  </string-array>
+
+  <string-array name="ziehen1">
+    <item>тянуть</item>
+  </string-array>
+
+  <string-array name="zwingen">
+    <item>заставлять</item>
+    <item>принуждать</item>
+  </string-array>
+</resources>
