@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <string name="test">Test</string>
     <string name="progression">Progression</string>
@@ -39,4 +40,6 @@
     <string name="connect">Contactez-nous</string>
     <string name="dependencies">Dépendances</string>
     <string name="developers">Développeurs</string>
-</resources>
+<string name="not_now">Pas maintenant</string>
+    
+    </resources>
