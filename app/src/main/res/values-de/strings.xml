@@ -25,7 +25,6 @@
     <string name="auxiliary">Hilfsverb</string>
 
     <string name="search_hint">Suchen</string>
-    <string name="app_label">Starke Verben</string>
 
     <string name="pref">Einstellungen</string>
     <string name="pref_about">Über uns</string>
@@ -41,5 +40,4 @@
     <string name="connect">Kontakt</string>
     <string name="dependencies">Abhängigkeiten</string>
     <string name="developers">Entwickler</string>
-    <string name="about_page_description">Starke Verben</string>
 </resources>

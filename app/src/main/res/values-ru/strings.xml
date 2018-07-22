@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="app_name">Сильные глаголы (немецкий)</string>
-
+<resources>
     <string name="test">Тест</string>
     <string name="progression">Прогресс</string>
     <string name="lesson">Список</string>
@@ -26,7 +25,6 @@
     <string name="auxiliary">Дополнение</string>
 
     <string name="search_hint">Поиск</string>
-    <string name="app_label">Сильные глаголы</string>
 
     <string name="pref">Настройки</string>
     <string name="pref_about">Справка</string>
@@ -42,5 +40,4 @@
     <string name="connect">Связаться с авторами</string>
     <string name="dependencies">Взаимосвязи</string>
     <string name="developers">Разработчики</string>
-    <string name="about_page_description">Сильные глаголы</string>
 </resources>
