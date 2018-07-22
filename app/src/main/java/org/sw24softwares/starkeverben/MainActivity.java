@@ -54,9 +54,12 @@ public class MainActivity extends AppCompatActivity {
                                   }
                               });
 
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.ok),
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.not_now),
                               new DialogInterface.OnClickListener() {
                                   public void onClick(DialogInterface dialog, int which) {
+                                      SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit();
+                                      editor.putBoolean("contribute", false);
+                                      editor.commit();
                                       alertDialog.hide();
                                   }
                               });
@@ -83,7 +86,8 @@ public class MainActivity extends AppCompatActivity {
         String s = Locale.getDefault().getLanguage();
         Log.e("StarkeVerben", s);
         String[] availableLang = res.getStringArray(R.array.language_values);
-        if(!Arrays.asList(availableLang).contains(s)) {
+        if(!Arrays.asList(availableLang).contains(s) &&
+           PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean("contribute",true)) {
             createTranslateDialog();
         }
 
