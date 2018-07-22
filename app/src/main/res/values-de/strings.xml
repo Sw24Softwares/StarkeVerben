@@ -40,4 +40,6 @@
     <string name="connect">Kontakt</string>
     <string name="dependencies">Abhängigkeiten</string>
     <string name="developers">Entwickler</string>
-</resources>
+<string name="not_now">Nicht jetzt</string>
+    
+    </resources>
