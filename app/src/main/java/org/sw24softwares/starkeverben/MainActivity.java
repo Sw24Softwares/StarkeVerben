@@ -2,9 +2,11 @@ package org.sw24softwares.starkeverben;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.app.SearchManager;
 import android.view.View;
@@ -24,10 +26,11 @@ import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Locale;
 import java.util.Arrays;
+import java.util.Locale;
 
 import android.util.Log;
+import android.net.Uri;
 
 public class MainActivity extends AppCompatActivity {
     private FragmentTransaction mTransaction;
@@ -35,6 +38,30 @@ public class MainActivity extends AppCompatActivity {
     private static final String PROGRESS = "Progress";
     private static final String SINGLE_LESSON = "SingleLesson";
     private static final String LESSON = "Lesson";
+
+    protected void createTranslateDialog() {
+        final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+        alertDialog.setTitle(getString(R.string.translate_alert));
+        alertDialog.setMessage(getString(R.string.translate_message));
+
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.contribute_trans),
+                              new DialogInterface.OnClickListener() {
+                                  public void onClick(DialogInterface dialog, int which) {
+                                      Intent browserIntent =
+                                          new Intent(Intent.ACTION_VIEW,
+                                                     Uri.parse("R.string.weblate_url"));
+                                      startActivity(browserIntent);
+                                  }
+                              });
+
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.ok),
+                              new DialogInterface.OnClickListener() {
+                                  public void onClick(DialogInterface dialog, int which) {
+                                      alertDialog.hide();
+                                  }
+                              });
+        alertDialog.show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +79,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Resources res = getResources();
+
+        String s = Locale.getDefault().getLanguage();
+        Log.e("StarkeVerben", s);
+        String[] availableLang = res.getStringArray(R.array.language_values);
+        if(!Arrays.asList(availableLang).contains(s)) {
+            createTranslateDialog();
+        }
+
         Settings.getSingleton().setFormString(0, res.getString(R.string.infinitive));
         Settings.getSingleton().setFormString(1, res.getString(R.string.preterite));
         Settings.getSingleton().setFormString(2, res.getString(R.string.participe));

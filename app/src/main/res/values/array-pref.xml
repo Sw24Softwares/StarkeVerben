@@ -24,6 +24,7 @@
     <item name="french">Français</item>
     <item name="hungarian">Magyar</item>
     <item name="romanian">Românesc</item>
+    <item name="russian">Русский</item>
   </string-array>
   <string-array name="language_values">
     <item name="default"></item>
@@ -32,5 +33,6 @@
     <item name="french">fr</item>
     <item name="hungarian">hu</item>
     <item name="romanian">ro</item>
+    <item name="russian">ru</item>
   </string-array>
 </resources>
