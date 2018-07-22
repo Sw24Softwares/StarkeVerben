@@ -1,0 +1,3 @@
+Changelog:
+- Solve crash for pre-Lollipop devices (4.2, 4.3, 4.4)
+- Solve crash when rotating screen

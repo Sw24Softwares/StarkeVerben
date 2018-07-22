@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">Starke Verben</string>
-
     <string name="test">Test</string>
     <string name="progression">Progression</string>
     <string name="lesson">Liste</string>
@@ -26,7 +24,6 @@
     <string name="auxiliary">Auxiliaire</string>
 
     <string name="search_hint">Rechercher</string>
-    <string name="app_label">StarkeVerben</string>
 
     <string name="pref">Paramètres</string>
     <string name="pref_about">À propos</string>
@@ -42,5 +39,4 @@
     <string name="connect">Contactez-nous</string>
     <string name="dependencies">Dépendances</string>
     <string name="developers">Développeurs</string>
-    <string name="about_page_description">Starke Verben</string>
 </resources>

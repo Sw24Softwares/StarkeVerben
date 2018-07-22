@@ -37,7 +37,8 @@ public class AboutActivity extends AppCompatActivity {
                 .addItem(new Element().setTitle(getResources().getString(R.string.version) + " "
                                                 + BuildConfig.VERSION_NAME))
                 .addGroup(getResources().getString(R.string.connect))
-                .addGitHub("Sw24Softwares/StarkeVerben")
+                .addGitHub("Sw24Softwares/StarkeVerben", "GitHub")
+                .addItem(addWeblate("projects/starke-verben"))
                 .addItem(addGitter("Sw24Softwares/StarkeVerben"))
                 .addWebsite("https://sw24softwares.github.io/");
         aboutPage = setUpDependencies(aboutPage);
@@ -82,6 +83,14 @@ public class AboutActivity extends AppCompatActivity {
             new Intent(Intent.ACTION_VIEW, Uri.parse("https://gitter.im/" + link)));
         if(Build.VERSION.SDK_INT >= 21)
             elem.setIconDrawable(R.drawable.gitter);
+        return elem;
+    }
+
+    protected Element addWeblate(final String link) {
+        Element elem = new Element().setTitle("Weblate").setAutoApplyIconTint(false).setIntent(
+            new Intent(Intent.ACTION_VIEW, Uri.parse("https://hosted.weblate.org/" + link)));
+        if(Build.VERSION.SDK_INT >= 21)
+            elem.setIconDrawable(R.drawable.weblate);
         return elem;
     }
 

@@ -10,6 +10,7 @@
         android:theme="@style/AppTheme">
         <activity android:name="org.sw24softwares.starkeverben.MainActivity"
                   android:theme="@style/AppTheme.NoActionBar"
+                  android:configChanges="keyboardHidden|orientation|screenSize"
                   android:launchMode="singleTop"> 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +20,8 @@
                 <meta-data android:name="android.app.searchable"
                            android:resource="@xml/searchable"/>
         </activity>
-        <activity android:name="org.sw24softwares.starkeverben.TestActivity" />
+        <activity android:name="org.sw24softwares.starkeverben.TestActivity"
+                  android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:name="org.sw24softwares.starkeverben.ResultActivity" />
         
         <activity android:name="org.sw24softwares.starkeverben.SettingsActivity" />

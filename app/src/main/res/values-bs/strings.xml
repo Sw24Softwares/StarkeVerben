@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Starke Verben</string>
-
     <string name="test">Ispit</string>
     <string name="progression">Napredak</string>
     <string name="lesson">Sadržaj</string>
@@ -27,7 +25,6 @@
     <string name="auxiliary">Pomoćnik</string>
 
     <string name="search_hint">Pretraga</string>
-    <string name="app_label">StarkeVerben</string>
 
     <string name="pref">Postavke</string>
     <string name="pref_about">O nama</string>
@@ -42,5 +39,4 @@
     <string name="version">Verzija</string>
     <string name="connect">Naše stranice</string>
     <string name="developers">Developeri</string>
-    <string name="about_page_description">Starke Verben</string>
 </resources>
