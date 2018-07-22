@@ -27,10 +27,12 @@
     <string name="traduction">Translation</string>
     <string name="auxiliary">Auxiliary</string>
 
-    <string name="translate_alert">Translation needed</string>
-    <string name="translate_message">Your language is sadly not supported by our application. Would you like to help us and translate it ?</string>
-    <string name="contribute_trans">Contribute</string>
-    <string name="weblate_url">https://hosted.weblate.org/projects/starke-verben</string>
+    <!-- Those following strings show when no translation is found,
+         thus it is useless to translate them -->
+    <string name="translate_alert" translatable="false">Translation needed</string>
+    <string name="translate_message" translatable="false">Your language is sadly not supported by our application. Would you like to help us and translate it ?</string>
+    <string name="contribute_trans" translatable="false">Contribute</string>
+    <string name="weblate_url" translatable="false">https://hosted.weblate.org/projects/starke-verben</string>
     
     <string name="search_hint">Search</string>
     <string name="app_label" translatable="false">StarkeVerben</string>
