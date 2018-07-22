@@ -43,5 +43,5 @@
     <string name="connect">Get in touch with us</string>
     <string name="dependencies">Dependencies</string>
     <string name="developers">Developers</string>
-    <string name="about_page_description">@string/app_name</string>
+    <string name="about_page_description" translatable="false">@string/app_name</string>
 </resources>
