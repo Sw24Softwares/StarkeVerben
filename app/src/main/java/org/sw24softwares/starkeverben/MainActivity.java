@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                                   public void onClick(DialogInterface dialog, int which) {
                                       Intent browserIntent = new Intent(
                                           Intent.ACTION_VIEW,
-                                          Uri.parse(res.getString(R.string.weblate_url)));
+                                          Uri.parse(res.getString(R.string.contribution_url)));
                                       startActivity(browserIntent);
                                   }
                               });

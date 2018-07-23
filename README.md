@@ -30,7 +30,12 @@ StarkeVerben is an Android application that aims to help people learning the Ger
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/07.png" width="20%">
 
 ## Translation
-As it is an application for an educational purpose, we want to reach a large number of people. Thus if you speak a language which is not available in our app, your help is welcome. [Here](https://hosted.weblate.org/engage/starke-verben) is the Weblate page where you can translate the app.
+As it is an application for an educational purpose, we want to reach a large number of people. Thus if you speak a language which is not available in our app, your help is welcome. [Here](https://hosted.weblate.org/engage/starke-verben) is the Weblate page where you can translate the application's interface.
+vers
+
+For now, it is impossible to translate the verbs in Weblate. You need instead to create a directory named `values-xx` (where xx is the [two letter language code](https://www.loc.gov/standards/iso639-2/php/code_list.php)) in `app/src/main/res/`, where you can paste the copy of a `verbs.xml` file from any of the others `values*` folder.
+
+Anyway, you can contact us for help via [Gitter](https://gitter.im/Sw24Softwares/StarkeVerben).
 
 For other contribution, please see [this](https://github.com/Sw24Softwares/StarkeVerben/blob/master/CONTRIBUTING.md).
 
