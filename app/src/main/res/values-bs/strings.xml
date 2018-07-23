@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <string name="test">Ispit</string>
     <string name="progression">Napredak</string>
@@ -39,4 +39,6 @@
     <string name="version">Verzija</string>
     <string name="connect">Naše stranice</string>
     <string name="developers">Developeri</string>
-</resources>
+<string name="not_now">Ne sada</string>
+    
+    </resources>
