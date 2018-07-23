@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String PROGRESS = "Progress";
     private static final String SINGLE_LESSON = "SingleLesson";
     private static final String LESSON = "Lesson";
+    private static Resources res;
 
     protected void createTranslateDialog() {
         final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
@@ -47,22 +48,24 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.contribute_trans),
                               new DialogInterface.OnClickListener() {
                                   public void onClick(DialogInterface dialog, int which) {
-                                      Intent browserIntent =
-                                          new Intent(Intent.ACTION_VIEW,
-                                                     Uri.parse("R.string.weblate_url"));
+                                      Intent browserIntent = new Intent(
+                                          Intent.ACTION_VIEW,
+                                          Uri.parse(res.getString(R.string.weblate_url)));
                                       startActivity(browserIntent);
                                   }
                               });
 
-        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, getString(R.string.not_now),
-                              new DialogInterface.OnClickListener() {
-                                  public void onClick(DialogInterface dialog, int which) {
-                                      SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit();
-                                      editor.putBoolean("contribute", false);
-                                      editor.commit();
-                                      alertDialog.hide();
-                                  }
-                              });
+        alertDialog.setButton(
+            AlertDialog.BUTTON_NEGATIVE, getString(R.string.not_now),
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    SharedPreferences.Editor editor =
+                        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit();
+                    editor.putBoolean("contribute", false);
+                    editor.commit();
+                    alertDialog.hide();
+                }
+            });
         alertDialog.show();
     }
 
@@ -81,13 +84,14 @@ public class MainActivity extends AppCompatActivity {
             Log.e("StarkeVerben", e.getMessage());
         }
 
-        Resources res = getResources();
+        res = getResources();
 
         String s = Locale.getDefault().getLanguage();
         Log.e("StarkeVerben", s);
         String[] availableLang = res.getStringArray(R.array.language_values);
-        if(!Arrays.asList(availableLang).contains(s) &&
-           PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean("contribute",true)) {
+        if(!Arrays.asList(availableLang).contains(s)
+           && PreferenceManager.getDefaultSharedPreferences(MainActivity.this)
+                  .getBoolean("contribute", true)) {
             createTranslateDialog();
         }
 
