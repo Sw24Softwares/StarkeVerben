@@ -18,9 +18,9 @@
         android:summary="@string/pref_given_forms_summary"
         android:title="@string/pref_given_forms_title" />
     
-    <!--<PreferenceScreen
+    <PreferenceScreen
          android:key="prefFormOrder"
-         android:title="@string/pref_form_order_title" />-->
+         android:title="@string/pref_form_order_title" />
   </PreferenceCategory>
   
   <PreferenceCategory

@@ -20,24 +20,22 @@
             <EditText
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/e0"
+                android:id="@+id/infinitive"
                 android:inputType="textNoSuggestions"
                 android:textAlignment="center"/>
 
             <EditText
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/e1"
+                android:id="@+id/preterite"
                 android:inputType="textNoSuggestions"
-                android:layout_below="@+id/e0"
                 android:textAlignment="center"/>
 
             <EditText
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/e2"
+                android:id="@+id/participe"
                 android:inputType="textNoSuggestions"
-                android:layout_below="@+id/e1"
                 android:textAlignment="center"/>
 
             <CheckBox
@@ -45,30 +43,26 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/auxiliary"
                 android:text="Sein"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/e2"/>
+                android:layout_centerHorizontal="true"/>
 
             <EditText
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/e3"
+                android:id="@+id/third_person"
                 android:inputType="text"
-                android:layout_below="@+id/auxiliary"
                 android:textAlignment="center"/>
 
             <EditText
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/e4"
+                android:id="@+id/traduction"
                 android:inputType="textNoSuggestions"
-                android:layout_below="@id/e3"
                 android:textAlignment="center"/>
 
             <Button
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/verify"
-                android:layout_below="@+id/e4"
                 android:layout_centerInParent="true"
                 android:layout_marginTop="20dp"
                 android:text="@string/verify"/>

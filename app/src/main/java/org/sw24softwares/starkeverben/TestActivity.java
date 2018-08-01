@@ -8,7 +8,9 @@ import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.view.inputmethod.InputMethodManager;
@@ -22,6 +24,7 @@ import java.util.HashSet;
 import java.util.Locale;
 
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import static android.R.color.black;
 
@@ -45,6 +48,23 @@ public class TestActivity extends AppCompatActivity {
             return false;
     }
 
+    protected void orderViews(Vector<View> views, Vector<Integer> order) {
+        for(int i = 0; i < views.size(); i++) {
+            Log.e("StarkeVerben", Integer.toString(i) + " " + Integer.toString(order.get(i)));
+            if(order.get(i) == 0)
+                continue;
+            int width = (int) (165 * Resources.getSystem().getDisplayMetrics().density);
+            if(i == 5)
+                width = ViewGroup.LayoutParams.WRAP_CONTENT;
+            RelativeLayout.LayoutParams p
+                = new RelativeLayout.LayoutParams(width, ViewGroup.LayoutParams.WRAP_CONTENT);
+            p.addRule(RelativeLayout.BELOW, views.get(order.indexOf(order.get(i) -1)).getId());
+            if(i == 5)
+                p.addRule(RelativeLayout.CENTER_HORIZONTAL);
+            views.get(i).setLayoutParams(p);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,27 +82,41 @@ public class TestActivity extends AppCompatActivity {
 
         final Vector<Integer> formsOrder = new Vector<Integer>();
         if(formOrderPref == null)
-            for(int i = 0; i < 5; i++)
+            for(int i = 0; i < 6; i++)
                 formsOrder.addElement(i);
         else
             for(char c : formOrderPref.toCharArray())
                 formsOrder.addElement(Character.getNumericValue(c));
 
         final Vector<Integer> formsOrderReverse = new Vector<Integer>();
-        formsOrderReverse.setSize(5);
+        formsOrderReverse.setSize(6);
         for(int i = 0; i < formsOrder.size(); i++)
             formsOrderReverse.set(formsOrder.get(i), i);
 
         final Vector<EditText> editForms = new Vector<EditText>();
-        editForms.addElement((EditText) findViewById(R.id.e0));
-        editForms.addElement((EditText) findViewById(R.id.e1));
-        editForms.addElement((EditText) findViewById(R.id.e2));
-        editForms.addElement((EditText) findViewById(R.id.e3));
-        editForms.addElement((EditText) findViewById(R.id.e4));
+        editForms.addElement((EditText) findViewById(R.id.infinitive));
+        editForms.addElement((EditText) findViewById(R.id.preterite));
+        editForms.addElement((EditText) findViewById(R.id.participe));
+        editForms.addElement((EditText) findViewById(R.id.third_person));
+        editForms.addElement((EditText) findViewById(R.id.traduction));
         final CheckBox aux = (CheckBox) findViewById(R.id.auxiliary);
 
+        final Vector<View> forms = new Vector<View>();
+        for(View v : editForms)
+            forms.addElement(v);
+        forms.addElement((View) aux);
+        orderViews(forms, formsOrderReverse);
+
+        Button button = (Button) findViewById(R.id.verify);
+        RelativeLayout.LayoutParams p
+            = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                                              ViewGroup.LayoutParams.WRAP_CONTENT);
+        p.addRule(RelativeLayout.BELOW, forms.get(formsOrder.get(formsOrder.size()-1)).getId());
+        p.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        button.setLayoutParams(p);
+
         for(int i = 0; i < editForms.size(); i++)
-            editForms.get(i).setHint(Verb.formToWord(formsOrder.get(i)));
+            editForms.get(i).setHint(Verb.formToWord(i));
 
         // Select verb
         Vector<Verb> verbs = Settings.getSingleton().getVerbs();
@@ -104,12 +138,12 @@ public class TestActivity extends AppCompatActivity {
         for(int i = 0; i < 4; i++) {
             if(mFormType == i) {
                 int possibility = rand.nextInt(mVerb.getAllForms().get(mFormType).size());
-                fillEditText(editForms.get(formsOrderReverse.get(i)),
+                fillEditText(editForms.get(i),
                              mVerb.getAllForms().get(mFormType).get(possibility));
             }
         }
         if(mFormType == 4)
-            fillEditText(editForms.get(formsOrderReverse.get(4)), mTranslations[0]);
+            fillEditText(editForms.get(4), mTranslations[0]);
 
         final int total = getIntent().getExtras().getInt("total");
         final int marks[] = getIntent().getExtras().getIntArray("marks");
@@ -129,7 +163,6 @@ public class TestActivity extends AppCompatActivity {
             }
         });
 
-        Button button = (Button) findViewById(R.id.verify);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -142,7 +175,7 @@ public class TestActivity extends AppCompatActivity {
 
                 String givenAnswers[] = new String[6];
                 for(int i = 0; i < editForms.size(); i++)
-                    givenAnswers[formsOrder.get(i)] = editForms.get(i).getText().toString();
+                    givenAnswers[i] = editForms.get(i).getText().toString();
                 givenAnswers[5] = Verb.boolToAux(aux.isChecked());
                 intent.putExtra("givenAnswers", givenAnswers);
 

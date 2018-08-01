@@ -46,7 +46,7 @@ public class FormOrderActivity extends AppCompatActivity {
         mItemArray = new ArrayList<>();
         String formOrderPref = mSharedPref.getString("formOrder", null);
         if(formOrderPref == null)
-            for(int i = 0; i < 5; i++)
+            for(int i = 0; i < 6; i++)
                 mItemArray.add(i);
         else
             for(char c : formOrderPref.toCharArray())
