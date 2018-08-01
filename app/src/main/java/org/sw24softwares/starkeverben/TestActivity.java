@@ -12,7 +12,6 @@ import android.widget.RelativeLayout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.view.inputmethod.InputMethodManager;
 
 import java.util.Date;
@@ -50,7 +49,6 @@ public class TestActivity extends AppCompatActivity {
 
     protected void orderViews(Vector<View> views, Vector<Integer> order) {
         for(int i = 0; i < views.size(); i++) {
-            Log.e("StarkeVerben", Integer.toString(i) + " " + Integer.toString(order.get(i)));
             if(order.get(i) == 0)
                 continue;
             int width = (int) (165 * Resources.getSystem().getDisplayMetrics().density);

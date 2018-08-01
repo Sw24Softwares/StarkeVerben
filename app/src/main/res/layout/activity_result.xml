@@ -1,103 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/test_layout"
+    android:clickable="true">
 
-  <RelativeLayout
+  <ScrollView
       android:layout_height="wrap_content"
-      android:layout_width="match_parent" >
+      android:layout_width="wrap_content"
+      android:layout_centerInParent="true">
 
-    <TextView
-        android:id="@+id/infinitive_result"
-        android:textSize="30sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_above="@+id/preterit_result"
-        android:layout_centerHorizontal="true" />
+    <RelativeLayout
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:focusableInTouchMode="true">
 
-    <TextView
-        android:id="@+id/preterit_result"
-        android:textSize="30sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_above="@+id/aux_part_layout"
-        android:layout_centerHorizontal="true" />
-
-    <LinearLayout
-        android:id="@+id/aux_part_layout"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_centerInParent="true">
 
       <TextView
+          android:id="@+id/infinitive_result"
+          android:textSize="30sp"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:textSize="30sp"
-          android:layout_marginRight="7dp"
-          android:layout_marginEnd="7dp"
-          android:id="@+id/auxiliary_result"
-          android:gravity="center_horizontal" />
+          android:layout_marginBottom="20dp" />
 
       <TextView
+          android:id="@+id/preterit_result"
+          android:textSize="30sp"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_marginBottom="20dp" />
+
+      <LinearLayout
+          android:id="@+id/aux_part_layout"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"
+            android:id="@+id/auxiliary_result"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:id="@+id/participe_result"
+            android:gravity="center_horizontal" />
+
+      </LinearLayout>
+
+
+      <TextView
+          android:id="@+id/third_person_result"
           android:textSize="30sp"
-          android:layout_marginLeft="7dp"
-          android:layout_marginStart="7dp"
-          android:id="@+id/participe_result"
-          android:gravity="center_horizontal" />
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="20dp" />
 
-    </LinearLayout>
+      <TextView
+          android:id="@+id/translation_result"
+          android:textSize="30sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
 
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/third_person_result"
-        android:textSize="30sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_below="@+id/aux_part_layout"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:id="@+id/translation_result"
-        android:textSize="30sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/third_person_result"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/finish"
-        android:text="@string/finish"
-        android:background="@android:color/transparent"
-        android:layout_marginLeft="35dp"
-        android:layout_marginStart="35dp"
-	      android:layout_marginBottom="45dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/go_on"
-        android:text="@string/go_on"
-        android:background="@android:color/transparent"
-        android:layout_marginRight="35dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="45dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"/>
-
-  </RelativeLayout>
-
-</ScrollView>
+  </ScrollView>
+  
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/finish"
+      android:text="@string/finish"
+      android:background="@android:color/transparent"
+      android:layout_marginLeft="35dp"
+      android:layout_marginStart="35dp"
+	  android:layout_marginBottom="45dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentLeft="true"/>
+  
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/go_on"
+      android:text="@string/go_on"
+      android:background="@android:color/transparent"
+      android:layout_marginRight="35dp"
+      android:layout_marginEnd="35dp"
+      android:layout_marginBottom="45dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"/>
+  
+</RelativeLayout>

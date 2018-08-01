@@ -10,8 +10,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.RelativeLayout;
 import android.content.ContentValues;
 
 import java.util.Date;
@@ -71,6 +73,18 @@ public class ResultActivity extends AppCompatActivity {
         ResultActivity.this.finish();
     }
 
+    protected void orderViews(Vector<View> views, Vector<Integer> order) {
+        for(int i = 0; i < views.size(); i++) {
+            RelativeLayout.LayoutParams p
+                = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                                                  ViewGroup.LayoutParams.WRAP_CONTENT);
+            if(order.get(i) != 0)
+                p.addRule(RelativeLayout.BELOW, views.get(order.indexOf(order.get(i) -1)).getId());
+            p.addRule(RelativeLayout.CENTER_HORIZONTAL);
+            views.get(i).setLayoutParams(p);
+        }
+    }
+
     protected void initTextViews(Vector<TextView> textViews, Verb givenVerb, Verb verb, int form) {
         Vector<Integer> compareRes = verb.compare(givenVerb);
 
@@ -89,6 +103,28 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        Locale l = GlobalData.getTranslationLocale(sharedPref);
+        Resources res = GlobalData.getLocalizedResources(this, l);
+        String formOrderPref = sharedPref.getString("formOrder", null);
+
+        final Vector<Integer> formsOrder = new Vector<Integer>();
+        if(formOrderPref == null)
+            for(int i = 0; i < 6; i++)
+                formsOrder.addElement(i);
+        else
+            for(char c : formOrderPref.toCharArray())
+                formsOrder.addElement(Character.getNumericValue(c));
+
+        // Search for Auxiliary and delete it
+        formsOrder.remove(formsOrder.indexOf(5));
+
+
+        final Vector<Integer> formsOrderReverse = new Vector<Integer>();
+        formsOrderReverse.setSize(6);
+        for(int i = 0; i < formsOrder.size(); i++)
+            formsOrderReverse.set(formsOrder.get(i), i);
+
         final Vector<TextView> textViews = new Vector<TextView>();
         textViews.addElement((TextView) findViewById(R.id.infinitive_result));
         textViews.addElement((TextView) findViewById(R.id.preterit_result));
@@ -97,9 +133,13 @@ public class ResultActivity extends AppCompatActivity {
         textViews.addElement((TextView) findViewById(R.id.translation_result));
         textViews.addElement((TextView) findViewById(R.id.auxiliary_result));
 
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        Locale l = GlobalData.getTranslationLocale(sharedPref);
-        Resources res = GlobalData.getLocalizedResources(this, l);
+        final Vector<View> forms = new Vector<View>();
+        forms.addElement((View) findViewById(R.id.infinitive_result));
+        forms.addElement((View) findViewById(R.id.preterit_result));
+        forms.addElement((View) findViewById(R.id.aux_part_layout));
+        forms.addElement((View) findViewById(R.id.third_person_result));
+        forms.addElement((View) findViewById(R.id.translation_result));
+        orderViews(forms, formsOrderReverse);
 
         Vector<Verb> verbs = Settings.getSingleton().getVerbs();
         int givenFormType = getIntent().getExtras().getInt("givenFormType");
