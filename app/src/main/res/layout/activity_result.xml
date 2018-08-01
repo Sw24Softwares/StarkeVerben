@@ -42,8 +42,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
-            android:layout_marginRight="7dp"
-            android:layout_marginEnd="7dp"
             android:id="@+id/auxiliary_result"
             android:gravity="center_horizontal" />
 
@@ -51,8 +49,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginStart="7dp"
+            android:text=" "
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
             android:id="@+id/participe_result"
             android:gravity="center_horizontal" />
 
