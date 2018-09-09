@@ -32,11 +32,20 @@ class GlobalData {
             return goal.getInfinitives().get(0);
         return goal.getInfinitives().get(0) + String.valueOf(translationNumber);
     }
+    static public String[] getTranslations(Vector<Verb> verbs, Verb v, Context c,
+                                           Resources res) {
+        // Get translations from Android
+        String cleanInfinitive = GlobalData.decompose(getTranslationName(verbs, v));
+        int id = res.getIdentifier(cleanInfinitive, "string", c.getPackageName());
+        String unpackedTranslation = res.getString(id);
+
+        // Separate translations
+        String[] translations = unpackedTranslation.split(",");
+        return translations;
+    }
     static public VerbWithTranslation androidVWTCreate(Vector<Verb> verbs, Verb v, Context c,
                                                        Resources res) {
-        String cleanInfinitive = GlobalData.decompose(getTranslationName(verbs, v));
-        int id = res.getIdentifier(cleanInfinitive, "array", c.getPackageName());
-        String[] translations = res.getStringArray(id);
+        String[] translations = getTranslations(verbs, v, c, res);
         Vector<String> transVec = new Vector<String>(Arrays.asList(translations));
         return new VerbWithTranslation(v, transVec);
     }

@@ -1,424 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string-array name="backen">
-    <item>to bake</item>
-  </string-array>
-
-  <string-array name="beginnen">
-    <item>to begin</item>
-  </string-array>
-
-  <string-array name="bieten">
-    <item>to offer</item>
-  </string-array>
-
-  <string-array name="binden">
-    <item>to bind</item>
-    <item>to tie</item>
-  </string-array>
-
-  <string-array name="bitten">
-    <item>to request</item>
-    <item>to ask</item>
-  </string-array>
-
-  <string-array name="bleiben">
-    <item>to stay</item>
-    <item>to remain</item>
-  </string-array>
-
-  <string-array name="brechen">
-    <item>to break</item>
-  </string-array>
-
-  <string-array name="bringen">
-    <item>to bring</item>
-  </string-array>
-
-  <string-array name="denken">
-    <item>to think</item>
-  </string-array>
-
-  <string-array name="dringen">
-    <item>to penetrate</item>
-  </string-array>
-
-  <string-array name="essen">
-    <item>to eat</item>
-  </string-array>
-
-  <string-array name="fahren">
-    <item>to drive</item>
-    <item>to travel</item>
-  </string-array>
-
-  <string-array name="fallen">
-    <item>to fall</item>
-  </string-array>
-
-  <string-array name="fangen">
-    <item>to catch</item>
-  </string-array>
-
-  <string-array name="finden">
-    <item>to find</item>
-  </string-array>
-
-  <string-array name="fliegen">
-    <item>to fly</item>
-  </string-array>
-
-  <string-array name="fliehen">
-    <item>to flee</item>
-  </string-array>
-
-  <string-array name="fliessen">
-    <item>to flow</item>
-  </string-array>
-
-  <string-array name="fressen">
-    <item>to eat like an animal</item>
-  </string-array>
-
-  <string-array name="geben">
-    <item>to give</item>
-  </string-array>
-
-  <string-array name="gehen">
-    <item>to walk</item>
-    <item>to go</item>
-  </string-array>
-
-  <string-array name="gelingen">
-    <item>to succeed</item>
-  </string-array>
-
-  <string-array name="gelten">
-    <item>to count</item>
-    <item>to be worth</item>
-  </string-array>
-
-  <string-array name="geniessen">
-    <item>to enjoy</item>
-  </string-array>
-
-  <string-array name="geschehen">
-    <item>to occur</item>
-  </string-array>
-
-  <string-array name="gewinnen">
-    <item>to win</item>
-    <item>to gain</item>
-  </string-array>
-
-  <string-array name="giessen">
-    <item>to pour</item>
-    <item>to water</item>
-  </string-array>
-
-  <string-array name="gleichen">
-    <item>to resemble</item>
-  </string-array>
-
-  <string-array name="graben">
-    <item>to dig</item>
-  </string-array>
-
-  <string-array name="greifen">
-    <item>to seize</item>
-    <item>to grab</item>
-  </string-array>
-
-  <string-array name="halten">
-    <item>to hold</item>
-  </string-array>
-
-  <string-array name="hangen">
-    <item>to hang</item>
-  </string-array>
-
-  <string-array name="heben">
-    <item>to lift</item>
-    <item>to raise</item>
-  </string-array>
-
-  <string-array name="heissen">
-    <item>to be called</item>
-  </string-array>
-
-  <string-array name="helfen">
-    <item>to help</item>
-  </string-array>
-
-  <string-array name="kennen">
-    <item>to know</item>
-  </string-array>
-
-  <string-array name="klingen">
-    <item>to sound</item>
-  </string-array>
-
-  <string-array name="kommen">
-    <item>to come</item>
-  </string-array>
-
-  <string-array name="laden">
-    <item>to load</item>
-  </string-array>
-
-  <string-array name="lassen">
-    <item>to let</item>
-    <item>to leave</item>
-  </string-array>
-
-  <string-array name="laufen">
-    <item>to run</item>
-  </string-array>
-
-  <string-array name="leihen">
-    <item>to lend</item>
-    <item>to borrow</item>
-  </string-array>
-
-  <string-array name="lesen">
-    <item>to read</item>
-  </string-array>
-
-  <string-array name="liegen">
-    <item>to lie (position)</item>
-  </string-array>
-
-  <string-array name="lugen">
-    <item>to lie</item>
-  </string-array>
-
-  <string-array name="meiden">
-    <item>to avoid</item>
-  </string-array>
-
-  <string-array name="messen">
-    <item>to measure</item>
-  </string-array>
-
-  <string-array name="nehmen">
-    <item>to take</item>
-  </string-array>
-
-  <string-array name="nennen">
-    <item>to name</item>
-    <item>to call</item>
-  </string-array>
-
-  <string-array name="pfeifen">
-    <item>to whistle</item>
-  </string-array>
-
-  <string-array name="raten">
-    <item>to advise</item>
-  </string-array>
-
-  <string-array name="reissen">
-    <item>to rip</item>
-    <item>to tear</item>
-  </string-array>
-
-  <string-array name="reiten">
-    <item>to ride (a horse)</item>
-  </string-array>
-
-  <string-array name="rufen">
-    <item>to call</item>
-  </string-array>
-
-  <string-array name="schaffen">
-    <item>to create</item>
-  </string-array>
-
-  <string-array name="scheinen">
-    <item>to seem</item>
-    <item>to shine</item>
-  </string-array>
-
-  <string-array name="schiessen">
-    <item>to shoot</item>
-  </string-array>
-
-  <string-array name="schlafen">
-    <item>to sleep</item>
-  </string-array>
-
-  <string-array name="schlagen">
-    <item>to hit</item>
-  </string-array>
-
-  <string-array name="schliessen">
-    <item>to close</item>
-    <item>to shut</item>
-  </string-array>
-
-  <string-array name="schmeissen">
-    <item>to fling</item>
-  </string-array>
-
-  <string-array name="schreiben">
-    <item>to write</item>
-  </string-array>
-
-  <string-array name="schreien">
-    <item>to scream</item>
-    <item>to shout</item>
-  </string-array>
-
-  <string-array name="schreiten">
-    <item>to stride</item>
-  </string-array>
-
-  <string-array name="schweigen">
-    <item>to be silent</item>
-  </string-array>
-
-  <string-array name="schwimmen">
-    <item>to swim</item>
-  </string-array>
-
-  <string-array name="schworen">
-    <item>to swear</item>
-  </string-array>
-
-  <string-array name="sehen">
-    <item>to see</item>
-    <item>to look</item>
-  </string-array>
-
-  <string-array name="senden">
-    <item>to send</item>
-  </string-array>
-
-  <string-array name="singen">
-    <item>to sing</item>
-  </string-array>
-
-  <string-array name="sitzen">
-    <item>to sit</item>
-  </string-array>
-
-  <string-array name="sprechen">
-    <item>to speak</item>
-  </string-array>
-
-  <string-array name="springen">
-    <item>to jump</item>
-  </string-array>
-
-  <string-array name="stehen">
-    <item>to stand</item>
-  </string-array>
-
-  <string-array name="steigen">
-    <item>to climb</item>
-  </string-array>
-
-  <string-array name="sterben">
-    <item>to die</item>
-  </string-array>
-
-  <string-array name="stossen">
-    <item>to push</item>
-    <item>to knock</item>
-  </string-array>
-
-  <string-array name="streiten">
-    <item>to argue</item>
-  </string-array>
-
-  <string-array name="tragen">
-    <item>to carry</item>
-    <item>to wear</item>
-  </string-array>
-
-  <string-array name="treffen">
-    <item>to meet someone</item>
-  </string-array>
-
-  <string-array name="treiben">
-    <item>to drive</item>
-    <item>to drift</item>
-  </string-array>
-
-  <string-array name="treten">
-    <item>to step</item>
-    <item>to kick</item>
-  </string-array>
-
-  <string-array name="trinken">
-    <item>to drink</item>
-  </string-array>
-
-  <string-array name="tun">
-    <item>to do</item>
-  </string-array>
-
-  <string-array name="vergessen">
-    <item>to forget</item>
-  </string-array>
-
-  <string-array name="verlieren">
-    <item>to lose</item>
-  </string-array>
-
-  <string-array name="verschlingen">
-    <item>to devour</item>
-  </string-array>
-
-  <string-array name="verschwinden">
-    <item>to vanish</item>
-    <item>to disappear</item>
-  </string-array>
-
-  <string-array name="wachsen">
-    <item>to grow</item>
-  </string-array>
-
-  <string-array name="waschen">
-    <item>to wash</item>
-  </string-array>
-
-  <string-array name="weichen">
-    <item>to yield</item>
-    <item>to give away</item>
-  </string-array>
-
-  <string-array name="weisen">
-    <item>to point</item>
-  </string-array>
-
-  <string-array name="wenden">
-    <item>to turn</item>
-  </string-array>
-
-  <string-array name="werben">
-    <item>to advertise</item>
-    <item>to recruit</item>
-  </string-array>
-
-  <string-array name="werfen">
-    <item>to throw</item>
-  </string-array>
-
-  <string-array name="wissen">
-    <item>to know</item>
-  </string-array>
-
-  <string-array name="ziehen">
-    <item>to move</item>
-  </string-array>
-
-  <string-array name="ziehen1">
-    <item>to pull</item>
-  </string-array>
-
-
-  <string-array name="zwingen">
-    <item>to force</item>
-  </string-array>
+  <string name="backen">to bake</string>
+  <string name="beginnen">to begin</string>
+  <string name="bieten">to offer</string>
+  <string name="binden">to bind,to tie</string>
+  <string name="bitten">to request,to ask</string>
+  <string name="bleiben">to stay,to remain</string>
+  <string name="brechen">to break</string>
+  <string name="bringen">to bring</string>
+  <string name="denken">to think</string>
+  <string name="dringen">to penetrate</string>
+  <string name="essen">to eat</string>
+  <string name="fahren">to drive,to travel</string>
+  <string name="fallen">to fall</string>
+  <string name="fangen">to catch</string>
+  <string name="finden">to find</string>
+  <string name="fliegen">to fly</string>
+  <string name="fliehen">to flee</string>
+  <string name="fliessen">to flow</string>
+  <string name="fressen">to eat like an animal</string>
+  <string name="geben">to give</string>
+  <string name="gehen">to walk,to go</string>
+  <string name="gelingen">to succeed</string>
+  <string name="gelten">to count,to be worth</string>
+  <string name="geniessen">to enjoy</string>
+  <string name="geschehen">to occur</string>
+  <string name="gewinnen">to win,to gain</string>
+  <string name="giessen">to pour,to water</string>
+  <string name="gleichen">to resemble</string>
+  <string name="graben">to dig</string>
+  <string name="greifen">to seize,to grab</string>
+  <string name="halten">to hold</string>
+  <string name="hangen">to hang</string>
+  <string name="heben">to lift,to raise</string>
+  <string name="heissen">to be called</string>
+  <string name="helfen">to help</string>
+  <string name="kennen">to know</string>
+  <string name="klingen">to sound</string>
+  <string name="kommen">to come</string>
+  <string name="laden">to load</string>
+  <string name="lassen">to let,to leave</string>
+  <string name="laufen">to run</string>
+  <string name="leihen">to lend,to borrow</string>
+  <string name="lesen">to read</string>
+  <string name="liegen">to lie (position)</string>
+  <string name="lugen">to lie</string>
+  <string name="meiden">to avoid</string>
+  <string name="messen">to measure</string>
+  <string name="nehmen">to take</string>
+  <string name="nennen">to name,to call</string>
+  <string name="pfeifen">to whistle</string>
+  <string name="raten">to advise</string>
+  <string name="reissen">to rip,to tear</string>
+  <string name="reiten">to ride (a horse)</string>
+  <string name="rufen">to call</string>
+  <string name="schaffen">to create</string>
+  <string name="scheinen">to seem,to shine</string>
+  <string name="schiessen">to shoot</string>
+  <string name="schlafen">to sleep</string>
+  <string name="schlagen">to hit</string>
+  <string name="schliessen">to close,to shut</string>
+  <string name="schmeissen">to fling</string>
+  <string name="schreiben">to write</string>
+  <string name="schreien">to scream,to shout</string>
+  <string name="schreiten">to stride</string>
+  <string name="schweigen">to be silent</string>
+  <string name="schwimmen">to swim</string>
+  <string name="schworen">to swear</string>
+  <string name="sehen">to see,to look</string>
+  <string name="senden">to send</string>
+  <string name="singen">to sing</string>
+  <string name="sitzen">to sit</string>
+  <string name="sprechen">to speak</string>
+  <string name="springen">to jump</string>
+  <string name="stehen">to stand</string>
+  <string name="steigen">to climb</string>
+  <string name="sterben">to die</string>
+  <string name="stossen">to push,to knock</string>
+  <string name="streiten">to argue</string>
+  <string name="tragen">to carry,to wear</string>
+  <string name="treffen">to meet someone</string>
+  <string name="treiben">to drive,to drift</string>
+  <string name="treten">to step,to kick</string>
+  <string name="trinken">to drink</string>
+  <string name="tun">to do</string>
+  <string name="vergessen">to forget</string>
+  <string name="verlieren">to lose</string>
+  <string name="verschlingen">to devour</string>
+  <string name="verschwinden">to vanish,to disappear</string>
+  <string name="wachsen">to grow</string>
+  <string name="waschen">to wash</string>
+  <string name="weichen">to yield,to give away</string>
+  <string name="weisen">to point</string>
+  <string name="wenden">to turn</string>
+  <string name="werben">to advertise,to recruit</string>
+  <string name="werfen">to throw</string>
+  <string name="wissen">to know</string>
+  <string name="ziehen">to move</string>
+  <string name="ziehen1">to pull</string>
+  <string name="zwingen">to force</string>
 </resources>

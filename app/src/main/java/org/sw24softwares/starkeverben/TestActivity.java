@@ -125,9 +125,7 @@ public class TestActivity extends AppCompatActivity {
         // Get translations
         Locale l = GlobalData.getTranslationLocale(sharedPref);
         Resources res = GlobalData.getLocalizedResources(this, l);
-        String cleanInfinitive = GlobalData.decompose(GlobalData.getTranslationName(verbs, mVerb));
-        int id = res.getIdentifier(cleanInfinitive, "array", getPackageName());
-        mTranslations = res.getStringArray(id);
+        mTranslations = GlobalData.getTranslations(verbs, mVerb, this, res);
 
         // Getting the given form, depends on the user preferences
         mFormType =
