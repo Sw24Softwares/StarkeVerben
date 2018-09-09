@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.3"
+    buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "org.sw24softwares.starkeverben"
         minSdkVersion 17
@@ -10,6 +10,7 @@ android {
         versionCode 12
         versionName "3.1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -23,17 +24,17 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26+'
-    compile 'com.android.support:design:26+'
-    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
-    compile 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
-    compile 'pl.bclogic:pulsator4droid:1.0.3'
-    compile 'com.github.medyo:android-about-page:1.2.2'
-    compile 'com.github.woxthebox:draglistview:1.5.1'
+    implementation 'com.android.support:appcompat-v7:26+'
+    implementation 'com.android.support:design:26+'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.4'
+    implementation 'pl.bclogic:pulsator4droid:1.0.3'
+    implementation 'com.github.medyo:android-about-page:1.2.2'
+    implementation 'com.github.woxthebox:draglistview:1.5.1'
     
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 }
