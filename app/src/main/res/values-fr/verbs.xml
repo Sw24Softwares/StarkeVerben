@@ -1,416 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string-array name="backen">
-    <item>cuire au four</item>
-  </string-array>
-
-  <string-array name="beginnen">
-    <item>commencer</item>
-  </string-array>
-
-  <string-array name="bieten">
-    <item>offrir</item>
-    <item>proposer</item>
-  </string-array>
-
-  <string-array name="binden">
-    <item>lier</item>
-    <item>attacher</item>
-  </string-array>
-
-  <string-array name="bitten">
-    <item>prier</item>
-    <item>demander</item>
-  </string-array>
-
-  <string-array name="bleiben">
-    <item>rester</item>
-  </string-array>
-
-  <string-array name="brechen">
-    <item>briser</item>
-  </string-array>
-
-  <string-array name="bringen">
-    <item>apporter</item>
-  </string-array>
-
-  <string-array name="denken">
-    <item>penser</item>
-  </string-array>
-
-  <string-array name="dringen">
-    <item>pénétrer</item>
-  </string-array>
-
-  <string-array name="essen">
-    <item>manger</item>
-  </string-array>
-
-  <string-array name="fahren">
-    <item>aller(en véhicule)</item>
-  </string-array>
-
-  <string-array name="fallen">
-    <item>tomber</item>
-  </string-array>
-
-  <string-array name="fangen">
-    <item>attraper</item>
-    <item>capturer</item>
-  </string-array>
-
-  <string-array name="finden">
-    <item>trouver</item>
-  </string-array>
-
-  <string-array name="fliegen">
-    <item>voler</item>
-  </string-array>
-
-  <string-array name="fliehen">
-    <item>fuir</item>
-  </string-array>
-
-  <string-array name="fliessen">
-    <item>couler</item>
-  </string-array>
-
-  <string-array name="fressen">
-    <item>manger (animaux)</item>
-  </string-array>
-
-  <string-array name="geben">
-    <item>donner</item>
-  </string-array>
-
-  <string-array name="gehen">
-    <item>aller à pied</item>
-  </string-array>
-
-  <string-array name="gelingen">
-    <item>réussir</item>
-  </string-array>
-
-  <string-array name="gelten">
-    <item>valoir</item>
-  </string-array>
-
-  <string-array name="geniessen">
-    <item>proﬁter</item>
-    <item>jouir de</item>
-  </string-array>
-
-  <string-array name="geschehen">
-    <item>se produire</item>
-  </string-array>
-
-  <string-array name="gewinnen">
-    <item>gagner</item>
-  </string-array>
-
-  <string-array name="giessen">
-    <item>verser</item>
-    <item>arroser</item>
-  </string-array>
-
-  <string-array name="gleichen">
-    <item>ressembler</item>
-  </string-array>
-
-  <string-array name="graben">
-    <item>creuser</item>
-  </string-array>
-
-  <string-array name="greifen">
-    <item>saisir</item>
-  </string-array>
-
-  <string-array name="halten">
-    <item>tenir</item>
-    <item>s’arrêter</item>
-  </string-array>
-
-  <string-array name="hangen">
-    <item>être suspendu</item>
-  </string-array>
-
-  <string-array name="heben">
-    <item>soulever</item>
-  </string-array>
-
-  <string-array name="heissen">
-    <item>s\'appeler</item>
-  </string-array>
-
-  <string-array name="helfen">
-    <item>aider</item>
-  </string-array>
-
-  <string-array name="kennen">
-    <item>connaître</item>
-  </string-array>
-
-  <string-array name="klingen">
-    <item>tinter</item>
-  </string-array>
-
-  <string-array name="kommen">
-    <item>venir</item>
-  </string-array>
-
-  <string-array name="laden">
-    <item>charger</item>
-  </string-array>
-
-  <string-array name="lassen">
-    <item>laisser</item>
-  </string-array>
-
-  <string-array name="laufen">
-    <item>courir</item>
-    <item>marcher</item>
-  </string-array>
-
-  <string-array name="leihen">
-    <item>prêter</item>
-  </string-array>
-
-  <string-array name="lesen">
-    <item>lire</item>
-  </string-array>
-
-  <string-array name="liegen">
-    <item>être couché</item>
-  </string-array>
-
-  <string-array name="lugen">
-    <item>mentir</item>
-  </string-array>
-
-  <string-array name="meiden">
-    <item>éviter</item>
-  </string-array>
-
-  <string-array name="messen">
-    <item>mesurer</item>
-  </string-array>
-
-  <string-array name="nehmen">
-    <item>prendre</item>
-  </string-array>
-
-  <string-array name="nennen">
-    <item>nommer</item>
-  </string-array>
-
-  <string-array name="pfeifen">
-    <item>siffler</item>
-  </string-array>
-
-  <string-array name="raten">
-    <item>conseiller</item>
-    <item>deviner</item>
-  </string-array>
-
-  <string-array name="reissen">
-    <item>arracher</item>
-  </string-array>
-
-  <string-array name="reiten">
-    <item>faire du cheval</item>
-  </string-array>
-
-  <string-array name="rufen">
-    <item>appeler</item>
-  </string-array>
-
-  <string-array name="schaffen">
-    <item>créer</item>
-  </string-array>
-
-  <string-array name="scheinen">
-    <item>briller</item>
-    <item>paraître</item>
-  </string-array>
-
-  <string-array name="schiessen">
-    <item>tirer avec une arme</item>
-  </string-array>
-
-  <string-array name="schlafen">
-    <item>dormir</item>
-  </string-array>
-
-  <string-array name="schlagen">
-    <item>frapper</item>
-  </string-array>
-
-  <string-array name="schliessen">
-    <item>fermer</item>
-  </string-array>
-
-  <string-array name="schmeissen">
-    <item>jeter(familier)</item>
-  </string-array>
-
-  <string-array name="schreiben">
-    <item>écrire</item>
-  </string-array>
-
-  <string-array name="schreien">
-    <item>crier</item>
-  </string-array>
-
-  <string-array name="schreiten">
-    <item>marcher</item>
-  </string-array>
-
-  <string-array name="schweigen">
-    <item>se taire</item>
-  </string-array>
-
-  <string-array name="schwimmen">
-    <item>nager</item>
-  </string-array>
-
-  <string-array name="schworen">
-    <item>jurer</item>
-  </string-array>
-
-  <string-array name="sehen">
-    <item>voir</item>
-  </string-array>
-
-  <string-array name="senden">
-    <item>émettre</item>
-    <item>envoyer</item>
-  </string-array>
-
-  <string-array name="singen">
-    <item>chanter</item>
-  </string-array>
-
-  <string-array name="sitzen">
-    <item>être assis</item>
-  </string-array>
-
-  <string-array name="sprechen">
-    <item>parler</item>
-  </string-array>
-
-  <string-array name="springen">
-    <item>sauter</item>
-  </string-array>
-
-  <string-array name="stehen">
-    <item>être debout</item>
-  </string-array>
-
-  <string-array name="steigen">
-    <item>monter</item>
-  </string-array>
-
-  <string-array name="sterben">
-    <item>mourir</item>
-  </string-array>
-
-  <string-array name="stossen">
-    <item>heurter</item>
-    <item>pousser</item>
-  </string-array>
-
-  <string-array name="streiten">
-    <item>(se)disputer</item>
-  </string-array>
-
-  <string-array name="tragen">
-    <item>porter</item>
-  </string-array>
-
-  <string-array name="treffen">
-    <item>atteindre</item>
-    <item>rencontrer</item>
-  </string-array>
-
-  <string-array name="treiben">
-    <item>faire avancer</item>
-  </string-array>
-
-  <string-array name="treten">
-    <item>marcher</item>
-    <item>faire un pas</item>
-  </string-array>
-
-  <string-array name="trinken">
-    <item>boire</item>
-  </string-array>
-
-  <string-array name="tun">
-    <item>faire</item>
-  </string-array>
-
-  <string-array name="vergessen">
-    <item>oublier</item>
-  </string-array>
-
-  <string-array name="verlieren">
-    <item>perdre</item>
-  </string-array>
-
-  <string-array name="verschlingen">
-    <item>avaler</item>
-    <item>engloutir</item>
-  </string-array>
-
-  <string-array name="verschwinden">
-    <item>disparaître</item>
-  </string-array>
-
-  <string-array name="wachsen">
-    <item>grandir</item>
-  </string-array>
-
-  <string-array name="waschen">
-    <item>laver</item>
-  </string-array>
-
-  <string-array name="weichen">
-    <item>céder</item>
-  </string-array>
-
-  <string-array name="weisen">
-    <item>indiquer</item>
-  </string-array>
-
-  <string-array name="wenden">
-    <item>tourner</item>
-    <item>retourner</item>
-  </string-array>
-
-  <string-array name="werben">
-    <item>faire de la publicité</item>
-  </string-array>
-
-  <string-array name="werfen">
-    <item>lancer</item>
-    <item>jeter</item>
-  </string-array>
-
-  <string-array name="wissen">
-    <item>savoir</item>
-  </string-array>
-
-  <string-array name="ziehen">
-    <item>s\'installer quelque part</item>
-  </string-array>
-
-  <string-array name="ziehen1">
-    <item>tirer</item>
-    <item>infuser</item>
-  </string-array>
-
-  <string-array name="zwingen">
-    <item>obliger</item>
-  </string-array>
-</resources>
+  <string name="backen">cuire au four</string>
+  <string name="beginnen">commencer</string>
+  <string name="bieten">offrir,proposer</string>
+  <string name="binden">lier,attacher</string>
+  <string name="bitten">prier,demander</string>
+  <string name="bleiben">rester</string>
+  <string name="brechen">briser</string>
+  <string name="bringen">apporter</string>
+  <string name="denken">penser</string>
+  <string name="dringen">pénétrer</string>
+  <string name="essen">manger</string>
+  <string name="fahren">aller(en véhicule)</string>
+  <string name="fallen">tomber</string>
+  <string name="fangen">attraper,capturer</string>
+  <string name="finden">trouver</string>
+  <string name="fliegen">voler</string>
+  <string name="fliehen">fuir</string>
+  <string name="fliessen">couler</string>
+  <string name="fressen">manger (animaux)</string>
+  <string name="geben">donner</string>
+  <string name="gehen">aller à pied</string>
+  <string name="gelingen">réussir</string>
+  <string name="gelten">valoir</string>
+  <string name="geniessen">proﬁter,jouir de</string>
+  <string name="geschehen">se produire</string>
+  <string name="gewinnen">gagner</string>
+  <string name="giessen">verser,arroser</string>
+  <string name="gleichen">ressembler</string>
+  <string name="graben">creuser</string>
+  <string name="greifen">saisir</string>
+  <string name="halten">tenir,s’arrêter</string>
+  <string name="hangen">être suspendu</string>
+  <string name="heben">soulever</string>
+  <string name="heissen">s\'appeler</string>
+  <string name="helfen">aider</string>
+  <string name="kennen">connaître</string>
+  <string name="klingen">tinter</string>
+  <string name="kommen">venir</string>
+  <string name="laden">charger</string>
+  <string name="lassen">laisser</string>
+  <string name="laufen">courir,marcher</string>
+  <string name="leihen">prêter</string>
+  <string name="lesen">lire</string>
+  <string name="liegen">être couché</string>
+  <string name="lugen">mentir</string>
+  <string name="meiden">éviter</string>
+  <string name="messen">mesurer</string>
+  <string name="nehmen">prendre</string>
+  <string name="nennen">nommer</string>
+  <string name="pfeifen">siffler</string>
+  <string name="raten">conseiller,deviner</string>
+  <string name="reissen">arracher</string>
+  <string name="reiten">faire du cheval</string>
+  <string name="rufen">appeler</string>
+  <string name="schaffen">créer</string>
+  <string name="scheinen">briller,paraître</string>
+  <string name="schiessen">tirer avec une arme</string>
+  <string name="schlafen">dormir</string>
+  <string name="schlagen">frapper</string>
+  <string name="schliessen">fermer</string>
+  <string name="schmeissen">jeter(familier)</string>
+  <string name="schreiben">écrire</string>
+  <string name="schreien">crier</string>
+  <string name="schreiten">marcher</string>
+  <string name="schweigen">se taire</string>
+  <string name="schwimmen">nager</string>
+  <string name="schworen">jurer</string>
+  <string name="sehen">voir</string>
+  <string name="senden">émettre,envoyer</string>
+  <string name="singen">chanter</string>
+  <string name="sitzen">être assis</string>
+  <string name="sprechen">parler</string>
+  <string name="springen">sauter</string>
+  <string name="stehen">être debout</string>
+  <string name="steigen">monter</string>
+  <string name="sterben">mourir</string>
+  <string name="stossen">heurter,pousser</string>
+  <string name="streiten">(se)disputer</string>
+  <string name="tragen">porter</string>
+  <string name="treffen">atteindre,rencontrer</string>
+  <string name="treiben">faire avancer</string>
+  <string name="treten">marcher,faire un pas</string>
+  <string name="trinken">boire</string>
+  <string name="tun">faire</string>
+  <string name="vergessen">oublier</string>
+  <string name="verlieren">perdre</string>
+  <string name="verschlingen">avaler,engloutir</string>
+  <string name="verschwinden">disparaître</string>
+  <string name="wachsen">grandir</string>
+  <string name="waschen">laver</string>
+  <string name="weichen">céder</string>
+  <string name="weisen">indiquer</string>
+  <string name="wenden">tourner,retourner</string>
+  <string name="werben">faire de la publicité</string>
+  <string name="werfen">lancer,jeter</string>
+  <string name="wissen">savoir</string>
+  <string name="ziehen">s\'installer quelque part</string>
+  <string name="ziehen1">tirer,infuser</string>
+  <string name="zwingen">obliger</string></resources>

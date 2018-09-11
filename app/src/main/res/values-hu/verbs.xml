@@ -1,419 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string-array name="backen">
-    <item>süt(süteményt)</item>
-  </string-array>
-
-  <string-array name="beginnen">
-    <item>kezd</item>
-  </string-array>
-
-  <string-array name="bieten">
-    <item>nyújt</item>
-    <item>felajánl</item>
-    <item>kínál</item>
-  </string-array>
-
-  <string-array name="binden">
-    <item>köt</item>
-    <item>megköt</item>
-  </string-array>
-
-  <string-array name="bitten">
-    <item>kér</item>
-  </string-array>
-
-  <string-array name="bleiben">
-    <item>marad</item>
-  </string-array>
-
-  <string-array name="brechen">
-    <item>eltörik</item>
-  </string-array>
-
-  <string-array name="bringen">
-    <item>hoz</item>
-  </string-array>
-
-  <string-array name="denken">
-    <item>gondol</item>
-  </string-array>
-
-  <string-array name="dringen">
-    <item>áthatol</item>
-  </string-array>
-
-  <string-array name="essen">
-    <item>enni</item>
-  </string-array>
-
-  <string-array name="fahren">
-    <item>autót vezet</item>
-    <item>utazik</item>
-  </string-array>
-
-  <string-array name="fallen">
-    <item>esik</item>
-  </string-array>
-
-  <string-array name="fangen">
-    <item>fog</item>
-  </string-array>
-
-  <string-array name="finden">
-    <item>talál</item>
-  </string-array>
-
-  <string-array name="fliegen">
-    <item>repül</item>
-  </string-array>
-
-  <string-array name="fliehen">
-    <item>menekül</item>
-  </string-array>
-
-  <string-array name="fliessen">
-    <item>folyik</item>
-  </string-array>
-
-  <string-array name="fressen">
-    <item>zabál</item>
-  </string-array>
-
-  <string-array name="geben">
-    <item>ad</item>
-  </string-array>
-
-  <string-array name="gehen">
-    <item>megy</item>
-  </string-array>
-
-  <string-array name="gelingen">
-    <item>sikerül</item>
-  </string-array>
-
-  <string-array name="gelten">
-    <item>érvényes</item>
-  </string-array>
-
-  <string-array name="geniessen">
-    <item>élvez</item>
-  </string-array>
-
-  <string-array name="geschehen">
-    <item>történik</item>
-  </string-array>
-
-  <string-array name="gewinnen">
-    <item>nyer</item>
-  </string-array>
-
-  <string-array name="giessen">
-    <item>öntöz</item>
-    <item>locsol</item>
-  </string-array>
-
-  <string-array name="gleichen">
-    <item>egyenget</item>
-    <item>simít</item>
-  </string-array>
-
-  <string-array name="graben">
-    <item>ás</item>
-  </string-array>
-
-  <string-array name="greifen">
-    <item>megragad</item>
-    <item>megfog</item>
-  </string-array>
-
-  <string-array name="halten">
-    <item>tart</item>
-  </string-array>
-
-  <string-array name="hangen">
-    <item>függ</item>
-    <item>lóg</item>
-  </string-array>
-
-  <string-array name="heben">
-    <item>emel</item>
-  </string-array>
-
-  <string-array name="heissen">
-    <item>hív</item>
-    <item>nevez</item>
-  </string-array>
-
-  <string-array name="helfen">
-    <item>segít</item>
-  </string-array>
-
-  <string-array name="kennen">
-    <item>ismer</item>
-  </string-array>
-
-  <string-array name="klingen">
-    <item>vhogyan hangzik</item>
-  </string-array>
-
-  <string-array name="kommen">
-    <item>jön</item>
-  </string-array>
-
-  <string-array name="laden">
-    <item>rak</item>
-    <item>rakodik</item>
-  </string-array>
-
-  <string-array name="lassen">
-    <item>hagy</item>
-    <item>enged</item>
-  </string-array>
-
-  <string-array name="laufen">
-    <item>fut</item>
-  </string-array>
-
-  <string-array name="leihen">
-    <item>kölcsönöz</item>
-  </string-array>
-
-  <string-array name="lesen">
-    <item>olvas</item>
-  </string-array>
-
-  <string-array name="liegen">
-    <item>fekszik</item>
-  </string-array>
-
-  <string-array name="lugen">
-    <item>hazudik</item>
-  </string-array>
-
-  <string-array name="meiden">
-    <item>kerül valakit</item>
-  </string-array>
-
-  <string-array name="messen">
-    <item>mér</item>
-  </string-array>
-
-  <string-array name="nehmen">
-    <item>vesz</item>
-  </string-array>
-
-  <string-array name="nennen">
-    <item>nevez</item>
-  </string-array>
-
-  <string-array name="pfeifen">
-    <item>fütyül</item>
-  </string-array>
-
-  <string-array name="raten">
-    <item>tanácsol</item>
-  </string-array>
-
-  <string-array name="reissen">
-    <item>tép</item>
-    <item>szakít</item>
-  </string-array>
-
-  <string-array name="reiten">
-    <item>lovagol</item>
-    <item>meglovagol</item>
-  </string-array>
-
-  <string-array name="rufen">
-    <item>hív</item>
-  </string-array>
-
-  <string-array name="schaffen">
-    <item>teremt</item>
-  </string-array>
-
-  <string-array name="scheinen">
-    <item>tűnik vmilyennek</item>
-  </string-array>
-
-  <string-array name="schiessen">
-    <item>lő</item>
-  </string-array>
-
-  <string-array name="schlafen">
-    <item>alszik</item>
-  </string-array>
-
-  <string-array name="schlagen">
-    <item>üt</item>
-  </string-array>
-
-  <string-array name="schliessen">
-    <item>zár</item>
-  </string-array>
-
-  <string-array name="schmeissen">
-    <item>dobál</item>
-    <item>hajít</item>
-  </string-array>
-
-  <string-array name="schreiben">
-    <item>írni</item>
-  </string-array>
-
-  <string-array name="schreien">
-    <item>kiabál</item>
-  </string-array>
-
-  <string-array name="schreiten">
-    <item>lép</item>
-    <item>lépked</item>
-  </string-array>
-
-  <string-array name="schweigen">
-    <item>hallgat</item>
-  </string-array>
-
-  <string-array name="schwimmen">
-    <item>úszik</item>
-  </string-array>
-
-  <string-array name="schworen">
-    <item>esküszik</item>
-  </string-array>
-
-  <string-array name="sehen">
-    <item>lát</item>
-  </string-array>
-
-  <string-array name="senden">
-    <item>küld</item>
-  </string-array>
-
-  <string-array name="singen">
-    <item>énekel</item>
-  </string-array>
-
-  <string-array name="sitzen">
-    <item>ül</item>
-  </string-array>
-
-  <string-array name="sprechen">
-    <item>beszél</item>
-  </string-array>
-
-  <string-array name="springen">
-    <item>ugrik</item>
-  </string-array>
-
-  <string-array name="stehen">
-    <item>áll</item>
-  </string-array>
-
-  <string-array name="steigen">
-    <item>emelkedik</item>
-  </string-array>
-
-  <string-array name="sterben">
-    <item>meghal</item>
-  </string-array>
-
-  <string-array name="stossen">
-    <item>meglök</item>
-    <item>ütközik</item>
-  </string-array>
-
-  <string-array name="streiten">
-    <item>veszekszik</item>
-  </string-array>
-
-  <string-array name="tragen">
-    <item>visz</item>
-    <item>cipel</item>
-  </string-array>
-
-  <string-array name="treffen">
-    <item>találkozik</item>
-  </string-array>
-
-  <string-array name="treiben">
-    <item>hajt</item>
-    <item>űz</item>
-  </string-array>
-
-  <string-array name="treten">
-    <item>rúg</item>
-    <item>lép</item>
-  </string-array>
-
-  <string-array name="trinken">
-    <item>iszik</item>
-  </string-array>
-
-  <string-array name="tun">
-    <item>tesz</item>
-  </string-array>
-
-  <string-array name="vergessen">
-    <item>elfelejt</item>
-  </string-array>
-
-  <string-array name="verlieren">
-    <item>elveszít vmit</item>
-  </string-array>
-
-  <string-array name="verschlingen">
-    <item>elnyel</item>
-    <item>felemészt</item>
-  </string-array>
-
-  <string-array name="verschwinden">
-    <item>eltűnik</item>
-  </string-array>
-
-  <string-array name="wachsen">
-    <item>nő</item>
-  </string-array>
-
-  <string-array name="waschen">
-    <item>mos</item>
-  </string-array>
-
-  <string-array name="weichen">
-    <item>puhul</item>
-    <item>enged</item>
-  </string-array>
-
-  <string-array name="weisen">
-    <item>mutat</item>
-  </string-array>
-
-  <string-array name="wenden">
-    <item>megfordít</item>
-  </string-array>
-
-  <string-array name="werben">
-    <item>szerez</item>
-  </string-array>
-
-  <string-array name="werfen">
-    <item>dob</item>
-  </string-array>
-
-  <string-array name="wissen">
-    <item>tud</item>
-  </string-array>
-
-  <string-array name="ziehen">
-    <item>húz</item>
-  </string-array>
-
-  <string-array name="ziehen1">
-    <item>húz</item>
-  </string-array>
-
-  <string-array name="zwingen">
-    <item>kényszerít</item>
-  </string-array>
-</resources>
+  <string name="backen">süt(süteményt)</string>
+  <string name="beginnen">kezd</string>
+  <string name="bieten">nyújt,felajánl,kínál</string>
+  <string name="binden">köt,megköt</string>
+  <string name="bitten">kér</string>
+  <string name="bleiben">marad</string>
+  <string name="brechen">eltörik</string>
+  <string name="bringen">hoz</string>
+  <string name="denken">gondol</string>
+  <string name="dringen">áthatol</string>
+  <string name="essen">enni</string>
+  <string name="fahren">autót vezet,utazik</string>
+  <string name="fallen">esik</string>
+  <string name="fangen">fog</string>
+  <string name="finden">talál</string>
+  <string name="fliegen">repül</string>
+  <string name="fliehen">menekül</string>
+  <string name="fliessen">folyik</string>
+  <string name="fressen">zabál</string>
+  <string name="geben">ad</string>
+  <string name="gehen">megy</string>
+  <string name="gelingen">sikerül</string>
+  <string name="gelten">érvényes</string>
+  <string name="geniessen">élvez</string>
+  <string name="geschehen">történik</string>
+  <string name="gewinnen">nyer</string>
+  <string name="giessen">öntöz,locsol</string>
+  <string name="gleichen">egyenget,simít</string>
+  <string name="graben">ás</string>
+  <string name="greifen">megragad,megfog</string>
+  <string name="halten">tart</string>
+  <string name="hangen">függ,lóg</string>
+  <string name="heben">emel</string>
+  <string name="heissen">hív,nevez</string>
+  <string name="helfen">segít</string>
+  <string name="kennen">ismer</string>
+  <string name="klingen">vhogyan hangzik</string>
+  <string name="kommen">jön</string>
+  <string name="laden">rak,rakodik</string>
+  <string name="lassen">hagy,enged</string>
+  <string name="laufen">fut</string>
+  <string name="leihen">kölcsönöz</string>
+  <string name="lesen">olvas</string>
+  <string name="liegen">fekszik</string>
+  <string name="lugen">hazudik</string>
+  <string name="meiden">kerül valakit</string>
+  <string name="messen">mér</string>
+  <string name="nehmen">vesz</string>
+  <string name="nennen">nevez</string>
+  <string name="pfeifen">fütyül</string>
+  <string name="raten">tanácsol</string>
+  <string name="reissen">tép,szakít</string>
+  <string name="reiten">lovagol,meglovagol</string>
+  <string name="rufen">hív</string>
+  <string name="schaffen">teremt</string>
+  <string name="scheinen">tűnik vmilyennek</string>
+  <string name="schiessen">lő</string>
+  <string name="schlafen">alszik</string>
+  <string name="schlagen">üt</string>
+  <string name="schliessen">zár</string>
+  <string name="schmeissen">dobál,hajít</string>
+  <string name="schreiben">írni</string>
+  <string name="schreien">kiabál</string>
+  <string name="schreiten">lép,lépked</string>
+  <string name="schweigen">hallgat</string>
+  <string name="schwimmen">úszik</string>
+  <string name="schworen">esküszik</string>
+  <string name="sehen">lát</string>
+  <string name="senden">küld</string>
+  <string name="singen">énekel</string>
+  <string name="sitzen">ül</string>
+  <string name="sprechen">beszél</string>
+  <string name="springen">ugrik</string>
+  <string name="stehen">áll</string>
+  <string name="steigen">emelkedik</string>
+  <string name="sterben">meghal</string>
+  <string name="stossen">meglök,ütközik</string>
+  <string name="streiten">veszekszik</string>
+  <string name="tragen">visz,cipel</string>
+  <string name="treffen">találkozik</string>
+  <string name="treiben">hajt,űz</string>
+  <string name="treten">rúg,lép</string>
+  <string name="trinken">iszik</string>
+  <string name="tun">tesz</string>
+  <string name="vergessen">elfelejt</string>
+  <string name="verlieren">elveszít vmit</string>
+  <string name="verschlingen">elnyel,felemészt</string>
+  <string name="verschwinden">eltűnik</string>
+  <string name="wachsen">nő</string>
+  <string name="waschen">mos</string>
+  <string name="weichen">puhul,enged</string>
+  <string name="weisen">mutat</string>
+  <string name="wenden">megfordít</string>
+  <string name="werben">szerez</string>
+  <string name="werfen">dob</string>
+  <string name="wissen">tud</string>
+  <string name="ziehen">húz</string>
+  <string name="ziehen1">húz</string>
+  <string name="zwingen">kényszerít</string></resources>
