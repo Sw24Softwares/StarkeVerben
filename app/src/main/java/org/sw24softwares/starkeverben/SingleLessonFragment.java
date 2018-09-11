@@ -48,15 +48,21 @@ public class SingleLessonFragment extends Fragment {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
         Locale l = GlobalData.getTranslationLocale(sharedPref);
         Resources res = GlobalData.getLocalizedResources(getActivity(), l);
-        int id = res.getIdentifier(GlobalData.decompose(verb.getInfinitives().get(0)), "array",
-                                   getActivity().getPackageName());
-        String[] trans = res.getStringArray(id);
+        String[] translationsArray = GlobalData.getTranslations(Settings.getSingleton().getVerbs(),
+                                                                verb, getActivity(), res);
+
+        String translations = "";
+        for(int i = 0; i < translationsArray.length; i++) {
+            translations += translationsArray[i];
+            if(i != translationsArray.length-1)
+                translations += ", ";
+        }
 
         infinitif.setText(verb.getInfinitives().get(0));
         preterit.setText(verb.getPreterites().get(0));
         participe.setText(verb.getParticiples().get(0));
         troisiemePersonne.setText(verb.getThirdPersons().get(0));
-        traduction.setText(trans[0]);
+        traduction.setText(translations);
         aux.setText(auxiliary);
 
         Button next = (Button) view.findViewById(R.id.next_single_lesson);
