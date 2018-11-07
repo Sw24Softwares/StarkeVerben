@@ -1,33 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-  <PreferenceCategory
-      android:title="@string/pref">
-    <ListPreference
-        android:key="prefLanguage"
-        android:summary="@string/pref_language_translation_summary"
-        android:title="@string/pref_language_translation_title"
-        android:defaultValue=""
-        android:entries="@array/language_entries"
-        android:entryValues="@array/language_values"/>
-    
-    <MultiSelectListPreference
-        android:entries="@array/forms"
-        android:entryValues="@array/forms_index"
-        android:defaultValue="@array/forms_index"
-        android:key="givenFormsInTest"
-        android:summary="@string/pref_given_forms_summary"
-        android:title="@string/pref_given_forms_title" />
-    
-    <PreferenceScreen
-         android:key="prefFormOrder"
-         android:title="@string/pref_form_order_title" />
-  </PreferenceCategory>
-  
-  <PreferenceCategory
-      android:title="@string/pref_about">
-    <PreferenceScreen
-        android:key="prefAbout"
-        android:title="@string/pref_about_app" />
-  </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref">
+        <ListPreference
+            android:defaultValue=""
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values"
+            android:key="prefLanguage"
+            android:summary="@string/pref_language_translation_summary"
+            android:title="@string/pref_language_translation_title" />
+
+        <MultiSelectListPreference
+            android:defaultValue="@array/forms_index"
+            android:entries="@array/forms"
+            android:entryValues="@array/forms_index"
+            android:key="givenFormsInTest"
+            android:summary="@string/pref_given_forms_summary"
+            android:title="@string/pref_given_forms_title" />
+
+        <PreferenceScreen
+            android:key="prefFormOrder"
+            android:title="@string/pref_form_order_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_about">
+        <PreferenceScreen
+            android:key="prefAbout"
+            android:title="@string/pref_about_app" />
+    </PreferenceCategory>
 
 </PreferenceScreen>

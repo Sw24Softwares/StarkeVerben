@@ -12,12 +12,12 @@
     <string name="verify">Verify</string>
     <string name="save">Save</string>
     <string name="save_question">Save?</string>
-    <string name="save_message">Save the mark.</string>
+    <string name="save_message">Save the mark</string>
     <string name="chart">Chart</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="not_now">Not now</string>
-    
+
     <string name="at">at</string>
 
     <string name="infinitive">Infinitive</string>
@@ -30,10 +30,10 @@
     <!-- Those following strings show when no translation is found,
          thus it is useless to translate them -->
     <string name="translate_alert" translatable="false">Translation needed</string>
-    <string name="translate_message" translatable="false">Your language is sadly not supported by our application. Would you like to help us and translate it ?</string>
+    <string name="translate_message" translatable="false">Your language is sadly not supported by our application. Would you like to help us and translate it?</string>
     <string name="contribute_trans" translatable="false">Contribute</string>
     <string name="contribution_url" translatable="false">https://github.com/Sw24Softwares/StarkeVerben/blob/master/README.md#translation</string>
-    
+
     <string name="search_hint">Search</string>
     <string name="app_label" translatable="false">StarkeVerben</string>
 
@@ -44,7 +44,7 @@
     <string name="pref_language_translation_summary">Choose the translation language</string>
     <string name="pref_language_translation_default">Automatic</string>
     <string name="pref_given_forms_title">Proposed forms in test</string>
-    <string name="pref_given_forms_summary">Verb forms which are potentially proposed in tests</string>
+    <string name="pref_given_forms_summary">Verb forms that may be proposed in tests</string>
     <string name="pref_form_order_title">Form order</string>
 
     <string name="version">Version</string>
