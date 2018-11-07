@@ -19,7 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " + TABLE_NAME + " ("
-            + "ID INTEGER PRIMARY KEY," + COLUMN_1 + " TEXT," + COLUMN_2 + " TEXT)";
+                + "ID INTEGER PRIMARY KEY," + COLUMN_1 + " TEXT," + COLUMN_2 + " TEXT)";
 
         db.execSQL(createTable);
     }
@@ -36,15 +36,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         long result = db.insert(TABLE_NAME, null, contentValues);
 
         // if date as inserted incorrectly it will return -1
-        if(result == -1)
-            return false;
-        else
-            return true;
+        return result != -1;
     }
 
     public Cursor getListContents() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
-        return data;
+        return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
     }
 }

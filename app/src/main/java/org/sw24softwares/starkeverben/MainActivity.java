@@ -1,36 +1,29 @@
 package org.sw24softwares.starkeverben;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.SearchManager;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.net.Uri;
+import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.os.Bundle;
-
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.app.SearchManager;
-import android.view.View;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
-import android.widget.Button;
-import android.preference.PreferenceManager;
-import android.content.SharedPreferences;
-
-import android.content.res.Resources;
-import android.content.res.Configuration;
-import android.content.Context;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import org.sw24softwares.starkeverben.Core.Settings;
+
 import java.util.Arrays;
 import java.util.Locale;
-
-import android.util.Log;
-import android.net.Uri;
 
 public class MainActivity extends AppCompatActivity {
     private FragmentTransaction mTransaction;
@@ -46,26 +39,22 @@ public class MainActivity extends AppCompatActivity {
         alertDialog.setMessage(getString(R.string.translate_message));
 
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.contribute_trans),
-                              new DialogInterface.OnClickListener() {
-                                  public void onClick(DialogInterface dialog, int which) {
-                                      Intent browserIntent = new Intent(
-                                          Intent.ACTION_VIEW,
-                                          Uri.parse(res.getString(R.string.contribution_url)));
-                                      startActivity(browserIntent);
-                                  }
-                              });
+                (dialog, which) -> {
+                    Intent browserIntent = new Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(res.getString(R.string.contribution_url)));
+                    startActivity(browserIntent);
+                });
 
         alertDialog.setButton(
-            AlertDialog.BUTTON_NEGATIVE, getString(R.string.not_now),
-            new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
+                AlertDialog.BUTTON_NEGATIVE, getString(R.string.not_now),
+                (dialog, which) -> {
                     SharedPreferences.Editor editor =
-                        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit();
+                            PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit();
                     editor.putBoolean("contribute", false);
-                    editor.commit();
+                    editor.apply();
                     alertDialog.hide();
-                }
-            });
+                });
         alertDialog.show();
     }
 
@@ -74,13 +63,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
         Settings.getSingleton().setDebug(BuildConfig.DEBUG);
         try {
             GlobalData.loadVerbs(this);
-        } catch(Exception e) {
+        } catch (Exception e) {
             Log.e("StarkeVerben", e.getMessage());
         }
 
@@ -89,9 +78,9 @@ public class MainActivity extends AppCompatActivity {
         String s = Locale.getDefault().getLanguage();
         Log.e("StarkeVerben", s);
         String[] availableLang = res.getStringArray(R.array.language_values);
-        if(!Arrays.asList(availableLang).contains(s)
-           && PreferenceManager.getDefaultSharedPreferences(MainActivity.this)
-                  .getBoolean("contribute", true)) {
+        if (!Arrays.asList(availableLang).contains(s)
+                && PreferenceManager.getDefaultSharedPreferences(MainActivity.this)
+                .getBoolean("contribute", true)) {
             createTranslateDialog();
         }
 
@@ -103,19 +92,19 @@ public class MainActivity extends AppCompatActivity {
         Settings.getSingleton().setFormString(5, res.getString(R.string.auxiliary));
 
         BottomNavigationBar bottomNavigationBar =
-            (BottomNavigationBar) findViewById(R.id.navigation);
+                findViewById(R.id.navigation);
         bottomNavigationBar
-            .addItem(new BottomNavigationItem(R.drawable.ic_subject_black_24dp, R.string.test))
-            .addItem(
-                new BottomNavigationItem(R.drawable.ic_timeline_black_24dp, R.string.progression))
-            .addItem(
-                new BottomNavigationItem(R.drawable.ic_learn_black_24dp, R.string.single_lesson))
-            .addItem(new BottomNavigationItem(R.drawable.ic_list_black_24dp, R.string.lesson))
-            .setActiveColor(R.color.colorPrimary)
-            .setInActiveColor(R.color.inactiveBottomNav)
-            .setBarBackgroundColor(android.R.color.white)
-            .setMode(BottomNavigationBar.MODE_FIXED)
-            .initialise();
+                .addItem(new BottomNavigationItem(R.drawable.ic_subject_black_24dp, R.string.test))
+                .addItem(
+                        new BottomNavigationItem(R.drawable.ic_timeline_black_24dp, R.string.progression))
+                .addItem(
+                        new BottomNavigationItem(R.drawable.ic_learn_black_24dp, R.string.single_lesson))
+                .addItem(new BottomNavigationItem(R.drawable.ic_list_black_24dp, R.string.lesson))
+                .setActiveColor(R.color.colorPrimary)
+                .setInActiveColor(R.color.inactiveBottomNav)
+                .setBarBackgroundColor(android.R.color.white)
+                .setMode(BottomNavigationBar.MODE_FIXED)
+                .initialise();
 
         mTransaction = getSupportFragmentManager().beginTransaction();
         mTransaction.add(R.id.main_container, new PreTestFragment(), PRE_TEST).commit();
@@ -126,28 +115,30 @@ public class MainActivity extends AppCompatActivity {
                 mTransaction = getSupportFragmentManager().beginTransaction();
                 mTransaction.setCustomAnimations(android.R.anim.fade_in, 0);
 
-                switch(position) {
-                case 0:
-                    mTransaction.replace(R.id.main_container, new PreTestFragment(), PRE_TEST);
-                    break;
-                case 1:
-                    mTransaction.replace(R.id.main_container, new ProgressTabsFragment(), PROGRESS);
-                    break;
-                case 2:
-                    mTransaction.replace(R.id.main_container, new SingleLessonFragment(),
-                                         SINGLE_LESSON);
-                    break;
-                case 3:
-                    mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON);
-                    break;
-                default:
-                    break;
+                switch (position) {
+                    case 0:
+                        mTransaction.replace(R.id.main_container, new PreTestFragment(), PRE_TEST);
+                        break;
+                    case 1:
+                        mTransaction.replace(R.id.main_container, new ProgressTabsFragment(), PROGRESS);
+                        break;
+                    case 2:
+                        mTransaction.replace(R.id.main_container, new SingleLessonFragment(),
+                                SINGLE_LESSON);
+                        break;
+                    case 3:
+                        mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON);
+                        break;
+                    default:
+                        break;
                 }
                 mTransaction.commit();
             }
+
             @Override
             public void onTabUnselected(int position) {
             }
+
             @Override
             public void onTabReselected(int position) {
             }
@@ -173,13 +164,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()) {
-        case R.id.action_settings:
-            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-            startActivity(intent);
-            return true;
-        default:
-            return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 
@@ -192,9 +183,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void handleIntent(Intent intent) {
         LessonFragment lessonFragment =
-            (LessonFragment) getSupportFragmentManager().findFragmentByTag(LESSON);
+                (LessonFragment) getSupportFragmentManager().findFragmentByTag(LESSON);
 
-        if(Intent.ACTION_SEARCH.equals(intent.getAction())) {
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
             lessonFragment.search(query);
         }

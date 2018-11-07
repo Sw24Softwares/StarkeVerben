@@ -4,9 +4,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.woxthebox.draglistview.DragItemAdapter;
+
+import org.sw24softwares.starkeverben.Core.Settings;
 
 import java.util.ArrayList;
 
@@ -43,9 +44,10 @@ class ItemAdapter extends DragItemAdapter<Integer, ItemAdapter.ViewHolder> {
 
     class ViewHolder extends DragItemAdapter.ViewHolder {
         TextView mText;
+
         ViewHolder(final View itemView) {
             super(itemView, mGrabHandleId, mDragOnLongPress);
-            mText = (TextView) itemView.findViewById(R.id.text);
+            mText = itemView.findViewById(R.id.text);
         }
     }
 }

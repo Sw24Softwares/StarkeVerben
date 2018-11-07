@@ -1,4 +1,4 @@
-package org.sw24softwares.starkeverben;
+package org.sw24softwares.starkeverben.Chart;
 
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
@@ -12,7 +12,7 @@ public class XAxisValueFormatter implements IAxisValueFormatter {
 
     @Override
     public String getFormattedValue(float value, AxisBase axis) {
-        if(mValues.length > (int) value && (int) value >= 0)
+        if (mValues.length > (int) value && (int) value >= 0)
             return mValues[(int) value];
         return "";
     }
