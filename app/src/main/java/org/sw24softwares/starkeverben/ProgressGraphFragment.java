@@ -1,20 +1,13 @@
 package org.sw24softwares.starkeverben;
 
+import android.content.Context;
+import android.database.Cursor;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
-import android.content.Context;
-import android.os.Bundle;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Vector;
-
-import android.database.Cursor;
-import android.widget.ExpandableListView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.LayoutInflater;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -22,12 +15,18 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
-import org.sw24softwares.starkeverben.XYMarkerView;
+
+import org.sw24softwares.starkeverben.Chart.XAxisValueFormatter;
+import org.sw24softwares.starkeverben.Chart.XYMarkerView;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 public class ProgressGraphFragment extends Fragment {
     private DatabaseHelper mDatabaseHelper;
-    private Vector<String> mDates = new Vector<String>();
-    private Vector<Integer> mScores = new Vector<Integer>();
+    private Vector<String> mDates = new Vector<>();
+    private Vector<Integer> mScores = new Vector<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,8 +40,8 @@ public class ProgressGraphFragment extends Fragment {
         mDatabaseHelper = new DatabaseHelper(context);
         parseData();
 
-        if(!mScores.isEmpty()) {
-            LineChart chart = (LineChart) view.findViewById(R.id.chart);
+        if (!mScores.isEmpty()) {
+            LineChart chart = view.findViewById(R.id.chart);
             chart.setDescription(null);
             chart.setDrawGridBackground(false);
             chart.setTouchEnabled(true);
@@ -52,7 +51,7 @@ public class ProgressGraphFragment extends Fragment {
             chart.setDoubleTapToZoomEnabled(false);
             chart.getLegend().setEnabled(false);
             XYMarkerView mv =
-                new XYMarkerView(context, new XAxisValueFormatter(mDates.toArray(new String[0])));
+                    new XYMarkerView(context, new XAxisValueFormatter(mDates.toArray(new String[0])));
             mv.setChartView(chart);
             chart.setMarker(mv);
 
@@ -77,7 +76,7 @@ public class ProgressGraphFragment extends Fragment {
             chart.getAxisRight().setEnabled(false);
 
             List<Entry> entries = new ArrayList<>();
-            for(int i = 0; i < mScores.size(); i++)
+            for (int i = 0; i < mScores.size(); i++)
                 entries.add(new Entry(i, mScores.get(i)));
 
             LineDataSet dataSet = new LineDataSet(entries, "Scores");
@@ -97,9 +96,10 @@ public class ProgressGraphFragment extends Fragment {
 
         return view;
     }
+
     private void parseData() {
         Cursor data = mDatabaseHelper.getListContents();
-        for(int i = 0; data.moveToNext(); i++) {
+        for (int i = 0; data.moveToNext(); i++) {
             String parts[] = data.getString(1).split(" ");
 
             mDates.addElement(parts[0] + " : " + parts[1]);

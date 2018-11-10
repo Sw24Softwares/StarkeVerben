@@ -1,8 +1,5 @@
 package org.sw24softwares.starkeverben;
 
-import java.util.HashMap;
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
@@ -10,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
+
+import java.util.HashMap;
+import java.util.List;
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
     private Context mContext;
@@ -39,15 +39,15 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                              View convertView, ViewGroup parent) {
         final String childText = (String) getChild(groupPosition, childPosition);
 
-        if(convertView == null) {
+        if (convertView == null) {
             LayoutInflater infalInflater =
-                (LayoutInflater) this.mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    (LayoutInflater) this.mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView =
-                infalInflater.inflate(R.layout.activity_lesson_expandable_list_item, null);
+                    infalInflater.inflate(R.layout.activity_lesson_expandable_list_item, null);
         }
 
         TextView txtListChild =
-            (TextView) convertView.findViewById(R.id.lesson_expandable_item_text);
+                convertView.findViewById(R.id.lesson_expandable_item_text);
 
         txtListChild.setText(childText);
         return convertView;
@@ -77,15 +77,15 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView,
                              ViewGroup parent) {
         String headerTitle = (String) getGroup(groupPosition);
-        if(convertView == null) {
+        if (convertView == null) {
             LayoutInflater infalInflater =
-                (LayoutInflater) this.mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    (LayoutInflater) this.mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView =
-                infalInflater.inflate(R.layout.activity_lesson_expandable_list_group, null);
+                    infalInflater.inflate(R.layout.activity_lesson_expandable_list_group, null);
         }
 
         TextView listHeader =
-            (TextView) convertView.findViewById(R.id.lesson_expandable_group_text);
+                convertView.findViewById(R.id.lesson_expandable_group_text);
         listHeader.setTypeface(null, Typeface.BOLD);
         listHeader.setText(headerTitle);
 
