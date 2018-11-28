@@ -4,4 +4,4 @@ Cette application ne nécessite aucune connexion Internet.
 
 La traduction des verbes est disponible en plusieurs langues. Si votre langue n'est pas listée, vous pouvez l'ajouter vous-même.
 L'application est elle-même traduisible.
-Pour plus d'informations, veuillez consulter : https://github.com/Sw24Softwares/StarkeVerben/blob/master/README.md#translation
+La page pour traduire l'application est la suivante : https://hosted.weblate.org/projects/starke-verben/
