@@ -1,0 +1,2 @@
+- Add parameter to change the verbs' order (FormOrder)
+- Add translations (Norwegian, Italian, Estonian)

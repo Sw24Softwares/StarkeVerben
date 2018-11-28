@@ -8,8 +8,8 @@ android {
         applicationId "org.sw24softwares.starkeverben"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 12
-        versionName "3.1.2"
+        versionCode 13
+        versionName "3.2.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
