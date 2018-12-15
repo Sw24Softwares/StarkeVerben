@@ -1,6 +1,8 @@
-<h1 align="center">Starke Verben</h1>
+<h1>Starke Verben</h1>
 
-<p align="center">
+<img align="right" width="430" alt="Share to Clipboard" src="./logo/starkeverben-logotype.png">
+
+<p>
     <a href="https://f-droid.org/app/org.sw24softwares.starkeverben"><img src="https://f-droid.org/badge/get-it-on.png"
        alt="Get it on F-Droid"
        height="80"></a>
@@ -9,7 +11,7 @@
        height="80"></a>
 </p>
 
-<p align="center">
+<p>
     <a href="https://hosted.weblate.org/engage/starke-verben/?utm_source=widget"><img src="https://hosted.weblate.org/widgets/starke-verben/-/svg-badge.svg" alt="Translation status" /></a>
     <a href="https://travis-ci.org/Sw24Softwares/StarkeVerben"><img src="https://travis-ci.org/Sw24Softwares/StarkeVerben.svg?branch=master" alt="Build Status"></a>
     <a href="https://github.com/Sw24Softwares/StarkeVerben/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-GPL_v3.0-blue.svg" alt="License"></a>
