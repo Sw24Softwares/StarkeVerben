@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources><string name="test">Test</string>
     <string name="progression">Edenemine</string>
     <string name="lesson">Nimekiri</string>
@@ -9,7 +9,7 @@
     <string name="verify">Kontrolli</string>
     <string name="save">Salvesta</string>
     <string name="save_question">Salvestada\?</string>
-    <string name="save_message">Salvesta hinne.</string>
+    <string name="save_message">Salvesta hinne</string>
     <string name="chart">Diagramm</string>
     <string name="yes">Jah</string>
     <string name="no">Ei</string>
@@ -30,11 +30,12 @@
     <string name="pref_language_translation_summary">Vali tõlke keel</string>
     <string name="pref_language_translation_default">Automaatne</string>
     <string name="pref_given_forms_title">"Testis pakutud  verbi kuju"</string>
-    <string name="pref_given_forms_summary">Tegusõna vormid, mis võivad testis olla</string>
+    <string name="pref_given_forms_summary">Tegusõna vormid, mis võivad testis esineda</string>
     <string name="pref_form_order_title">Vormi järjekord</string>
 
     <string name="version">Versioon</string>
     <string name="connect">Võtke meiega ühendust</string>
     <string name="dependencies">Sõltuvused</string>
     <string name="developers">Arendajad</string>
-    </resources>
+    <string name="at">" "</string>
+</resources>
