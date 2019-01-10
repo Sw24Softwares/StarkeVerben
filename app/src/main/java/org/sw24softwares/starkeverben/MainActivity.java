@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar myToolbar = findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+        //Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        //setSupportActionBar(myToolbar);
 
         Settings.getSingleton().setDebug(BuildConfig.DEBUG);
         try {
@@ -119,9 +119,9 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         mTransaction.replace(R.id.main_container, new PreTestFragment(), PRE_TEST);
                         break;
-                    case 1:
+                        /*case 1:
                         mTransaction.replace(R.id.main_container, new ProgressTabsFragment(), PROGRESS);
-                        break;
+                        break;*/
                     case 2:
                         mTransaction.replace(R.id.main_container, new SingleLessonFragment(),
                                 SINGLE_LESSON);
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.toolbar_main, menu);
+        //getMenuInflater().inflate(R.menu.toolbar_main, menu);
         return true;
     }
 

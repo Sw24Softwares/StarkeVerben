@@ -26,8 +26,8 @@ public class ProgressTabsFragment extends Fragment {
         ViewPager mViewPager = view.findViewById(R.id.view_pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        mTabLayout = getActivity().findViewById(R.id.sliding_tabs);
-        mTabLayout.setupWithViewPager(mViewPager);
+        //mTabLayout = getActivity().findViewById(R.id.sliding_tabs);
+        //mTabLayout.setupWithViewPager(mViewPager);
 
         return view;
     }
