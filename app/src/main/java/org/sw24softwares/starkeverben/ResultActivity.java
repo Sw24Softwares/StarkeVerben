@@ -113,11 +113,13 @@ public class ResultActivity extends AppCompatActivity {
         // Search for Auxiliary and delete it
         formsOrder.remove(5);
 
-
         final Vector<Integer> formsOrderReverse = new Vector<>();
         formsOrderReverse.setSize(6);
         for (int i = 0; i < formsOrder.size(); i++)
             formsOrderReverse.set(formsOrder.get(i), i);
+	for (int i = 0; i < formsOrderReverse.size(); i++)
+	    if(formsOrderReverse.get(i) == null)
+		formsOrderReverse.remove(i);
 
         final Vector<TextView> textViews = new Vector<>();
         textViews.addElement((TextView) findViewById(R.id.infinitive_result));
