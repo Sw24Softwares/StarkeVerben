@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-  <!-- <android.support.design.widget.TabLayout
-      android:id="@+id/sliding_tabs"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:visibility="gone" /> -->
-
-  <FrameLayout
-      android:id="@+id/main_container"
+  <androidx.core.widget.NestedScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:layout_above="@+id/navigation"
-      android:layout_below="@+id/appbar" />
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navigation"
+        android:layout_below="@+id/appbar" />
+
+  </androidx.core.widget.NestedScrollView>
 
   <com.ashokvarma.bottomnavigation.BottomNavigationBar
       android:id="@+id/navigation"
@@ -24,4 +26,17 @@
       android:layout_height="wrap_content"
       android:layout_alignParentBottom="true" />
 
-</RelativeLayout>
+  <com.google.android.material.appbar.AppBarLayout
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+  </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
