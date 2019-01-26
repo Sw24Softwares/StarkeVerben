@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="test">Test</string>
     <string name="progression">Entwicklung</string>
@@ -10,7 +10,7 @@
     <string name="verify">Überprüfen</string>
     <string name="save">Abspeichern</string>
     <string name="save_question">Abspeichern?</string>
-    <string name="save_message">Zensur abspeichern.</string>
+    <string name="save_message">Zensur abspeichern</string>
     <string name="chart">Diagramm</string>
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
@@ -33,7 +33,7 @@
     <string name="pref_language_translation_summary">Wählen Sie die Übersetzungssprache</string>
     <string name="pref_language_translation_default">Automatisch</string>
     <string name="pref_given_forms_title">Vorgeschlagene Formen im Test</string>
-    <string name="pref_given_forms_summary">Verbformen, die potentiell in Tests vorgeschlagen werden</string>
+    <string name="pref_given_forms_summary">Verbformen, die in Tests vorgeschlagen werden können</string>
     <string name="pref_form_order_title">Reihenfolge</string>
 
     <string name="version">Version</string>
