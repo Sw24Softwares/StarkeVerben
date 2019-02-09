@@ -17,6 +17,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
+import android.widget.FrameLayout;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
@@ -61,15 +63,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
-            setTheme(R.style.AppTheme);
-        else
-            setTheme(R.style.AppThemeBase);
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar myToolbar = findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+        Toolbar toolbar = findViewById(R.id.my_toolbar);
 
         Settings.getSingleton().setDebug(BuildConfig.DEBUG);
         try {
@@ -113,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
         mTransaction = getSupportFragmentManager().beginTransaction();
         mTransaction.add(R.id.main_container, new PreTestFragment(), PRE_TEST).commit();
+        //mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON);
 
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
@@ -148,6 +147,31 @@ public class MainActivity extends AppCompatActivity {
             public void onTabReselected(int position) {
             }
         });
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(MenuItem item) {
+
+                    switch (item.getItemId()) {
+                    case R.id.progression:
+                        mTransaction.replace(R.id.main_container, new PreTestFragment(), PRE_TEST);
+                        break;
+                    case R.id.single_lesson:
+                        mTransaction.replace(R.id.main_container, new SingleLessonFragment(),
+                                             SINGLE_LESSON);
+                        break;
+                    case R.id.lesson:
+                        mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON);
+                        break;
+                    case R.id.settings:
+                        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    return false;
+                }
+            });
 
         handleIntent(getIntent());
     }
