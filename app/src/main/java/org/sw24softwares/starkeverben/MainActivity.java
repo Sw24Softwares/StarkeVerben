@@ -20,9 +20,6 @@ import android.widget.SearchView;
 import android.widget.FrameLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import com.ashokvarma.bottomnavigation.BottomNavigationBar;
-import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-
 import org.sw24softwares.starkeverben.Core.Settings;
 
 import java.util.Arrays;
@@ -94,76 +91,29 @@ public class MainActivity extends AppCompatActivity {
         Settings.getSingleton().setFormString(4, res.getString(R.string.traduction));
         Settings.getSingleton().setFormString(5, res.getString(R.string.auxiliary));
 
-        BottomNavigationBar bottomNavigationBar =
-                findViewById(R.id.navigation);
-        bottomNavigationBar
-                .addItem(new BottomNavigationItem(R.drawable.ic_subject_black_24dp, R.string.test))
-                .addItem(
-                        new BottomNavigationItem(R.drawable.ic_timeline_black_24dp, R.string.progression))
-                .addItem(
-                        new BottomNavigationItem(R.drawable.ic_learn_black_24dp, R.string.single_lesson))
-                .addItem(new BottomNavigationItem(R.drawable.ic_list_black_24dp, R.string.lesson))
-                .setActiveColor(R.color.colorPrimary)
-                .setInActiveColor(R.color.inactiveBottomNav)
-                .setBarBackgroundColor(android.R.color.white)
-                .setMode(BottomNavigationBar.MODE_FIXED)
-                .initialise();
-
         mTransaction = getSupportFragmentManager().beginTransaction();
         mTransaction.add(R.id.main_container, new PreTestFragment(), PRE_TEST).commit();
-        //mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON);
-
-        bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(int position) {
-                mTransaction = getSupportFragmentManager().beginTransaction();
-                mTransaction.setCustomAnimations(android.R.anim.fade_in, 0);
-
-                switch (position) {
-                    case 0:
-                        mTransaction.replace(R.id.main_container, new PreTestFragment(), PRE_TEST);
-                        break;
-                        /*case 1:
-                        mTransaction.replace(R.id.main_container, new ProgressTabsFragment(), PROGRESS);
-                        break;*/
-                    case 2:
-                        mTransaction.replace(R.id.main_container, new SingleLessonFragment(),
-                                SINGLE_LESSON);
-                        break;
-                    case 3:
-                        mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON);
-                        break;
-                    default:
-                        break;
-                }
-                mTransaction.commit();
-            }
-
-            @Override
-            public void onTabUnselected(int position) {
-            }
-
-            @Override
-            public void onTabReselected(int position) {
-            }
-        });
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(MenuItem item) {
+                    mTransaction = getSupportFragmentManager().beginTransaction();
 
                     switch (item.getItemId()) {
                     case R.id.progression:
                         mTransaction.replace(R.id.main_container, new PreTestFragment(), PRE_TEST);
-                        break;
+                        mTransaction.commit();
+                        return true;
                     case R.id.single_lesson:
                         mTransaction.replace(R.id.main_container, new SingleLessonFragment(),
                                              SINGLE_LESSON);
-                        break;
+                        mTransaction.commit();
+                        return true;
                     case R.id.lesson:
                         mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON);
-                        break;
+                        mTransaction.commit();
+                        return true;
                     case R.id.settings:
                         Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
                         startActivity(intent);

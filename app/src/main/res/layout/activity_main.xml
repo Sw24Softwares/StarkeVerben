@@ -9,6 +9,7 @@
   <androidx.core.widget.NestedScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
+      android:fillViewport="true"
       app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <FrameLayout
@@ -20,7 +21,8 @@
 
   <com.google.android.material.appbar.AppBarLayout
       android:layout_height="wrap_content"
-      android:layout_width="match_parent">
+      android:layout_width="match_parent"
+      app:elevation="0dp">
 
     <androidx.appcompat.widget.Toolbar
             android:id="@+id/my_toolbar"
@@ -47,13 +49,6 @@
     </androidx.appcompat.widget.Toolbar>
 
   </com.google.android.material.appbar.AppBarLayout>
-
-  <com.ashokvarma.bottomnavigation.BottomNavigationBar
-      android:id="@+id/navigation"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_gravity="bottom"
-      android:visibility="gone"/>
 
   <com.google.android.material.bottomnavigation.BottomNavigationView
       android:id="@+id/bottom_navigation"

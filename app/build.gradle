@@ -34,7 +34,6 @@ android {
 dependencies {
     implementation 'com.google.android.material:material:1.0.0'
 
-    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.1.0'
     implementation 'pl.bclogic:pulsator4droid:1.0.3'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
     implementation 'com.github.medyo:android-about-page:1.2.4'
