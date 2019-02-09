@@ -2,11 +2,39 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ExpandableListView
-        android:id="@+id/progress_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:dividerHeight="1dp" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/chart"
+      android:textSize="12sp"
+      android:textAllCaps="true"
+      android:fontFamily="@font/googlesans_regular"
+      android:textColor="@color/colorPrimaryDark"
+      android:layout_marginTop="30dp"
+      android:layout_marginLeft="20dp"/>
+
+  <com.github.mikephil.charting.charts.LineChart
+      android:id="@+id/chart"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:layout_margin="15dp" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/lesson"
+      android:textSize="12sp"
+      android:textAllCaps="true"
+      android:fontFamily="@font/googlesans_regular"
+      android:textColor="@color/colorPrimaryDark"
+      android:layout_margin="20dp"/>
+
+  <ExpandableListView
+      android:id="@+id/progress_list"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:dividerHeight="1dp" />
 </LinearLayout>

@@ -9,6 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
+        android:fontFamily="@font/googlesans_regular"
         android:gravity="center_horizontal"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
