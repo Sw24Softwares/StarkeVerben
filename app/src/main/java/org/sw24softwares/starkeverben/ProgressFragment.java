@@ -1,6 +1,7 @@
 package org.sw24softwares.starkeverben;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -80,6 +82,7 @@ public class ProgressFragment extends Fragment {
             yLeft.setPosition(YAxis.YAxisLabelPosition.OUTSIDE_CHART);
             yLeft.setDrawAxisLine(false);
             yLeft.setDrawGridLines(true);
+            yLeft.setDrawLabels(false);
             yLeft.setXOffset(15);
             yLeft.setAxisMinimum(0f);
             yLeft.setAxisMaximum(100f);
@@ -105,6 +108,18 @@ public class ProgressFragment extends Fragment {
             chart.setVisibleXRangeMaximum(60);
             chart.moveViewToX(mDates.size());
         }
+
+        FloatingActionButton fab = view.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getActivity(), TestActivity.class);
+                    intent.putExtra("total", 0);
+                    intent.putExtra("marks", new int[0]);
+                    intent.putExtra("dialog", false);
+                    startActivity(intent);
+                }
+            });
 
         return view;
     }
