@@ -52,6 +52,7 @@
       android:background="@color/colorAccent"
       style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
       app:menu="@menu/navigation_items"
+      app:labelVisibilityMode="labeled"
       app:itemIconSize="27dp"/>
 
 </RelativeLayout>

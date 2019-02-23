@@ -9,6 +9,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.preference.ListPreference;
+import android.preference.PreferenceScreen;
+import androidx.preference.PreferenceFragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String PROGRESS = "Progress";
     private static final String SINGLE_LESSON = "SingleLesson";
     private static final String LESSON = "Lesson";
+    private static final String SETTINGS = "Settings";
     private static Resources res;
 
     protected void createTranslateDialog() {
@@ -102,22 +106,18 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                     case R.id.progression:
-                        mTransaction.replace(R.id.main_container, new ProgressFragment(), PROGRESS);
-                        mTransaction.commit();
+                        mTransaction.replace(R.id.main_container, new ProgressFragment(), PROGRESS).commit();
                         return true;
                     case R.id.single_lesson:
                         mTransaction.replace(R.id.main_container, new SingleLessonFragment(),
-                                             SINGLE_LESSON);
-                        mTransaction.commit();
+                                             SINGLE_LESSON).commit();
                         return true;
                     case R.id.lesson:
-                        mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON);
-                        mTransaction.commit();
+                        mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON).commit();
                         return true;
                     case R.id.settings:
-                        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                        startActivity(intent);
-                        break;
+                        mTransaction.replace(R.id.main_container, new SettingsFragment()).commit();
+                        return true;
                     }
                     return false;
                 }
@@ -139,18 +139,6 @@ public class MainActivity extends AppCompatActivity {
         intent.addCategory(Intent.CATEGORY_HOME);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
     }
 
     // Following methods are used for the search bar in the LessonFragment

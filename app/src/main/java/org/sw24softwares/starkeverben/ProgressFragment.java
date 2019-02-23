@@ -102,7 +102,7 @@ public class ProgressFragment extends Fragment {
             dataSet.setDrawValues(false);
             dataSet.setValueTextSize(12f);
             dataSet.setHighlightEnabled(true);
-            dataSet.setColors(R.color.colorAccent);
+            dataSet.setColors(ContextCompat.getColor(context, R.color.colorAccent));
             LineData lineData = new LineData(dataSet);
             chart.setData(lineData);
             chart.setVisibleXRangeMaximum(60);
@@ -120,6 +120,7 @@ public class ProgressFragment extends Fragment {
                     startActivity(intent);
                 }
             });
+        fab.setTooltipText(getString(R.string.test));
 
         return view;
     }
