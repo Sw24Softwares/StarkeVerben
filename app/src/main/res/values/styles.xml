@@ -27,4 +27,9 @@
         <item name="colorPrimaryDark">@android:color/transparent</item>
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
+
+    <style name="TextAppearance.MaterialComponents.Caption" parent="AppThemeBase">
+        <item name="fontFamily">@font/googlesans_medium</item>
+        <item name="android:textSize">13sp</item>
+    </style>
 </resources>

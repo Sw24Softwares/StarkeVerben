@@ -22,6 +22,7 @@
       <ImageView
           android:layout_width="60dp"
           android:layout_height="60dp"
+          android:layout_gravity="center_vertical"
           android:src="@drawable/ic_starkeverben_logomark" />
 
       <TextView
@@ -29,7 +30,7 @@
           android:layout_height="wrap_content"
           android:fontFamily="@font/aller_bold"
           android:text="Starke Verben"
-          android:textSize="20sp"
+          android:textSize="24sp"
           android:layout_gravity="center"
           android:textColor="#3a596d"/>
 
@@ -53,6 +54,6 @@
       style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
       app:menu="@menu/navigation_items"
       app:labelVisibilityMode="labeled"
-      app:itemIconSize="27dp"/>
+      app:itemIconSize="26dp"/>
 
 </RelativeLayout>

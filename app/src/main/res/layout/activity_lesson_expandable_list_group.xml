@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
         android:fontFamily="@font/googlesans_regular"
+        android:textColor="@android:color/black"
         android:paddingStart="?android:attr/expandableListPreferredItemPaddingLeft"
         android:textSize="17sp" />
 
