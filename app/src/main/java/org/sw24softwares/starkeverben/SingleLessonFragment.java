@@ -62,13 +62,6 @@ public class SingleLessonFragment extends Fragment {
         traduction.setText(translations.toString());
         aux.setText(auxiliary);
 
-        Button next = view.findViewById(R.id.next_single_lesson);
-        next.setOnClickListener(view1 -> {
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.main_container, new SingleLessonFragment());
-            transaction.commit();
-        });
-
         return view;
     }
 }

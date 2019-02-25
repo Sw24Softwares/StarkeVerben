@@ -12,12 +12,10 @@
         android:ellipsize="end"
         android:gravity="center"
         android:lines="2"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
+        android:padding="5dp"
+        android:fontFamily="@font/googlesans_regular"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@android:color/white"
-        android:textSize="12sp" />
+        android:textSize="11sp" />
 
 </RelativeLayout>
