@@ -1,2 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="test">Prueba</string>
+    <string name="progression">Progresión</string>
+    <string name="lesson">Lista</string>
+    <string name="single_lesson">Lección</string>
+    <string name="finish">Acabado</string>
+    <string name="go_on">Continuar</string>
+    <string name="verify">Verificar</string>
+    <string name="save">Guardar</string>
+    <string name="save_question">¿Guardar\?</string>
+    <string name="save_message">Guardar la marca</string>
+    <string name="chart">Gráfico</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="not_now">No ahora</string>
+    <string name="at">en</string>
+    <string name="infinitive">Infinitivo</string>
+    <string name="preterite">Pretérito</string>
+    <string name="participe">Participio</string>
+    <string name="third_person">3ª Persona</string>
+    <string name="traduction">Traducción</string>
+    <string name="auxiliary">Auxiliar</string>
+    <string name="search_hint">Buscar</string>
+    <string name="pref">Ajustes</string>
+    <string name="pref_about">Acerca de</string>
+    <string name="pref_about_app">Acerca de esta aplicación</string>
+    <string name="pref_language_translation_title">Idioma de la traducción</string>
+    <string name="pref_language_translation_summary">Seleccione el idioma de la traducción</string>
+    <string name="pref_language_translation_default">Automático</string>
+    <string name="pref_given_forms_title">Formularios propuestos en prueba</string>
+    <string name="pref_given_forms_summary">Formas verbales que pueden proponerse en las pruebas</string>
+    <string name="version">Versión</string>
+    <string name="connect">Póngase en contacto con nosotros</string>
+    <string name="dependencies">Dependencias</string>
+    <string name="developers">Desarrolladores</string>
+</resources>
