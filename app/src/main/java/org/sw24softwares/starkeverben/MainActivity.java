@@ -170,24 +170,9 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         int selectedItemId = bottomNav.getSelectedItemId();
 
-        mTransaction = getSupportFragmentManager().beginTransaction();
-        switch (selectedItemId) {
-        case R.id.progression:
+        if(selectedItemId == R.id.progression) {
+            mTransaction = getSupportFragmentManager().beginTransaction();
             mTransaction.replace(R.id.main_container, new ProgressFragment(), PROGRESS).commit();
-            break;
-        case R.id.single_lesson:
-            mTransaction.replace(R.id.main_container, new SingleLessonFragment(),
-                                 SINGLE_LESSON).commit();
-            break;
-        case R.id.lesson:
-            mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON).commit();
-            break;
-        case R.id.settings:
-            mTransaction.replace(R.id.main_container, new SettingsFragment()).commit();
-            break;
-        default:
-            mTransaction.replace(R.id.main_container, new ProgressFragment(), PROGRESS).commit();
-            break;
         }
         super.onResume();
     }
