@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:gravity="center"
-                android:fontFamily="@font/muli_regular"
+                android:fontFamily="@font/nunito_regular"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/black" />
 
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="8dp"
-                android:fontFamily="@font/muli_regular"
+                android:fontFamily="@font/nunito_regular"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/black" />
 
@@ -76,7 +76,7 @@
                     android:id="@+id/auxiliary_single_lesson"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/muli_regular"
+                    android:fontFamily="@font/nunito_regular"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/black" />
 
@@ -84,7 +84,7 @@
                     android:id="@+id/participe_single_lesson"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/muli_regular"
+                    android:fontFamily="@font/nunito_regular"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/black" />
 
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="8dp"
-                android:fontFamily="@font/muli_regular"
+                android:fontFamily="@font/nunito_regular"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/black" />
 
@@ -128,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="8dp"
-                android:fontFamily="@font/muli_regular"
+                android:fontFamily="@font/nunito_regular"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/black" />
         </LinearLayout>
