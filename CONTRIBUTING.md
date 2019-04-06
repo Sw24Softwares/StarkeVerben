@@ -8,4 +8,4 @@ If you have installed clang, please run the script `format-code.sh`, located at 
 An issue is a good start to contribute. If you have an idea for an extra feature, detail it as far as you can. Do not forget to add images that could help us seeing what you think.
 
 ## Pull Request
-A pull request is for us easier than an issue, as we do not have to code the feature ourself. Nonetheless do not forget to test you code before submitting it, or specify it in the comments.
+A pull request is for us easier than an issue, as we do not have to code the feature ourself. Nonetheless do not forget to test your code before submitting it, or specify it in the comments.
