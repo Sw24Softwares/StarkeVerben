@@ -1,2 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="backen">piec</string>
+    <string name="beginnen">zacząć</string>
+    <string name="bieten">zaoferować</string>
+    <string name="binden">zawiązać,wiązać</string>
+    <string name="bitten">poprosić,zapytać</string>
+    <string name="bleiben">zostać,pozostać</string>
+    <string name="brechen">złamać,przerwać</string>
+    <string name="bringen">przynieść</string>
+    <string name="denken">myśleć</string>
+    <string name="dringen">zpenetrować</string>
+    <string name="essen">do jedzenia</string>
+    <string name="fahren">prowadzić, podróżować</string>
+    <string name="fallen">upaść</string>
+    <string name="fangen">złapać</string>
+    <string name="finden">znaleźć,szukać</string>
+    <string name="fliegen">lecieć</string>
+    <string name="fliehen">uciekać</string>
+    <string name="fliessen">płynąć</string>
+    <string name="fressen">jeść jak zwierzę</string>
+    <string name="geben">Dawać</string>
+    <string name="gehen">iść,chodzić</string>
+    <string name="gelingen">odnieść sukces</string>
+    <string name="gelten">liczyć,być wartym</string>
+    <string name="geniessen">cieszyć się</string>
+    <string name="geschehen">wystąpić,gotowy</string>
+</resources>
