@@ -1,2 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="test">Test</string>
+    <string name="progression">Postęp</string>
+    <string name="lesson">Lista</string>
+    <string name="single_lesson">Lekcja</string>
+    <string name="finish">Koniec</string>
+    <string name="go_on">Kontynuacja</string>
+    <string name="verify">Weryfikacja</string>
+    <string name="save">Zapisz</string>
+    <string name="save_question">Zapisać \?</string>
+    <string name="save_message">Zapisz znak</string>
+    <string name="chart">Wykres</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+    <string name="not_now">Nie teraz</string>
+    <string name="at">w</string>
+    <string name="infinitive">Bezokolicznik</string>
+    <string name="preterite">czas przeszły lub przeszła forma czasownika</string>
+    <string name="participe">Imiesłów</string>
+    <string name="third_person">Trzecia osoba</string>
+    <string name="traduction">Tłumaczenie</string>
+    <string name="auxiliary">Pomocniczy</string>
+    <string name="search_hint">Szukaj</string>
+    <string name="pref">Ustawienia</string>
+    <string name="pref_about">O</string>
+    <string name="pref_about_app">O tej aplikacji</string>
+    <string name="pref_language_translation_title">Język tłumaczenia</string>
+    <string name="pref_language_translation_summary">Wybierz język tłumaczenia</string>
+    <string name="pref_language_translation_default">Automatyczny</string>
+    <string name="pref_given_forms_title">Proponowane formy w teście</string>
+    <string name="pref_given_forms_summary">Formy czasowników, które mogą być proponowane w testach</string>
+    <string name="pref_form_order_title">Kolejność formularzy</string>
+    <string name="version">Wersja</string>
+    <string name="connect">Skontaktuj się z nami</string>
+    <string name="dependencies">Zależności</string>
+    <string name="developers">Deweloperzy</string>
+</resources>
