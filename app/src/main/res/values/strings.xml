@@ -27,16 +27,6 @@
     <string name="traduction">Translation</string>
     <string name="auxiliary">Auxiliary</string>
 
-    <!-- Those following strings show when no translation is found,
-         thus it is useless to translate them -->
-    <string name="translate_alert" translatable="false">Translation needed</string>
-    <string name="translate_message" translatable="false">This application is sadly not translated in your language. Would you like to help us and translate it?</string>
-    <string name="contribute_trans" translatable="false">Contribute</string>
-    <string name="contribution_url" translatable="false">https://hosted.weblate.org/projects/starke-verben</string>
-
-    <string name="search_hint">Search</string>
-    <string name="app_label" translatable="false">StarkeVerben</string>
-
     <string name="pref">Settings</string>
     <string name="pref_about">About</string>
     <string name="pref_about_app">About this app</string>
@@ -48,8 +38,19 @@
     <string name="pref_form_order_title">Form order</string>
 
     <string name="version">Version</string>
+    <string name="contributors">Contributors</string>
     <string name="connect">Get in touch with us</string>
     <string name="dependencies">Dependencies</string>
     <string name="developers">Developers</string>
     <string name="about_page_description" translatable="false">@string/app_name</string>
+
+    <!-- Those following strings show when no translation is found,
+         thus it is useless to translate them -->
+    <string name="translate_alert" translatable="false">Translation needed</string>
+    <string name="translate_message" translatable="false">This application is sadly not translated in your language. Would you like to help us and translate it?</string>
+    <string name="contribute_trans" translatable="false">Contribute</string>
+    <string name="contribution_url" translatable="false">https://hosted.weblate.org/projects/starke-verben</string>
+
+    <string name="search_hint">Search</string>
+    <string name="app_label" translatable="false">StarkeVerben</string>
 </resources>

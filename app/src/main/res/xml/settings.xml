@@ -23,9 +23,29 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/pref_about">
+        <Preference
+            android:key="prefVersion" />
         <PreferenceScreen
-            android:key="prefAbout"
-            android:title="@string/pref_about_app" />
+            android:key="prefWeblate"
+            android:icon="@drawable/weblate"
+            android:title="Weblate" />
+        <PreferenceScreen
+            android:key="prefGithub"
+            android:icon="@drawable/github"
+            android:title="Github" />
+        <PreferenceScreen
+            android:key="prefGitter"
+            android:icon="@drawable/gitter"
+            android:title="Gitter" />
+        <PreferenceScreen
+            android:key="prefHamzaDev"
+            android:title="Hamza Parnica" />
+        <PreferenceScreen
+            android:key="prefLouisDev"
+            android:title="Louis Vanhaelewyn" />
+        <PreferenceScreen
+            android:key="prefContributors"
+            android:title="@string/contributors" />
     </PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>

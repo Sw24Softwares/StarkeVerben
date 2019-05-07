@@ -1,8 +1,11 @@
 package org.sw24softwares.starkeverben;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Build;
 import androidx.preference.ListPreference;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceFragmentCompat;
 
@@ -25,10 +28,28 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
         ListPreference guiList = (ListPreference) findPreference("prefLanguage");
 
-        PreferenceScreen screen = (PreferenceScreen) findPreference("prefAbout");
-        screen.setIntent(new Intent(getActivity(), AboutActivity.class));
-        /*PreferenceScreen*/
-        screen = (PreferenceScreen) findPreference("prefFormOrder");
-        screen.setIntent(new Intent(getActivity(), FormOrderActivity.class));
+        PreferenceScreen formOrder = (PreferenceScreen) findPreference("prefFormOrder");
+        formOrder.setIntent(new Intent(getActivity(), FormOrderActivity.class));
+
+        Preference version = (Preference) findPreference("prefVersion");
+        version.setTitle(getString(R.string.version) + " " + BuildConfig.VERSION_NAME);
+
+        PreferenceScreen weblate = (PreferenceScreen) findPreference("prefWeblate");
+        weblate.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://hosted.weblate.org/projects/starke-verben")));
+
+        PreferenceScreen github = (PreferenceScreen) findPreference("prefGithub");
+        github.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Sw24Softwares/StarkeVerben")));
+
+        PreferenceScreen gitter = (PreferenceScreen) findPreference("prefGitter");
+        gitter.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://gitter.im/Sw24Softwares/StarkeVerben")));
+
+        PreferenceScreen hamzaDev = (PreferenceScreen) findPreference("prefHamzaDev");
+        hamzaDev.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/24PaH")));
+
+        PreferenceScreen louisDev = (PreferenceScreen) findPreference("prefLouisDev");
+        louisDev.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Swarthon")));
+
+        PreferenceScreen naufalDesigner = (PreferenceScreen) findPreference("prefContributors");
+        naufalDesigner.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Sw24Softwares/StarkeVerben/blob/master/CONTRIBUTORS.md")));
     }
 }
