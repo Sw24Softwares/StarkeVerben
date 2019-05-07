@@ -54,6 +54,7 @@ public class ProgressGraphFragment extends Fragment {
                     new XYMarkerView(context, new XAxisValueFormatter(mDates.toArray(new String[0])));
             mv.setChartView(chart);
             chart.setMarker(mv);
+            chart.setNoDataText(getString(R.string.no_progress_data));
 
             XAxis x = chart.getXAxis();
             x.setEnabled(true);

@@ -17,6 +17,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="not_now">Not now</string>
+    <string name="no_progress_data">Take a test by pressing the orange button</string>
 
     <string name="at">at</string>
 
