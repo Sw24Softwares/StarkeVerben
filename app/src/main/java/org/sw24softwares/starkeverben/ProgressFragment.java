@@ -55,9 +55,10 @@ public class ProgressFragment extends Fragment {
         mListAdapter = new ExpandableListAdapter(context, mListDataHeader, mListDataChild);
         mExpListView.setAdapter(mListAdapter);
 
+        LineChart chart = view.findViewById(R.id.chart);
+        chart.setNoDataText(getString(R.string.no_progress_data));
 
         if (!mScores.isEmpty()) {
-            LineChart chart = view.findViewById(R.id.chart);
             chart.setDescription(null);
             chart.setDrawGridBackground(false);
             chart.setTouchEnabled(true);
