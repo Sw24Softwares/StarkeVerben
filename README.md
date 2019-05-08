@@ -44,6 +44,8 @@ In order to compile this application, make sure you have the Android SDK install
 ## License
 This program is released under the GPL3 license. For further information, please read LICENSE file.
 
+The logo was designed by <a href="https://naufal.id">Ahmad Naufal Mukhtar</a>
+
 <sub><p align="right">
 *Google Play and the Google Play logo are trademarks of Google LLC.*
 </p></sub>

@@ -2,32 +2,36 @@
 
 
 ** Translators
-comradekingu - Norwegian Bokmål
 
-mwesten - Dutch
+<a href="https://github.com/comradekingu">comradekingu</a> - Norwegian Bokmål
 
-nautilusx - German
+<a href="https://github.com/mwesten">mwesten</a> - Dutch
 
-luksprog - Romanian
+<a href="https://github.com/nautilusx">nautilusx</a> - German
 
-ErikaWunderli - Hungarian
+<a href="https://github.com/luksprog">luksprog</a> - Romanian
 
-lordx2 - Russian
+<a href="https://github.com/ErikaWunderli">ErikaWunderli</a> - Hungarian
 
-NathanBnm - French
+<a href="https://github.com/lordx2">lordx2</a> - Russian
 
-afmachado  - Brazilian / Portuguese
+<a href="https://github.com/NathanBnm">NathanBnm</a> - French
+
+<a href="https://github.com/afmachado">afmachado</a>  - Brazilian / Portuguese
 
 
 ** Coders
-TacoTheDank - Code cleaning
 
-luksprog - Single Lesson appearence
+<a href="https://github.com/TacoTheDank">TacoTheDank</a> - Code cleaning
+
+<a href="https://github.com/luksprog">luksprog</a> - Single Lesson appearence
 
 
 ** Logo
-naufaldsg
+
+<a href="https://github.com/naufaldsg">naufaldsg</a>
 
 
-** Others
-andy5995 - Typo fixing
+** Miscellaneous
+
+<a href="https://github.com/andy5995">andy5995</a> - Typo fixing
