@@ -1,7 +1,7 @@
-* Lists of contributors
+# Lists of contributors
 
 
-** Translators
+## Translators
 
 <a href="https://github.com/comradekingu">comradekingu</a> - Norwegian Bokmål
 
@@ -20,18 +20,18 @@
 <a href="https://github.com/afmachado">afmachado</a>  - Brazilian / Portuguese
 
 
-** Coders
+## Coders
 
 <a href="https://github.com/TacoTheDank">TacoTheDank</a> - Code cleaning
 
 <a href="https://github.com/luksprog">luksprog</a> - Single Lesson appearence
 
 
-** Logo
+## Logo
 
 <a href="https://github.com/naufaldsg">naufaldsg</a>
 
 
-** Miscellaneous
+## Miscellaneous
 
 <a href="https://github.com/andy5995">andy5995</a> - Typo fixing
