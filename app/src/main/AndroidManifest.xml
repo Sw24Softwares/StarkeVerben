@@ -28,9 +28,6 @@
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:name="org.sw24softwares.starkeverben.ResultActivity" />
 
-        <activity
-            android:name="org.sw24softwares.starkeverben.AboutActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="org.sw24softwares.starkeverben.FormOrderActivity" />
     </application>
 
