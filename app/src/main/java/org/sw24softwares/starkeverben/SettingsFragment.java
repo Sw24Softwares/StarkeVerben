@@ -43,6 +43,12 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         PreferenceScreen gitter = (PreferenceScreen) findPreference("prefGitter");
         gitter.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://gitter.im/Sw24Softwares/StarkeVerben")));
 
+        if(Build.VERSION.SDK_INT >= 21) {
+            weblate.setIcon(R.drawable.ic_weblate_black);
+            github.setIcon(R.drawable.ic_github_black);
+            gitter.setIcon(R.drawable.ic_gitter_black);
+        }
+
         PreferenceScreen hamzaDev = (PreferenceScreen) findPreference("prefHamzaDev");
         hamzaDev.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/24PaH")));
 

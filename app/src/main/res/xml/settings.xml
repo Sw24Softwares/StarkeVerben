@@ -27,15 +27,12 @@
             android:key="prefVersion" />
         <PreferenceScreen
             android:key="prefWeblate"
-            android:icon="@drawable/weblate"
             android:title="Weblate" />
         <PreferenceScreen
             android:key="prefGithub"
-            android:icon="@drawable/github"
             android:title="Github" />
         <PreferenceScreen
             android:key="prefGitter"
-            android:icon="@drawable/gitter"
             android:title="Gitter" />
         <PreferenceScreen
             android:key="prefHamzaDev"

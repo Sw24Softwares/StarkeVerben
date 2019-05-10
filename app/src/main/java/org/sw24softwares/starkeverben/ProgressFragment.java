@@ -67,10 +67,13 @@ public class ProgressFragment extends Fragment {
             chart.setPinchZoom(false);
             chart.setDoubleTapToZoomEnabled(false);
             chart.getLegend().setEnabled(false);
-            XYMarkerView mv =
+
+            if(Build.VERSION.SDK_INT >= 24) {
+                XYMarkerView mv =
                     new XYMarkerView(context, new XAxisValueFormatter(mDates.toArray(new String[0])));
-            mv.setChartView(chart);
-            chart.setMarker(mv);
+                mv.setChartView(chart);
+                chart.setMarker(mv);
+            }
 
             XAxis x = chart.getXAxis();
             x.setEnabled(true);
