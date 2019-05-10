@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/pref">
         <ListPreference
             android:defaultValue=""
@@ -23,9 +23,26 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/pref_about">
+        <Preference
+            android:key="prefVersion" />
         <PreferenceScreen
-            android:key="prefAbout"
-            android:title="@string/pref_about_app" />
+            android:key="prefWeblate"
+            android:title="Weblate" />
+        <PreferenceScreen
+            android:key="prefGithub"
+            android:title="Github" />
+        <PreferenceScreen
+            android:key="prefGitter"
+            android:title="Gitter" />
+        <PreferenceScreen
+            android:key="prefHamzaDev"
+            android:title="Hamza Parnica" />
+        <PreferenceScreen
+            android:key="prefLouisDev"
+            android:title="Louis Vanhaelewyn" />
+        <PreferenceScreen
+            android:key="prefContributors"
+            android:title="@string/contributors" />
     </PreferenceCategory>
 
-</PreferenceScreen>
+</androidx.preference.PreferenceScreen>

@@ -8,13 +8,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:background="#aaffffff"
+        android:background="@drawable/custom_marker_view_background"
         android:ellipsize="end"
         android:gravity="center"
         android:lines="2"
-        android:padding="3dp"
+        android:padding="5dp"
+        android:fontFamily="@font/googlesans_regular"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@android:color/black"
-        android:textSize="12sp" />
+        android:textColor="@android:color/white"
+        android:textSize="11sp" />
 
 </RelativeLayout>

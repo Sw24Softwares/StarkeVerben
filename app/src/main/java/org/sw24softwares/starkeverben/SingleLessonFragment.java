@@ -4,8 +4,8 @@ import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,13 +61,6 @@ public class SingleLessonFragment extends Fragment {
         troisiemePersonne.setText(verb.getThirdPersons().get(0));
         traduction.setText(translations.toString());
         aux.setText(auxiliary);
-
-        Button next = view.findViewById(R.id.next_single_lesson);
-        next.setOnClickListener(view1 -> {
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.main_container, new SingleLessonFragment());
-            transaction.commit();
-        });
 
         return view;
     }

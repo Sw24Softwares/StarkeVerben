@@ -7,18 +7,21 @@ import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Build;
 import android.preference.PreferenceManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.preference.ListPreference;
+import android.preference.PreferenceScreen;
+import androidx.preference.PreferenceFragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
-
-import com.ashokvarma.bottomnavigation.BottomNavigationBar;
-import com.ashokvarma.bottomnavigation.BottomNavigationItem;
+import android.widget.FrameLayout;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.sw24softwares.starkeverben.Core.Settings;
 
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String PROGRESS = "Progress";
     private static final String SINGLE_LESSON = "SingleLesson";
     private static final String LESSON = "Lesson";
+    private static final String SETTINGS = "Settings";
     private static Resources res;
 
     protected void createTranslateDialog() {
@@ -60,11 +64,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar myToolbar = findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
 
         Settings.getSingleton().setDebug(BuildConfig.DEBUG);
         try {
@@ -91,67 +95,35 @@ public class MainActivity extends AppCompatActivity {
         Settings.getSingleton().setFormString(4, res.getString(R.string.traduction));
         Settings.getSingleton().setFormString(5, res.getString(R.string.auxiliary));
 
-        BottomNavigationBar bottomNavigationBar =
-                findViewById(R.id.navigation);
-        bottomNavigationBar
-                .addItem(new BottomNavigationItem(R.drawable.ic_subject_black_24dp, R.string.test))
-                .addItem(
-                        new BottomNavigationItem(R.drawable.ic_timeline_black_24dp, R.string.progression))
-                .addItem(
-                        new BottomNavigationItem(R.drawable.ic_learn_black_24dp, R.string.single_lesson))
-                .addItem(new BottomNavigationItem(R.drawable.ic_list_black_24dp, R.string.lesson))
-                .setActiveColor(R.color.colorPrimary)
-                .setInActiveColor(R.color.inactiveBottomNav)
-                .setBarBackgroundColor(android.R.color.white)
-                .setMode(BottomNavigationBar.MODE_FIXED)
-                .initialise();
-
         mTransaction = getSupportFragmentManager().beginTransaction();
-        mTransaction.add(R.id.main_container, new PreTestFragment(), PRE_TEST).commit();
+        mTransaction.add(R.id.main_container, new ProgressFragment(), PROGRESS).commit();
 
-        bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(int position) {
-                mTransaction = getSupportFragmentManager().beginTransaction();
-                mTransaction.setCustomAnimations(android.R.anim.fade_in, 0);
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(MenuItem item) {
+                    mTransaction = getSupportFragmentManager().beginTransaction();
 
-                switch (position) {
-                    case 0:
-                        mTransaction.replace(R.id.main_container, new PreTestFragment(), PRE_TEST);
-                        break;
-                    case 1:
-                        mTransaction.replace(R.id.main_container, new ProgressTabsFragment(), PROGRESS);
-                        break;
-                    case 2:
+                    switch (item.getItemId()) {
+                    case R.id.progression:
+                        mTransaction.replace(R.id.main_container, new ProgressFragment(), PROGRESS).commit();
+                        return true;
+                    case R.id.single_lesson:
                         mTransaction.replace(R.id.main_container, new SingleLessonFragment(),
-                                SINGLE_LESSON);
-                        break;
-                    case 3:
-                        mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON);
-                        break;
-                    default:
-                        break;
+                                             SINGLE_LESSON).commit();
+                        return true;
+                    case R.id.lesson:
+                        mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON).commit();
+                        return true;
+                    case R.id.settings:
+                        mTransaction.replace(R.id.main_container, new SettingsFragment()).commit();
+                        return true;
+                    }
+                    return false;
                 }
-                mTransaction.commit();
-            }
-
-            @Override
-            public void onTabUnselected(int position) {
-            }
-
-            @Override
-            public void onTabReselected(int position) {
-            }
-        });
+            });
 
         handleIntent(getIntent());
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.toolbar_main, menu);
-        return true;
     }
 
     @Override
@@ -160,18 +132,6 @@ public class MainActivity extends AppCompatActivity {
         intent.addCategory(Intent.CATEGORY_HOME);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
     }
 
     // Following methods are used for the search bar in the LessonFragment
@@ -196,5 +156,17 @@ public class MainActivity extends AppCompatActivity {
 
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setIconifiedByDefault(false);// Do not iconify the widget; expand it by default
+    }
+
+    @Override
+    protected void onResume() {
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        int selectedItemId = bottomNav.getSelectedItemId();
+
+        if(selectedItemId == R.id.progression) {
+            mTransaction = getSupportFragmentManager().beginTransaction();
+            mTransaction.replace(R.id.main_container, new ProgressFragment(), PROGRESS).commit();
+        }
+        super.onResume();
     }
 }

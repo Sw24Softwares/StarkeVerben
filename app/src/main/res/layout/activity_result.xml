@@ -22,6 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/nunito_regular"
                 android:textSize="30sp" />
 
             <TextView
@@ -29,6 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/nunito_regular"
                 android:textSize="30sp" />
 
             <LinearLayout
@@ -42,6 +44,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:fontFamily="@font/nunito_regular"
                     android:textSize="30sp" />
 
                 <TextView
@@ -49,6 +52,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:text=" "
+                    android:fontFamily="@font/nunito_regular"
                     android:textSize="30sp" />
 
                 <TextView
@@ -56,6 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:fontFamily="@font/nunito_regular"
                     android:textSize="30sp" />
 
             </LinearLayout>
@@ -65,12 +70,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
+                android:fontFamily="@font/nunito_regular"
                 android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/translation_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_regular"
                 android:textSize="30sp" />
 
         </RelativeLayout>

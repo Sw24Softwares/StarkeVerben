@@ -12,7 +12,7 @@
             android:name="org.sw24softwares.starkeverben.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:launchMode="singleTop"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.SEARCH" />
@@ -28,10 +28,6 @@
             android:configChanges="keyboardHidden|orientation|screenSize" />
         <activity android:name="org.sw24softwares.starkeverben.ResultActivity" />
 
-        <activity android:name="org.sw24softwares.starkeverben.SettingsActivity" />
-        <activity
-            android:name="org.sw24softwares.starkeverben.AboutActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="org.sw24softwares.starkeverben.FormOrderActivity" />
     </application>
 
