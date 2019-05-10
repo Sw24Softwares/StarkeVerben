@@ -7,7 +7,6 @@
     <string name="finish">Aufhören</string>
     <string name="go_on">Weitermachen</string>
     <string name="verify">Überprüfen</string>
-    <string name="save">Speichern</string>
     <string name="save_question">Abspeichern?</string>
     <string name="save_message">Zensur abspeichern</string>
     <string name="chart">Diagramm</string>
@@ -23,7 +22,6 @@
     <string name="search_hint">Suchen</string>
     <string name="pref">Einstellungen</string>
     <string name="pref_about">Über uns</string>
-    <string name="pref_about_app">Über diese App</string>
     <string name="pref_language_translation_title">Übersetzungssprache</string>
     <string name="pref_language_translation_summary">Wählen Sie die Übersetzungssprache</string>
     <string name="pref_language_translation_default">Automatisch</string>
@@ -31,8 +29,5 @@
     <string name="pref_given_forms_summary">Verbformen, die in Tests vorgeschlagen werden können</string>
     <string name="pref_form_order_title">Reihenfolge</string>
     <string name="version">Version</string>
-    <string name="connect">Kontakt</string>
-    <string name="dependencies">Abhängigkeiten</string>
-    <string name="developers">Entwickler</string>
     <string name="not_now">Nicht jetzt</string>
 </resources>

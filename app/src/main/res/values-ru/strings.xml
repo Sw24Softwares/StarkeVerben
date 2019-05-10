@@ -8,7 +8,6 @@
     <string name="finish">Закончить</string>
     <string name="go_on">Продолжить</string>
     <string name="verify">Проверить</string>
-    <string name="save">Сохранить</string>
     <string name="save_question">Сохранить?</string>
     <string name="save_message">Сохранить отметку.</string>
     <string name="chart">График</string>
@@ -28,7 +27,6 @@
 
     <string name="pref">Настройки</string>
     <string name="pref_about">Справка</string>
-    <string name="pref_about_app">О приложении</string>
     <string name="pref_language_translation_title">Язык перевода</string>
     <string name="pref_language_translation_summary">Выберите язык перевода</string>
     <string name="pref_language_translation_default">Автоматически</string>
@@ -37,7 +35,4 @@
     <string name="pref_form_order_title">Порядок полей</string>
 
     <string name="version">Версия</string>
-    <string name="connect">Связаться с авторами</string>
-    <string name="dependencies">Взаимосвязи</string>
-    <string name="developers">Разработчики</string>
 </resources>

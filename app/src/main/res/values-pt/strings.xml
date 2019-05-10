@@ -7,7 +7,6 @@
     <string name="finish">Finalizar</string>
     <string name="go_on">Continuar</string>
     <string name="verify">Verificar</string>
-    <string name="save">Guardar</string>
     <string name="save_question">Guardar\?</string>
     <string name="save_message">Guardar a marca</string>
     <string name="chart">Gráfico</string>
@@ -24,7 +23,6 @@
     <string name="search_hint">Procurar</string>
     <string name="pref">Configuração</string>
     <string name="pref_about">Sobre</string>
-    <string name="pref_about_app">Sobre esta aplicação</string>
     <string name="pref_language_translation_title">Idioma de tradução</string>
     <string name="pref_language_translation_summary">Escolha o idioma de tradução</string>
     <string name="pref_language_translation_default">Automático</string>
@@ -32,7 +30,4 @@
     <string name="pref_given_forms_summary">Tempos verbais que podem ser propostos nos testes</string>
     <string name="pref_form_order_title">Pedido de formulário</string>
     <string name="version">Versão</string>
-    <string name="connect">Contacte-nos</string>
-    <string name="dependencies">"Dependências "</string>
-    <string name="developers">Programadores</string>
 </resources>

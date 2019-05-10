@@ -7,7 +7,6 @@
     <string name="finish">Acabado</string>
     <string name="go_on">Continuar</string>
     <string name="verify">Verificar</string>
-    <string name="save">Guardar</string>
     <string name="save_question">¿Guardar\?</string>
     <string name="save_message">Guardar la marca</string>
     <string name="chart">Gráfico</string>
@@ -24,14 +23,10 @@
     <string name="search_hint">Buscar</string>
     <string name="pref">Ajustes</string>
     <string name="pref_about">Acerca de</string>
-    <string name="pref_about_app">Acerca de esta aplicación</string>
     <string name="pref_language_translation_title">Idioma de la traducción</string>
     <string name="pref_language_translation_summary">Seleccione el idioma de la traducción</string>
     <string name="pref_language_translation_default">Automático</string>
     <string name="pref_given_forms_title">Formularios propuestos en prueba</string>
     <string name="pref_given_forms_summary">Formas verbales que pueden proponerse en las pruebas</string>
     <string name="version">Versión</string>
-    <string name="connect">Póngase en contacto con nosotros</string>
-    <string name="dependencies">Dependencias</string>
-    <string name="developers">Desarrolladores</string>
 </resources>

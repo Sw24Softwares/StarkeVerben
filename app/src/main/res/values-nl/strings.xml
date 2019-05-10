@@ -6,7 +6,6 @@
     <string name="finish">Stoppen</string>
     <string name="go_on">Verder gaan</string>
     <string name="verify">Nakijken</string>
-    <string name="save">Opslaan</string>
     <string name="save_question">Opslaan\?</string>
     <string name="save_message">Deze score opslaan</string>
     <string name="chart">Diagram</string>
@@ -23,7 +22,6 @@
     <string name="search_hint">Zoeken</string>
     <string name="pref">Instellingen</string>
     <string name="pref_about">Over</string>
-    <string name="pref_about_app">Over deze App</string>
     <string name="pref_language_translation_title">Vertalingstaal</string>
     <string name="pref_language_translation_summary">Kies de vertalingstaal</string>
     <string name="pref_language_translation_default">Automatisch</string>
@@ -31,7 +29,4 @@
     <string name="pref_given_forms_summary">Werkwoordsvormen die aangeboden worden in de Test</string>
     <string name="pref_form_order_title">Volgorde</string>
     <string name="version">Versie</string>
-    <string name="connect">Contact</string>
-    <string name="dependencies">Afhankelijkheden</string>
-    <string name="developers">Ontwikkelaars</string>
 </resources>

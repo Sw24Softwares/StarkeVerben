@@ -7,7 +7,6 @@
     <string name="finish">Lõpeta</string>
     <string name="go_on">Jätka</string>
     <string name="verify">Kontrolli</string>
-    <string name="save">Salvesta</string>
     <string name="save_question">Salvestada\?</string>
     <string name="save_message">Salvesta hinne</string>
     <string name="chart">Diagramm</string>
@@ -25,7 +24,6 @@
     <string name="search_hint">Otsi</string>
     <string name="pref">Sätted</string>
     <string name="pref_about">Teave</string>
-    <string name="pref_about_app">Rakenduse teave</string>
     <string name="pref_language_translation_title">Tõlke keel</string>
     <string name="pref_language_translation_summary">Vali tõlke keel</string>
     <string name="pref_language_translation_default">Automaatne</string>
@@ -34,8 +32,5 @@
     <string name="pref_form_order_title">Vormi järjekord</string>
 
     <string name="version">Versioon</string>
-    <string name="connect">Võtke meiega ühendust</string>
-    <string name="dependencies">Sõltuvused</string>
-    <string name="developers">Arendajad</string>
     <string name="at">" "</string>
 </resources>
