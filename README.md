@@ -28,8 +28,6 @@ StarkeVerben is an Android application that aims to help people learning the Ger
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/03.png" width="20%">
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/04.png" width="20%">
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/05.png" width="20%">
-<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/06.png" width="20%">
-<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/07.png" width="20%">
 
 ## Translation
 As it is an application for an educational purpose, we want to reach a large number of people. Thus if you speak a language which is not available in our app, your help is welcome. [Here](https://hosted.weblate.org/projects/starke-verben) is the Weblate page where you can translate the application.
