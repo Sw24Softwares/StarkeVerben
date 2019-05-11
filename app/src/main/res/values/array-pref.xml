@@ -19,21 +19,27 @@
     <!-- Languages array -->
     <string-array name="language_entries">
         <item name="default">@string/pref_language_translation_default</item>
-        <item name="english">English</item>
         <item name="bosnian">Bosanski</item>
+        <item name="english">English</item>
         <item name="estonian">Eesti keel</item>
         <item name="french">Français</item>
         <item name="hungarian">Magyar</item>
+        <item name="dutch">Nederlands</item>
+        <item name="bokmal">Norsk Bokmål</item>
+        <item name="polish">Polski</item>
         <item name="romanian">Românesc</item>
         <item name="russian">Русский</item>
     </string-array>
     <string-array name="language_values">
         <item name="default"></item>
-        <item name="english">en</item>
         <item name="bosnian">bs</item>
+        <item name="english">en</item>
         <item name="estonian">et</item>
         <item name="french">fr</item>
         <item name="hungarian">hu</item>
+        <item name="dutch">nl</item>
+        <item name="bokmal">nb-rNO</item>
+        <item name="polish">pl</item>
         <item name="romanian">ro</item>
         <item name="russian">ru</item>
     </string-array>
