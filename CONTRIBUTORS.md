@@ -17,7 +17,11 @@
 
 <a href="https://github.com/NathanBnm">NathanBnm</a> - French
 
-<a href="https://github.com/afmachado">afmachado</a>  - Brazilian / Portuguese
+<a href="https://github.com/afmachado">afmachado</a> - Brazilian
+
+<a href="https://hosted.weblate.org/user/tonela">Rui Mendes</a> - Portuguese
+
+<a href="https://hosted.weblate.org/user/luca.dematte64">Luca Demattè</a> - Italian
 
 
 ## Coders
