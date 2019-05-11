@@ -80,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
         res = getResources();
 
         String s = Locale.getDefault().getLanguage();
-        Log.e("StarkeVerben", s);
         String[] availableLang = res.getStringArray(R.array.language_values);
         if (!Arrays.asList(availableLang).contains(s)
                 && PreferenceManager.getDefaultSharedPreferences(MainActivity.this)
