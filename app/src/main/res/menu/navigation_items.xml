@@ -1,10 +1,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-  <item android:id="@+id/progression"
-        android:title="@string/progression"
-        android:icon="@drawable/ic_timeline_black_24dp" />
   <item android:id="@+id/single_lesson"
         android:title="@string/single_lesson"
         android:icon="@drawable/ic_learn_black_24dp" />
+  <item android:id="@+id/progression"
+        android:title="@string/test"
+        android:icon="@drawable/ic_timeline_black_24dp" />
   <item android:id="@+id/lesson"
         android:title="@string/lesson"
         android:icon="@drawable/ic_list_black_24dp" />

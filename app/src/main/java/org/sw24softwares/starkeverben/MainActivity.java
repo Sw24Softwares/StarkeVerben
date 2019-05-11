@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         Settings.getSingleton().setFormString(5, res.getString(R.string.auxiliary));
 
         mTransaction = getSupportFragmentManager().beginTransaction();
-        mTransaction.add(R.id.main_container, new ProgressFragment(), PROGRESS).commit();
+        mTransaction.add(R.id.main_container, new SingleLessonFragment(), SINGLE_LESSON).commit();
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -105,12 +105,12 @@ public class MainActivity extends AppCompatActivity {
                     mTransaction = getSupportFragmentManager().beginTransaction();
 
                     switch (item.getItemId()) {
-                    case R.id.progression:
-                        mTransaction.replace(R.id.main_container, new ProgressFragment(), PROGRESS).commit();
-                        return true;
                     case R.id.single_lesson:
                         mTransaction.replace(R.id.main_container, new SingleLessonFragment(),
                                              SINGLE_LESSON).commit();
+                        return true;
+                    case R.id.progression:
+                        mTransaction.replace(R.id.main_container, new ProgressFragment(), PROGRESS).commit();
                         return true;
                     case R.id.lesson:
                         mTransaction.replace(R.id.main_container, new LessonFragment(), LESSON).commit();
