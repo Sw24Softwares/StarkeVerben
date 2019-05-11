@@ -70,7 +70,7 @@ public class SingleLessonFragment extends Fragment implements TextToSpeech.OnIni
 	preterit.setOnClickListener(new WordClickListener(preterit.getText().toString(), textToSpeech, Locale.GERMAN));
 	participe.setOnClickListener(new WordClickListener(aux.getText().toString() + " " + participe.getText().toString(), textToSpeech, Locale.GERMAN));
 	troisiemePersonne.setOnClickListener(new WordClickListener(troisiemePersonne.getText().toString(), textToSpeech, Locale.GERMAN));
-	traduction.setOnClickListener(new WordClickListener(traduction.getText().toString(), textToSpeech, Locale.US));
+	traduction.setOnClickListener(new WordClickListener(traduction.getText().toString(), textToSpeech, view.getResources().getConfiguration().locale));
 	aux.setOnClickListener(new WordClickListener(aux.getText().toString() + " " + participe.getText().toString(), textToSpeech, Locale.GERMAN));
         return view;
     }

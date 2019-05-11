@@ -1,6 +1,7 @@
 package org.sw24softwares.starkeverben;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,20 +9,28 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import android.speech.tts.TextToSpeech;
+
+import java.util.Locale;
 import java.util.HashMap;
 import java.util.List;
 
-public class ExpandableListAdapter extends BaseExpandableListAdapter {
+import org.sw24softwares.starkeverben.Core.Verb;
+
+
+public class ExpandableListAdapter extends BaseExpandableListAdapter implements TextToSpeech.OnInitListener {
     private Context mContext;
     private List<String> mListDataHeader;// header titles
     // child data in format of header title, child title
     private HashMap<String, List<String>> mListDataChild;
+    TextToSpeech textToSpeech;
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<String>> listChildData) {
         this.mContext = context;
         this.mListDataHeader = listDataHeader;
         this.mListDataChild = listChildData;
+	textToSpeech = new TextToSpeech(context, this);
     }
 
     @Override
@@ -48,8 +57,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
         TextView txtListChild =
                 convertView.findViewById(R.id.lesson_expandable_item_text);
-
-        txtListChild.setText(childText);
+	Locale l = (childPosition == 4 ? mContext.getResources().getConfiguration().locale : Locale.GERMAN); 
+	txtListChild.setOnClickListener(new WordClickListener(childText, textToSpeech, l));
+        txtListChild.setText(Verb.formToWord(childPosition) + " : " + childText);
         return convertView;
     }
 
@@ -99,5 +109,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return true;
+    }
+
+    @Override
+    public void onInit(int status) {
+	if (status == TextToSpeech.SUCCESS) {
+            int result = textToSpeech.setLanguage(Locale.GERMAN);
+        }
     }
 }

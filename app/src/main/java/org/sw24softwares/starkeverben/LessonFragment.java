@@ -63,13 +63,13 @@ public class LessonFragment extends Fragment {
             Boolean contain = false;
             List<String> details = new ArrayList<>();
             for (int j = 0; j < v.getAllForms().size(); j++) {
-                String caseVerb = Verb.formToWord(j) + " : " + v.getPrintedForm(j, false);
+                String caseVerb = v.getPrintedForm(j, false);
                 for (int k = 0; k < v.getAllForms().get(j).size(); k++)
                     if (v.getAllForms().get(j).get(k).contains(search_word))
                         contain = true;
                 details.add(caseVerb);
             }
-            String caseVerb = Verb.formToWord(5) + " : " + Verb.boolToAux(v.getAuxiliary());
+            String caseVerb = Verb.boolToAux(v.getAuxiliary());
             details.add(caseVerb);
 
             if (contain || search_word.isEmpty()) {
