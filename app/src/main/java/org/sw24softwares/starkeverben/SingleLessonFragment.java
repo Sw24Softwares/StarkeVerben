@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.speech.tts.TextToSpeech;
 
 import org.sw24softwares.starkeverben.Core.Settings;
 import org.sw24softwares.starkeverben.Core.Verb;
@@ -18,7 +19,8 @@ import org.sw24softwares.starkeverben.Core.Verb;
 import java.util.Locale;
 import java.util.Random;
 
-public class SingleLessonFragment extends Fragment {
+public class SingleLessonFragment extends Fragment implements TextToSpeech.OnInitListener {
+    TextToSpeech textToSpeech;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -61,7 +63,22 @@ public class SingleLessonFragment extends Fragment {
         troisiemePersonne.setText(verb.getThirdPersons().get(0));
         traduction.setText(translations.toString());
         aux.setText(auxiliary);
+	
+	textToSpeech = new TextToSpeech(getActivity(), this);
 
+	infinitif.setOnClickListener(new WordClickListener(infinitif.getText().toString(), textToSpeech, Locale.GERMAN));
+	preterit.setOnClickListener(new WordClickListener(preterit.getText().toString(), textToSpeech, Locale.GERMAN));
+	participe.setOnClickListener(new WordClickListener(aux.getText().toString() + " " + participe.getText().toString(), textToSpeech, Locale.GERMAN));
+	troisiemePersonne.setOnClickListener(new WordClickListener(troisiemePersonne.getText().toString(), textToSpeech, Locale.GERMAN));
+	traduction.setOnClickListener(new WordClickListener(traduction.getText().toString(), textToSpeech, Locale.US));
+	aux.setOnClickListener(new WordClickListener(aux.getText().toString() + " " + participe.getText().toString(), textToSpeech, Locale.GERMAN));
         return view;
+    }
+
+    @Override
+    public void onInit(int status) {
+	if (status == TextToSpeech.SUCCESS) {
+            int result = textToSpeech.setLanguage(Locale.GERMAN);
+        }
     }
 }
