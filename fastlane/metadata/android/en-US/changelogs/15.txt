@@ -1,2 +1,2 @@
 - FRESH NEW INTERFACE!
-= Add translations
+- Add translations
