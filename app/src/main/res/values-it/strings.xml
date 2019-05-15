@@ -1,27 +1,25 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="test">Verifica</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="test">Verifica</string>
     <string name="progression">Progresso</string>
     <string name="lesson">Elenco</string>
     <string name="single_lesson">Lezione</string>
-
     <string name="finish">Finisci</string>
     <string name="go_on">Continua</string>
     <string name="verify">Verifica</string>
     <string name="save">Salva</string>
     <string name="save_question">Salvare?</string>
-    <string name="save_message">Salva il punteggio.</string>
+    <string name="save_message">Salva il punteggio</string>
     <string name="chart">Grafico</string>
     <string name="yes">Sì</string>
     <string name="no">No</string>
     <string name="not_now">Non ora</string>
-    
     <string name="infinitive">Infinito</string>
     <string name="preterite">Perfetto</string>
     <string name="participe">Participio</string>
     <string name="third_person">Terza persona</string>
     <string name="traduction">Traduzione</string>
     <string name="auxiliary">Ausiliario</string>
-
     <string name="search_hint">Cerca</string>
     <string name="pref">Impostazioni</string>
     <string name="pref_about">Informazioni su</string>
@@ -29,8 +27,12 @@
     <string name="pref_language_translation_summary">Scegli il linguaggio su cui vuoi tradurre</string>
     <string name="pref_language_translation_default">Automatico</string>
     <string name="pref_given_forms_title">Moduli proposti nella verifica</string>
-    <string name="pref_given_forms_summary">Forme verbali potenzialmente proposte nella verifica</string>
+    <string name="pref_given_forms_summary">Forme verbali che possono essere proposte nelle verifiche</string>
     <string name="version">Versione</string>
     <string name="connect">Contattaci</string>
     <string name="developers">Sviluppatori</string>
-    </resources>
+    <string name="at">a</string>
+    <string name="pref_about_app">Riguardo questa app</string>
+    <string name="pref_form_order_title">Richiesta del modulo</string>
+    <string name="dependencies">Dipendenze</string>
+</resources>
