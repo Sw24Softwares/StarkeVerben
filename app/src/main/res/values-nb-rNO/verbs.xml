@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources><string name="backen">å bake</string>
+<resources>
+    <string name="backen">å bake</string>
     <string name="beginnen">å begynne</string>
     <string name="bieten">å tilby</string>
     <string name="bringen">å bringe</string>
@@ -69,4 +70,33 @@
     <string name="ziehen">å flytte</string>
     <string name="ziehen1">å dra</string>
     <string name="zwingen">å tvinge</string>
+    <string name="binden">å binde, å knytte</string>
+    <string name="bitten">å forespørre, å spørre</string>
+    <string name="bleiben">å bli, å forbli</string>
+    <string name="brechen">å knekke</string>
+    <string name="greifen">å ta, å gripe</string>
+    <string name="halten">å holde</string>
+    <string name="klingen">å lyde</string>
+    <string name="lassen">å la, å forlate</string>
+    <string name="leihen">å låne, å leie</string>
+    <string name="liegen">å ligge (adposisjon)</string>
+    <string name="lugen">Å lyge</string>
+    <string name="nennen">å navngi, å kalle</string>
+    <string name="reissen">å rive, å flenge</string>
+    <string name="rufen">å kalle, å ringe</string>
+    <string name="scheinen">å synes (tilsynelatende), å skinne</string>
+    <string name="schmeissen">å slenge</string>
+    <string name="schreien">å rope, å kauke</string>
+    <string name="schreiten">å skride</string>
+    <string name="sehen">å se</string>
+    <string name="stossen">å dytte, å banke på</string>
+    <string name="streiten">å krangle/argumentere</string>
+    <string name="tragen">å bære, å ha på seg</string>
+    <string name="treiben">å drive, å drifte</string>
+    <string name="treten">å tre, å sparke</string>
+    <string name="verschlingen">å fortære</string>
+    <string name="verschwinden">å fordufte, å forsvinne</string>
+    <string name="weichen">å gi etter, å gi bort</string>
+    <string name="wenden">å svinge</string>
+    <string name="werben">å reklamere, å rekruttere</string>
 </resources>
