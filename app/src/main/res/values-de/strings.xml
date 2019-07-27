@@ -4,11 +4,11 @@
     <string name="progression">Entwicklung</string>
     <string name="lesson">Liste</string>
     <string name="single_lesson">Lektion</string>
-    <string name="finish">Aufhören</string>
-    <string name="go_on">Weitermachen</string>
-    <string name="verify">Überprüfen</string>
+    <string name="finish">Beenden</string>
+    <string name="go_on">Weiter</string>
+    <string name="verify">Prüfen</string>
     <string name="save">Speichern</string>
-    <string name="save_question">Abspeichern?</string>
+    <string name="save_question">Speichern\?</string>
     <string name="save_message">Zensur abspeichern</string>
     <string name="chart">Diagramm</string>
     <string name="yes">Ja</string>
