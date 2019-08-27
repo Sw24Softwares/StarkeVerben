@@ -33,6 +33,6 @@
     <string name="developers">Sviluppatori</string>
     <string name="at">a</string>
     <string name="pref_about_app">Riguardo questa app</string>
-    <string name="pref_form_order_title">Richiesta del modulo</string>
+    <string name="pref_form_order_title">Ordine delle forme verbali</string>
     <string name="dependencies">Dipendenze</string>
 </resources>
