@@ -4,7 +4,6 @@
     <string name="progression">Progression</string>
     <string name="lesson">Liste</string>
     <string name="single_lesson">Leçon</string>
-
     <string name="finish">Terminer</string>
     <string name="go_on">Continuer</string>
     <string name="verify">Vérifier</string>
@@ -14,18 +13,14 @@
     <string name="chart">Graphique</string>
     <string name="yes">Oui</string>
     <string name="no">Non</string>
-
     <string name="at">à</string>
-
     <string name="infinitive">Infinitif</string>
     <string name="preterite">Prétérit</string>
     <string name="participe">Participe p.</string>
-    <string name="third_person">3e Personne</string>
+    <string name="third_person">3e personne</string>
     <string name="traduction">Traduction</string>
     <string name="auxiliary">Auxiliaire</string>
-
     <string name="search_hint">Rechercher</string>
-
     <string name="pref">Paramètres</string>
     <string name="pref_about">À propos</string>
     <string name="pref_about_app">À propos de cette application</string>
@@ -35,11 +30,9 @@
     <string name="pref_given_forms_title">Formes proposées dans les tests</string>
     <string name="pref_given_forms_summary">Formes verbales pouvant être proposées dans les tests</string>
     <string name="pref_form_order_title">Ordre des formes verbales</string>
-
     <string name="version">Version</string>
     <string name="connect">Contactez-nous</string>
     <string name="dependencies">Dépendances</string>
     <string name="developers">Développeurs</string>
-<string name="not_now">Pas maintenant</string>
-    
-    </resources>
+    <string name="not_now">Pas maintenant</string>
+</resources>
