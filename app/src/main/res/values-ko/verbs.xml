@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="backen">굽다</string>
+    <string name="beginnen">시작하다</string>
+    <string name="bieten">제공하다</string>
+    <string name="binden">묶다</string>
+    <string name="bitten">부탁하다, 요청하다</string>
+    <string name="bleiben">머무르다, 중단되다</string>
+    <string name="brechen">부수다</string>
+    <string name="bringen">운반하다, 가져오다, 제출하다</string>
+    <string name="denken">생각하다</string>
+</resources>
