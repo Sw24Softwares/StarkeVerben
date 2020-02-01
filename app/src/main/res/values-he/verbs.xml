@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="schwimmen">לשחות</string>
-    <string name="streiten">להתווכח</string>
+    <string name="streiten">להתווכח,להילחם</string>
     <string name="ziehen1">למשוך</string>
     <string name="nehmen">לקחת</string>
     <string name="schreiten">לפסוע,לצעוד</string>
@@ -84,7 +84,7 @@
     <string name="liegen">לשכב</string>
     <string name="gewinnen">לנצח,להרוויח,להשיג</string>
     <string name="graben">לחפור</string>
-    <string name="stossen">לדחוף,להפיל</string>
+    <string name="stossen">לדחוף</string>
     <string name="waschen">לשטוף,לרחוץ</string>
     <string name="scheinen">לעשות רושם,להיראות</string>
     <string name="geben">לתת,להעניק</string>
