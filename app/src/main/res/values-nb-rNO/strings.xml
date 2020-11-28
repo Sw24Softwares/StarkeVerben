@@ -1,9 +1,9 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources><string name="test">Test</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="test">Test</string>
     <string name="progression">Framdrift</string>
     <string name="lesson">Liste</string>
     <string name="single_lesson">Leksjon</string>
-
     <string name="finish">Fullfør</string>
     <string name="go_on">Fortsett</string>
     <string name="verify">Bekreft</string>
@@ -14,16 +14,13 @@
     <string name="yes">Ja</string>
     <string name="no">Nei</string>
     <string name="not_now">Ikke nå</string>
-    
-    <string name="at">den</string>
-
+    <string name="at">på</string>
     <string name="infinitive">Infinitiv</string>
     <string name="preterite">Preteritum</string>
     <string name="participe">Partisipp</string>
     <string name="third_person">Tredjeperson</string>
     <string name="traduction">Oversettelse</string>
     <string name="auxiliary">Hjelpeverb</string>
-
     <string name="search_hint">Søk</string>
     <string name="pref">Innstillinger</string>
     <string name="pref_about">Om</string>
@@ -34,9 +31,8 @@
     <string name="pref_given_forms_title">Mulige former i test</string>
     <string name="pref_given_forms_summary">Mulige verbformer brukt i tester</string>
     <string name="pref_form_order_title">Formrekkefølge</string>
-
     <string name="version">Versjon</string>
     <string name="connect">Kontakt</string>
     <string name="dependencies">Avhengigheter</string>
     <string name="developers">Utviklere</string>
-    </resources>
+</resources>
