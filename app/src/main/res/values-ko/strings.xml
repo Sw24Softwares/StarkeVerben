@@ -29,4 +29,10 @@
     <string name="version">버전</string>
     <string name="dependencies">의존성</string>
     <string name="developers">개발자들</string>
+    <string name="connect">우리와 함께 연락</string>
+    <string name="auxiliary">보조</string>
+    <string name="at">at</string>
+    <string name="not_now">지금 말고</string>
+    <string name="save_message">표시 저장</string>
+    <string name="progression">진행</string>
 </resources>
