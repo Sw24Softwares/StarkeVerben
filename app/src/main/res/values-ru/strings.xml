@@ -28,7 +28,7 @@
     <string name="pref_language_translation_summary">Выберите язык перевода</string>
     <string name="pref_language_translation_default">Автоматически</string>
     <string name="pref_given_forms_title">Предлагаемые формы в тесте</string>
-    <string name="pref_given_forms_summary">Формы глаголов, которые могут предлагаться в тестах</string>
+    <string name="pref_given_forms_summary">Глагольные формы, которые могут быть предложены в тестах</string>
     <string name="pref_form_order_title">Порядок полей</string>
     <string name="version">Версия</string>
     <string name="connect">Связаться с авторами</string>
