@@ -34,5 +34,5 @@
     <string name="connect">Võtke meiega ühendust</string>
     <string name="dependencies">Sõltuvused</string>
     <string name="developers">Arendajad</string>
-    <string name="at"></string>
+    <string name="at">" "</string>
 </resources>
