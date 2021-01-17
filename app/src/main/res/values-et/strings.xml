@@ -27,7 +27,7 @@
     <string name="pref_language_translation_title">Tõlke keel</string>
     <string name="pref_language_translation_summary">Vali tõlke keel</string>
     <string name="pref_language_translation_default">Automaatne</string>
-    <string name="pref_given_forms_title">"Testis pakutud  verbi kuju"</string>
+    <string name="pref_given_forms_title">Testis pakutud verbi kuju</string>
     <string name="pref_given_forms_summary">Tegusõna vormid, mis võivad testis esineda</string>
     <string name="pref_form_order_title">Vormi järjekord</string>
     <string name="version">Versioon</string>
