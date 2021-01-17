@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources><string name="test">Test</string>
+<resources>
+    <string name="test">Test</string>
     <string name="progression">Edenemine</string>
     <string name="lesson">Nimekiri</string>
     <string name="single_lesson">Õppetund</string>
-
     <string name="finish">Lõpeta</string>
     <string name="go_on">Jätka</string>
     <string name="verify">Kontrolli</string>
@@ -14,14 +14,12 @@
     <string name="yes">Jah</string>
     <string name="no">Ei</string>
     <string name="not_now">Mitte praegu</string>
-    
     <string name="infinitive">Algvorm</string>
     <string name="preterite">Üldminevik</string>
     <string name="participe">Kesksõna</string>
     <string name="third_person">Kolmas isik</string>
     <string name="traduction">Tõlge</string>
     <string name="auxiliary">Täiend</string>
-
     <string name="search_hint">Otsi</string>
     <string name="pref">Sätted</string>
     <string name="pref_about">Teave</string>
@@ -32,10 +30,9 @@
     <string name="pref_given_forms_title">"Testis pakutud  verbi kuju"</string>
     <string name="pref_given_forms_summary">Tegusõna vormid, mis võivad testis esineda</string>
     <string name="pref_form_order_title">Vormi järjekord</string>
-
     <string name="version">Versioon</string>
     <string name="connect">Võtke meiega ühendust</string>
     <string name="dependencies">Sõltuvused</string>
     <string name="developers">Arendajad</string>
-    <string name="at">" "</string>
+    <string name="at">can\'t translate directly because in estonian cases used instead prepositions</string>
 </resources>
