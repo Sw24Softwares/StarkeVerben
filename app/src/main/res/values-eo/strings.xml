@@ -1,2 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="developers">Programistoj</string>
+    <string name="dependencies">Dependaĵoj</string>
+    <string name="connect">Kontaktu nin</string>
+    <string name="version">Versio</string>
+    <string name="pref_form_order_title">Ordo de formoj</string>
+    <string name="pref_given_forms_summary">Verboformoj proponotaj en testoj</string>
+    <string name="pref_given_forms_title">Proponotaj formoj en testo</string>
+    <string name="pref_language_translation_default">Aŭtomate</string>
+    <string name="pref_language_translation_summary">Elekti la tradukan lingvon</string>
+    <string name="pref_language_translation_title">Traduka lingvo</string>
+    <string name="pref_about_app">Pri ĉi tiu aplikaĵo</string>
+    <string name="pref_about">Pri</string>
+    <string name="pref">Agordoj</string>
+    <string name="search_hint">Serĉi</string>
+    <string name="auxiliary">Helpverbo</string>
+    <string name="traduction">Traduko</string>
+    <string name="third_person">3a Persono</string>
+    <string name="participe">Participo</string>
+    <string name="preterite">Preterito</string>
+    <string name="infinitive">Infinitivo</string>
+    <string name="at">ĉe</string>
+    <string name="not_now">Ne nun</string>
+    <string name="no">Ne</string>
+    <string name="yes">Jes</string>
+    <string name="chart">Diagramo</string>
+    <string name="save_message">Konservi la markon</string>
+    <string name="save_question">Ĉu konservi\?</string>
+    <string name="save">Konservi</string>
+    <string name="verify">Konfirmi</string>
+    <string name="go_on">Daŭrigi</string>
+    <string name="finish">Fini</string>
+    <string name="single_lesson">Leciono</string>
+    <string name="lesson">Listo</string>
+    <string name="progression">Progreso</string>
+    <string name="test">Testo</string>
+</resources>
