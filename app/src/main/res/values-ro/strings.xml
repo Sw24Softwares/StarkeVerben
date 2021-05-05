@@ -9,7 +9,7 @@
     <string name="verify">Verifică</string>
     <string name="save">Salvează</string>
     <string name="save_question">Salvează?</string>
-    <string name="save_message">Salvați marca</string>
+    <string name="save_message">Salvează semnul</string>
     <string name="chart">Grafic</string>
     <string name="yes">Da</string>
     <string name="no">Nu</string>
@@ -23,16 +23,16 @@
     <string name="search_hint">Caută</string>
     <string name="developers">Dezvoltatori</string>
     <string name="dependencies">Dependențe</string>
-    <string name="connect">Ia legătura cu noi</string>
+    <string name="connect">Contactează-ne</string>
     <string name="version">Versiune</string>
     <string name="pref_form_order_title">Comandă formular</string>
     <string name="pref_given_forms_summary">Forme verbale care pot fi propuse în teste</string>
     <string name="pref_given_forms_title">Formularele propuse în test</string>
     <string name="pref_language_translation_default">Automat</string>
-    <string name="pref_language_translation_summary">Alegeți limba de traducere</string>
-    <string name="pref_language_translation_title">Limba de traducere</string>
+    <string name="pref_language_translation_summary">Alege limba de traducere</string>
+    <string name="pref_language_translation_title">Limba traducătoare</string>
     <string name="pref_about_app">Despre această aplicație</string>
     <string name="pref_about">Despre</string>
-    <string name="pref">Configurări</string>
+    <string name="pref">Setări</string>
     <string name="not_now">Nu acum</string>
 </resources>
