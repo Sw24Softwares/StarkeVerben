@@ -35,4 +35,11 @@
     <string name="lesson">Список</string>
     <string name="progression">Прогрес</string>
     <string name="test">Тест</string>
+    <string name="contribution_url" translatable="false"></string>
+    <string name="app_label" translatable="false"></string>
+    <string name="contribute_trans" translatable="false"></string>
+    <string name="translate_message" translatable="false"></string>
+    <string name="about_page_description" translatable="false"></string>
+    <string name="app_name" translatable="false"></string>
+    <string name="translate_alert" translatable="false"></string>
 </resources>
