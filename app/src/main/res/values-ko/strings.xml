@@ -35,11 +35,11 @@
     <string name="not_now">지금 말고</string>
     <string name="save_message">표시 저장</string>
     <string name="progression">진행</string>
-    <string name="app_name" translatable="false"/>
-    <string name="app_label" translatable="false"/>
-    <string name="contribute_trans" translatable="false"/>
-    <string name="about_page_description" translatable="false"/>
-    <string name="contribution_url" translatable="false"/>
-    <string name="translate_alert" translatable="false"/>
-    <string name="translate_message" translatable="false"/>
+    <string name="app_name" translatable="false"></string>
+    <string name="app_label" translatable="false"></string>
+    <string name="contribute_trans" translatable="false"></string>
+    <string name="about_page_description" translatable="false"></string>
+    <string name="contribution_url" translatable="false"></string>
+    <string name="translate_alert" translatable="false"></string>
+    <string name="translate_message" translatable="false"></string>
 </resources>
