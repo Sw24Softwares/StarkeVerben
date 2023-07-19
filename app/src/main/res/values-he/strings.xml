@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="test">בדיקה</string>
+    <string name="progression">התקדמות</string>
+    <string name="lesson">רשימה</string>
+    <string name="single_lesson">שיעור</string>
+    <string name="finish">סיום</string>
+    <string name="go_on">המשך</string>
+    <string name="verify">אימות</string>
+    <string name="save">שמירה</string>
+    <string name="save_question">לשמור\?</string>
+    <string name="save_message">שמירת הסימון</string>
+    <string name="chart">תרשים</string>
+    <string name="yes">כן</string>
+    <string name="no">לא</string>
+    <string name="not_now">לא עכשיו</string>
+    <string name="at">ב־</string>
+    <string name="infinitive">שם הפועל</string>
+    <string name="preterite">עבר פשוט</string>
+    <string name="participe">בינוני פועל</string>
+    <string name="third_person">גוף שלישי</string>
+    <string name="traduction">תרגום</string>
+    <string name="auxiliary">מושא</string>
+    <string name="search_hint">חיפוש</string>
+    <string name="pref">הגדרות</string>
+    <string name="pref_about">על אודות</string>
+    <string name="pref_about_app">על יישומון זה</string>
+    <string name="pref_language_translation_title">שפת התרגום</string>
+    <string name="pref_language_translation_summary">נא לבחור את שפת התרגום</string>
+    <string name="pref_language_translation_default">אוטומטי</string>
+    <string name="pref_given_forms_title">צורות מוצעות בבחינה</string>
+    <string name="pref_given_forms_summary">צורות פעלים שעשויות להופיע בבחינה</string>
+    <string name="pref_form_order_title">סדר הצורות</string>
+    <string name="version">גרסה</string>
+    <string name="connect">ליצור אתנו קשר</string>
+    <string name="dependencies">תלויות</string>
+    <string name="developers">מפתחים</string>
+    <string name="app_label" translatable="false"></string>
+    <string name="translate_message" translatable="false"></string>
+    <string name="contribution_url" translatable="false"></string>
+    <string name="app_name" translatable="false"></string>
+    <string name="about_page_description" translatable="false"></string>
+    <string name="translate_alert" translatable="false"></string>
+    <string name="contribute_trans" translatable="false"></string>
+</resources>

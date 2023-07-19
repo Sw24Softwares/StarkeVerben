@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources><string name="test">Test</string>
+<resources>
+    <string name="test">Test</string>
     <string name="progression">Voortgang</string>
     <string name="lesson">Lijst</string>
     <string name="single_lesson">Les</string>

@@ -1,40 +1,37 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="test">Ispit</string>
     <string name="progression">Napredak</string>
     <string name="lesson">Sadržaj</string>
     <string name="single_lesson">Vježba</string>
-
     <string name="finish">Završiti</string>
     <string name="go_on">Nastaviti</string>
     <string name="verify">Provjeriti</string>
-    <string name="save_question">Spasiti?</string>
-    <string name="save_message">Spasiti ocjenu.</string>
+    <string name="save">Spasiti</string>
+    <string name="save_question">Spasiti\?</string>
+    <string name="save_message">Snimi znak</string>
     <string name="chart">Grafikon</string>
     <string name="yes">Da</string>
     <string name="no">Ne</string>
-
     <string name="at">u</string>
-
     <string name="infinitive">Infinitiv</string>
     <string name="preterite">Preterit</string>
     <string name="participe">Particip</string>
     <string name="third_person">3. Lice</string>
     <string name="traduction">Prevod</string>
     <string name="auxiliary">Pomoćnik</string>
-
     <string name="search_hint">Pretraga</string>
-
     <string name="pref">Postavke</string>
     <string name="pref_about">O nama</string>
     <string name="pref_language_translation_title">Jezik za prevod glagola</string>
     <string name="pref_language_translation_summary">Izaberite jezik za prevod glagola</string>
     <string name="pref_language_translation_default">Automatski</string>
     <string name="pref_given_forms_title">Predloženi glagolski oblici</string>
-    <string name="pref_given_forms_summary">Predloženi glagolski oblici u ispit</string>
+    <string name="pref_given_forms_summary">Forme koje se mogu predložiti u testovima</string>
     <string name="pref_form_order_title">Raspored glagolske forme</string>
-
     <string name="version">Verzija</string>
-<string name="not_now">Ne sada</string>
-    
-    </resources>
+    <string name="connect">Naše stranice</string>
+    <string name="developers">Developeri</string>
+    <string name="not_now">Ne sada</string>
+    <string name="dependencies">Zavisnosti</string>
+</resources>

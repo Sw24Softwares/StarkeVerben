@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="test">Test</string>
+    <string name="progression">Napredak</string>
+    <string name="lesson">Popis</string>
+    <string name="single_lesson">Lekcija</string>
+    <string name="finish">Završi</string>
+    <string name="go_on">Nastavi</string>
+    <string name="verify">Provjeri</string>
+    <string name="save">Spremi</string>
+    <string name="save_question">Spremiti\?</string>
+    <string name="save_message">Spremi ocjenu</string>
+    <string name="chart">Grafikon</string>
+    <string name="yes">Da</string>
+    <string name="no">Ne</string>
+    <string name="not_now">Ne sada</string>
+    <string name="at">u</string>
+    <string name="infinitive">Infinitiv</string>
+    <string name="preterite">Preterit</string>
+    <string name="participe">Particip</string>
+    <string name="third_person">3. lice</string>
+    <string name="traduction">Prijevod</string>
+    <string name="auxiliary">Pomoćni glagol</string>
+    <string name="search_hint">Traži</string>
+    <string name="pref">Postavke</string>
+    <string name="pref_about">Informacije</string>
+    <string name="pref_about_app">O ovom programu</string>
+    <string name="pref_language_translation_title">Jezik prijevoda</string>
+    <string name="pref_language_translation_summary">Odaberi jezik prijevoda</string>
+    <string name="pref_language_translation_default">Automatski</string>
+    <string name="pref_given_forms_title">Predloženi oblici u testu</string>
+    <string name="pref_given_forms_summary">Mogući predloženi glagolski oblici u testu</string>
+    <string name="pref_form_order_title">Redoslijed oblika</string>
+    <string name="version">Verzija</string>
+    <string name="connect">Kontaktiraj nas</string>
+    <string name="dependencies">Ovisnosti</string>
+    <string name="developers">Razvijatelji</string>
+    <string name="about_page_description" translatable="false"></string>
+    <string name="app_name" translatable="false"></string>
+    <string name="contribution_url" translatable="false"></string>
+    <string name="translate_alert" translatable="false"></string>
+    <string name="translate_message" translatable="false"></string>
+    <string name="contribute_trans" translatable="false"></string>
+    <string name="app_label" translatable="false"></string>
+</resources>

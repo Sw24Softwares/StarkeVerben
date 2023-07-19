@@ -29,4 +29,8 @@
     <string name="pref_given_forms_title">Formularios propuestos en prueba</string>
     <string name="pref_given_forms_summary">Formas verbales que pueden proponerse en las pruebas</string>
     <string name="version">Versión</string>
+    <string name="connect">Póngase en contacto con nosotros</string>
+    <string name="dependencies">Dependencias</string>
+    <string name="developers">Desarrolladores</string>
+    <string name="pref_form_order_title">Formulario de pedido</string>
 </resources>
