@@ -34,4 +34,6 @@
     <string name="dependencies">Dépendances</string>
     <string name="developers">Développeurs</string>
     <string name="not_now">Pas maintenant</string>
+    <string name="contributors">Contributeurs</string>
+    <string name="no_progress_data">Passer un test en appuyant sur le bouton orange</string>
 </resources>
