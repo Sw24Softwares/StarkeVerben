@@ -15,7 +15,6 @@
     <a href="https://hosted.weblate.org/engage/starke-verben/?utm_source=widget"><img src="https://hosted.weblate.org/widgets/starke-verben/-/svg-badge.svg" alt="Translation status" /></a>
     <a href="https://travis-ci.org/Sw24Softwares/StarkeVerben"><img src="https://travis-ci.org/Sw24Softwares/StarkeVerben.svg?branch=master" alt="Build Status"></a>
     <a href="https://github.com/Sw24Softwares/StarkeVerben/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-GPL_v3.0-blue.svg" alt="License"></a>
-    <a href="https://gitter.im/Sw24Softwares/StarkeVerben?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/Sw24Softwares/StarkeVerben.svg" alt="Gitter"></a>
 </p>
 
 ---
@@ -31,8 +30,6 @@ StarkeVerben is an Android application that aims to help people learning the Ger
 
 ## Translation
 As it is an application for an educational purpose, we want to reach a large number of people. Thus if you speak a language which is not available in our app, your help is welcome. [Here](https://hosted.weblate.org/projects/starke-verben) is the Weblate page where you can translate the application.
-
-You can contact us for help via [Gitter](https://gitter.im/Sw24Softwares/StarkeVerben).
 
 For other contribution, please see [this](https://github.com/Sw24Softwares/StarkeVerben/blob/master/CONTRIBUTING.md).
 
