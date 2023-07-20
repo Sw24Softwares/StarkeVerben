@@ -41,7 +41,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         github.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Sw24Softwares/StarkeVerben")));
 
         if(Build.VERSION.SDK_INT >= 21) {
-            weblate.setIcon(R.drawable.ic_weblate_black);
+            weblate.setIcon(R.drawable.ic_weblate);
             github.setIcon(R.drawable.ic_github_black);
         }
 
