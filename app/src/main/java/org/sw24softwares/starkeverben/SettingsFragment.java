@@ -40,13 +40,9 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         PreferenceScreen github = (PreferenceScreen) findPreference("prefGithub");
         github.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Sw24Softwares/StarkeVerben")));
 
-        PreferenceScreen gitter = (PreferenceScreen) findPreference("prefGitter");
-        gitter.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://gitter.im/Sw24Softwares/StarkeVerben")));
-
         if(Build.VERSION.SDK_INT >= 21) {
             weblate.setIcon(R.drawable.ic_weblate_black);
             github.setIcon(R.drawable.ic_github_black);
-            gitter.setIcon(R.drawable.ic_gitter_black);
         }
 
         PreferenceScreen hamzaDev = (PreferenceScreen) findPreference("prefHamzaDev");
@@ -55,7 +51,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         PreferenceScreen louisDev = (PreferenceScreen) findPreference("prefLouisDev");
         louisDev.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Swarthon")));
 
-        PreferenceScreen naufalDesigner = (PreferenceScreen) findPreference("prefContributors");
-        naufalDesigner.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Sw24Softwares/StarkeVerben/blob/master/CONTRIBUTORS.md")));
+        PreferenceScreen contributors = (PreferenceScreen) findPreference("prefContributors");
+        contributors.setIntent(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Sw24Softwares/StarkeVerben/blob/master/CONTRIBUTORS.md")));
     }
 }

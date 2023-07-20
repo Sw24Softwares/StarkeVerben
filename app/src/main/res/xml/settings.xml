@@ -32,9 +32,6 @@
             android:key="prefGithub"
             android:title="Github" />
         <PreferenceScreen
-            android:key="prefGitter"
-            android:title="Gitter" />
-        <PreferenceScreen
             android:key="prefHamzaDev"
             android:title="Hamza Parnica" />
         <PreferenceScreen
