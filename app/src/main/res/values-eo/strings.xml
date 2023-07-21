@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="developers">Programistoj</string>
-    <string name="dependencies">Dependaĵoj</string>
-    <string name="connect">Kontaktu nin</string>
     <string name="version">Versio</string>
     <string name="pref_form_order_title">Ordo de formoj</string>
     <string name="pref_given_forms_summary">Verboformoj proponotaj en testoj</string>
@@ -10,7 +7,6 @@
     <string name="pref_language_translation_default">Aŭtomate</string>
     <string name="pref_language_translation_summary">Elekti la tradukan lingvon</string>
     <string name="pref_language_translation_title">Traduka lingvo</string>
-    <string name="pref_about_app">Pri ĉi tiu aplikaĵo</string>
     <string name="pref_about">Pri</string>
     <string name="pref">Agordoj</string>
     <string name="search_hint">Serĉi</string>
@@ -27,7 +23,6 @@
     <string name="chart">Diagramo</string>
     <string name="save_message">Konservi la markon</string>
     <string name="save_question">Ĉu konservi\?</string>
-    <string name="save">Konservi</string>
     <string name="verify">Konfirmi</string>
     <string name="go_on">Daŭrigi</string>
     <string name="finish">Fini</string>
@@ -40,6 +35,5 @@
     <string name="contribution_url" translatable="false"></string>
     <string name="app_label" translatable="false"></string>
     <string name="translate_alert" translatable="false"></string>
-    <string name="about_page_description" translatable="false"></string>
     <string name="translate_message" translatable="false"></string>
 </resources>

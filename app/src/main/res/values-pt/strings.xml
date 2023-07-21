@@ -30,7 +30,4 @@
     <string name="pref_given_forms_summary">Tempos verbais que podem ser propostos nos testes</string>
     <string name="pref_form_order_title">Pedido de formulário</string>
     <string name="version">Versão</string>
-    <string name="connect">Contacte-nos</string>
-    <string name="dependencies">Dependências</string>
-    <string name="developers">Programadores</string>
 </resources>

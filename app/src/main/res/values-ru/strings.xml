@@ -7,7 +7,6 @@
     <string name="finish">Закончить</string>
     <string name="go_on">Продолжить</string>
     <string name="verify">Проверить</string>
-    <string name="save">Сохранить</string>
     <string name="save_question">Сохранить\?</string>
     <string name="save_message">Сохранить отметку</string>
     <string name="chart">График</string>
@@ -30,8 +29,5 @@
     <string name="pref_given_forms_summary">Глагольные формы, которые могут быть предложены в тестах</string>
     <string name="pref_form_order_title">Порядок полей</string>
     <string name="version">Версия</string>
-    <string name="connect">Связаться с авторами</string>
-    <string name="dependencies">Зависимости</string>
-    <string name="developers">Разработчики</string>
     <string name="not_now">Не сейчас</string>
 </resources>

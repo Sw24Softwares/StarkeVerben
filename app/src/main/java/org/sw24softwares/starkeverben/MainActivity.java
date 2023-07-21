@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
     // Following methods are used for the search bar in the LessonFragment
     @Override
     protected void onNewIntent(Intent intent) {
+	super.onNewIntent(intent);
         setIntent(intent);
         handleIntent(intent);
     }

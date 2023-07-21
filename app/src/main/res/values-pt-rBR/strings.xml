@@ -7,7 +7,6 @@
     <string name="finish">Finalizar</string>
     <string name="go_on">Continuar</string>
     <string name="verify">Verificar</string>
-    <string name="save">Salvar</string>
     <string name="save_question">Salvar\?</string>
     <string name="save_message">Guarde a nota</string>
     <string name="chart">Gráfico</string>
@@ -24,7 +23,6 @@
     <string name="not_now">Agora não</string>
     <string name="pref">Configurações</string>
     <string name="pref_about">Sobre</string>
-    <string name="pref_about_app">Sobre este aplicativo</string>
     <string name="pref_language_translation_title">Idioma de tradução</string>
     <string name="pref_language_translation_summary">Escolha o idioma de tradução</string>
     <string name="pref_language_translation_default">Automático</string>
@@ -32,7 +30,4 @@
     <string name="pref_given_forms_summary">Tempos verbais que podem ser propostos nas provas</string>
     <string name="pref_form_order_title">Pedido de formulário</string>
     <string name="version">Versão</string>
-    <string name="connect">Contate-nos</string>
-    <string name="dependencies">Dependências</string>
-    <string name="developers">Desenvolvedores</string>
 </resources>

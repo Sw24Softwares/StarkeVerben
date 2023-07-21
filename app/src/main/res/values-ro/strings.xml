@@ -7,7 +7,6 @@
     <string name="finish">Termină</string>
     <string name="go_on">Continuă</string>
     <string name="verify">Verifică</string>
-    <string name="save">Salvează</string>
     <string name="save_question">Salvează\?</string>
     <string name="save_message">Salvează semnul</string>
     <string name="chart">Grafic</string>
@@ -21,9 +20,6 @@
     <string name="traduction">Traducere</string>
     <string name="auxiliary">Auxiliar</string>
     <string name="search_hint">Caută</string>
-    <string name="developers">Dezvoltatori</string>
-    <string name="dependencies">Dependențe</string>
-    <string name="connect">Contactează-ne</string>
     <string name="version">Versiune</string>
     <string name="pref_form_order_title">Comandă formular</string>
     <string name="pref_given_forms_summary">Forme verbale care pot fi propuse în teste</string>
@@ -31,7 +27,6 @@
     <string name="pref_language_translation_default">Automat</string>
     <string name="pref_language_translation_summary">Alege limba de traducere</string>
     <string name="pref_language_translation_title">Limba traducătoare</string>
-    <string name="pref_about_app">Despre această aplicație</string>
     <string name="pref_about">Despre</string>
     <string name="pref">Setări</string>
     <string name="not_now">Nu acum</string>

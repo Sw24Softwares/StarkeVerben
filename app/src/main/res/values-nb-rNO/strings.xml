@@ -7,7 +7,6 @@
     <string name="finish">Fullfør</string>
     <string name="go_on">Fortsett</string>
     <string name="verify">Bekreft</string>
-    <string name="save">Lagre</string>
     <string name="save_question">Lagre\?</string>
     <string name="save_message">Lagre merket</string>
     <string name="chart">Diagram</string>
@@ -31,7 +30,4 @@
     <string name="pref_given_forms_summary">Mulige verbformer brukt i tester</string>
     <string name="pref_form_order_title">Formrekkefølge</string>
     <string name="version">Versjon</string>
-    <string name="connect">Kontakt</string>
-    <string name="dependencies">Avhengigheter</string>
-    <string name="developers">Utviklere</string>
 </resources>

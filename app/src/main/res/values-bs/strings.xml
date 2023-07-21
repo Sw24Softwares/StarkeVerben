@@ -7,7 +7,6 @@
     <string name="finish">Završiti</string>
     <string name="go_on">Nastaviti</string>
     <string name="verify">Provjeriti</string>
-    <string name="save">Spasiti</string>
     <string name="save_question">Spasiti\?</string>
     <string name="save_message">Snimi znak</string>
     <string name="chart">Grafikon</string>
@@ -30,9 +29,6 @@
     <string name="pref_given_forms_summary">Forme koje se mogu predložiti u testovima</string>
     <string name="pref_form_order_title">Raspored glagolske forme</string>
     <string name="version">Verzija</string>
-    <string name="connect">Naše stranice</string>
-    <string name="developers">Developeri</string>
     <string name="not_now">Ne sada</string>
-    <string name="dependencies">Zavisnosti</string>
     <string name="contributors">Saradnici</string>
 </resources>
