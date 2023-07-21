@@ -1,2 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="bitten">bitten</string>
+    <string name="denken">denken</string>
+    <string name="dringen">dringen</string>
+    <string name="essen">essen</string>
+    <string name="fliegen">fliegen</string>
+    <string name="fliessen">fließen</string>
+    <string name="fressen">fressen</string>
+    <string name="geben">geben</string>
+    <string name="gehen">gehen</string>
+    <string name="gelingen">gelingen</string>
+    <string name="gelten">gelten</string>
+    <string name="geniessen">genießen</string>
+    <string name="geschehen">geschehen</string>
+    <string name="backen">backen</string>
+    <string name="beginnen">beginnen</string>
+    <string name="bieten">bieten</string>
+    <string name="brechen">brechen</string>
+    <string name="bringen">bringen</string>
+    <string name="fahren">fahren</string>
+    <string name="fallen">fallen</string>
+    <string name="fangen">fangen</string>
+    <string name="binden">binden</string>
+    <string name="bleiben">bleiben</string>
+    <string name="finden">finden</string>
+    <string name="fliehen">fliehen</string>
+    <string name="gewinnen">gewinnen</string>
+</resources>
