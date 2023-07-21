@@ -31,4 +31,6 @@
     <string name="pref_form_order_title">Reihenfolge</string>
     <string name="version">Version</string>
     <string name="not_now">Nicht jetzt</string>
+    <string name="no_progress_data">Machen Sie einen Test, indem Sie die orangefarbene Taste drücken</string>
+    <string name="contributors">Mitwirkende</string>
 </resources>
