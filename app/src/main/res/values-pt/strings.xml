@@ -30,4 +30,6 @@
     <string name="pref_given_forms_summary">Tempos verbais que podem ser propostos nos testes</string>
     <string name="pref_form_order_title">Pedido de formulário</string>
     <string name="version">Versão</string>
+    <string name="contributors">Contribuidores</string>
+    <string name="no_progress_data">Faça um teste a pressionar o botão de cor laranja</string>
 </resources>
