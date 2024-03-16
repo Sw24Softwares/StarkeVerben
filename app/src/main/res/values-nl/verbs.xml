@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources><string name="backen">bakken</string>
+<resources>
+    <string name="backen">bakken</string>
     <string name="beginnen">beginnen</string>
     <string name="bieten">bieden,aanbieden</string>
     <string name="binden">binden,vastbinden</string>
@@ -24,8 +25,8 @@
     <string name="gelten">gelden,aangaan,meetellen</string>
     <string name="geniessen">genieten,nuttigen</string>
     <string name="geschehen">gebeuren,geschieden,overkomen</string>
-    <string name="gewinnen">winnen,bereiken</string>
-    <string name="giessen">gieten,uitstorten</string>
+    <string name="gewinnen">winnen, bereiken</string>
+    <string name="giessen">gieten, uitstorten</string>
     <string name="gleichen">(op iemand) lijken</string>
     <string name="graben">graven,spitten,delven</string>
     <string name="greifen">grijpen,vatten,pakken</string>
