@@ -30,4 +30,6 @@
     <string name="pref_given_forms_summary">Werkwoordsvormen die aangeboden worden in de Test</string>
     <string name="pref_form_order_title">Volgorde</string>
     <string name="version">Versie</string>
+    <string name="no_progress_data">Doe een test door op de oranje knop te drukken</string>
+    <string name="contributors">Bijdragers</string>
 </resources>
