@@ -1,2 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="bitten">solicitar,pedir</string>
+    <string name="bieten">Oferecer</string>
+    <string name="binden">prender,amarrar</string>
+    <string name="fahren">dirigir,viajar</string>
+    <string name="fallen">cair</string>
+    <string name="fliehen">fugir</string>
+    <string name="fliessen">fluir</string>
+    <string name="geben">dar</string>
+    <string name="backen">Assar</string>
+    <string name="beginnen">Começar</string>
+    <string name="bleiben">ficar,permanecer</string>
+    <string name="brechen">quebrar</string>
+    <string name="bringen">trazer</string>
+    <string name="denken">pensar</string>
+    <string name="dringen">penetrar</string>
+    <string name="essen">comer</string>
+    <string name="fangen">pegar</string>
+    <string name="finden">achar</string>
+    <string name="fliegen">voar</string>
+    <string name="fressen">comer como um animal</string>
+    <string name="gehen">caminhar,ir</string>
+</resources>
