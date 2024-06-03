@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="go_on">Pokračovat</string>
+    <string name="verify">Ověřit</string>
+    <string name="test">Test</string>
+    <string name="single_lesson">Lekce</string>
+    <string name="progression">Postup</string>
+    <string name="yes">Ano</string>
+    <string name="no">Ne</string>
+    <string name="lesson">Seznam</string>
+    <string name="finish">Dokončit</string>
+    <string name="save_question">Uložit?</string>
+    <string name="save_message">Uložte značku</string>
+</resources>
