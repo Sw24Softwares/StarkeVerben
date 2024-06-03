@@ -1,2 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="bleiben">zůstat</string>
+    <string name="beginnen">začít</string>
+    <string name="bieten">nabídnout</string>
+    <string name="backen">péct</string>
+    <string name="binden">svázat</string>
+    <string name="bitten">žádat</string>
+    <string name="brechen">rozbít</string>
+    <string name="bringen">přinést</string>
+    <string name="denken">myslet</string>
+    <string name="dringen">proniknout</string>
+    <string name="essen">jíst</string>
+</resources>
