@@ -11,4 +11,25 @@
     <string name="denken">myslet</string>
     <string name="dringen">proniknout</string>
     <string name="essen">jíst</string>
+    <string name="fahren">řídit, cestovat</string>
+    <string name="fallen">padat</string>
+    <string name="fangen">chytit</string>
+    <string name="fliehen">utéct</string>
+    <string name="fliessen">plynout</string>
+    <string name="geben">dát</string>
+    <string name="gehen">chodit, jít</string>
+    <string name="gelingen">uspět</string>
+    <string name="geniessen">užívat si</string>
+    <string name="geschehen">nastat</string>
+    <string name="giessen">nalít, zalít</string>
+    <string name="fliegen">letět</string>
+    <string name="finden">najít</string>
+    <string name="gelten">počítat, stát za to</string>
+    <string name="fressen">jíst jako zvíře</string>
+    <string name="hangen">pověsit</string>
+    <string name="gewinnen">vyhrát, získat</string>
+    <string name="gleichen">podobat se</string>
+    <string name="graben">kopat</string>
+    <string name="greifen">zmocnit se, chytit</string>
+    <string name="halten">držet</string>
 </resources>
