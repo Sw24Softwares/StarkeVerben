@@ -11,4 +11,25 @@
     <string name="finish">Dokončit</string>
     <string name="save_question">Uložit?</string>
     <string name="save_message">Uložte značku</string>
+    <string name="chart">Graf</string>
+    <string name="not_now">Teď ne</string>
+    <string name="at">na</string>
+    <string name="infinitive">Infinitiv</string>
+    <string name="third_person">3. osoba</string>
+    <string name="pref_about">O</string>
+    <string name="pref_language_translation_title">Překladový jazyk</string>
+    <string name="pref_form_order_title">Objednávka formuláře</string>
+    <string name="version">Verze</string>
+    <string name="search_hint">Vyhledávání</string>
+    <string name="no_progress_data">Proveďte test stisknutím oranžového tlačítka</string>
+    <string name="preterite">Preteritum</string>
+    <string name="pref">Nastavení</string>
+    <string name="pref_language_translation_default">Automatický</string>
+    <string name="participe">Příčestí</string>
+    <string name="traduction">Překlad</string>
+    <string name="auxiliary">Pomocný</string>
+    <string name="pref_language_translation_summary">Vyberte jazyk překladu</string>
+    <string name="pref_given_forms_title">Navrhované formy v testu</string>
+    <string name="pref_given_forms_summary">Slovesné tvary, které mohou být navrženy v testech</string>
+    <string name="contributors">Přispěvatelé</string>
 </resources>
