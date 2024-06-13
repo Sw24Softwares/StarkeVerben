@@ -32,4 +32,26 @@
     <string name="graben">kopat</string>
     <string name="greifen">zmocnit se, chytit</string>
     <string name="halten">držet</string>
+    <string name="heben">zvednout</string>
+    <string name="heissen">být volán</string>
+    <string name="helfen">pomoci</string>
+    <string name="kennen">vědět</string>
+    <string name="klingen">znít</string>
+    <string name="laden">naložit</string>
+    <string name="lassen">nechat, odejít</string>
+    <string name="laufen">běžet</string>
+    <string name="leihen">půjčit</string>
+    <string name="lesen">číst</string>
+    <string name="liegen">ležet</string>
+    <string name="meiden">vyhnout se</string>
+    <string name="messen">měřit</string>
+    <string name="reissen">trhat</string>
+    <string name="reiten">jezdit na koni</string>
+    <string name="lugen">lhát</string>
+    <string name="kommen">přijít</string>
+    <string name="nehmen">vzít</string>
+    <string name="rufen">volat</string>
+    <string name="nennen">jmenovat, volat</string>
+    <string name="pfeifen">pískat</string>
+    <string name="raten">radit</string>
 </resources>
