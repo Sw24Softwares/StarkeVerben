@@ -26,4 +26,15 @@
     <string name="finden">finden</string>
     <string name="fliehen">fliehen</string>
     <string name="gewinnen">gewinnen</string>
+    <string name="giessen">gießen</string>
+    <string name="gleichen">gleichen</string>
+    <string name="greifen">greifen</string>
+    <string name="halten">halten</string>
+    <string name="hangen">hängen</string>
+    <string name="heben">heben</string>
+    <string name="heissen">heißen</string>
+    <string name="helfen">helfen</string>
+    <string name="kennen">kennen</string>
+    <string name="klingen">klingen</string>
+    <string name="graben">graben</string>
 </resources>
