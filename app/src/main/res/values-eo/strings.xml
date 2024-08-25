@@ -30,10 +30,12 @@
     <string name="lesson">Listo</string>
     <string name="progression">Progreso</string>
     <string name="test">Testo</string>
-    <string name="app_name" translatable="false"></string>
-    <string name="contribute_trans" translatable="false"></string>
-    <string name="contribution_url" translatable="false"></string>
-    <string name="app_label" translatable="false"></string>
-    <string name="translate_alert" translatable="false"></string>
-    <string name="translate_message" translatable="false"></string>
+    <string name="app_name" translatable="false"/>
+    <string name="contribute_trans" translatable="false"/>
+    <string name="contribution_url" translatable="false"/>
+    <string name="app_label" translatable="false"/>
+    <string name="translate_alert" translatable="false"/>
+    <string name="translate_message" translatable="false"/>
+    <string name="no_progress_data">Ekzameniĝu premante la oranĝan butonon</string>
+    <string name="contributors">Kontribuintoj</string>
 </resources>
