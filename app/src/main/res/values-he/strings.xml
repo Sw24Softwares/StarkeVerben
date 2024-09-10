@@ -30,10 +30,12 @@
     <string name="pref_given_forms_summary">צורות פעלים שעשויות להופיע בבחינה</string>
     <string name="pref_form_order_title">סדר הצורות</string>
     <string name="version">גרסה</string>
-    <string name="app_label" translatable="false"></string>
-    <string name="translate_message" translatable="false"></string>
-    <string name="contribution_url" translatable="false"></string>
-    <string name="app_name" translatable="false"></string>
-    <string name="translate_alert" translatable="false"></string>
-    <string name="contribute_trans" translatable="false"></string>
+    <string name="app_label" translatable="false"/>
+    <string name="translate_message" translatable="false"/>
+    <string name="contribution_url" translatable="false"/>
+    <string name="app_name" translatable="false"/>
+    <string name="translate_alert" translatable="false"/>
+    <string name="contribute_trans" translatable="false"/>
+    <string name="no_progress_data">קח מבחן בעזרת לחיצה על הכפתור הכתום</string>
+    <string name="contributors">תורמים</string>
 </resources>
