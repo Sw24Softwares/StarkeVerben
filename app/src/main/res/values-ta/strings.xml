@@ -1,2 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="pref_form_order_title">படிவம் வரிசை</string>
+    <string name="search_hint">தேடல்</string>
+    <string name="test">தேர்வு</string>
+    <string name="progression">முன்னேற்றம்</string>
+    <string name="lesson">பட்டியல்</string>
+    <string name="single_lesson">பாடம்</string>
+    <string name="finish">முடிக்க</string>
+    <string name="go_on">தொடரவும்</string>
+    <string name="verify">சரிபார்க்கவும்</string>
+    <string name="save_question">சேமிக்கவா?</string>
+    <string name="save_message">அடையாளத்தை சேமிக்கவும்</string>
+    <string name="chart">விளக்கப்படம்</string>
+    <string name="yes">ஆம்</string>
+    <string name="no">இல்லை</string>
+    <string name="not_now">இப்போது இல்லை</string>
+    <string name="no_progress_data">ஆரஞ்சு பொத்தானை அழுத்துவதன் மூலம் சோதனை செய்யுங்கள்</string>
+    <string name="at">at</string>
+    <string name="infinitive">எண்ணற்ற</string>
+    <string name="preterite">Preterite</string>
+    <string name="participe">பங்கேற்பு</string>
+    <string name="third_person">3 வது நபர்</string>
+    <string name="traduction">மொழிபெயர்ப்பு</string>
+    <string name="auxiliary">துணை</string>
+    <string name="pref">அமைப்புகள்</string>
+    <string name="pref_about">பற்றி</string>
+    <string name="pref_language_translation_title">மொழிபெயர்ப்பு மொழி</string>
+    <string name="pref_language_translation_summary">மொழிபெயர்ப்பு மொழியைத் தேர்வுசெய்க</string>
+    <string name="pref_language_translation_default">தானியங்கி</string>
+    <string name="pref_given_forms_title">சோதனையில் முன்மொழியப்பட்ட படிவங்கள்</string>
+    <string name="pref_given_forms_summary">சோதனைகளில் முன்மொழியக்கூடிய வினை வடிவங்கள்</string>
+    <string name="version">பதிப்பு</string>
+    <string name="contributors">பங்களிப்பாளர்கள்</string>
+</resources>
